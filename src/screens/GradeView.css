@@ -1,0 +1,146 @@
+.gv-cover {
+  position: relative;
+  height: 300px;
+  max-height: 42vh;
+  min-height: 240px;
+}
+
+.gv-cover .photo {
+  position: absolute;
+  inset: 0;
+}
+
+.grade-view.g2 .gv-cover .photo img,
+.grade-view.g3 .gv-cover .photo img {
+  filter: saturate(0.55) contrast(1.05) brightness(0.7);
+}
+
+.gv-back {
+  position: absolute;
+  z-index: 2;
+  top: calc(env(safe-area-inset-top, 0px) + 8px);
+  left: var(--gutter);
+  color: var(--text);
+}
+
+.gv-title {
+  position: absolute;
+  z-index: 2;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gv-title .label {
+  color: var(--accent);
+}
+
+.gv-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.gv-title p {
+  color: var(--on-photo);
+  font-size: 14px;
+}
+
+.gv-body {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 40px);
+  gap: 22px;
+}
+
+.gv-outcome {
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gv-outcome p {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.gv-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gv-planned {
+  font-size: 13px;
+}
+
+.gv-modules ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: gm;
+}
+
+.gv-modules li {
+  counter-increment: gm;
+  border-bottom: 1px solid var(--line);
+}
+
+.gv-modules li > * {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 2px 10px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 0;
+}
+
+.gv-modules li > *::before {
+  content: 'M' counter(gm);
+  font-family: var(--font-data);
+  font-size: 12px;
+  color: var(--accent);
+  grid-row: span 2;
+  padding-top: 2px;
+}
+
+.gv-modules b {
+  font-size: 15px;
+}
+
+.gv-modules span {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.gv-exam {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  border-radius: var(--r-tile);
+  border: 1px solid var(--line);
+}
+
+.gv-exam .label {
+  color: var(--accent);
+}
+
+.gv-exam b {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.gv-exam .muted {
+  font-size: 14px;
+}
+
+.grade-view .cta:disabled {
+  background: var(--raised);
+  color: var(--muted);
+  opacity: 1;
+}

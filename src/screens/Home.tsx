@@ -37,11 +37,11 @@ export function Home() {
 
       <div className="screen home-body">
         <div className="chips">
-          <button className="chip on">
+          <button className="chip on" onClick={() => navigate(`/grade/${grade.n}`)}>
             {grade.n}. {c(grade.title)}
           </button>
           {upcoming.map((g) => (
-            <button key={g.n} className="chip" disabled>
+            <button key={g.n} className="chip" onClick={() => navigate(`/grade/${g.n}`)}>
               {g.n}. {c(g.title)}
             </button>
           ))}
@@ -100,7 +100,7 @@ export function Home() {
 
         <div className="home-next">
           {upcoming.map((g) => (
-            <div key={g.n} className={`next-grade g${g.n}`}>
+            <button key={g.n} className={`next-grade g${g.n}`} onClick={() => navigate(`/grade/${g.n}`)}>
               <Photo name={g.photo} />
               <div className="next-text">
                 <span className="label">
@@ -109,7 +109,7 @@ export function Home() {
                 <b>{c(g.title)}</b>
                 <small>{c(g.tagline)}</small>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

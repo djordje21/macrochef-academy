@@ -267,3 +267,8 @@
   font-size: 13px;
   min-width: 0;
 }
+
+.lg-card {
+  width: 100%;
+  text-align: left;
+}

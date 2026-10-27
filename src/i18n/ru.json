@@ -99,5 +99,13 @@
   "exam.macro": "Внеси это блюдо в MacroChef как рецепт и посмотри макросы своего блюда.",
   "exam.again": "Новый холодильник",
   "exam.passed": "сдан",
-  "exam.back": "‹ Учебник"
+  "exam.back": "‹ Учебник",
+  "gradeview.forWho": "Для кого",
+  "gradeview.outcome": "В конце класса",
+  "gradeview.modules": "Модули",
+  "gradeview.modulesN": "модулей",
+  "gradeview.lessonsN": "уроков",
+  "gradeview.read": "чтения",
+  "gradeview.soonCta": "Откроется после {n} класса",
+  "gradeview.planned": "План класса, уроки готовятся."
 }

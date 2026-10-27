@@ -104,7 +104,7 @@ export function Landing() {
         <section>
           <h2>{t('landing.gradesTitle')}</h2>
           <div className="landing-grades">
-            <div className="lg-card g1">
+            <button className="lg-card g1" onClick={() => navigate(`/grade/1`)}>
               <Photo name={grade.photo} />
               <div>
                 <span className="label">
@@ -113,9 +113,9 @@ export function Landing() {
                 <b>{c(grade.title)}</b>
                 <small>{c(grade.tagline)}</small>
               </div>
-            </div>
+            </button>
             {upcoming.map((g) => (
-              <div key={g.n} className={`lg-card g${g.n}`}>
+              <button key={g.n} className={`lg-card g${g.n}`} onClick={() => navigate(`/grade/${g.n}`)}>
                 <Photo name={g.photo} />
                 <div>
                   <span className="label">
@@ -124,7 +124,7 @@ export function Landing() {
                   <b>{c(g.title)}</b>
                   <small>{c(g.tagline)}</small>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </section>

@@ -53,6 +53,15 @@ export interface Grade {
   title: L
   tagline: L
   photo: string
+  /** Who the grade is for. */
+  audience: L
+  /** What the cook can do at the end of the grade. */
+  outcome: L
   modules: Module[]
   exam?: { title: L; text: L }
+}
+
+/** A grade that is announced but not written yet: module titles only. */
+export interface UpcomingGrade extends Pick<Grade, 'n' | 'title' | 'tagline' | 'photo' | 'audience' | 'outcome' | 'exam'> {
+  plannedModules: L[]
 }

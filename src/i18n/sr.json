@@ -99,5 +99,13 @@
   "exam.macro": "Unesi ovaj obrok u MacroChef kao recept, pa vidi makroe svog jela.",
   "exam.again": "Novi frižider",
   "exam.passed": "položen",
-  "exam.back": "‹ Udžbenik"
+  "exam.back": "‹ Udžbenik",
+  "gradeview.forWho": "Za koga",
+  "gradeview.outcome": "Na kraju razreda",
+  "gradeview.modules": "Moduli",
+  "gradeview.modulesN": "modula",
+  "gradeview.lessonsN": "lekcija",
+  "gradeview.read": "čitanja",
+  "gradeview.soonCta": "Otvara se posle {n}. razreda",
+  "gradeview.planned": "Plan razreda, lekcije su u pripremi."
 }

@@ -20,6 +20,16 @@ export const grade1: Grade = {
     'От первого разреза до обеда без рецепта.',
   ),
   photo: 'grade-1.webp',
+  audience: l(
+    'Za one koji nikad nisu kuvali, ili kuvaju po receptu i ne znaju zašto nešto uspe, a nešto ne.',
+    'For people who have never cooked, or who follow recipes without knowing why something works or fails.',
+    'Для тех, кто никогда не готовил или готовит по рецепту, не понимая, почему одно получается, а другое нет.',
+  ),
+  outcome: l(
+    'Otvoriš frižider, skuvaš ručak bez recepta i znaš zašto si uradio svaki korak.',
+    'You open the fridge, cook a meal without a recipe and know why you did every step.',
+    'Ты открываешь холодильник, готовишь обед без рецепта и знаешь, зачем сделал каждый шаг.',
+  ),
   modules: [
     {
       id: 'm1',
@@ -121,9 +131,9 @@ export const grade1: Grade = {
   exam: {
     title: l('Izazov frižider', 'The fridge challenge', 'Испытание холодильником'),
     text: l(
-      'Dobiješ 8–10 namirnica, sam smisliš i skuvaš obrok i obrazložiš tri odluke: rez, tehniku i korekciju ukusa.',
-      'You get 8–10 ingredients, plan and cook a meal on your own, and explain three decisions: the cut, the technique and how you adjusted the taste.',
-      'Ты получаешь 8–10 продуктов, сам придумываешь и готовишь блюдо и объясняешь три решения: нарезку, технику и правку вкуса.',
+      'Dobiješ 10 namirnica, sam smisliš i skuvaš obrok i obrazložiš tri odluke: rez, tehniku i korekciju ukusa.',
+      'You get 10 ingredients, plan and cook a meal on your own, and explain three decisions: the cut, the technique and how you adjusted the taste.',
+      'Ты получаешь 10 продуктов, сам придумываешь и готовишь блюдо и объясняешь три решения: нарезку, технику и правку вкуса.',
     ),
   },
 }
