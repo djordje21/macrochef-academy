@@ -1,0 +1,10 @@
+# Cloudflare Pages headers (Netlify reads netlify.toml instead).
+/*
+  X-Content-Type-Options: nosniff
+
+# Always revalidate the service worker and the page shell, so phones pick up new deploys.
+/sw.js
+  Cache-Control: no-cache
+
+/index.html
+  Cache-Control: no-cache

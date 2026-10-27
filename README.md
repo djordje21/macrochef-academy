@@ -12,7 +12,9 @@ npm run dev -- --host   # otvori Network URL na telefonu (ista Wi-Fi mreža)
 npm run build           # produkcijski build u dist/
 ```
 
-Netlify čita `netlify.toml` (build `npm run build`, publish `dist`).
+Deploy:
+- **Cloudflare Pages:** poveži GitHub repo, build `npm run build`, output `dist`, promenljiva `NODE_VERSION=22`. Zaglavlja su u `public/_headers`. Svaki push na `main` ide uživo.
+- **Netlify:** čita `netlify.toml`.
 
 ## Struktura
 
