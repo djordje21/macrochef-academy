@@ -6,7 +6,11 @@ import { VitePWA } from 'vite-plugin-pwa'
 // `--mode preview-page` builds a copy with relative paths and no service worker, for a shareable preview page.
 export default defineConfig(({ mode }) => ({
   base: mode === 'preview-page' ? './' : '/',
-  build: mode === 'preview-page' ? { outDir: 'dist-preview' } : undefined,
+  build: {
+    // All course text ships in the bundle on purpose, so lessons open offline next to the stove.
+    chunkSizeWarningLimit: 1000,
+    ...(mode === 'preview-page' ? { outDir: 'dist-preview' } : {}),
+  },
   plugins: [
     react(),
     VitePWA({

@@ -5,6 +5,7 @@ import { heatLessons } from './m3-heat'
 import { tasteLessons } from './m4-taste'
 import { eggLessons } from './m5-eggs'
 import { meatLessons } from './m6-meat'
+import { sauceLessons } from './m7-sauces'
 
 // Grade 1 · First steps. Modules in teaching order: kitchen and knife first, then heat and taste,
 // then dishes. Unwritten modules list their planned lessons so the whole path is visible from day one.
@@ -101,14 +102,7 @@ export const grade1: Grade = {
         'Бульон, крем-суп и три соуса на всю жизнь.',
       ),
       photo: 'm7.webp',
-      lessons: [],
-      planned: [
-        { title: l('Pileći fond', 'Chicken stock', 'Куриный бульон'), minutes: 8 },
-        { title: l('Krem supa od povrća', 'Vegetable cream soup', 'Овощной крем-суп'), minutes: 7 },
-        { title: l('Deglaziranje', 'Deglazing', 'Деглазирование'), minutes: 6 },
-        { title: l('Bešamel', 'Béchamel', 'Бешамель'), minutes: 7 },
-        { title: l('Vinegret i majonez', 'Vinaigrette and mayonnaise', 'Винегрет и майонез'), minutes: 8 },
-      ],
+      lessons: sauceLessons,
     },
     {
       id: 'm8',

@@ -930,6 +930,104 @@ const drawings = {
       <Cut i={1} d="M50 76 L220 76" dash />
     </>
   ),
+  // Module 7 · Soups and sauces
+  coldStart: (
+    <>
+      <rect x="60" y="40" width="180" height="106" rx="8" fill={C.pot} />
+      <rect x="66" y="56" width="168" height="84" rx="6" fill={C.water} opacity=".5" />
+      <g fill={C.flesh}>
+        <rect x="90" y="104" width="50" height="14" rx="7" transform="rotate(-12 115 111)" />
+        <rect x="150" y="110" width="56" height="14" rx="7" transform="rotate(10 178 117)" />
+        <rect x="120" y="86" width="46" height="13" rx="6" />
+      </g>
+      <g fill={C.ice}><rect x="86" y="62" width="14" height="14" rx="3" /><rect x="196" y="66" width="14" height="14" rx="3" /></g>
+      <Cut i={0} d="M250 56 L250 92" />
+      <Cut i={1} d="M242 84 L250 92 L258 84" />
+    </>
+  ),
+  skim: (
+    <>
+      <rect x="60" y="60" width="180" height="86" rx="8" fill={C.pot} />
+      <rect x="66" y="70" width="168" height="70" rx="6" fill={C.bread} opacity=".6" />
+      <path d="M90 72 Q110 64 130 72 Q150 66 170 72" fill="none" stroke="#B9B2A6" strokeWidth="6" strokeLinecap="round" />
+      <ellipse cx="200" cy="66" rx="22" ry="8" fill={C.steel} />
+      <rect x="216" y="20" width="8" height="48" rx="3" fill={C.steel} transform="rotate(20 220 44)" />
+      <Cut i={0} d="M96 60 Q140 44 184 58" />
+    </>
+  ),
+  blend: (
+    <>
+      <rect x="60" y="70" width="180" height="76" rx="8" fill={C.pot} />
+      <rect x="66" y="80" width="168" height="60" rx="6" fill={C.carrot} />
+      <rect x="140" y="10" width="20" height="100" rx="6" fill={C.handle} />
+      <rect x="134" y="104" width="32" height="14" rx="4" fill={C.steel} />
+      <Cut i={0} d="M110 118 A40 14 0 1 0 190 118" />
+      <Cut i={1} d="M184 110 L190 118 L180 122" />
+    </>
+  ),
+  deglaze: (
+    <>
+      <rect x="40" y="110" width="190" height="16" rx="4" fill={C.potDark} />
+      <rect x="230" y="112" width="60" height="7" rx="3" fill={C.handle} />
+      <ellipse cx="135" cy="108" rx="80" ry="6" fill={C.crust} />
+      <path d="M70 30 L110 30 L104 60 L76 60 Z" fill={C.ice} opacity=".7" transform="rotate(30 90 45)" />
+      <Cut i={0} d="M108 64 Q118 84 120 102" />
+      <rect x="150" y="60" width="8" height="46" rx="3" fill={C.wood} transform="rotate(-25 154 83)" />
+      <Cut i={1} d="M150 104 L200 104" />
+    </>
+  ),
+  coatSpoon: (
+    <>
+      <ellipse cx="120" cy="80" rx="64" ry="40" fill={C.crust} />
+      <ellipse cx="120" cy="80" rx="54" ry="32" fill="#A0582F" />
+      <rect x="184" y="74" width="100" height="12" rx="6" fill={C.steel} />
+      <path d="M84 64 L156 98" stroke={C.steel} strokeWidth="8" strokeLinecap="round" />
+      <Cut i={0} d="M84 64 L156 98" />
+    </>
+  ),
+  roux: (
+    <>
+      <rect x="60" y="80" width="180" height="66" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="96" rx="80" ry="10" fill="#F2DDA4" />
+      <rect x="196" y="20" width="8" height="70" rx="3" fill={C.wood} transform="rotate(20 200 55)" />
+      <Cut i={0} d="M100 96 Q150 84 200 96" />
+    </>
+  ),
+  whiskMilk: (
+    <>
+      <rect x="60" y="80" width="180" height="66" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="96" rx="80" ry="10" fill={C.paper} />
+      <path d="M60 30 L100 30 L96 58 L64 58 Z" fill={C.ice} transform="rotate(25 80 44)" />
+      <g stroke={C.steel} strokeWidth="2.5" fill="none">
+        <path d="M186 28 L186 70 Q196 92 206 70 L206 28" />
+        <path d="M192 28 L192 70 Q196 84 200 70 L200 28" />
+      </g>
+      <Cut i={0} d="M96 60 Q104 74 108 88" />
+      <Cut i={1} d="M170 100 A26 8 0 1 0 222 100" />
+    </>
+  ),
+  jarRatio: (
+    <>
+      <rect x="110" y="30" width="80" height="120" rx="10" fill={C.ice} opacity=".35" />
+      <rect x="114" y="34" width="72" height="10" rx="3" fill={C.handle} />
+      <rect x="114" y="120" width="72" height="26" rx="6" fill="#C9B07A" />
+      <rect x="114" y="46" width="72" height="74" fill={C.yolk} opacity=".75" />
+      <Cut i={0} d="M204 120 L204 146" />
+      <Cut i={1} d="M220 46 L220 146" />
+    </>
+  ),
+  emulsion: (
+    <>
+      <path d="M50 80 A100 60 0 0 0 250 80 Z" fill={C.pot} />
+      <ellipse cx="150" cy="80" rx="100" ry="12" fill="#F8E3A0" />
+      <path d="M200 10 L230 10 L224 40 L206 40 Z" fill={C.yolk} opacity=".8" transform="rotate(-20 215 25)" />
+      <g fill={C.yolk}><ellipse cx="196" cy="54" rx="2.5" ry="4" /><ellipse cx="190" cy="68" rx="2.5" ry="4" /></g>
+      <g stroke={C.steel} strokeWidth="2.5" fill="none">
+        <path d="M110 10 L120 56 Q134 76 138 52 L128 8" />
+      </g>
+      <Cut i={0} d="M96 84 A40 8 0 1 0 176 84" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
