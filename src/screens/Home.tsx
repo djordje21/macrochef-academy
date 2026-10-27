@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { allLessons, findLesson, grades, upcoming } from '../content'
 import { useDone } from '../app/progress'
 import { navigate } from '../app/router'
@@ -22,7 +23,7 @@ export function Home() {
           <span className="home-brand">{t('app.name')}</span>
           <LangSwitch />
         </div>
-        <div className="home-title">
+        <div className="home-title enter-up">
           <span className="label">{t('grade.label', { n: grade.n })}</span>
           <h1>{c(grade.title)}</h1>
           <p>{c(grade.tagline)}</p>
@@ -41,7 +42,7 @@ export function Home() {
           ))}
         </div>
 
-        <button className="cta split" onClick={() => navigate(`/lesson/${next.id}`)}>
+        <button className="cta split nudge" onClick={() => navigate(`/lesson/${next.id}`)}>
           <span>
             {t(started ? 'home.continue' : 'home.start')}
             <small>
@@ -52,7 +53,7 @@ export function Home() {
         </button>
 
         <div className="rows">
-          {grade.modules.map((m) => {
+          {grade.modules.map((m, i) => {
             const total = m.lessons.length || m.planned?.length || 0
             const finished = m.lessons.filter((x) => done.has(x.id)).length
             const cls = [
@@ -62,17 +63,25 @@ export function Home() {
               m.lessons.length > 0 && finished === total ? 'done' : '',
             ].join(' ')
             return (
-              <button key={m.id} className={cls} onClick={() => navigate(`/module/${m.id}`)}>
+              <button
+                key={m.id}
+                className={`${cls} enter`}
+                style={{ '--i': i } as CSSProperties}
+                onClick={() => navigate(`/module/${m.id}`)}
+              >
                 <span className="n">M{m.n}</span>
                 <span>{c(m.title)}</span>
                 <span className="s">
                   {m.lessons.length ? t('module.done', { d: finished, n: total }) : t('module.soon')}
                 </span>
+                <span className="meter" aria-hidden="true">
+                  <i style={{ width: `${total ? (finished / total) * 100 : 0}%` }} />
+                </span>
               </button>
             )
           })}
           {grade.exam && (
-            <div className="row soon">
+            <div className="row soon enter" style={{ '--i': grade.modules.length } as CSSProperties}>
               <span className="n">∎</span>
               <span>{c(grade.exam.title)}</span>
               <span className="s">{t('module.exam')}</span>
