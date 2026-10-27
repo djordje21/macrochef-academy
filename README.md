@@ -20,7 +20,7 @@ Deploy:
 
 - `src/content/` – sadržaj kursa, odvojen od koda. Svaki tekst postoji na sva tri jezika (`l(sr, en, ru)`).
   - `grade1/index.ts` – program 1. razreda: 8 modula i završni ispit.
-  - `grade1/m2-knife.ts` – modul 2 Nož, 5 lekcija.
+  - `grade1/m1-kitchen.ts` … `grade1/m8-starches.ts` – po jedan fajl za svaki modul.
   - `reference.ts` – šalabahter: temperature i rezovi.
 - `src/drawings/` – crteži koraka. Hrana i alat su pune boje, ono što kuvar radi je žuta linija koja se iscrta kad se korak otvori.
 - `src/screens/` – početna, modul, lekcija, korak, kraj lekcije, šalabahter.
@@ -37,7 +37,7 @@ Deploy:
 
 ## Status
 
-- 1. razred: program svih 8 modula, napisan modul 2 Nož (5 lekcija), šalabahter.
+- 1. razred: svih 8 modula napisano, 41 lekcija i 205 koraka na SR/EN/RU, sa crtežima, plus šalabahter. Završni ispit „Izazov frižider“ je opisan na početnoj.
 - 2. i 3. razred: najavljeni na početnoj.
 
 ## Fotografije

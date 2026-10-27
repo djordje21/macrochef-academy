@@ -6,9 +6,10 @@ import { tasteLessons } from './m4-taste'
 import { eggLessons } from './m5-eggs'
 import { meatLessons } from './m6-meat'
 import { sauceLessons } from './m7-sauces'
+import { starchLessons } from './m8-starches'
 
 // Grade 1 · First steps. Modules in teaching order: kitchen and knife first, then heat and taste,
-// then dishes. Unwritten modules list their planned lessons so the whole path is visible from day one.
+// then dishes.
 
 export const grade1: Grade = {
   n: 1,
@@ -114,14 +115,7 @@ export const grade1: Grade = {
         'Гарниры, которые всегда получаются: рис, паста аль денте, пюре и печёный картофель.',
       ),
       photo: 'm8.webp',
-      lessons: [],
-      planned: [
-        { title: l('Pirinač', 'Rice', 'Рис'), minutes: 6 },
-        { title: l('Testenina al dente', 'Pasta al dente', 'Паста аль денте'), minutes: 6 },
-        { title: l('Pire krompir', 'Mashed potatoes', 'Картофельное пюре'), minutes: 7 },
-        { title: l('Pečeni krompir', 'Roast potatoes', 'Печёный картофель'), minutes: 7 },
-        { title: l('Jednostavan rizoto', 'Simple risotto', 'Простое ризотто'), minutes: 9 },
-      ],
+      lessons: starchLessons,
     },
   ],
   exam: {
