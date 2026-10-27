@@ -1,0 +1,116 @@
+.home-cover {
+  position: relative;
+  height: 340px;
+  max-height: 46vh;
+  min-height: 280px;
+}
+
+.home-cover .photo {
+  position: absolute;
+  inset: 0;
+}
+
+.home-bar {
+  position: absolute;
+  z-index: 2;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.home-title {
+  position: absolute;
+  z-index: 2;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 560px;
+}
+
+.home-title .label {
+  color: var(--accent);
+}
+
+.home-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home-title p {
+  color: var(--on-photo);
+  font-size: 14px;
+}
+
+.home-body {
+  padding-top: 14px;
+}
+
+.home-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.next-grade {
+  position: relative;
+  min-height: 170px;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.next-grade .photo {
+  position: absolute;
+  inset: 0;
+}
+
+.next-grade .photo img {
+  filter: saturate(0.4) contrast(1.05) brightness(0.6);
+}
+
+.next-text {
+  position: relative;
+  z-index: 2;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.next-text .label {
+  font-size: 9.5px;
+}
+
+.next-grade.g2 .label {
+  color: var(--grade-2);
+}
+
+.next-grade.g3 .label {
+  color: var(--grade-3);
+}
+
+.next-text b {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.next-text small {
+  color: var(--on-photo);
+  font-size: 11.5px;
+  line-height: 1.35;
+}

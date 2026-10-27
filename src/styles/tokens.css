@@ -1,0 +1,34 @@
+/* Same base as MacroChef; each grade takes one of MacroChef's macro colors as its accent. */
+:root {
+  --bg: #0B1730;
+  --card: #101F3D;
+  --raised: #17284B;
+  --line: #24375E;
+  --nav: #0F1E3B;
+
+  --text: #F3F5FA;
+  --muted: #8E9BB8;
+  --on-photo: #C9D1E3;
+
+  --grade-1: #F5B83D;
+  --grade-2: #F0644A;
+  --grade-3: #A6C95E;
+  --accent: var(--grade-1);
+  --on-accent: #0B1730;
+  --ok: #A6C95E;
+  --warn: #F0644A;
+
+  --protein: #F0644A;
+  --carbs: #F5B83D;
+  --fat: #A6C95E;
+
+  --font-display: 'Unbounded Variable', 'Unbounded', system-ui, sans-serif;
+  --font-body: 'Manrope Variable', 'Manrope', system-ui, sans-serif;
+  --font-data: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+
+  --r-card: 16px;
+  --r-tile: 12px;
+  --r-pill: 999px;
+  --tap: 44px;
+  --gutter: 18px;
+}

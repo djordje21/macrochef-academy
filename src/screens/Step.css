@@ -1,0 +1,148 @@
+.step {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 100px);
+  gap: 12px;
+}
+
+.stepbar {
+  display: flex;
+  gap: 4px;
+}
+
+.stepbar i {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line);
+  transition: background 0.3s;
+}
+
+.stepbar i.on {
+  background: var(--accent);
+}
+
+.step .topbar .back span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60vw;
+}
+
+.step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: step-in 0.32s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes step-in {
+  from {
+    transform: translateX(28px);
+    opacity: 0;
+  }
+}
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 0.9;
+  color: var(--accent);
+}
+
+.step-text {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.step-drawing {
+  background: var(--card);
+  border-radius: var(--r-card);
+  padding: 12px;
+}
+
+.done-when {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.45;
+  padding: 14px;
+  border-radius: var(--r-tile);
+  border: 1px solid var(--line);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.done-when .label {
+  display: block;
+  color: var(--ok);
+  margin-bottom: 2px;
+}
+
+.done-when .check {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  display: grid;
+  place-items: center;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.done-when .check svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--ok);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.done-when .check polyline {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.done-when.on {
+  border-color: var(--ok);
+  background: rgba(166, 201, 94, 0.08);
+}
+
+.done-when.on .check {
+  border-color: var(--ok);
+  animation: check-pop 0.35s cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+.done-when.on .check polyline {
+  animation: check-draw 0.3s 0.08s ease-out forwards;
+}
+
+@keyframes check-pop {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes check-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.step-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  padding: 12px max(var(--gutter), env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 12px)
+    max(var(--gutter), env(safe-area-inset-left, 0px));
+  background: linear-gradient(180deg, rgba(11, 23, 48, 0), var(--bg) 30%);
+  max-width: 560px;
+  margin: 0 auto;
+}

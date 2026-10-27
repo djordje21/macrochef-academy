@@ -1,0 +1,21 @@
+.lang-switch {
+  display: flex;
+  padding: 3px;
+  border-radius: var(--r-pill);
+  background: rgba(11, 23, 48, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.lang-switch button {
+  min-width: 38px;
+  min-height: 30px;
+  border-radius: var(--r-pill);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.lang-switch button.on {
+  background: var(--text);
+  color: var(--bg);
+}

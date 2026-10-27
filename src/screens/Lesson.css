@@ -1,0 +1,43 @@
+.lesson {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 100px);
+}
+
+.lesson-title {
+  font-size: 28px;
+}
+
+.need {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.need div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 7px;
+  border-bottom: 1px dotted var(--line);
+}
+
+.need .mono {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.lesson-go {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px max(var(--gutter), env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 12px)
+    max(var(--gutter), env(safe-area-inset-left, 0px));
+  background: linear-gradient(180deg, rgba(11, 23, 48, 0), var(--bg) 30%);
+}
+
+.lesson-go .cta {
+  max-width: 524px;
+  margin: 0 auto;
+}

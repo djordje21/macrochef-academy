@@ -1,0 +1,112 @@
+.lesson-end {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 100px);
+}
+
+.think {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.think h2 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  text-align: left;
+  min-height: var(--tap);
+  padding: 12px 14px;
+  border-radius: var(--r-tile);
+  border: 1px solid var(--line);
+  font-size: 15px;
+  transition: border-color 0.25s, opacity 0.25s;
+}
+
+.option i {
+  font-style: normal;
+  font-family: var(--font-data);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.option.right {
+  border-color: var(--ok);
+}
+
+.option.right i {
+  color: var(--ok);
+}
+
+.option.wrong {
+  border-color: var(--warn);
+}
+
+.option.dim {
+  opacity: 0.5;
+}
+
+.explain {
+  border-left: 2px solid var(--ok);
+  padding-left: 12px;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+.recipe {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recipe > b {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.macros {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  font-family: var(--font-data);
+  font-size: 15px;
+}
+
+.macros span {
+  display: flex;
+  flex-direction: column;
+}
+
+.macros small {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.macros .p {
+  color: var(--protein);
+}
+
+.macros .c {
+  color: var(--carbs);
+}
+
+.macros .f {
+  color: var(--fat);
+}
