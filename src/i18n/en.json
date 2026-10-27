@@ -106,5 +106,11 @@
   "gradeview.lessonsN": "lessons",
   "gradeview.read": "reading",
   "gradeview.soonCta": "Opens after grade {n}",
-  "gradeview.planned": "Grade plan; lessons are being written."
+  "gradeview.planned": "Grade plan; lessons are being written.",
+  "gradeview.others": "Other grades",
+  "menu.open": "Open menu",
+  "menu.close": "Close menu",
+  "menu.grades": "Grades",
+  "menu.modules": "Grade 1 · modules",
+  "menu.family": "Part of the MacroChef family"
 }

@@ -106,5 +106,11 @@
   "gradeview.lessonsN": "lekcija",
   "gradeview.read": "čitanja",
   "gradeview.soonCta": "Otvara se posle {n}. razreda",
-  "gradeview.planned": "Plan razreda, lekcije su u pripremi."
+  "gradeview.planned": "Plan razreda, lekcije su u pripremi.",
+  "gradeview.others": "Ostali razredi",
+  "menu.open": "Otvori meni",
+  "menu.close": "Zatvori meni",
+  "menu.grades": "Razredi",
+  "menu.modules": "1. razred · moduli",
+  "menu.family": "Deo MacroChef porodice"
 }

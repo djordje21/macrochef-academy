@@ -10,8 +10,9 @@ import { Landing } from '../screens/Landing'
 import { Exam } from '../screens/Exam'
 import { GradeView } from '../screens/GradeView'
 import { isWelcomed } from './progress'
+import { Menu } from './Menu'
 
-export function App() {
+function Screen() {
   const { path, params } = useRoute()
   const [, section, id, sub] = path.split('/')
 
@@ -27,6 +28,18 @@ export function App() {
     <>
       {section === 'reference' ? <Reference /> : <Home />}
       <BottomNav />
+    </>
+  )
+}
+
+export function App() {
+  const { path } = useRoute()
+  // The step screen stays a focused, full-screen view next to the stove.
+  const focused = path.endsWith('/step')
+  return (
+    <>
+      <Screen />
+      {!focused && <Menu />}
     </>
   )
 }

@@ -1,0 +1,209 @@
+.menu-button {
+  position: fixed;
+  z-index: 30;
+  top: calc(env(safe-area-inset-top, 0px) + 10px);
+  right: max(12px, env(safe-area-inset-right, 0px));
+  width: var(--tap);
+  height: var(--tap);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(11, 23, 48, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+}
+
+.menu-button svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* Leave room for the burger on the right of every top bar. */
+.topbar,
+.home-bar,
+.landing-bar {
+  padding-right: 52px;
+}
+
+.menu-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(5, 10, 22, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.menu-scrim.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-drawer {
+  position: fixed;
+  z-index: 41;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(340px, 88vw);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--nav);
+  border-left: 1px solid var(--line);
+  padding: calc(env(safe-area-inset-top, 0px) + 14px) max(18px, env(safe-area-inset-right, 0px))
+    calc(env(safe-area-inset-bottom, 0px) + 24px) 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.menu-drawer.open {
+  transform: none;
+}
+
+.menu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-close {
+  width: var(--tap);
+  height: var(--tap);
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.menu-drawer .lang-switch {
+  align-self: flex-start;
+  background: var(--card);
+}
+
+.menu-label {
+  margin-top: 6px;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-links button {
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-links button.on {
+  color: var(--accent);
+}
+
+.menu-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex: none;
+}
+
+.menu-dot.g1 {
+  background: var(--grade-1);
+}
+
+.menu-dot.g2 {
+  background: var(--grade-2);
+}
+
+.menu-dot.g3 {
+  background: var(--grade-3);
+}
+
+.menu-soon {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.menu-ok {
+  margin-left: auto;
+  color: var(--ok);
+}
+
+.menu-modules details {
+  border-bottom: 1px solid var(--line);
+}
+
+.menu-modules summary {
+  min-height: var(--tap);
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  font-size: 15px;
+}
+
+.menu-modules summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-modules summary .mono {
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.menu-modules .menu-count {
+  color: var(--muted);
+}
+
+.menu-modules details[open] summary {
+  font-weight: 700;
+}
+
+.menu-module-open {
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 0 0 8px 40px;
+}
+
+.menu-lesson {
+  width: 100%;
+  min-height: 40px;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  text-align: left;
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+.menu-lesson .mono {
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.menu-lesson.on {
+  color: var(--accent);
+}
+
+.menu-foot {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}

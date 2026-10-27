@@ -272,8 +272,3 @@
   width: 100%;
   text-align: left;
 }
-
-.next-pill.open {
-  background: var(--grade-1);
-  color: var(--on-accent);
-}

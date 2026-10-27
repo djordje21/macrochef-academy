@@ -4,6 +4,7 @@ import { useDone } from '../app/progress'
 import { goBack, navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
+import { GradeCards } from '../components/GradeCards'
 import './GradeView.css'
 
 /** A short intro to one grade: who it is for, what you can do at the end, its modules and exam. */
@@ -107,6 +108,11 @@ export function GradeView({ n }: { n: number }) {
             {t('gradeview.soonCta', { n: n - 1 })}
           </button>
         )}
+
+        <div className="gv-others">
+          <span className="label">{t('gradeview.others')}</span>
+          <GradeCards exclude={n} />
+        </div>
       </div>
     </div>
   )

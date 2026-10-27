@@ -106,5 +106,11 @@
   "gradeview.lessonsN": "уроков",
   "gradeview.read": "чтения",
   "gradeview.soonCta": "Откроется после {n} класса",
-  "gradeview.planned": "План класса, уроки готовятся."
+  "gradeview.planned": "План класса, уроки готовятся.",
+  "gradeview.others": "Другие классы",
+  "menu.open": "Открыть меню",
+  "menu.close": "Закрыть меню",
+  "menu.grades": "Классы",
+  "menu.modules": "1 класс · модули",
+  "menu.family": "Часть семьи MacroChef"
 }

@@ -7,6 +7,7 @@ import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import { LangSwitch } from '../components/LangSwitch'
 import { Logo } from '../components/Logo'
+import { GradeCards } from '../components/GradeCards'
 import './Home.css'
 
 export function Home() {
@@ -98,21 +99,7 @@ export function Home() {
           )}
         </div>
 
-        <div className="home-next">
-          {upcoming.map((g) => (
-            <button key={g.n} className={`next-grade g${g.n}`} onClick={() => navigate(`/grade/${g.n}`)}>
-              <Photo name={g.photo} />
-              <div className="next-text">
-                <span className="next-top">
-                  <span className="label">{t('grade.label', { n: g.n })}</span>
-                  <span className="next-pill">{t('grade.soon')}</span>
-                </span>
-                <b>{c(g.title)}</b>
-                <small>{c(g.tagline)}</small>
-              </div>
-            </button>
-          ))}
-        </div>
+        <GradeCards exclude={grade.n} />
       </div>
     </div>
   )
