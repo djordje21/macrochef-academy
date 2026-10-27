@@ -759,6 +759,91 @@ const drawings = {
       <Cut i={2} d="M210 80 L228 80" />
     </>
   ),
+  // Module 5 · Eggs and vegetables
+  yolkStages: (
+    <>
+      <ellipse cx="60" cy="80" rx="40" ry="50" fill={C.paper} />
+      <circle cx="60" cy="86" r="22" fill="#F8C24A" />
+      <path d="M48 104 Q60 126 72 104 Z" fill="#F8C24A" />
+      <ellipse cx="150" cy="80" rx="40" ry="50" fill={C.paper} />
+      <circle cx="150" cy="86" r="22" fill="#F2A93B" />
+      <circle cx="150" cy="86" r="12" fill="#F8C24A" />
+      <ellipse cx="240" cy="80" rx="40" ry="50" fill={C.paper} />
+      <circle cx="240" cy="86" r="22" fill="#F5D27C" />
+      <Cut i={0} d="M30 146 L90 146" />
+      <Cut i={1} d="M120 146 L180 146" />
+      <Cut i={2} d="M210 146 L270 146" />
+    </>
+  ),
+  eggPeel: (
+    <>
+      <ellipse cx="150" cy="80" rx="48" ry="62" fill={C.bread} />
+      <path d="M110 46 Q150 4 190 46 Q150 40 110 46 Z" fill={C.paper} />
+      <Cut i={0} d="M118 40 Q150 30 182 40" dash />
+    </>
+  ),
+  scramble: (
+    <>
+      <circle cx="140" cy="84" r="66" fill={C.potDark} />
+      <rect x="204" y="78" width="84" height="12" rx="5" fill={C.handle} />
+      <g fill="#F8D27A">
+        <path d="M100 70 Q112 56 128 66 Q140 78 124 88 Q104 92 100 70 Z" />
+        <path d="M140 56 Q160 48 170 64 Q172 80 154 80 Q136 76 140 56 Z" />
+        <path d="M108 100 Q124 92 138 104 Q140 120 120 120 Q104 116 108 100 Z" />
+        <path d="M150 96 Q170 90 178 106 Q174 122 156 118 Q144 110 150 96 Z" />
+      </g>
+      <Cut i={0} d="M196 84 Q170 60 140 84 Q110 108 90 84" />
+    </>
+  ),
+  omeletteFold: (
+    <>
+      <path d="M50 110 A100 40 0 0 1 250 110 Z" fill="#F8D27A" />
+      <path d="M50 110 A100 30 0 0 0 250 110" fill="#F5C860" />
+      <Cut i={0} d="M70 80 Q150 30 230 80" />
+      <Cut i={1} d="M220 66 L230 80 L214 84" />
+    </>
+  ),
+  eggSieve: (
+    <>
+      <path d="M90 50 A60 44 0 0 0 210 50 Z" fill="none" stroke={C.pot} strokeWidth="4" strokeDasharray="5 4" />
+      <rect x="208" y="46" width="70" height="7" rx="3" fill={C.handle} />
+      <ellipse cx="150" cy="62" rx="40" ry="14" fill={C.paper} />
+      <circle cx="150" cy="60" r="12" fill={C.yolk} />
+      <path d="M110 150 L120 110 L180 110 L190 150 Z" fill={C.pot} />
+      <Cut i={0} d="M140 96 L140 108" />
+      <Cut i={1} d="M160 96 L160 108" />
+    </>
+  ),
+  poach: (
+    <>
+      <rect x="60" y="50" width="180" height="96" rx="8" fill={C.pot} />
+      <rect x="66" y="60" width="168" height="80" rx="6" fill={C.water} opacity=".55" />
+      <ellipse cx="150" cy="116" rx="34" ry="16" fill={C.paper} />
+      <circle cx="150" cy="112" r="11" fill={C.yolk} />
+      <g fill={C.ice}><circle cx="100" cy="134" r="2.5" /><circle cx="200" cy="132" r="2.5" /></g>
+      <Cut i={0} d="M150 20 L150 84" />
+      <Cut i={1} d="M142 76 L150 84 L158 76" />
+    </>
+  ),
+  zucchiniPan: (
+    <>
+      <circle cx="140" cy="80" r="68" fill={C.potDark} />
+      <rect x="206" y="74" width="80" height="12" rx="5" fill={C.handle} />
+      <g fill={C.veg}>
+        <path d="M90 66 a14 14 0 0 1 28 0 Z" />
+        <path d="M126 50 a14 14 0 0 1 28 0 Z" />
+        <path d="M162 64 a14 14 0 0 1 28 0 Z" />
+        <path d="M96 102 a14 14 0 0 1 28 0 Z" />
+        <path d="M134 92 a14 14 0 0 1 28 0 Z" />
+        <path d="M166 104 a14 14 0 0 1 28 0 Z" />
+      </g>
+      <g fill={C.bread}>
+        <rect x="90" y="66" width="28" height="4" /><rect x="126" y="50" width="28" height="4" /><rect x="162" y="64" width="28" height="4" />
+        <rect x="96" y="102" width="28" height="4" /><rect x="134" y="92" width="28" height="4" /><rect x="166" y="104" width="28" height="4" />
+      </g>
+      <Cut i={0} d="M140 12 A68 68 0 0 1 208 80" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

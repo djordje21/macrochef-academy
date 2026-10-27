@@ -3,6 +3,7 @@ import { kitchenLessons } from './m1-kitchen'
 import { knifeLessons } from './m2-knife'
 import { heatLessons } from './m3-heat'
 import { tasteLessons } from './m4-taste'
+import { eggLessons } from './m5-eggs'
 
 // Grade 1 · First steps. Modules in teaching order: kitchen and knife first, then heat and taste,
 // then dishes. Unwritten modules list their planned lessons so the whole path is visible from day one.
@@ -70,19 +71,12 @@ export const grade1: Grade = {
       n: 5,
       title: l('Jaja i povrće', 'Eggs and vegetables', 'Яйца и овощи'),
       intro: l(
-        'Jaja na pet načina i povrće koje ostaje hrskavo i zeleno.',
-        'Eggs five ways and vegetables that stay crisp and green.',
-        'Яйца пятью способами и овощи, которые остаются хрустящими и зелёными.',
+        'Jaja na četiri načina i povrće iz tiganja. Najjeftiniji način da naučiš kontrolu vatre.',
+        'Eggs four ways and vegetables from the pan. The cheapest way to learn heat control.',
+        'Яйца четырьмя способами и овощи со сковороды. Самый дешёвый способ научиться управлять огнём.',
       ),
       photo: 'm5.webp',
-      lessons: [],
-      planned: [
-        { title: l('Kuvana jaja', 'Boiled eggs', 'Варёные яйца'), minutes: 6 },
-        { title: l('Kajgana i omlet', 'Scrambled eggs and omelette', 'Скрэмбл и омлет'), minutes: 8 },
-        { title: l('Poširano jaje', 'Poached egg', 'Яйцо пашот'), minutes: 7 },
-        { title: l('Blanširanje i šok', 'Blanching and shocking', 'Бланширование и шок'), minutes: 6 },
-        { title: l('Pečeno povrće', 'Roasted vegetables', 'Запечённые овощи'), minutes: 7 },
-      ],
+      lessons: eggLessons,
     },
     {
       id: 'm6',
