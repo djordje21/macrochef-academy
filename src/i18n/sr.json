@@ -34,7 +34,7 @@
   "end.complete": "Završi lekciju",
   "end.title": "Kraj lekcije",
   "ref.title": "Šalabahter",
-  "ref.intro": "Tablice koje otvoriš usred kuvanja, bez lekcije.",
+  "ref.intro": "Temperature, odnosi, vremena i rezovi iz svih lekcija na jednom mestu. Dodir na red otvara lekciju.",
   "ref.temps": "Temperature u sredini mesa",
   "ref.tempsNote": "Meri termometrom u najdeblji deo, ne do kosti. Skini 3–5°C pre cilja: meso dopeče dok odmara.",
   "ref.rest": "Odmaranje",
@@ -112,5 +112,7 @@
   "menu.close": "Zatvori meni",
   "menu.grades": "Razredi",
   "menu.modules": "1. razred · moduli",
-  "menu.family": "Deo MacroChef porodice"
+  "menu.family": "Deo MacroChef porodice",
+  "ref.ratios": "Odnosi i mere",
+  "ref.times": "Vremena"
 }

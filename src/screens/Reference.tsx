@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { cuts, temps } from '../content/reference'
+import { cuts, ratios, temps, times } from '../content/reference'
 import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import './Reference.css'
@@ -83,6 +83,26 @@ export function Reference() {
         </div>
         <p className="note">{t('ref.zoneText')}</p>
       </section>
+
+      {([
+        ['ref.ratios', ratios],
+        ['ref.times', times],
+      ] as const).map(([title, list]) => (
+        <section key={title} className="ref-block">
+          <h2>{t(title)}</h2>
+          <div className="rows">
+            {list.map((x, i) => (
+              <button key={i} className="row temp" onClick={() => navigate(`/lesson/${x.lesson}`)}>
+                <span>
+                  {c(x.name)}
+                  <small>{x.lesson}</small>
+                </span>
+                <span className="s">{c(x.value)}</span>
+              </button>
+            ))}
+          </div>
+        </section>
+      ))}
 
       <section className="ref-block">
         <h2>{t('ref.cuts')}</h2>

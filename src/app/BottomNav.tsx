@@ -16,7 +16,7 @@ export function BottomNav() {
       </button>
       <button className={onRef ? 'on' : ''} onClick={() => navigate('/reference', undefined, true)}>
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M10 4v11a3 3 0 1 0 4 0V4a2 2 0 0 0-4 0zM12 12v5M17 7h3M17 11h3" />
+          <path d="M6 3h9l3 3v15H6zM9 9h6M9 13h6M9 17h4" />
         </svg>
         {t('nav.reference')}
       </button>

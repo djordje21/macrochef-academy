@@ -34,7 +34,7 @@
   "end.complete": "Finish lesson",
   "end.title": "End of lesson",
   "ref.title": "Cheat sheet",
-  "ref.intro": "Tables to open mid-cooking, no lesson needed.",
+  "ref.intro": "Temperatures, ratios, times and cuts from every lesson in one place. Tap a row to open its lesson.",
   "ref.temps": "Core temperatures for meat",
   "ref.tempsNote": "Measure in the thickest part, not touching bone. Pull it 3–5°C early: meat keeps cooking while it rests.",
   "ref.rest": "Resting",
@@ -112,5 +112,7 @@
   "menu.close": "Close menu",
   "menu.grades": "Grades",
   "menu.modules": "Grade 1 · modules",
-  "menu.family": "Part of the MacroChef family"
+  "menu.family": "Part of the MacroChef family",
+  "ref.ratios": "Ratios and measures",
+  "ref.times": "Times"
 }
