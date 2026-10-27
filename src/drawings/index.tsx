@@ -24,6 +24,19 @@ const C = {
   paper: '#F3F5FA',
   cut: '#F5B83D',
   ok: '#A6C95E',
+  pot: '#8E9BB8',
+  potDark: '#5E6E90',
+  water: '#5C8BD6',
+  ice: '#BFD4F2',
+  meat: '#C8655A',
+  crust: '#7A3B22',
+  veg: '#7FB24A',
+  bread: '#E8C27E',
+  yolk: '#F5B83D',
+  warn: '#F0644A',
+  fridge: '#DCE3EE',
+  raisedBar: '#24375E',
+  bg: '#0B1730',
 }
 
 /** An amber line that draws itself; `i` sets its turn in the sequence. */
@@ -292,6 +305,338 @@ const drawings = {
         <path d="M190 116 Q210 104 230 118 T270 112" />
         <path d="M204 84 Q220 72 236 86 T268 80" />
       </g>
+    </>
+  ),
+  // Module 1 · Kitchen before cooking
+  twoKnives: (
+    <>
+      <Board />
+      <rect x="30" y="98" width="62" height="16" rx="6" fill={C.handle} />
+      <path d="M92 96 L262 98 Q252 116 208 118 L92 114 Z" fill={C.steel} />
+      <rect x="40" y="58" width="42" height="12" rx="5" fill={C.handle} />
+      <path d="M82 56 L156 60 Q148 72 128 72 L82 70 Z" fill={C.steel} />
+      <Cut i={0} d="M92 84 L262 84" />
+      <Cut i={1} d="M82 44 L156 44" />
+    </>
+  ),
+  bigBoard: (
+    <>
+      <rect x="40" y="18" width="220" height="118" rx="10" fill={C.wood} />
+      <rect x="46" y="24" width="208" height="106" rx="8" fill={C.woodTop} opacity=".35" />
+      <circle cx="112" cy="77" r="36" fill={C.veg} />
+      <path d="M90 66 Q112 52 134 66 M88 86 Q112 100 136 86" fill="none" stroke="#5E8F35" strokeWidth="2" />
+      <g fill={C.veg}>
+        <rect x="186" y="56" width="12" height="12" rx="2" />
+        <rect x="204" y="64" width="12" height="12" rx="2" />
+        <rect x="190" y="78" width="12" height="12" rx="2" />
+        <rect x="214" y="86" width="12" height="12" rx="2" />
+      </g>
+      <Cut i={0} d="M40 150 L260 150" />
+      <Cut i={1} d="M276 18 L276 136" />
+    </>
+  ),
+  pans: (
+    <>
+      <rect x="14" y="108" width="72" height="18" rx="4" fill={C.pot} />
+      <rect x="86" y="110" width="30" height="6" rx="3" fill={C.handle} />
+      <rect x="126" y="84" width="62" height="42" rx="5" fill={C.pot} />
+      <rect x="188" y="88" width="24" height="6" rx="3" fill={C.handle} />
+      <rect x="220" y="52" width="68" height="74" rx="6" fill={C.pot} />
+      <rect x="214" y="58" width="80" height="6" rx="3" fill={C.potDark} />
+      <Cut i={0} d="M16 130 L84 130" />
+      <Cut i={1} d="M128 130 L186 130" />
+      <Cut i={2} d="M222 130 L286 130" />
+    </>
+  ),
+  iceTest: (
+    <>
+      <path d="M90 50 L190 50 L178 146 L102 146 Z" fill={C.water} opacity=".55" />
+      <g fill={C.ice}>
+        <rect x="108" y="64" width="22" height="22" rx="4" transform="rotate(-12 119 75)" />
+        <rect x="142" y="78" width="22" height="22" rx="4" transform="rotate(10 153 89)" />
+        <rect x="118" y="104" width="22" height="22" rx="4" />
+      </g>
+      <line x1="150" y1="130" x2="212" y2="52" stroke={C.steelEdge} strokeWidth="4" strokeLinecap="round" />
+      <circle cx="222" cy="38" r="22" fill={C.paper} />
+      <Cut i={0} d="M222 38 L222 20" />
+    </>
+  ),
+  bowlsInOrder: (
+    <>
+      <path d="M20 90 A30 22 0 0 0 80 90 Z" fill={C.pot} />
+      <ellipse cx="50" cy="90" rx="26" ry="5" fill={C.flesh} />
+      <path d="M90 90 A30 22 0 0 0 150 90 Z" fill={C.pot} />
+      <ellipse cx="120" cy="90" rx="26" ry="5" fill={C.paper} />
+      <path d="M160 90 A30 22 0 0 0 220 90 Z" fill={C.pot} />
+      <ellipse cx="190" cy="90" rx="26" ry="5" fill={C.warn} />
+      <path d="M230 90 A30 22 0 0 0 290 90 Z" fill={C.pot} />
+      <ellipse cx="260" cy="90" rx="26" ry="5" fill={C.veg} />
+      <Cut i={0} d="M30 136 L270 136" />
+      <Cut i={1} d="M260 128 L270 136 L260 144" />
+    </>
+  ),
+  station: (
+    <>
+      <rect x="90" y="40" width="130" height="90" rx="8" fill={C.wood} />
+      <circle cx="46" cy="44" r="20" fill={C.pot} />
+      <circle cx="46" cy="96" r="20" fill={C.pot} />
+      <circle cx="46" cy="44" r="13" fill={C.flesh} />
+      <circle cx="46" cy="96" r="13" fill={C.veg} />
+      <circle cx="262" cy="56" r="24" fill={C.potDark} />
+      <rect x="236" y="104" width="54" height="34" rx="5" fill={C.cloth} opacity=".7" />
+      <Cut i={0} d="M196 70 Q222 46 246 54" />
+      <Cut i={1} d="M70 70 L96 70" />
+    </>
+  ),
+  twoBoards: (
+    <>
+      <rect x="20" y="30" width="122" height="100" rx="8" fill={C.warn} />
+      <rect x="158" y="30" width="122" height="100" rx="8" fill={C.veg} />
+      <path d="M50 70 Q60 52 90 58 Q118 62 112 86 Q104 106 74 100 Q46 96 50 70 Z" fill={C.meat} />
+      <path d="M182 92 L250 70 L256 80 L186 100 Z" fill={C.carrot} />
+      <Cut i={0} d="M150 20 L150 140" dash />
+    </>
+  ),
+  fridgeTemp: (
+    <>
+      <rect x="80" y="8" width="140" height="146" rx="10" fill={C.fridge} />
+      <g stroke={C.pot} strokeWidth="3">
+        <line x1="88" y1="54" x2="212" y2="54" />
+        <line x1="88" y1="100" x2="212" y2="100" />
+      </g>
+      <path d="M128 70 L156 70 L152 100 L132 100 Z" fill={C.water} opacity=".6" />
+      <line x1="146" y1="94" x2="172" y2="64" stroke={C.steelEdge} strokeWidth="3" strokeLinecap="round" />
+      <circle cx="178" cy="62" r="10" fill={C.paper} stroke={C.pot} strokeWidth="1.5" />
+      <Cut i={0} d="M178 62 L172 54" />
+      <Cut i={1} d="M120 104 L164 104" />
+    </>
+  ),
+  fridgeShelves: (
+    <>
+      <rect x="80" y="8" width="140" height="146" rx="10" fill={C.fridge} />
+      <g stroke={C.pot} strokeWidth="3">
+        <line x1="88" y1="52" x2="212" y2="52" />
+        <line x1="88" y1="98" x2="212" y2="98" />
+      </g>
+      <rect x="98" y="26" width="40" height="26" rx="4" fill={C.pot} />
+      <rect x="150" y="30" width="44" height="22" rx="4" fill={C.potDark} />
+      <path d="M100 98 L100 78 L140 70 L140 98 Z" fill={C.bread} />
+      <rect x="96" y="128" width="108" height="16" rx="4" fill={C.potDark} />
+      <path d="M108 128 Q118 108 146 112 Q178 114 186 128 Z" fill={C.meat} />
+      <Cut i={0} d="M88 104 L212 104 L212 150 L88 150 Z" />
+    </>
+  ),
+  dangerZone: (
+    <>
+      <rect x="30" y="64" width="240" height="18" rx="9" fill={C.raisedBar} />
+      <rect x="42" y="64" width="132" height="18" fill={C.warn} opacity=".75" />
+      <line x1="39" y1="56" x2="39" y2="90" stroke={C.ice} strokeWidth="3" />
+      <rect x="196" y="112" width="74" height="18" rx="3" fill={C.pot} />
+      <rect x="200" y="106" width="66" height="8" rx="2" fill={C.flesh} />
+      <Cut i={0} d="M250 40 L44 40" />
+      <Cut i={1} d="M54 32 L44 40 L54 48" />
+    </>
+  ),
+  scaleTare: (
+    <>
+      <rect x="70" y="104" width="160" height="40" rx="8" fill={C.potDark} />
+      <rect x="84" y="96" width="132" height="10" rx="3" fill={C.pot} />
+      <rect x="128" y="114" width="44" height="22" rx="4" fill={C.bg} />
+      <path d="M96 96 A54 40 0 0 0 204 96 Z" fill={C.pot} opacity=".9" transform="translate(0 -40)" />
+      <Cut i={0} d="M150 118 A6 8 0 1 1 149.9 118" />
+    </>
+  ),
+  levelSpoon: (
+    <>
+      <path d="M60 90 A44 26 0 0 0 148 90 Z" fill={C.pot} />
+      <rect x="148" y="86" width="110" height="8" rx="4" fill={C.pot} />
+      <path d="M64 90 Q104 50 144 90 Z" fill="none" stroke={C.paper} strokeWidth="2" strokeDasharray="4 4" />
+      <ellipse cx="104" cy="90" rx="40" ry="5" fill={C.paper} />
+      <rect x="40" y="76" width="140" height="8" rx="3" fill={C.steel} transform="rotate(0)" />
+      <Cut i={0} d="M44 90 L174 90" />
+    </>
+  ),
+
+  // Module 3 · Heat
+  eggSet: (
+    <>
+      <circle cx="150" cy="80" r="70" fill={C.potDark} />
+      <path d="M96 84 Q92 44 140 40 Q196 36 206 78 Q214 120 160 124 Q100 128 96 84 Z" fill={C.paper} />
+      <circle cx="152" cy="80" r="20" fill={C.yolk} />
+      <Cut i={0} d="M110 110 Q120 98 134 94" />
+      <Cut i={1} d="M196 62 Q184 66 172 72" />
+    </>
+  ),
+  grainSwell: (
+    <>
+      <ellipse cx="80" cy="80" rx="22" ry="9" fill={C.paper} opacity=".85" />
+      <ellipse cx="220" cy="80" rx="44" ry="20" fill={C.paper} />
+      <Cut i={0} d="M118 80 L166 80" />
+      <Cut i={1} d="M156 70 L166 80 L156 90" />
+    </>
+  ),
+  lidDrops: (
+    <>
+      <rect x="70" y="80" width="140" height="64" rx="8" fill={C.pot} />
+      <rect x="74" y="96" width="132" height="44" rx="6" fill={C.water} opacity=".6" />
+      <g transform="rotate(-18 120 50)">
+        <rect x="64" y="44" width="150" height="10" rx="5" fill={C.potDark} />
+        <rect x="128" y="34" width="22" height="10" rx="4" fill={C.handle} />
+      </g>
+      <g fill={C.ice}>
+        <ellipse cx="112" cy="70" rx="3" ry="4.5" />
+        <ellipse cx="150" cy="60" rx="3" ry="4.5" />
+        <ellipse cx="184" cy="48" rx="3" ry="4.5" />
+      </g>
+      <Cut i={0} d="M110 92 Q100 80 110 68" />
+      <Cut i={1} d="M150 92 Q140 78 150 64" />
+      <Cut i={2} d="M188 92 Q178 76 188 60" />
+    </>
+  ),
+  toast: (
+    <>
+      <rect x="40" y="112" width="180" height="16" rx="4" fill={C.potDark} />
+      <rect x="220" y="114" width="60" height="7" rx="3" fill={C.handle} />
+      <path d="M80 112 L80 74 Q80 56 104 56 Q116 44 132 52 Q150 44 160 56 Q182 56 182 74 L182 112 Z" fill={C.bread} />
+      <rect x="80" y="104" width="102" height="8" fill={C.crust} />
+      <Cut i={0} d="M78 116 L184 116" />
+    </>
+  ),
+  waterVsPan: (
+    <>
+      <rect x="80" y="20" width="24" height="120" rx="12" fill={C.raisedBar} />
+      <rect x="80" y="92" width="24" height="48" rx="12" fill={C.water} />
+      <rect x="196" y="20" width="24" height="120" rx="12" fill={C.raisedBar} />
+      <rect x="196" y="44" width="24" height="96" rx="12" fill={C.warn} />
+      <Cut i={0} d="M60 73 L240 73" dash />
+    </>
+  ),
+  boil: (
+    <>
+      <rect x="70" y="60" width="160" height="86" rx="8" fill={C.pot} />
+      <rect x="76" y="70" width="148" height="70" rx="6" fill={C.water} opacity=".6" />
+      <g fill={C.ice}>
+        <circle cx="100" cy="80" r="9" />
+        <circle cx="130" cy="74" r="11" />
+        <circle cx="166" cy="80" r="10" />
+        <circle cx="198" cy="76" r="9" />
+        <circle cx="118" cy="104" r="7" />
+        <circle cx="182" cy="108" r="8" />
+        <circle cx="148" cy="120" r="6" />
+      </g>
+      <Cut i={0} d="M110 52 Q100 38 110 22" />
+      <Cut i={1} d="M150 52 Q140 36 150 18" />
+      <Cut i={2} d="M190 52 Q180 38 190 22" />
+    </>
+  ),
+  simmer: (
+    <>
+      <rect x="70" y="60" width="160" height="86" rx="8" fill={C.pot} />
+      <rect x="76" y="70" width="148" height="70" rx="6" fill={C.water} opacity=".6" />
+      <g fill={C.ice}>
+        <circle cx="112" cy="132" r="3" />
+        <circle cx="118" cy="116" r="2.5" />
+        <circle cx="184" cy="130" r="3" />
+        <circle cx="180" cy="108" r="2.5" />
+      </g>
+      <Cut i={0} d="M76 72 Q100 68 124 72 T172 72 T224 72" />
+    </>
+  ),
+  iceBath: (
+    <>
+      <path d="M60 80 A90 60 0 0 0 240 80 Z" fill={C.pot} />
+      <ellipse cx="150" cy="80" rx="90" ry="12" fill={C.water} opacity=".7" />
+      <g fill={C.ice}>
+        <rect x="96" y="70" width="18" height="18" rx="3" transform="rotate(-10 105 79)" />
+        <rect x="180" y="68" width="18" height="18" rx="3" transform="rotate(14 189 77)" />
+      </g>
+      <g fill={C.veg}>
+        <rect x="124" y="74" width="40" height="6" rx="3" transform="rotate(-8 144 77)" />
+        <rect x="134" y="82" width="40" height="6" rx="3" transform="rotate(6 154 85)" />
+      </g>
+      <Cut i={0} d="M150 14 L150 56" />
+      <Cut i={1} d="M140 46 L150 56 L160 46" />
+    </>
+  ),
+  steamer: (
+    <>
+      <rect x="70" y="50" width="160" height="96" rx="8" fill={C.pot} />
+      <rect x="76" y="118" width="148" height="22" rx="4" fill={C.water} opacity=".7" />
+      <path d="M80 90 Q150 112 220 90" fill="none" stroke={C.potDark} strokeWidth="6" strokeDasharray="4 4" />
+      <g fill={C.veg}>
+        <circle cx="116" cy="84" r="13" />
+        <circle cx="150" cy="88" r="14" />
+        <circle cx="186" cy="84" r="13" />
+      </g>
+      <rect x="64" y="40" width="172" height="10" rx="5" fill={C.potDark} />
+      <Cut i={0} d="M110 116 Q102 106 110 96" />
+      <Cut i={1} d="M190 116 Q182 106 190 96" />
+    </>
+  ),
+  traySpacing: (
+    <>
+      <rect x="30" y="20" width="240" height="124" rx="8" fill={C.potDark} />
+      <g fill={C.carrot}>
+        <rect x="52" y="38" width="26" height="26" rx="5" />
+        <rect x="98" y="40" width="26" height="26" rx="5" />
+        <rect x="144" y="36" width="26" height="26" rx="5" />
+      </g>
+      <g fill={C.bread}>
+        <rect x="56" y="84" width="26" height="26" rx="5" />
+        <rect x="102" y="86" width="26" height="26" rx="5" />
+        <rect x="148" y="82" width="26" height="26" rx="5" />
+      </g>
+      <g fill={C.veg}>
+        <rect x="194" y="40" width="26" height="26" rx="5" />
+        <rect x="198" y="86" width="26" height="26" rx="5" />
+      </g>
+      <Cut i={0} d="M88 72 Q82 62 88 52" />
+      <Cut i={1} d="M136 72 Q130 62 136 52" />
+      <Cut i={2} d="M184 76 Q178 66 184 56" />
+    </>
+  ),
+  waterDrop: (
+    <>
+      <rect x="40" y="110" width="190" height="16" rx="4" fill={C.potDark} />
+      <rect x="230" y="112" width="60" height="7" rx="3" fill={C.handle} />
+      <path d="M135 80 Q135 92 128 100 A10 10 0 0 0 142 100 Q135 92 135 80 Z" fill={C.ice} />
+      <Cut i={0} d="M112 98 L102 90" />
+      <Cut i={1} d="M158 98 L168 90" />
+      <Cut i={2} d="M135 70 L135 58" />
+    </>
+  ),
+  panSpacing: (
+    <>
+      <circle cx="140" cy="80" r="68" fill={C.potDark} />
+      <rect x="206" y="74" width="80" height="12" rx="5" fill={C.handle} />
+      <g fill={C.bread}>
+        <path d="M96 62 a16 16 0 0 1 32 0 Z" />
+        <path d="M144 52 a16 16 0 0 1 32 0 Z" />
+        <path d="M90 104 a16 16 0 0 1 32 0 Z" />
+        <path d="M138 98 a16 16 0 0 1 32 0 Z" />
+        <path d="M168 76 a14 14 0 0 1 28 0 Z" />
+      </g>
+      <Cut i={0} d="M140 12 A68 68 0 0 1 208 80" />
+    </>
+  ),
+  patDry: (
+    <>
+      <Board y={128} />
+      <rect x="70" y="92" width="160" height="36" rx="12" fill={C.meat} />
+      <path d="M82 84 L218 84 L224 96 L76 96 Z" fill={C.paper} />
+      <Cut i={0} d="M150 26 L150 72" />
+      <Cut i={1} d="M140 62 L150 72 L160 62" />
+    </>
+  ),
+  searRelease: (
+    <>
+      <rect x="30" y="116" width="200" height="16" rx="4" fill={C.potDark} />
+      <rect x="230" y="118" width="60" height="7" rx="3" fill={C.handle} />
+      <path d="M70 116 L70 92 Q70 80 86 80 L186 80 Q202 80 202 92 L202 112 Z" fill={C.meat} transform="rotate(-6 70 116)" />
+      <path d="M70 116 L202 102" stroke={C.crust} strokeWidth="7" strokeLinecap="round" />
+      <path d="M252 40 L206 96 M262 48 L212 100" stroke={C.steelEdge} strokeWidth="4" strokeLinecap="round" />
+      <Cut i={0} d="M74 124 L200 110" />
+      <Cut i={1} d="M218 72 L218 52" />
     </>
   ),
 } satisfies Record<string, ReactNode>

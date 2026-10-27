@@ -1,5 +1,7 @@
 import { l, type Grade } from '../types'
+import { kitchenLessons } from './m1-kitchen'
 import { knifeLessons } from './m2-knife'
+import { heatLessons } from './m3-heat'
 
 // Grade 1 · First steps. Modules in teaching order: kitchen and knife first, then heat and taste,
 // then dishes. Unwritten modules list their planned lessons so the whole path is visible from day one.
@@ -24,14 +26,7 @@ export const grade1: Grade = {
         'Инвентарь, порядок и гигиена. Всё, что должно быть готово, прежде чем включить плиту.',
       ),
       photo: 'm1.webp',
-      lessons: [],
-      planned: [
-        { title: l('Minimum opreme', 'Minimum equipment', 'Минимум инвентаря'), minutes: 6 },
-        { title: l('Mise en place', 'Mise en place', 'Мизанплас'), minutes: 6 },
-        { title: l('Ruke, daske, krpe', 'Hands, boards, cloths', 'Руки, доски, салфетки'), minutes: 5 },
-        { title: l('Frižider i opasna zona', 'Fridge and the danger zone', 'Холодильник и опасная зона'), minutes: 7 },
-        { title: l('Čitanje recepta i merenje', 'Reading a recipe and measuring', 'Чтение рецепта и взвешивание'), minutes: 6 },
-      ],
+      lessons: kitchenLessons,
     },
     {
       id: 'm2',
@@ -55,15 +50,7 @@ export const grade1: Grade = {
         'Что огонь делает с едой и как им управлять: вода, пар, духовка, сковорода.',
       ),
       photo: 'm3.webp',
-      lessons: [],
-      planned: [
-        { title: l('Šta toplota radi hrani', 'What heat does to food', 'Что огонь делает с едой'), minutes: 6 },
-        { title: l('Kuvanje, krčkanje, blanširanje', 'Boiling, simmering, blanching', 'Варка, томление, бланширование'), minutes: 8 },
-        { title: l('Para', 'Steam', 'Пар'), minutes: 5 },
-        { title: l('Rerna', 'Oven', 'Духовка'), minutes: 7 },
-        { title: l('Tiganj i sotiranje', 'Pan and sautéing', 'Сковорода и соте'), minutes: 8 },
-        { title: l('Zlatna korica', 'The golden crust', 'Золотистая корочка'), minutes: 7 },
-      ],
+      lessons: heatLessons,
     },
     {
       id: 'm4',
