@@ -36,22 +36,14 @@ export function useDone(): Set<string> {
   )
 }
 
-// Whether this device has passed the landing page. Progress alone counts too, for people who
-// started before the landing page existed.
-const WELCOMED = 'academy.welcomed'
+// The landing page opens every launch of the app; once passed, the app stays inside until it is
+// opened again. Kept in memory on purpose, so each new launch starts on the landing page.
+let welcomed = false
 
 export function isWelcomed(): boolean {
-  try {
-    return localStorage.getItem(WELCOMED) === '1' || done.size > 0
-  } catch {
-    return done.size > 0
-  }
+  return welcomed
 }
 
 export function markWelcomed() {
-  try {
-    localStorage.setItem(WELCOMED, '1')
-  } catch {
-    /* storage blocked: the landing page shows again next time */
-  }
+  welcomed = true
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { allLessons, grades, upcoming } from '../content'
+import { useDone } from '../app/progress'
 import { navigate } from '../app/router'
 import { markWelcomed } from '../app/progress'
 import { useT } from '../i18n/useT'
@@ -22,10 +23,38 @@ export function Landing() {
   const [video, setVideo] = useState(true)
   const grade = grades[0]
 
+  const done = useDone()
+  const next = allLessons.find((x) => !done.has(x.id))
+  const started = done.size > 0
+
   const start = () => {
     markWelcomed()
     navigate('/', undefined, true)
   }
+  // Someone who has already begun goes straight back to their next lesson.
+  const resume = () => {
+    markWelcomed()
+    navigate('/', undefined, true)
+    if (next) navigate(`/lesson/${next.id}`)
+  }
+
+  const mainCta = started ? (
+    <button className="cta split" onClick={resume}>
+      <span>
+        {t('home.continue')}
+        {next && (
+          <small>
+            {next.id} {c(next.title)} · {t('home.min', { n: next.minutes })}
+          </small>
+        )}
+      </span>
+      <span aria-hidden="true">→</span>
+    </button>
+  ) : (
+    <button className="cta" onClick={start}>
+      {t('landing.cta')} <span aria-hidden="true">→</span>
+    </button>
+  )
 
   return (
     <div className="landing">
@@ -56,9 +85,12 @@ export function Landing() {
         <div className="landing-copy enter-up">
           <h1>{t('landing.title')}</h1>
           <p>{t('landing.sub')}</p>
-          <button className="cta" onClick={start}>
-            {t('landing.cta')} <span aria-hidden="true">→</span>
-          </button>
+          {mainCta}
+          {started && (
+            <button className="landing-book" onClick={start}>
+              {t('nav.book')} →
+            </button>
+          )}
         </div>
       </header>
 
@@ -149,9 +181,7 @@ export function Landing() {
           <p className="muted">{t('landing.mcText')}</p>
         </section>
 
-        <button className="cta" onClick={start}>
-          {t('landing.cta')} <span aria-hidden="true">→</span>
-        </button>
+        {mainCta}
       </div>
     </div>
   )
