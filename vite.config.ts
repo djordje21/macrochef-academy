@@ -3,10 +3,14 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // Start with `npm run dev -- --host` to open it from a phone on the same Wi-Fi.
-export default defineConfig({
+// `--mode preview-page` builds a copy with relative paths and no service worker, for a shareable preview page.
+export default defineConfig(({ mode }) => ({
+  base: mode === 'preview-page' ? './' : '/',
+  build: mode === 'preview-page' ? { outDir: 'dist-preview' } : undefined,
   plugins: [
     react(),
     VitePWA({
+      disable: mode === 'preview-page',
       registerType: 'autoUpdate',
       // Registered from main.tsx, so a new deploy reloads the app instead of showing the cached version.
       injectRegister: false,
@@ -34,4 +38,4 @@ export default defineConfig({
       },
     }),
   ],
-})
+}))
