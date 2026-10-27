@@ -132,5 +132,13 @@
   "practice.l4": "Yellow buttons with a clock start a timer. The phone beeps when time is up.",
   "practice.go": "Start · step 1",
   "practice.tip": "Theory first? Read the lesson, then come back.",
-  "landing.modesTitle": "Two parts of every lesson"
+  "landing.modesTitle": "Two parts of every lesson",
+  "mode.t1": "The whole lesson on one page",
+  "mode.t2": "Drawings, measures and the why for every step",
+  "mode.t3": "At the end: the mistake everyone makes and a check",
+  "mode.p1": "Lay out the ingredients and stand the phone by the board",
+  "mode.p2": "One step per screen, the screen stays on",
+  "mode.p3": "Timers start with a tap and beep when time is up",
+  "mode.goTheory": "Read the theory",
+  "mode.goPractice": "Go to the kitchen"
 }

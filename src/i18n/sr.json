@@ -132,5 +132,13 @@
   "practice.l4": "Žuta dugmad sa satom pokreću tajmer. Telefon zapišti kad je vreme.",
   "practice.go": "Kreni · korak 1",
   "practice.tip": "Prvo teorija? Pročitaj lekciju, pa se vrati.",
-  "landing.modesTitle": "Dva dela svake lekcije"
+  "landing.modesTitle": "Dva dela svake lekcije",
+  "mode.t1": "Cela lekcija na jednoj stranici",
+  "mode.t2": "Crteži, mere i zašto za svaki korak",
+  "mode.t3": "Na kraju: greška koju svi prave i provera",
+  "mode.p1": "Pripremiš namirnice i postaviš telefon pored daske",
+  "mode.p2": "Jedan korak na ekranu, ekran se ne gasi",
+  "mode.p3": "Vreme pokrećeš dodirom, telefon zapišti kad je gotovo",
+  "mode.goTheory": "Čitaj teoriju",
+  "mode.goPractice": "Kreni u kuhinju"
 }

@@ -1,74 +1,134 @@
 .modes {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.mode {
+.mode-switch {
+  position: relative;
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
-  gap: 12px;
-  align-items: start;
-  width: 100%;
-  text-align: left;
-  padding: 14px;
-  border-radius: var(--r-card);
+  grid-template-columns: 1fr 1fr;
+  padding: 4px;
+  border-radius: var(--r-pill);
   background: var(--card);
   border: 1px solid var(--line);
 }
 
-.mode.practice {
-  border-color: var(--accent);
+/* The thumb slides under the chosen tab. */
+.mode-thumb {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  border-radius: var(--r-pill);
+  background: var(--text);
+  transition: transform 0.35s cubic-bezier(0.3, 0.8, 0.2, 1), background 0.35s;
 }
 
-.mode-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: var(--raised);
-}
-
-.mode.practice .mode-icon {
+.modes.practice .mode-thumb {
+  transform: translateX(100%);
   background: var(--accent);
 }
 
-.mode-icon svg {
-  width: 24px;
-  height: 24px;
+.mode-switch button {
+  position: relative;
+  z-index: 1;
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+
+.mode-switch button.on {
+  color: var(--bg);
+}
+
+.mode-switch svg {
+  width: 20px;
+  height: 20px;
   fill: none;
-  stroke: var(--text);
+  stroke: currentColor;
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.mode.practice .mode-icon svg {
-  stroke: var(--on-accent);
-}
-
-.mode-text {
+.mode-panel {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 10px;
+  padding: 16px;
+  border-radius: var(--r-card);
+  background: var(--card);
+  border: 1px solid var(--line);
+  animation: mode-in 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
-.mode-text b {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 17px;
+.modes.practice .mode-panel {
+  border-color: var(--accent);
 }
 
-.mode-text small {
-  font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
+.modes.theory .mode-panel .label {
+  color: var(--text);
 }
 
-.mode-text > span {
+.modes.practice .mode-panel .label {
+  color: var(--accent);
+}
+
+.modes.practice .mode-panel {
+  animation-name: mode-in-right;
+}
+
+@keyframes mode-in {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+}
+
+@keyframes mode-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+}
+
+.mode-lead {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.mode-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mode-panel li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 8px;
   font-size: 14px;
   color: var(--muted);
   line-height: 1.45;
+}
+
+.mode-panel li::before {
+  content: '✓';
+  color: var(--ok);
+  font-weight: 800;
+}
+
+.mode-panel .cta {
+  margin-top: 4px;
 }
