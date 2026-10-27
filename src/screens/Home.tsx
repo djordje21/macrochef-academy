@@ -103,8 +103,9 @@ export function Home() {
             <button key={g.n} className={`next-grade g${g.n}`} onClick={() => navigate(`/grade/${g.n}`)}>
               <Photo name={g.photo} />
               <div className="next-text">
-                <span className="label">
-                  {t('grade.label', { n: g.n })} · {t('grade.locked', { n: g.n - 1 })}
+                <span className="next-top">
+                  <span className="label">{t('grade.label', { n: g.n })}</span>
+                  <span className="next-pill">{t('grade.soon')}</span>
                 </span>
                 <b>{c(g.title)}</b>
                 <small>{c(g.tagline)}</small>

@@ -107,8 +107,9 @@ export function Landing() {
             <button className="lg-card g1" onClick={() => navigate(`/grade/1`)}>
               <Photo name={grade.photo} />
               <div>
-                <span className="label">
-                  {t('grade.label', { n: 1 })} · {t('landing.open')}
+                <span className="next-top">
+                  <span className="label">{t('grade.label', { n: 1 })}</span>
+                  <span className="next-pill open">{t('landing.open')}</span>
                 </span>
                 <b>{c(grade.title)}</b>
                 <small>{c(grade.tagline)}</small>
@@ -118,8 +119,9 @@ export function Landing() {
               <button key={g.n} className={`lg-card g${g.n}`} onClick={() => navigate(`/grade/${g.n}`)}>
                 <Photo name={g.photo} />
                 <div>
-                  <span className="label">
-                    {t('grade.label', { n: g.n })} · {t('grade.soon')}
+                  <span className="next-top">
+                    <span className="label">{t('grade.label', { n: g.n })}</span>
+                    <span className="next-pill">{t('grade.soon')}</span>
                   </span>
                   <b>{c(g.title)}</b>
                   <small>{c(g.tagline)}</small>
