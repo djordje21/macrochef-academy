@@ -844,6 +844,92 @@ const drawings = {
       <Cut i={0} d="M140 12 A68 68 0 0 1 208 80" />
     </>
   ),
+  // Module 6 · Meat and fish
+  probeCenter: (
+    <>
+      <Board y={128} />
+      <rect x="60" y="78" width="170" height="50" rx="16" fill={C.meat} />
+      <rect x="66" y="84" width="158" height="38" rx="12" fill="#D98A7E" opacity=".6" />
+      <line x1="145" y1="103" x2="290" y2="60" stroke={C.steelEdge} strokeWidth="4" strokeLinecap="round" />
+      <Cut i={0} d="M145 103 A7 7 0 1 1 144.9 103" />
+    </>
+  ),
+  carryOver: (
+    <>
+      <rect x="40" y="20" width="24" height="120" rx="12" fill={C.raisedBar} />
+      <rect x="40" y="56" width="24" height="84" rx="12" fill={C.yolk} />
+      <rect x="236" y="20" width="24" height="120" rx="12" fill={C.raisedBar} />
+      <rect x="236" y="46" width="24" height="94" rx="12" fill={C.ok} />
+      <rect x="110" y="96" width="80" height="30" rx="10" fill={C.meat} />
+      <Cut i={0} d="M76 60 Q150 20 224 48" />
+      <Cut i={1} d="M214 40 L224 48 L212 54" />
+    </>
+  ),
+  restTent: (
+    <>
+      <Board y={128} />
+      <rect x="80" y="96" width="140" height="32" rx="12" fill={C.meat} />
+      <path d="M60 128 L150 60 L240 128" fill="none" stroke={C.steel} strokeWidth="5" strokeLinejoin="round" />
+      <Cut i={0} d="M150 60 L150 92" dash />
+    </>
+  ),
+  acrossGrain: (
+    <>
+      <Board y={128} />
+      <rect x="40" y="84" width="220" height="44" rx="14" fill={C.meat} />
+      <g stroke="#A84E44" strokeWidth="2">
+        <line x1="54" y1="96" x2="246" y2="96" /><line x1="50" y1="106" x2="250" y2="106" /><line x1="54" y1="116" x2="246" y2="116" />
+      </g>
+      <Cut i={0} d="M110 70 L110 134" />
+      <Cut i={1} d="M150 70 L150 134" />
+      <Cut i={2} d="M190 70 L190 134" />
+    </>
+  ),
+  flattenChicken: (
+    <>
+      <Board y={128} />
+      <path d="M50 128 Q50 96 110 92 Q190 88 250 116 L250 128 Z" fill="#F2C4B4" />
+      <rect x="70" y="40" width="150" height="12" rx="5" fill={C.potDark} />
+      <rect x="140" y="52" width="10" height="20" fill={C.potDark} />
+      <Cut i={0} d="M145 76 L145 98" />
+      <Cut i={1} d="M137 90 L145 98 L153 90" />
+      <Cut i={2} d="M50 104 L250 104" dash />
+    </>
+  ),
+  fatNicks: (
+    <>
+      <Board y={130} />
+      <path d="M40 120 Q40 70 120 64 Q220 58 260 90 Q262 120 250 130 L50 130 Q40 128 40 120 Z" fill={C.meat} />
+      <path d="M40 120 Q40 70 120 64 Q220 58 260 90" fill="none" stroke={C.flesh} strokeWidth="10" />
+      <Cut i={0} d="M80 66 L90 84" />
+      <Cut i={1} d="M130 56 L134 76" />
+      <Cut i={2} d="M180 56 L178 76" />
+      <Cut i={3} d="M226 66 L216 84" />
+    </>
+  ),
+  fishPress: (
+    <>
+      <rect x="30" y="116" width="200" height="16" rx="4" fill={C.potDark} />
+      <rect x="230" y="118" width="60" height="7" rx="3" fill={C.handle} />
+      <path d="M60 116 L60 96 Q60 82 80 82 L190 82 Q210 82 210 96 L210 116 Z" fill="#F4A582" />
+      <rect x="60" y="110" width="150" height="6" fill="#9A9E9E" />
+      <rect x="100" y="70" width="80" height="10" rx="3" fill={C.steel} />
+      <rect x="136" y="30" width="8" height="42" rx="3" fill={C.handle} />
+      <Cut i={0} d="M160 22 L160 60" />
+      <Cut i={1} d="M152 52 L160 60 L168 52" />
+    </>
+  ),
+  fishOpaque: (
+    <>
+      <rect x="30" y="116" width="200" height="16" rx="4" fill={C.potDark} />
+      <rect x="230" y="118" width="60" height="7" rx="3" fill={C.handle} />
+      <path d="M60 116 L60 76 Q60 62 80 62 L190 62 Q210 62 210 76 L210 116 Z" fill="#F4A582" />
+      <path d="M60 116 L60 76 L210 76 L210 116 Z" fill="#F7D3BF" />
+      <rect x="60" y="110" width="150" height="6" fill="#9A9E9E" />
+      <Cut i={0} d="M230 76 L230 116" />
+      <Cut i={1} d="M50 76 L220 76" dash />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

@@ -4,6 +4,7 @@ import { knifeLessons } from './m2-knife'
 import { heatLessons } from './m3-heat'
 import { tasteLessons } from './m4-taste'
 import { eggLessons } from './m5-eggs'
+import { meatLessons } from './m6-meat'
 
 // Grade 1 · First steps. Modules in teaching order: kitchen and knife first, then heat and taste,
 // then dishes. Unwritten modules list their planned lessons so the whole path is visible from day one.
@@ -88,14 +89,7 @@ export const grade1: Grade = {
         'Термометр вместо догадок. Курица, отбивная и рыба с хрустящей кожей.',
       ),
       photo: 'm6.webp',
-      lessons: [],
-      planned: [
-        { title: l('Termometar i temperature', 'Thermometer and temperatures', 'Термометр и температуры'), minutes: 6 },
-        { title: l('Odmaranje mesa', 'Resting meat', 'Отдых мяса'), minutes: 5 },
-        { title: l('Pileći file i batak', 'Chicken breast and thigh', 'Куриное филе и бедро'), minutes: 9 },
-        { title: l('Svinjski kotlet', 'Pork chop', 'Свиная отбивная'), minutes: 8 },
-        { title: l('Riba sa kožom', 'Skin-on fish', 'Рыба с кожей'), minutes: 8 },
-      ],
+      lessons: meatLessons,
     },
     {
       id: 'm7',
