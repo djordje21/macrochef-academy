@@ -1,5 +1,4 @@
 {
-  "app.name": "Academy",
   "nav.book": "Textbook",
   "nav.reference": "Cheat sheet",
   "grade.label": "Grade {n}",

@@ -180,6 +180,12 @@
   }
 }
 
+.home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .home-about {
   font-family: var(--font-body);
   font-weight: 600;

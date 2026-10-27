@@ -6,6 +6,7 @@ import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import { LangSwitch } from '../components/LangSwitch'
+import { Logo } from '../components/Logo'
 import './Home.css'
 
 export function Home() {
@@ -23,7 +24,7 @@ export function Home() {
         <Photo name={grade.photo} />
         <div className="home-bar">
           <button className="home-brand" onClick={() => navigate('/about')}>
-            {t('app.name')} <span className="home-about">· {t('landing.about')}</span>
+            <Logo /> <span className="home-about">{t('landing.about')}</span>
           </button>
           <LangSwitch />
         </div>

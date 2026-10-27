@@ -239,3 +239,19 @@
     rgba(11, 23, 48, 0.15);
   pointer-events: none;
 }
+
+/* MCA mark: the book cover from MacroChef's recipe intro, as a label. */
+.mca {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 8px 0 10px;
+  border-radius: 4px 7px 7px 4px;
+  background: var(--grade-1);
+  box-shadow: inset 3px 0 0 #c98a12;
+  color: var(--on-accent);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
