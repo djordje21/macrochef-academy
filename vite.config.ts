@@ -3,8 +3,15 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // Start with `npm run dev -- --host` to open it from a phone on the same Wi-Fi.
+// Cloudflare sets WORKERS_CI_COMMIT_SHA; shown in the menu so we can tell which build a phone is running.
+const commit = process.env.WORKERS_CI_COMMIT_SHA ?? process.env.CF_PAGES_COMMIT_SHA ?? 'local'
+const version = `${new Date().toISOString().slice(0, 16).replace('T', ' ')} · ${commit.slice(0, 7)}`
+
 // `--mode preview-page` builds a copy with relative paths and no service worker, for a shareable preview page.
 export default defineConfig(({ mode }) => ({
+  define: {
+    __APP_VERSION__: JSON.stringify(version),
+  },
   base: mode === 'preview-page' ? './' : '/',
   build: {
     // All course text ships in the bundle on purpose, so lessons open offline next to the stove.

@@ -105,7 +105,10 @@ export function Menu() {
           })}
         </div>
 
-        <p className="menu-foot">{t('menu.family')}</p>
+        <p className="menu-foot">
+          {t('menu.family')}
+          <span className="mono">v {__APP_VERSION__}</span>
+        </p>
       </aside>
     </>
   )
