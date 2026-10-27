@@ -13,7 +13,7 @@ npm run build           # produkcijski build u dist/
 ```
 
 Deploy:
-- **Cloudflare Pages:** poveži GitHub repo, build `npm run build`, output `dist`, promenljiva `NODE_VERSION=22`. Zaglavlja su u `public/_headers`. Svaki push na `main` ide uživo.
+- **Cloudflare (Workers & Pages):** poveži GitHub repo, build command `npm run build`, deploy command `npx wrangler deploy`. Podešavanje je u `wrangler.jsonc`, zaglavlja u `public/_headers`. Svaki push na `main` ide uživo.
 - **Netlify:** čita `netlify.toml`.
 
 ## Struktura
