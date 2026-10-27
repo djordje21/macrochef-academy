@@ -21,10 +21,10 @@ Deploy:
 - `src/content/` – sadržaj kursa, odvojen od koda. Svaki tekst postoji na sva tri jezika (`l(sr, en, ru)`).
   - `grade1/index.ts` – program 1. razreda: 8 modula i završni ispit.
   - `grade1/m1-kitchen.ts` … `grade1/m8-starches.ts` – po jedan fajl za svaki modul.
-  - `reference.ts` – šalabahter: temperature i rezovi.
+  - `reference.ts` – Mere i temperature: temperature, odnosi, vremena i rezovi.
   - `exam.ts` – završni ispit: namirnice po grupama, tri odluke i kontrolna lista.
 - `src/drawings/` – crteži koraka. Hrana i alat su pune boje, ono što kuvar radi je žuta linija koja se iscrta kad se korak otvori.
-- `src/screens/` – početna, modul, lekcija, korak, kraj lekcije, šalabahter.
+- `src/screens/` – početna, modul, lekcija, korak, kraj lekcije, mere i temperature, ispit, pregled razreda, landing.
 - `public/media/` – naslovne fotografije (Pexels). Video za landing stranicu: ubaci `public/media/hero.mp4` (bez zvuka, do ~5 MB) i stranica ga sama koristi; bez njega prikazuje fotografiju.
 
 ## Pravila pisanja lekcije
@@ -38,7 +38,7 @@ Deploy:
 
 ## Status
 
-- 1. razred: svih 8 modula napisano, 41 lekcija i 204 koraka na SR/EN/RU, sa crtežima, plus šalabahter. Interaktivni završni ispit „Izazov frižider“ (nasumičan frižider, tri odluke, kontrolna lista dok kuvaš). Landing stranica za nove posetioce.
+- 1. razred: svih 8 modula napisano, 41 lekcija i 204 koraka na SR/EN/RU, sa crtežima, plus Mere i temperature (tablice iz svih lekcija). Interaktivni završni ispit „Izazov frižider“ (nasumičan frižider, tri odluke, kontrolna lista dok kuvaš). Landing stranica za nove posetioce.
 - 2. i 3. razred: najavljeni na početnoj.
 
 ## Fotografije

@@ -707,7 +707,7 @@ const crust: Lesson = {
         'Both sides are deep golden, not black, and the thermometer shows the target.',
         'Обе стороны насыщенно-золотистые, не чёрные, а термометр показывает нужную цифру.',
       ),
-      why: l('Temperature su u šalabahteru.', 'The temperatures are in the cheat sheet.', 'Температуры есть в шпаргалке.'),
+      why: l('Sve temperature su u delu „Mere i temperature“.', 'All temperatures are in “Measures and temperatures”.', 'Все температуры есть в разделе «Меры и температуры».'),
     },
   ],
   mistake: {

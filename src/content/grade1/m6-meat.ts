@@ -1,7 +1,7 @@
 import { l, type Lesson } from '../types'
 
 // Module 6 · Meat and fish. A thermometer replaces guessing; every lesson ends on a measured
-// number from the cheat sheet, then rest.
+// number from the measures and temperatures page, then rest.
 
 const thermometer: Lesson = {
   id: '6.1',
