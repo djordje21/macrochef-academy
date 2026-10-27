@@ -11,6 +11,7 @@ import { Exam } from '../screens/Exam'
 import { GradeView } from '../screens/GradeView'
 import { isWelcomed } from './progress'
 import { Menu } from './Menu'
+import { TimerPill } from '../components/TimerPill'
 
 function Screen() {
   const { path, params } = useRoute()
@@ -40,6 +41,7 @@ export function App() {
     <>
       <Screen />
       {!focused && <Menu />}
+      <TimerPill />
     </>
   )
 }

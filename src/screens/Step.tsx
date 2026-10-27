@@ -4,6 +4,7 @@ import { goBack, navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Drawing } from '../drawings'
 import { useWakeLock } from '../app/useWakeLock'
+import { parseDuration, startTimer } from '../app/timer'
 import './Step.css'
 
 /** One step per screen, read with wet hands next to the board: big type, one action, the screen stays on. */
@@ -42,9 +43,25 @@ export function StepScreen({ id, n }: { id: string; n: number }) {
         <h1 className="step-text">{c(step.text)}</h1>
         {step.params && (
           <div className="param">
-            {step.params.map((p, i) => (
-              <span key={i}>{c(p)}</span>
-            ))}
+            {step.params.map((p, i) => {
+              const seconds = parseDuration(p.sr)
+              return seconds ? (
+                <button
+                  key={i}
+                  className="param-timer"
+                  onClick={() => startTimer(`${lesson.id} ${c(lesson.title)} · ${c(p)}`, seconds)}
+                  aria-label={`${t('timer.start')} ${c(p)}`}
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="13" r="8" />
+                    <path d="M12 9v4l2.5 2M9 2h6" />
+                  </svg>
+                  {c(p)}
+                </button>
+              ) : (
+                <span key={i}>{c(p)}</span>
+              )
+            })}
           </div>
         )}
         {step.drawing && (

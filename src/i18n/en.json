@@ -114,5 +114,8 @@
   "menu.modules": "Grade 1 · modules",
   "menu.family": "Part of the MacroChef family",
   "ref.ratios": "Ratios and measures",
-  "ref.times": "Times"
+  "ref.times": "Times",
+  "timer.up": "Time’s up!",
+  "timer.stop": "Stop timer",
+  "timer.start": "Start timer"
 }

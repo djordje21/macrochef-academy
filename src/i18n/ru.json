@@ -114,5 +114,8 @@
   "menu.modules": "1 класс · модули",
   "menu.family": "Часть семьи MacroChef",
   "ref.ratios": "Пропорции и меры",
-  "ref.times": "Время"
+  "ref.times": "Время",
+  "timer.up": "Время!",
+  "timer.stop": "Остановить таймер",
+  "timer.start": "Запустить таймер"
 }

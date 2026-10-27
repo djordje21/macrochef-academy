@@ -255,3 +255,27 @@
   font-size: 12px;
   letter-spacing: 0.06em;
 }
+
+/* A measure that is a duration doubles as a timer button. */
+.param-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 32px;
+  font-family: var(--font-data);
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 3px 10px 3px 7px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 500;
+}
+
+.param-timer svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}

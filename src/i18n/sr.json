@@ -114,5 +114,8 @@
   "menu.modules": "1. razred · moduli",
   "menu.family": "Deo MacroChef porodice",
   "ref.ratios": "Odnosi i mere",
-  "ref.times": "Vremena"
+  "ref.times": "Vremena",
+  "timer.up": "Vreme je!",
+  "timer.stop": "Zaustavi tajmer",
+  "timer.start": "Pokreni tajmer"
 }
