@@ -20,7 +20,9 @@ export function Home() {
       <header className="home-cover">
         <Photo name={grade.photo} />
         <div className="home-bar">
-          <span className="home-brand">{t('app.name')}</span>
+          <button className="home-brand" onClick={() => navigate('/about')}>
+            {t('app.name')} <span className="home-about">· {t('landing.about')}</span>
+          </button>
           <LangSwitch />
         </div>
         <div className="home-title enter-up">

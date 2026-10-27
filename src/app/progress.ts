@@ -35,3 +35,23 @@ export function useDone(): Set<string> {
     () => done,
   )
 }
+
+// Whether this device has passed the landing page. Progress alone counts too, for people who
+// started before the landing page existed.
+const WELCOMED = 'academy.welcomed'
+
+export function isWelcomed(): boolean {
+  try {
+    return localStorage.getItem(WELCOMED) === '1' || done.size > 0
+  } catch {
+    return done.size > 0
+  }
+}
+
+export function markWelcomed() {
+  try {
+    localStorage.setItem(WELCOMED, '1')
+  } catch {
+    /* storage blocked: the landing page shows again next time */
+  }
+}

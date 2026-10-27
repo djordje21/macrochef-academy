@@ -24,7 +24,7 @@ Deploy:
   - `reference.ts` – šalabahter: temperature i rezovi.
 - `src/drawings/` – crteži koraka. Hrana i alat su pune boje, ono što kuvar radi je žuta linija koja se iscrta kad se korak otvori.
 - `src/screens/` – početna, modul, lekcija, korak, kraj lekcije, šalabahter.
-- `public/media/` – naslovne fotografije (Pexels).
+- `public/media/` – naslovne fotografije (Pexels). Video za landing stranicu: ubaci `public/media/hero.mp4` (bez zvuka, do ~5 MB) i stranica ga sama koristi; bez njega prikazuje fotografiju.
 
 ## Pravila pisanja lekcije
 
@@ -37,7 +37,7 @@ Deploy:
 
 ## Status
 
-- 1. razred: svih 8 modula napisano, 41 lekcija i 205 koraka na SR/EN/RU, sa crtežima, plus šalabahter. Završni ispit „Izazov frižider“ je opisan na početnoj.
+- 1. razred: svih 8 modula napisano, 41 lekcija i 204 koraka na SR/EN/RU, sa crtežima, plus šalabahter. Završni ispit „Izazov frižider“ je opisan na početnoj.
 - 2. i 3. razred: najavljeni na početnoj.
 
 ## Fotografije
