@@ -140,5 +140,8 @@
   "mode.p2": "Один шаг на экране, экран не гаснет",
   "mode.p3": "Таймер запускается касанием и пищит, когда время вышло",
   "mode.goTheory": "Читать теорию",
-  "mode.goPractice": "На кухню"
+  "mode.goPractice": "На кухню",
+  "landing.example": "Пример шага из урока {id} {title}",
+  "landing.exampleOpen": "Открыть урок",
+  "landing.stepOf": "шаг {n} из {total}"
 }

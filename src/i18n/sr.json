@@ -140,5 +140,8 @@
   "mode.p2": "Jedan korak na ekranu, ekran se ne gasi",
   "mode.p3": "Vreme pokrećeš dodirom, telefon zapišti kad je gotovo",
   "mode.goTheory": "Čitaj teoriju",
-  "mode.goPractice": "Kreni u kuhinju"
+  "mode.goPractice": "Kreni u kuhinju",
+  "landing.example": "Primer koraka iz lekcije {id} {title}",
+  "landing.exampleOpen": "Otvori lekciju",
+  "landing.stepOf": "korak {n} od {total}"
 }

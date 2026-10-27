@@ -140,5 +140,8 @@
   "mode.p2": "One step per screen, the screen stays on",
   "mode.p3": "Timers start with a tap and beep when time is up",
   "mode.goTheory": "Read the theory",
-  "mode.goPractice": "Go to the kitchen"
+  "mode.goPractice": "Go to the kitchen",
+  "landing.example": "A sample step from lesson {id} {title}",
+  "landing.exampleOpen": "Open the lesson",
+  "landing.stepOf": "step {n} of {total}"
 }

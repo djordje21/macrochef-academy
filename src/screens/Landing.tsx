@@ -12,7 +12,8 @@ import './Landing.css'
 
 const steps = allLessons.reduce((sum, x) => sum + x.steps.length, 0)
 // Step 4 of 2.3 Diced onion: the horizontal cuts, shown as a sample of a real step.
-const demo = allLessons.find((x) => x.id === '2.3')!.steps[3]
+const demoLesson = allLessons.find((x) => x.id === '2.3')!
+const demo = demoLesson.steps[3]
 
 /**
  * The first page a visitor sees. The hero plays public/media/hero.mp4 when that file exists
@@ -119,6 +120,10 @@ export function Landing() {
           <h2>{t('landing.howTitle')}</h2>
           <div className="landing-how">
             <div className="how-demo">
+              <span className="how-example">
+                <span className="label">{t('landing.example', { id: demoLesson.id, title: c(demoLesson.title) })}</span>
+                <span className="mono">{t('landing.stepOf', { n: 4, total: demoLesson.steps.length })}</span>
+              </span>
               <span className="how-num">4</span>
               <p className="how-step">{c(demo.text)}</p>
               <div className="param">
@@ -127,6 +132,9 @@ export function Landing() {
                 ))}
               </div>
               <Drawing id="onionHorizontal" />
+              <button className="how-open" onClick={() => navigate(`/lesson/${demoLesson.id}`)}>
+                {t('landing.exampleOpen')} →
+              </button>
             </div>
             <ol className="how-list">
               {(['how1', 'how2', 'how3', 'how4'] as const).map((k) => (
