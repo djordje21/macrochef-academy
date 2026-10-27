@@ -638,6 +638,127 @@ const drawings = {
       <Cut i={1} d="M218 72 L218 52" />
     </>
   ),
+  // Module 4 · Taste
+  saltRain: (
+    <>
+      <path d="M60 140 A90 26 0 0 0 240 140 Z" fill={C.pot} />
+      <ellipse cx="150" cy="140" rx="90" ry="8" fill={C.warn} opacity=".8" />
+      <ellipse cx="150" cy="30" rx="16" ry="10" fill={C.skin} />
+      <g fill={C.paper}>
+        <circle cx="120" cy="70" r="2" /><circle cx="150" cy="62" r="2" /><circle cx="180" cy="72" r="2" />
+        <circle cx="104" cy="98" r="2" /><circle cx="136" cy="92" r="2" /><circle cx="168" cy="96" r="2" /><circle cx="198" cy="102" r="2" />
+        <circle cx="90" cy="122" r="2" /><circle cx="128" cy="118" r="2" /><circle cx="176" cy="120" r="2" /><circle cx="212" cy="124" r="2" />
+      </g>
+      <Cut i={0} d="M260 30 L260 132" />
+      <Cut i={1} d="M252 30 L268 30" />
+      <Cut i={2} d="M252 132 L268 132" />
+    </>
+  ),
+  tomatoHalves: (
+    <>
+      <Board y={128} />
+      <circle cx="96" cy="88" r="40" fill={C.warn} />
+      <circle cx="96" cy="88" r="28" fill="#F48A73" />
+      <circle cx="204" cy="88" r="40" fill={C.warn} />
+      <circle cx="204" cy="88" r="28" fill="#F48A73" />
+      <g fill={C.paper}><circle cx="194" cy="80" r="2" /><circle cx="210" cy="92" r="2" /><circle cx="200" cy="100" r="2" /><circle cx="214" cy="76" r="2" /></g>
+    </>
+  ),
+  twoCups: (
+    <>
+      <path d="M60 60 L120 60 L114 130 L66 130 Z" fill={C.pot} />
+      <ellipse cx="90" cy="62" rx="28" ry="6" fill={C.carrot} />
+      <path d="M180 60 L240 60 L234 130 L186 130 Z" fill={C.pot} />
+      <ellipse cx="210" cy="62" rx="28" ry="6" fill={C.carrot} />
+      <Cut i={0} d="M140 95 L160 95" />
+      <Cut i={1} d="M140 103 L160 103" />
+    </>
+  ),
+  lemonDrops: (
+    <>
+      <path d="M150 70 L210 70 L204 140 L156 140 Z" fill={C.pot} />
+      <ellipse cx="180" cy="72" rx="28" ry="6" fill={C.carrot} />
+      <ellipse cx="120" cy="34" rx="34" ry="22" fill={C.yolk} />
+      <ellipse cx="120" cy="34" rx="26" ry="15" fill="#F8D27A" />
+      <g fill={C.yolk}><ellipse cx="164" cy="50" rx="2.5" ry="4" /><ellipse cx="176" cy="60" rx="2.5" ry="4" /></g>
+      <Cut i={0} d="M150 40 Q166 44 176 58" />
+    </>
+  ),
+  acidsRow: (
+    <>
+      <Board y={128} />
+      <ellipse cx="50" cy="110" rx="24" ry="17" fill={C.yolk} />
+      <rect x="92" y="54" width="22" height="74" rx="6" fill={C.ice} opacity=".8" />
+      <rect x="98" y="44" width="10" height="12" rx="2" fill={C.handle} />
+      <path d="M140 128 L140 70 Q140 52 154 52 Q168 52 168 70 L168 128 Z" fill="#7A2340" />
+      <circle cx="210" cy="106" r="22" fill={C.warn} />
+      <path d="M242 128 L242 92 L282 92 L282 128 Z" fill={C.paper} />
+      <Cut i={0} d="M30 142 L280 142" dash />
+    </>
+  ),
+  butterSauce: (
+    <>
+      <path d="M60 80 A90 56 0 0 0 240 80 Z" fill={C.pot} />
+      <ellipse cx="150" cy="80" rx="90" ry="12" fill={C.warn} />
+      <rect x="132" y="40" width="34" height="24" rx="4" fill="#F8E3A0" />
+      <Cut i={0} d="M118 82 Q150 70 184 82" />
+      <Cut i={1} d="M128 90 Q150 84 172 90" />
+    </>
+  ),
+  bloomSpice: (
+    <>
+      <rect x="40" y="110" width="190" height="16" rx="4" fill={C.potDark} />
+      <rect x="230" y="112" width="60" height="7" rx="3" fill={C.handle} />
+      <ellipse cx="135" cy="108" rx="80" ry="6" fill={C.warn} opacity=".85" />
+      <g fill="#B5341E"><circle cx="120" cy="104" r="2" /><circle cx="136" cy="106" r="2" /><circle cx="150" cy="103" r="2" /><circle cx="128" cy="108" r="2" /></g>
+      <Cut i={0} d="M135 40 L135 92" />
+      <Cut i={1} d="M127 84 L135 92 L143 84" />
+    </>
+  ),
+  chiliQuarter: (
+    <>
+      <path d="M40 90 A44 24 0 0 0 128 90 Z" fill={C.pot} />
+      <rect x="128" y="86" width="110" height="8" rx="4" fill={C.pot} />
+      <path d="M44 90 A40 20 0 0 0 64 106 L64 90 Z" fill={C.warn} />
+      <Cut i={0} d="M64 70 L64 112" dash />
+      <Cut i={1} d="M84 70 L84 112" dash />
+      <Cut i={2} d="M104 70 L104 112" dash />
+    </>
+  ),
+  umamiRow: (
+    <>
+      <Board y={128} />
+      <path d="M24 128 L56 92 L88 128 Z" fill={C.yolk} />
+      <rect x="104" y="96" width="40" height="32" rx="4" fill={C.warn} />
+      <path d="M160 128 L160 112 A20 20 0 0 1 200 112 L200 128 Z" fill={C.bread} />
+      <rect x="176" y="112" width="8" height="16" fill={C.flesh} />
+      <rect x="220" y="70" width="20" height="58" rx="5" fill={C.crust} />
+      <rect x="225" y="60" width="10" height="12" rx="2" fill={C.warn} />
+      <Cut i={0} d="M20 142 L250 142" dash />
+    </>
+  ),
+  cleanSpoon: (
+    <>
+      <rect x="40" y="64" width="110" height="86" rx="8" fill={C.pot} />
+      <rect x="46" y="74" width="98" height="70" rx="6" fill={C.carrot} opacity=".85" />
+      <ellipse cx="200" cy="56" rx="16" ry="10" fill={C.steel} />
+      <rect x="214" y="52" width="70" height="7" rx="3" fill={C.steel} />
+      <Cut i={0} d="M150 70 Q174 40 186 52" />
+      <Cut i={1} d="M200 80 L200 120" />
+      <Cut i={2} d="M192 112 L200 120 L208 112" />
+    </>
+  ),
+  tasteSteps: (
+    <>
+      <circle cx="44" cy="80" r="22" fill={C.paper} />
+      <circle cx="114" cy="80" r="22" fill={C.yolk} />
+      <circle cx="184" cy="80" r="22" fill="#F8E3A0" />
+      <circle cx="254" cy="80" r="22" fill={C.ok} />
+      <Cut i={0} d="M70 80 L88 80" />
+      <Cut i={1} d="M140 80 L158 80" />
+      <Cut i={2} d="M210 80 L228 80" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

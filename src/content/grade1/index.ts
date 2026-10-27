@@ -2,6 +2,7 @@ import { l, type Grade } from '../types'
 import { kitchenLessons } from './m1-kitchen'
 import { knifeLessons } from './m2-knife'
 import { heatLessons } from './m3-heat'
+import { tasteLessons } from './m4-taste'
 
 // Grade 1 · First steps. Modules in teaching order: kitchen and knife first, then heat and taste,
 // then dishes. Unwritten modules list their planned lessons so the whole path is visible from day one.
@@ -62,14 +63,7 @@ export const grade1: Grade = {
         'Соль, кислота, жир, сладость, острота, умами. Попробуй, поправь, попробуй снова.',
       ),
       photo: 'm4.webp',
-      lessons: [],
-      planned: [
-        { title: l('So: kada i koliko', 'Salt: when and how much', 'Соль: когда и сколько'), minutes: 7 },
-        { title: l('Kiselina', 'Acid', 'Кислота'), minutes: 5 },
-        { title: l('Masnoća i slatko', 'Fat and sweetness', 'Жир и сладость'), minutes: 6 },
-        { title: l('Ljuto i umami', 'Heat and umami', 'Острота и умами'), minutes: 6 },
-        { title: l('Probaj i koriguj', 'Taste and adjust', 'Попробуй и поправь'), minutes: 8 },
-      ],
+      lessons: tasteLessons,
     },
     {
       id: 'm5',
