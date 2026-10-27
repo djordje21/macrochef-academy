@@ -24,7 +24,7 @@ Deploy:
   - `reference.ts` – Mere i temperature: temperature, odnosi, vremena i rezovi.
   - `exam.ts` – završni ispit: namirnice po grupama, tri odluke i kontrolna lista.
 - `src/drawings/` – crteži koraka. Hrana i alat su pune boje, ono što kuvar radi je žuta linija koja se iscrta kad se korak otvori.
-- `src/screens/` – početna, modul, lekcija, korak, kraj lekcije, mere i temperature, ispit, pregled razreda, landing.
+- `src/screens/` – početna, modul, lekcija (teorija i praksa), korak, kraj lekcije, mere i temperature, ispit, pregled razreda, landing.
 - `public/media/` – naslovne fotografije (Pexels). Video za landing stranicu: ubaci `public/media/hero.mp4` (bez zvuka, do ~5 MB) i stranica ga sama koristi; bez njega prikazuje fotografiju.
 
 ## Pravila pisanja lekcije

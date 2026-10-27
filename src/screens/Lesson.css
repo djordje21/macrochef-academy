@@ -41,3 +41,8 @@
   max-width: 524px;
   margin: 0 auto;
 }
+
+.lesson-done {
+  font-size: 13px;
+  color: var(--ok);
+}

@@ -1,6 +1,7 @@
 import { findLesson } from '../content'
 import { useDone } from '../app/progress'
-import { goBack, navigate } from '../app/router'
+import { goBack } from '../app/router'
+import { ModeCards } from '../components/ModeCards'
 import { useT } from '../i18n/useT'
 import './Lesson.css'
 
@@ -57,11 +58,8 @@ export function LessonScreen({ id }: { id: string }) {
         {c(lesson.why)}
       </p>
 
-      <div className="lesson-go">
-        <button className="cta" onClick={() => navigate(`/lesson/${lesson.id}/step`, { n: 1 })}>
-          {done.has(lesson.id) ? t('lesson.again') : t('lesson.start')}
-        </button>
-      </div>
+      <ModeCards lessonId={lesson.id} minutes={lesson.minutes} />
+      {done.has(lesson.id) && <p className="muted lesson-done">✓ {t('lesson.done')}</p>}
     </div>
   )
 }

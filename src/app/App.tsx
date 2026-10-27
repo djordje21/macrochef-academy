@@ -9,6 +9,8 @@ import { Reference } from '../screens/Reference'
 import { Landing } from '../screens/Landing'
 import { Exam } from '../screens/Exam'
 import { GradeView } from '../screens/GradeView'
+import { Theory } from '../screens/Theory'
+import { Practice } from '../screens/Practice'
 import { isWelcomed } from './progress'
 import { Menu } from './Menu'
 import { TimerPill } from '../components/TimerPill'
@@ -23,6 +25,8 @@ function Screen() {
   if (section === 'module' && id) return <ModuleScreen id={id} />
   if (section === 'lesson' && id && sub === 'step') return <StepScreen id={id} n={Number(params.get('n') ?? 1)} />
   if (section === 'lesson' && id && sub === 'end') return <LessonEnd id={id} />
+  if (section === 'lesson' && id && sub === 'theory') return <Theory id={id} />
+  if (section === 'lesson' && id && sub === 'practice') return <Practice id={id} />
   if (section === 'lesson' && id) return <LessonScreen id={id} />
 
   return (

@@ -6,6 +6,7 @@ import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import { LangSwitch } from '../components/LangSwitch'
 import { Drawing } from '../drawings'
+import { ModeCards } from '../components/ModeCards'
 import './Landing.css'
 
 const steps = allLessons.reduce((sum, x) => sum + x.steps.length, 0)
@@ -76,6 +77,11 @@ export function Landing() {
             <span>{t('landing.langs')}</span>
           </div>
         </div>
+
+        <section>
+          <h2>{t('landing.modesTitle')}</h2>
+          <ModeCards />
+        </section>
 
         <section>
           <h2>{t('landing.howTitle')}</h2>

@@ -33,7 +33,9 @@ export function StepScreen({ id, n }: { id: string; n: number }) {
       </div>
       <div className="topbar">
         <button className="back" onClick={() => navigate(`/lesson/${id}`, undefined, true)} aria-label="Close">
-          ✕ <span>{c(lesson.title)}</span>
+          ✕ <span>
+            {t('mode.practice')} · {c(lesson.title)}
+          </span>
         </button>
         <span className="mono">{t('step.of', { n, total })}</span>
       </div>
