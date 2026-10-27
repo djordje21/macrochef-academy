@@ -29,7 +29,12 @@ export function Landing() {
   return (
     <div className="landing">
       <header className="landing-hero">
-        <Photo name={grade.photo} />
+        <div className="photo">
+          <picture>
+            <source media="(max-width: 700px)" srcSet={`${import.meta.env.BASE_URL}media/hero-portrait.webp`} />
+            <img src={`${import.meta.env.BASE_URL}media/hero-wide.webp`} alt="" decoding="async" />
+          </picture>
+        </div>
         {video && (
           <video
             className="landing-video"

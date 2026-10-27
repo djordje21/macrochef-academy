@@ -254,3 +254,16 @@
   font-size: 16px;
   line-height: 1.55;
 }
+
+.landing-hero picture {
+  display: contents;
+}
+
+.landing-bar {
+  gap: 12px;
+}
+
+.landing-bar .home-brand {
+  font-size: 13px;
+  min-width: 0;
+}

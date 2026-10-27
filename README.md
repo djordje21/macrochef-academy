@@ -44,7 +44,7 @@ Deploy:
 ## Fotografije
 
 Sa [Pexels](https://www.pexels.com), pod Pexels licencom (besplatno, i za komercijalnu upotrebu):
-[grade-1](https://www.pexels.com/photo/person-holding-knife-cutting-food-8448077/),
+[grade-1, hero](https://www.pexels.com/photo/person-holding-knife-cutting-food-8448077/),
 [grade-2](https://www.pexels.com/photo/photo-of-person-holding-knife-3296281/),
 [grade-3](https://www.pexels.com/photo/person-holding-bowl-2403392/),
 [m1](https://www.pexels.com/photo/assorted-vegetables-placed-on-counter-near-jars-with-pasta-7262895/),
