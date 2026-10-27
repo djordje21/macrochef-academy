@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { allLessons, findLesson, grades, upcoming } from '../content'
 import { useDone } from '../app/progress'
+import { useExam } from '../app/exam'
 import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
@@ -10,6 +11,7 @@ import './Home.css'
 export function Home() {
   const { t, c } = useT()
   const done = useDone()
+  const exam = useExam()
   const grade = grades[0]
   const next = allLessons.find((x) => !done.has(x.id)) ?? allLessons[0]
   const nextModule = findLesson(next.id)?.module
@@ -83,11 +85,15 @@ export function Home() {
             )
           })}
           {grade.exam && (
-            <div className="row soon enter" style={{ '--i': grade.modules.length } as CSSProperties}>
+            <button
+              className={`row enter ${exam.passed ? 'done' : ''}`}
+              style={{ '--i': grade.modules.length } as CSSProperties}
+              onClick={() => navigate('/exam')}
+            >
               <span className="n">∎</span>
               <span>{c(grade.exam.title)}</span>
-              <span className="s">{t('module.exam')}</span>
-            </div>
+              <span className="s">{exam.passed ? `✓ ${t('exam.passed')}` : t('module.exam')}</span>
+            </button>
           )}
         </div>
 
