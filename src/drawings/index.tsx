@@ -452,7 +452,6 @@ const drawings = {
       <rect x="148" y="86" width="110" height="8" rx="4" fill={C.pot} />
       <path d="M64 90 Q104 50 144 90 Z" fill="none" stroke={C.paper} strokeWidth="2" strokeDasharray="4 4" />
       <ellipse cx="104" cy="90" rx="40" ry="5" fill={C.paper} />
-      <rect x="40" y="76" width="140" height="8" rx="3" fill={C.steel} transform="rotate(0)" />
       <Cut i={0} d="M44 90 L174 90" />
     </>
   ),
