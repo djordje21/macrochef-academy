@@ -2817,6 +2817,83 @@ const drawings = {
       <Cut i={0} d="M44 98 A106 30 0 0 0 256 98" dash />
     </>
   ),
+  // Grade 2 · Module 13 · Plating
+  plateClock: (
+    <>
+      <circle cx="150" cy="86" r="70" fill={C.paper} />
+      <circle cx="150" cy="86" r="52" fill="none" stroke="#E4E8F0" strokeWidth="2" />
+      <ellipse cx="118" cy="68" rx="18" ry="12" fill={C.bread} />
+      <g fill={C.veg}><circle cx="176" cy="62" r="6" /><circle cx="186" cy="74" r="6" /><circle cx="170" cy="76" r="6" /></g>
+      <rect x="128" y="96" width="44" height="22" rx="8" fill={C.crust} />
+      <Cut i={0} d="M150 150 L150 132" />
+      <Cut i={1} d="M150 86 m-62 0 a62 62 0 1 0 124 0" dash />
+    </>
+  ),
+  plateHeight: (
+    <>
+      <ellipse cx="150" cy="130" rx="120" ry="14" fill={C.paper} />
+      <ellipse cx="150" cy="118" rx="44" ry="10" fill={C.bread} />
+      <rect x="118" y="92" width="64" height="24" rx="8" fill={C.crust} transform="rotate(-8 150 104)" />
+      <g stroke={C.leaf} strokeWidth="3"><path d="M150 90 L146 76" /><path d="M154 90 L160 78" /></g>
+      <Cut i={0} d="M220 130 L220 74" />
+      <Cut i={1} d="M214 74 L226 74 M214 130 L226 130" />
+    </>
+  ),
+  sauceSwoosh: (
+    <>
+      <circle cx="150" cy="86" r="70" fill={C.paper} />
+      <path d="M100 110 Q150 80 200 70 Q170 90 110 116 Z" fill={C.crust} />
+      <ellipse cx="200" cy="72" rx="10" ry="6" fill={C.steel} transform="rotate(-20 200 72)" />
+      <Cut i={0} d="M104 112 Q150 82 196 72" />
+    </>
+  ),
+  sauceDots: (
+    <>
+      <circle cx="150" cy="86" r="70" fill={C.paper} />
+      <g fill={C.ok}><circle cx="110" cy="100" r="7" /><circle cx="130" cy="112" r="5" /><circle cx="150" cy="118" r="3.5" /></g>
+      <rect x="170" y="20" width="22" height="50" rx="6" fill={C.warn} opacity=".85" transform="rotate(30 181 45)" />
+      <Cut i={0} d="M160 64 L150 80" />
+    </>
+  ),
+  textureContrast: (
+    <>
+      <path d="M60 80 A90 56 0 0 0 240 80 Z" fill={C.steel} />
+      <ellipse cx="150" cy="82" rx="88" ry="12" fill={C.carrot} />
+      <g fill={C.bread} stroke="#B88A3E" strokeWidth="2"><rect x="120" y="70" width="14" height="14" rx="2" /><rect x="146" y="66" width="14" height="14" rx="2" /><rect x="168" y="72" width="14" height="14" rx="2" /></g>
+      <Cut i={0} d="M110 40 L120 50 M150 30 L150 44 M190 40 L180 50" />
+    </>
+  ),
+  garnishEdible: (
+    <>
+      <circle cx="150" cy="86" r="70" fill={C.paper} />
+      <rect x="114" y="74" width="72" height="30" rx="10" fill={C.crust} />
+      <g fill={C.leaf}><ellipse cx="146" cy="72" rx="5" ry="3" /><ellipse cx="156" cy="70" rx="5" ry="3" /><ellipse cx="151" cy="66" rx="5" ry="3" /></g>
+      <g fill={C.paper}><rect x="130" y="80" width="3" height="3" /><rect x="168" y="86" width="3" height="3" /></g>
+      <path d="M230 20 L180 60" stroke={C.steel} strokeWidth="3" /><path d="M236 26 L184 64" stroke={C.steel} strokeWidth="3" />
+      <Cut i={0} d="M151 66 m-14 0 a14 10 0 1 0 28 0 a14 10 0 1 0 -28 0" />
+    </>
+  ),
+  photoLight: (
+    <>
+      <rect x="20" y="20" width="70" height="110" rx="4" fill={C.ice} opacity=".5" />
+      <path d="M55 20 L55 130 M20 75 L90 75" stroke={C.steel} strokeWidth="3" />
+      <ellipse cx="170" cy="110" rx="50" ry="14" fill={C.paper} />
+      <rect x="150" y="92" width="40" height="18" rx="6" fill={C.crust} />
+      <rect x="240" y="60" width="8" height="70" rx="2" fill={C.paper} />
+      <Cut i={0} d="M96 60 L140 92" />
+      <Cut i={1} d="M96 90 L140 104" />
+      <Cut i={2} d="M236 96 L200 100" dash />
+    </>
+  ),
+  photoAngle: (
+    <>
+      <ellipse cx="120" cy="120" rx="70" ry="16" fill={C.paper} />
+      <rect x="96" y="96" width="48" height="22" rx="8" fill={C.crust} />
+      <rect x="210" y="30" width="34" height="58" rx="6" fill={C.handle} transform="rotate(45 227 59)" />
+      <Cut i={0} d="M204 72 L150 104" />
+      <Cut i={1} d="M120 70 A50 50 0 0 1 170 100" dash />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

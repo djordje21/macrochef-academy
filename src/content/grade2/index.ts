@@ -11,6 +11,7 @@ import { lowTempLessons } from './lowtemp'
 import { frenchLessons } from './french'
 import { italianLessons } from './italian'
 import { mediterraneanLessons } from './mediterranean'
+import { platingLessons } from './plating'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -193,14 +194,7 @@ export const grade2: Grade = {
         'Тарелка как в ресторане: цвет, высота, соус и контраст. Сначала едят глазами.',
       ),
       photo: 'g2-plating.webp',
-      lessons: [],
-      planned: [
-        p('2.13.1', l('Tanjir, boja i visina', 'The plate, colour and height', 'Тарелка, цвет и высота')),
-        p('2.13.2', l('Sos na tanjiru', 'Sauce on the plate', 'Соус на тарелке')),
-        p('2.13.3', l('Kontrast tekstura', 'Contrasting textures', 'Контраст текстур')),
-        p('2.13.4', l('Garnir koji ima smisla', 'A garnish that makes sense', 'Гарнир со смыслом')),
-        p('2.13.5', l('Fotografija jela', 'Photographing a dish', 'Фотография блюда')),
-      ],
+      lessons: platingLessons,
     },
     {
       id: 'g2m14',
