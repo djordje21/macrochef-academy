@@ -6,6 +6,7 @@ import { modernLessons } from './modern'
 import { proteinLessons } from './protein'
 import { pastryLessons } from './pastry'
 import { creatingLessons } from './creating'
+import { menuLessons } from './menu'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -127,14 +128,7 @@ export const grade3: Grade = {
         'Структура меню, ритм дегустационного меню, описание блюд и матрица, показывающая, что приносит прибыль.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.8.1', l('Struktura menija', 'Menu structure', 'Структура меню')),
-        p('3.8.2', l('Ritam degustacionog menija', 'The rhythm of a tasting menu', 'Ритм дегустационного меню')),
-        p('3.8.3', l('Opis jela na meniju', 'Writing the dish description', 'Описание блюда в меню')),
-        p('3.8.4', l('Menu engineering', 'Menu engineering', 'Меню-инжиниринг')),
-        p('3.8.5', l('Promena menija po sezoni', 'Changing the menu with the season', 'Смена меню по сезону')),
-      ],
+      lessons: menuLessons,
     },
     {
       id: 'g3m9',

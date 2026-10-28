@@ -3085,6 +3085,18 @@ const drawings = {
       <Cut i={1} d="M96 90 L204 90" />
     </>
   ),
+  // Grade 3 · Module 8 · Menu
+  menuMatrix: (
+    <>
+      <rect x="70" y="14" width="80" height="62" rx="6" fill={C.leaf} opacity=".75" />
+      <rect x="154" y="14" width="80" height="62" rx="6" fill={C.yolk} opacity=".85" />
+      <rect x="70" y="80" width="80" height="62" rx="6" fill={C.pot} />
+      <rect x="154" y="80" width="80" height="62" rx="6" fill={C.warn} opacity=".75" />
+      <path d="M194 30 L199 41 L211 42 L202 50 L205 62 L194 56 L183 62 L186 50 L177 42 L189 41 Z" fill={C.paper} />
+      <Cut i={0} d="M54 146 L54 10" />
+      <Cut i={1} d="M54 146 L250 146" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
