@@ -11,6 +11,7 @@ import { starchLessons } from './starches'
 import { coldLessons } from './cold'
 import { soupLessons } from './soups'
 import { motherSauceLessons } from './mothersauces'
+import { legumeLessons } from './legumes'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
@@ -178,14 +179,7 @@ export const grade1: Grade = {
         'Фасоль, чечевица, нут и булгур. Дёшево, полезно и по-домашнему.',
       ),
       photo: 'legumes.webp',
-      lessons: [],
-      planned: [
-        p('11.1', l('Pasulj: namakanje i kuvanje', 'Beans: soaking and cooking', 'Фасоль: замачивание и варка')),
-        p('11.2', l('Prebranac', 'Baked beans (prebranac)', 'Запечённая фасоль (пребранац)')),
-        p('11.3', l('Sočivo', 'Lentils', 'Чечевица')),
-        p('11.4', l('Leblebija i humus', 'Chickpeas and hummus', 'Нут и хумус')),
-        p('11.5', l('Bulgur', 'Bulgur', 'Булгур')),
-      ],
+      lessons: legumeLessons,
     },
     {
       id: 'm12',

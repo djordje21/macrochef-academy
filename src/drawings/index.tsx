@@ -1425,6 +1425,50 @@ const drawings = {
       <Cut i={1} d="M110 110 A40 6 0 1 0 190 110" />
     </>
   ),
+  // Module 11 · Pulses and grains
+  soakBeans: (
+    <>
+      <path d="M50 60 A100 80 0 0 0 250 60 Z" fill={C.pot} />
+      <ellipse cx="150" cy="60" rx="100" ry="12" fill={C.water} opacity=".7" />
+      <g fill={C.paper}>
+        <ellipse cx="110" cy="100" rx="9" ry="6" /><ellipse cx="130" cy="108" rx="9" ry="6" /><ellipse cx="150" cy="102" rx="9" ry="6" />
+        <ellipse cx="170" cy="110" rx="9" ry="6" /><ellipse cx="190" cy="100" rx="9" ry="6" /><ellipse cx="140" cy="118" rx="9" ry="6" /><ellipse cx="162" cy="122" rx="9" ry="6" />
+      </g>
+      <Cut i={0} d="M262 120 L262 66" />
+      <Cut i={1} d="M254 74 L262 66 L270 74" />
+    </>
+  ),
+  layerDish: (
+    <>
+      <rect x="50" y="50" width="200" height="96" rx="12" fill="#B4643C" />
+      <rect x="60" y="112" width="180" height="24" fill={C.paper} />
+      <rect x="60" y="96" width="180" height="16" fill={C.warn} opacity=".8" />
+      <rect x="60" y="76" width="180" height="20" fill={C.paper} />
+      <rect x="60" y="60" width="180" height="16" fill={C.warn} opacity=".8" />
+      <Cut i={0} d="M268 136 L268 60" />
+      <Cut i={1} d="M262 136 L274 136 M262 112 L274 112 M262 96 L274 96 M262 76 L274 76" />
+    </>
+  ),
+  pinchTest: (
+    <>
+      <path d="M60 130 Q70 70 130 70 L150 84 L120 96 Q100 110 100 130 Z" fill={C.skin} />
+      <path d="M240 130 Q230 70 170 70 L150 84 L180 96 Q200 110 200 130 Z" fill={C.skinShade} />
+      <ellipse cx="150" cy="84" rx="16" ry="7" fill="#E8C98E" />
+      <Cut i={0} d="M110 50 L136 74" />
+      <Cut i={1} d="M190 50 L164 74" />
+    </>
+  ),
+  forkFluff: (
+    <>
+      <rect x="60" y="80" width="180" height="66" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="88" rx="84" ry="10" fill="#D9B26A" />
+      <g fill="#E8C98E"><circle cx="110" cy="86" r="3" /><circle cx="130" cy="82" r="3" /><circle cx="170" cy="84" r="3" /><circle cx="196" cy="88" r="3" /></g>
+      <g stroke={C.steel} strokeWidth="3" strokeLinecap="round">
+        <path d="M150 20 L150 50" /><path d="M140 50 L140 76" /><path d="M150 50 L150 76" /><path d="M160 50 L160 76" /><path d="M140 50 L160 50" />
+      </g>
+      <Cut i={0} d="M110 60 Q150 40 190 60" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
