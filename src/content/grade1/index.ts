@@ -5,6 +5,7 @@ import { heatLessons } from './heat'
 import { tasteLessons } from './taste'
 import { eggLessons } from './eggs'
 import { meatLessons } from './meat'
+import { meatPrepLessons } from './meatprep'
 import { dressingBaseLesson, sauceBaseLessons, soupBaseLessons } from './sauces'
 import { starchLessons } from './starches'
 import { coldLessons } from './cold'
@@ -117,13 +118,7 @@ export const grade1: Grade = {
         'От хранения и зачистки до сковороды: жилы, кожа, порции, термометр и рыба с хрустящей кожей.',
       ),
       photo: 'meat.webp',
-      lessons: meatLessons,
-      planned: [
-        p('7.1', l('Skladištenje i odmrzavanje', 'Storing and thawing', 'Хранение и разморозка')),
-        p('7.2', l('Čišćenje mesa: žile, opna, masnoća', 'Trimming meat: sinew, silver skin, fat', 'Зачистка мяса: жилы, плёнка, жир')),
-        p('7.3', l('Sečenje i porcioniranje', 'Cutting and portioning', 'Нарезка и порционирование')),
-        p('7.4', l('Koža i koščice: piletina i riba', 'Skin and pin bones: chicken and fish', 'Кожа и косточки: курица и рыба')),
-      ],
+      lessons: [...meatPrepLessons, ...meatLessons],
     },
     {
       id: 'm8',

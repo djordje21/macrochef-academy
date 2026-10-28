@@ -1191,6 +1191,84 @@ const drawings = {
       <Cut i={1} d="M40 150 L260 150" dash />
     </>
   ),
+  // Module 7 · Meat prep
+  thawPlate: (
+    <>
+      <rect x="40" y="20" width="220" height="130" rx="10" fill={C.fridge} opacity=".25" />
+      <ellipse cx="150" cy="112" rx="80" ry="16" fill={C.paper} />
+      <ellipse cx="150" cy="104" rx="50" ry="16" fill={C.meat} />
+      <ellipse cx="150" cy="102" rx="18" ry="6" fill={C.ice} />
+      <Cut i={0} d="M70 40 L90 40 M80 30 L80 50 M73 33 L87 47 M87 33 L73 47" />
+      <Cut i={1} d="M150 102 m-30 0 a30 10 0 1 0 60 0 a30 10 0 1 0 -60 0" />
+    </>
+  ),
+  thawBath: (
+    <>
+      <path d="M50 50 A100 74 0 0 0 250 50 Z" fill={C.pot} />
+      <ellipse cx="150" cy="50" rx="100" ry="12" fill={C.water} opacity=".8" />
+      <rect x="110" y="62" width="80" height="40" rx="8" fill={C.ice} opacity=".6" />
+      <ellipse cx="150" cy="82" rx="30" ry="12" fill={C.meat} />
+      <Cut i={0} d="M60 20 Q80 6 100 20" />
+      <Cut i={1} d="M200 20 Q220 6 240 20" />
+    </>
+  ),
+  silverSkin: (
+    <>
+      <Board y={128} />
+      <path d="M40 112 Q60 80 150 80 Q250 80 262 112 Z" fill={C.meat} />
+      <path d="M90 86 Q150 78 220 86" stroke={C.paper} strokeWidth="5" fill="none" opacity=".8" />
+      <path d="M200 72 L270 60 L272 66 L204 80 Z" fill={C.steel} />
+      <rect x="268" y="52" width="26" height="14" rx="4" fill={C.handle} transform="rotate(-10 280 60)" />
+      <Cut i={0} d="M90 86 Q150 76 200 80" />
+      <Cut i={1} d="M70 70 L96 82" />
+    </>
+  ),
+  butterfly: (
+    <>
+      <Board y={128} />
+      <path d="M50 110 Q60 70 150 64 Q240 70 250 110 Z" fill={C.flesh} />
+      <path d="M260 88 L120 88" stroke={C.steel} strokeWidth="6" strokeLinecap="round" />
+      <rect x="258" y="80" width="30" height="14" rx="4" fill={C.handle} />
+      <Cut i={0} d="M60 88 L240 88" dash />
+      <Cut i={1} d="M30 64 L30 110" />
+    </>
+  ),
+  portionScale: (
+    <>
+      <rect x="80" y="110" width="140" height="36" rx="8" fill={C.steelEdge} />
+      <rect x="126" y="120" width="48" height="16" rx="3" fill={C.bg} />
+      <rect x="70" y="102" width="160" height="8" rx="4" fill={C.steel} />
+      <ellipse cx="150" cy="92" rx="44" ry="14" fill={C.flesh} />
+      <Cut i={0} d="M134 128 L166 128" />
+      <Cut i={1} d="M150 40 L150 70" />
+      <Cut i={2} d="M140 60 L150 72 L160 60" />
+    </>
+  ),
+  pinBones: (
+    <>
+      <Board y={128} />
+      <path d="M30 110 Q50 70 160 66 Q250 70 270 104 L270 118 L30 118 Z" fill={C.carrot} opacity=".85" />
+      <g stroke={C.paper} strokeWidth="2">
+        <path d="M100 80 L94 74" /><path d="M130 76 L124 70" /><path d="M160 74 L154 68" /><path d="M190 76 L184 70" />
+      </g>
+      <g stroke={C.steel} strokeWidth="3" strokeLinecap="round">
+        <path d="M168 66 L200 22" /><path d="M162 62 L188 18" />
+      </g>
+      <Cut i={0} d="M210 70 L80 70" dash />
+      <Cut i={1} d="M150 54 L120 36" />
+    </>
+  ),
+  skinFish: (
+    <>
+      <Board y={128} />
+      <path d="M40 116 L250 116" stroke={C.steelEdge} strokeWidth="5" strokeLinecap="round" />
+      <path d="M70 112 Q90 80 170 80 Q240 84 250 112 Z" fill={C.carrot} opacity=".85" />
+      <path d="M30 104 L130 112 L130 116 L30 110 Z" fill={C.steel} />
+      <rect x="4" y="96" width="30" height="14" rx="4" fill={C.handle} />
+      <Cut i={0} d="M262 104 L282 104 M262 104 L268 98 M262 104 L268 110" />
+      <Cut i={1} d="M282 120 L262 120 M282 120 L276 114 M282 120 L276 126" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
