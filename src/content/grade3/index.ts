@@ -7,6 +7,7 @@ import { proteinLessons } from './protein'
 import { pastryLessons } from './pastry'
 import { creatingLessons } from './creating'
 import { menuLessons } from './menu'
+import { nutritionLessons } from './nutrition'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -140,14 +141,7 @@ export const grade3: Grade = {
         'Баланс макросов на тарелке, 14 аллергенов, замены и облегчённая классика в MacroChef.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.9.1', l('Makro-balans tanjira', 'Macro balance on the plate', 'Баланс макросов на тарелке')),
-        p('3.9.2', l('14 alergena', 'The 14 allergens', '14 аллергенов')),
-        p('3.9.3', l('Bez glutena i bez laktoze', 'Gluten-free and lactose-free', 'Без глютена и без лактозы')),
-        p('3.9.4', l('Lakša verzija klasika', 'A lighter classic', 'Облегчённая классика')),
-        p('3.9.5', l('Jelo u MacroChefu', 'The dish in MacroChef', 'Блюдо в MacroChef')),
-      ],
+      lessons: nutritionLessons,
     },
     {
       id: 'g3m10',
