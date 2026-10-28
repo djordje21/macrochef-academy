@@ -44,8 +44,16 @@ export default defineConfig(({ mode }) => ({
       },
       workbox: {
         cleanupOutdatedCaches: true,
-        // Lessons are read next to the stove, often offline, so the cover photos are precached too.
+        // The app and lessons are precached; cover photos (about 4 MB at full sharpness) are cached as they are viewed.
         globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
+        globIgnores: ['media/**'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith('/media/') && url.pathname.endsWith('.webp'),
+            handler: 'CacheFirst',
+            options: { cacheName: 'media', expiration: { maxEntries: 80 } },
+          },
+        ],
         // Every lesson of every grade ships in the main bundle so the course works offline; it outgrew the 2 MiB default.
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
       },
