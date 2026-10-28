@@ -1,10 +1,10 @@
 import { l, type Lesson } from '../types'
 
-// Module 8 · Rice, pasta, potatoes. Starch from lesson 3.1 in practice: how much water it takes,
+// Module 10 · Rice, pasta, potatoes. Starch from lesson 4.1 in practice: how much water it takes,
 // when it is done, and how not to turn it into glue.
 
 const rice: Lesson = {
-  id: '8.1',
+  id: '10.1',
   title: l('Pirinač', 'Rice', 'Рис'),
   goal: l(
     'Skuvaš pirinač čija su zrna mekana i odvojena, a ne lepljiva.',
@@ -41,7 +41,7 @@ const rice: Lesson = {
       text: l('Poklopi, smanji na najtišu vatru i ne otvaraj.', 'Cover, turn to the lowest heat and do not open.', 'Накрой крышкой, убавь до минимума и не открывай.'),
       params: [l('15 min', '15 min', '15 мин')],
       done: l('Prošlo je 15 minuta, a poklopac nijednom nije podignut.', '15 minutes have passed without lifting the lid once.', 'Прошло 15 минут, а крышку ни разу не подняли.'),
-      why: l('Pirinač se kuva u pari pod poklopcem. Svako otvaranje je pušta, kao u 3.3.', 'The rice cooks in the steam under the lid. Every peek lets it out, as in 3.3.', 'Рис доходит в пару под крышкой. Каждое открытие выпускает пар, как в 3.3.'),
+      why: l('Pirinač se kuva u pari pod poklopcem. Svako otvaranje je pušta, kao u 4.3.', 'The rice cooks in the steam under the lid. Every peek lets it out, as in 4.3.', 'Рис доходит в пару под крышкой. Каждое открытие выпускает пар, как в 4.3.'),
       drawing: 'lidOn',
     },
     {
@@ -58,9 +58,9 @@ const rice: Lesson = {
   mistake: {
     title: l('Mešanje pirinča dok se kuva.', 'Stirring the rice while it cooks.', 'Помешивать рис во время варки.'),
     fix: l(
-      'Mešanje oslobodi skrob iz zrna i pirinač postane lepljiv. Mešanje je za rizoto (8.5), ne za prilog.',
-      'Stirring releases starch from the grains and the rice turns sticky. Stirring is for risotto (8.5), not for a side.',
-      'Помешивание освобождает крахмал, и рис становится липким. Мешают ризотто (8.5), а не гарнир.',
+      'Mešanje oslobodi skrob iz zrna i pirinač postane lepljiv. Mešanje je za rizoto (10.5), ne za prilog.',
+      'Stirring releases starch from the grains and the rice turns sticky. Stirring is for risotto (10.5), not for a side.',
+      'Помешивание освобождает крахмал, и рис становится липким. Мешают ризотто (10.5), а не гарнир.',
     ),
   },
   think: {
@@ -80,7 +80,7 @@ const rice: Lesson = {
 }
 
 const pasta: Lesson = {
-  id: '8.2',
+  id: '10.2',
   title: l('Testenina al dente', 'Pasta al dente', 'Паста аль денте'),
   goal: l(
     'Skuvaš testeninu al dente i povežeš je sa sosom vodom od kuvanja.',
@@ -130,7 +130,7 @@ const pasta: Lesson = {
       text: l('Prebaci testeninu u sos i dodaj vode od kuvanja.', 'Toss the pasta into the sauce and add the cooking water.', 'Переложи пасту в соус и добавь воду от варки.'),
       params: [l('po 2–3 kašike', '2–3 tbsp at a time', 'по 2–3 ст. л.'), l('1 min na vatri', '1 min on the heat', '1 мин на огне')],
       done: l('Sos je sjajan i drži se za testeninu, ne ostaje na dnu.', 'The sauce is glossy and clings to the pasta instead of pooling at the bottom.', 'Соус блестит и держится на пасте, а не стекает на дно.'),
-      why: l('Skrob iz vode veže sos i testeninu u jedno. Opet emulzija, kao u 7.5.', 'The starch in the water binds sauce and pasta together. An emulsion again, as in 7.5.', 'Крахмал из воды связывает соус и пасту. Снова эмульсия, как в 7.5.'),
+      why: l('Skrob iz vode veže sos i testeninu u jedno. Opet emulzija, kao u 3.2.', 'The starch in the water binds sauce and pasta together. An emulsion again, as in 3.2.', 'Крахмал из воды связывает соус и пасту. Снова эмульсия, как в 3.2.'),
     },
   ],
   mistake: {
@@ -158,7 +158,7 @@ const pasta: Lesson = {
 }
 
 const mash: Lesson = {
-  id: '8.3',
+  id: '10.3',
   title: l('Pire krompir', 'Mashed potatoes', 'Картофельное пюре'),
   goal: l(
     'Napraviš glatak, vazdušast pire, a ne lepak.',
@@ -235,7 +235,7 @@ const mash: Lesson = {
 }
 
 const roast: Lesson = {
-  id: '8.4',
+  id: '10.4',
   title: l('Pečeni krompir', 'Roast potatoes', 'Печёный картофель'),
   goal: l(
     'Ispečeš krompir hrskav spolja i mekan kao pire iznutra.',
@@ -310,7 +310,7 @@ const roast: Lesson = {
 }
 
 const risotto: Lesson = {
-  id: '8.5',
+  id: '10.5',
   title: l('Jednostavan rizoto', 'Simple risotto', 'Простое ризотто'),
   goal: l(
     'Skuvaš rizoto koji je kremast, a zrno ima jezgro, bez pavlake.',
@@ -326,9 +326,9 @@ const risotto: Lesson = {
     { item: l('Puter i parmezan', 'Butter and parmesan', 'Масло и пармезан'), qty: l('30 g + 30 g', '30 g + 30 g', '30 г + 30 г') },
   ],
   why: l(
-    'Rizoto spaja ceo prvi razred: brunoise iz 2.4, fond iz 7.1, skrob iz 3.1 i emulziju iz 7.5. Ako ga skuvaš, spreman si za ispit.',
-    'Risotto brings the whole first grade together: brunoise from 2.4, stock from 7.1, starch from 3.1 and emulsion from 7.5. If you can cook it, you are ready for the exam.',
-    'Ризотто объединяет весь первый класс: брюнуаз из 2.4, бульон из 7.1, крахмал из 3.1 и эмульсию из 7.5. Если оно получилось, ты готов к экзамену.',
+    'Rizoto spaja ceo prvi razred: brunoise iz 2.4, fond iz 8.1, skrob iz 4.1 i emulziju iz 3.2. Ako ga skuvaš, spreman si za ispit.',
+    'Risotto brings the whole first grade together: brunoise from 2.4, stock from 8.1, starch from 4.1 and emulsion from 3.2. If you can cook it, you are ready for the exam.',
+    'Ризотто объединяет весь первый класс: брюнуаз из 2.4, бульон из 8.1, крахмал из 4.1 и эмульсию из 3.2. Если оно получилось, ты готов к экзамену.',
   ),
   steps: [
     {
@@ -353,13 +353,13 @@ const risotto: Lesson = {
     {
       text: l('Probaj zrno posle 16 minuta.', 'Taste a grain after 16 minutes.', 'Попробуй зерно через 16 минут.'),
       done: l('Zrno je mekano, ali ima tanko jezgro kad ga zagrizeš.', 'The grain is soft but has a thin core when you bite it.', 'Зерно мягкое, но с тонкой сердцевиной на зуб.'),
-      why: l('Isto „al dente“ kao kod testenine u 8.2.', 'The same "al dente" as the pasta in 8.2.', 'То же «аль денте», что у пасты в 8.2.'),
+      why: l('Isto „al dente“ kao kod testenine u 10.2.', 'The same "al dente" as the pasta in 10.2.', 'То же «аль денте», что у пасты в 10.2.'),
     },
     {
       text: l('Skloni sa vatre, umešaj hladan puter i parmezan.', 'Take off the heat and beat in cold butter and parmesan.', 'Сними с огня и энергично вмешай холодное масло и пармезан.'),
       params: [l('15 g + 30 g', '15 g + 30 g', '15 г + 30 г'), l('odmori 1 min', 'rest 1 min', 'отдых 1 мин')],
       done: l('Rizoto se razlije po tanjiru u talasu, a ne stoji u gomili.', 'The risotto spreads across the plate in a wave instead of sitting in a heap.', 'Ризотто растекается по тарелке волной, а не стоит горкой.'),
-      why: l('Hladan puter van vatre, kao u 7.3. Italijani to zovu „all’onda“, na talasu.', 'Cold butter off the heat, as in 7.3. Italians call it "all’onda", like a wave.', 'Холодное масло вне огня, как в 7.3. Итальянцы называют это «all’onda» — волной.'),
+      why: l('Hladan puter van vatre, kao u 9.8. Italijani to zovu „all’onda“, na talasu.', 'Cold butter off the heat, as in 9.8. Italians call it "all’onda", like a wave.', 'Холодное масло вне огня, как в 9.8. Итальянцы называют это «all’onda» — волной.'),
     },
   ],
   mistake: {
@@ -379,9 +379,9 @@ const risotto: Lesson = {
     ],
     answer: 0,
     explain: l(
-      'To je odgovor na pitanje iz 8.1. Skrob koji tamo ispiraš, ovde čuvaš i oslobađaš. Ista namirnica, suprotan cilj.',
-      'That answers the question from 8.1. The starch you rinse off there, you keep and release here. Same ingredient, opposite goal.',
-      'Это ответ на вопрос из 8.1. Крахмал, который там смывают, здесь сохраняют и высвобождают. Тот же продукт, противоположная цель.',
+      'To je odgovor na pitanje iz 10.1. Skrob koji tamo ispiraš, ovde čuvaš i oslobađaš. Ista namirnica, suprotan cilj.',
+      'That answers the question from 10.1. The starch you rinse off there, you keep and release here. Same ingredient, opposite goal.',
+      'Это ответ на вопрос из 10.1. Крахмал, который там смывают, здесь сохраняют и высвобождают. Тот же продукт, противоположная цель.',
     ),
   },
 }

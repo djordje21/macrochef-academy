@@ -1,10 +1,10 @@
 import { l, type Lesson } from '../types'
 
-// Module 6 · Meat and fish. A thermometer replaces guessing; every lesson ends on a measured
+// Module 7 · Meat and fish. A thermometer replaces guessing; every lesson ends on a measured
 // number from the measures and temperatures page, then rest.
 
 const thermometer: Lesson = {
-  id: '6.1',
+  id: '7.5',
   title: l('Termometar i temperature', 'Thermometer and temperatures', 'Термометр и температуры'),
   goal: l(
     'Izmeriš temperaturu u sredini mesa tačno, iz prvog pokušaja.',
@@ -80,7 +80,7 @@ const thermometer: Lesson = {
 }
 
 const resting: Lesson = {
-  id: '6.2',
+  id: '7.6',
   title: l('Odmaranje mesa', 'Resting meat', 'Отдых мяса'),
   goal: l(
     'Odmoriš meso posle pečenja i iseceš ga tako da ostane sočno i mekano.',
@@ -154,7 +154,7 @@ const resting: Lesson = {
 }
 
 const chicken: Lesson = {
-  id: '6.3',
+  id: '7.7',
   title: l('Pileći file', 'Chicken breast', 'Куриное филе'),
   goal: l(
     'Ispečeš pileći file koji je bezbedan, zlatan spolja i sočan iznutra.',
@@ -186,7 +186,7 @@ const chicken: Lesson = {
       text: l('Osuši file i posoli ga.', 'Pat the breast dry and salt it.', 'Обсуши филе и посоли.'),
       params: [l('1 g soli na 100 g', '1 g salt per 100 g', '1 г соли на 100 г')],
       done: l('Ubrus ostaje suv kad dodirne meso.', 'A fresh paper towel stays dry against the meat.', 'Чистое полотенце остаётся сухим.'),
-      why: l('Pravilo iz 3.6: suvo meso dobije koricu.', 'The rule from 3.6: dry meat gets a crust.', 'Правило из 3.6: сухое мясо получает корочку.'),
+      why: l('Pravilo iz 4.6: suvo meso dobije koricu.', 'The rule from 4.6: dry meat gets a crust.', 'Правило из 4.6: сухое мясо получает корочку.'),
     },
     {
       text: l('Peci na srednje jakoj vatri i ne pomeraj.', 'Cook over medium-high heat without moving it.', 'Жарь на огне выше среднего, не двигая.'),
@@ -230,7 +230,7 @@ const chicken: Lesson = {
 }
 
 const porkChop: Lesson = {
-  id: '6.4',
+  id: '7.8',
   title: l('Svinjski kotlet', 'Pork chop', 'Свиная отбивная'),
   goal: l(
     'Ispečeš ravan kotlet sa koricom i ružičastom, sočnom sredinom.',
@@ -246,9 +246,9 @@ const porkChop: Lesson = {
     { item: l('Termometar', 'Thermometer', 'Термометр'), qty: l('1', '1', '1') },
   ],
   why: l(
-    'Kotlet je lekcija 3.6 na pravom mesu, plus jedan trik koji ga drži ravnim.',
-    'A chop is lesson 3.6 on real meat, plus one trick that keeps it flat.',
-    'Отбивная — урок 3.6 на настоящем мясе плюс один приём, который держит её ровной.',
+    'Kotlet je lekcija 4.6 na pravom mesu, plus jedan trik koji ga drži ravnim.',
+    'A chop is lesson 4.6 on real meat, plus one trick that keeps it flat.',
+    'Отбивная — урок 4.6 на настоящем мясе плюс один приём, который держит её ровной.',
   ),
   steps: [
     {
@@ -305,7 +305,7 @@ const porkChop: Lesson = {
 }
 
 const fish: Lesson = {
-  id: '6.5',
+  id: '7.9',
   title: l('Riba sa kožom', 'Skin-on fish', 'Рыба с кожей'),
   goal: l(
     'Ispečeš file ribe sa hrskavom kožom i sočnim mesom koje se lista.',
@@ -359,9 +359,9 @@ const fish: Lesson = {
   mistake: {
     title: l('Pomeranje ribe pre nego što se koža zapeče.', 'Moving the fish before the skin has crisped.', 'Двигать рыбу, пока кожа не схватилась.'),
     fix: l(
-      'Koža se zalepi i otkine, a file se raspadne. Kao meso u 3.6: kad je koža gotova, sama se odvoji.',
-      'The skin sticks and tears, and the fillet falls apart. As with meat in 3.6: when the skin is done, it lets go on its own.',
-      'Кожа прилипает и рвётся, филе разваливается. Как с мясом в 3.6: когда кожа готова, она отходит сама.',
+      'Koža se zalepi i otkine, a file se raspadne. Kao meso u 4.6: kad je koža gotova, sama se odvoji.',
+      'The skin sticks and tears, and the fillet falls apart. As with meat in 4.6: when the skin is done, it lets go on its own.',
+      'Кожа прилипает и рвётся, филе разваливается. Как с мясом в 4.6: когда кожа готова, она отходит сама.',
     ),
   },
   think: {

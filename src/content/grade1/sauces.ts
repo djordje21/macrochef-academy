@@ -1,10 +1,9 @@
 import { l, type Lesson } from '../types'
 
-// Module 7 · Soups and sauces. Stock first, because every other lesson in the module uses it;
-// then the three ways a sauce gets its body: purée, reduction with butter, flour, and emulsion.
+// Stock, cream soup, deglazing, béchamel and the two emulsions. Split across modules 3, 8 and 9.
 
 const stock: Lesson = {
-  id: '7.1',
+  id: '8.1',
   title: l('Pileći fond', 'Chicken stock', 'Куриный бульон'),
   goal: l(
     'Skuvaš bistar pileći fond koji je osnova za supe i sosove.',
@@ -61,9 +60,9 @@ const stock: Lesson = {
   mistake: {
     title: l('Fond koji ključa.', 'Stock that boils.', 'Бульон, который кипит.'),
     fix: l(
-      'Ključanje umeša mast i penu u tečnost i fond postane mutan i mastan. Isto pravilo kao u 3.2: krčka se, ne ključa.',
-      'Boiling churns fat and foam into the liquid and the stock goes cloudy and greasy. Same rule as 3.2: simmer, do not boil.',
-      'Кипение вмешивает жир и пену в жидкость, и бульон становится мутным и жирным. То же правило, что в 3.2: томить, а не кипятить.',
+      'Ključanje umeša mast i penu u tečnost i fond postane mutan i mastan. Isto pravilo kao u 4.2: krčka se, ne ključa.',
+      'Boiling churns fat and foam into the liquid and the stock goes cloudy and greasy. Same rule as 4.2: simmer, do not boil.',
+      'Кипение вмешивает жир и пену в жидкость, и бульон становится мутным и жирным. То же правило, что в 4.2: томить, а не кипятить.',
     ),
   },
   think: {
@@ -83,8 +82,8 @@ const stock: Lesson = {
 }
 
 const creamSoup: Lesson = {
-  id: '7.2',
-  title: l('Krem supa od povrća', 'Vegetable cream soup', 'Овощной крем-суп'),
+  id: '8.6',
+  title: l('Potaž: krem supa od povrća', 'Potage: vegetable cream soup', 'Потаж: овощной крем-суп'),
   goal: l(
     'Skuvaš glatku krem supu od šargarepe, bez pavlake i brašna.',
     'You make a smooth carrot cream soup, with no cream or flour.',
@@ -131,7 +130,7 @@ const creamSoup: Lesson = {
     {
       text: l('Podesi gustinu fondom, pa so i kap limuna.', 'Adjust the thickness with stock, then salt and a squeeze of lemon.', 'Отрегулируй густоту бульоном, затем соль и капля лимона.'),
       done: l('Supa sporo curi sa kašike i ukus je jasan.', 'The soup runs slowly off a spoon and the flavour is clear.', 'Суп медленно стекает с ложки, вкус ясный.'),
-      why: l('Redosled iz 4.5: prvo so, pa kiselina.', 'The order from 4.5: salt first, then acid.', 'Порядок из 4.5: сначала соль, потом кислота.'),
+      why: l('Redosled iz 5.5: prvo so, pa kiselina.', 'The order from 5.5: salt first, then acid.', 'Порядок из 5.5: сначала соль, потом кислота.'),
     },
   ],
   mistake: {
@@ -159,7 +158,7 @@ const creamSoup: Lesson = {
 }
 
 const deglaze: Lesson = {
-  id: '7.3',
+  id: '9.8',
   title: l('Deglaziranje', 'Deglazing', 'Деглазирование'),
   goal: l(
     'Posle pečenja mesa napraviš sos u istom tiganju, za 3 minuta.',
@@ -196,7 +195,7 @@ const deglaze: Lesson = {
       text: l('Ukuvaj tečnost na pola.', 'Reduce the liquid by half.', 'Уварь жидкость наполовину.'),
       params: [l('150 → 75 ml', '150 → 75 ml', '150 → 75 мл'), l('2 min', '2 min', '2 мин')],
       done: l('Mehurići su sitniji i sporiji, a sos sjajniji.', 'The bubbles are smaller and slower, and the sauce glossier.', 'Пузыри мельче и медленнее, соус блестит.'),
-      why: l('Voda isparava, a ukus ostaje. Isto kao poklopac u 3.1, samo naopako.', 'The water evaporates and the flavour stays. Like the lid in 3.1, in reverse.', 'Вода испаряется, вкус остаётся. Как крышка в 3.1, только наоборот.'),
+      why: l('Voda isparava, a ukus ostaje. Isto kao poklopac u 4.1, samo naopako.', 'The water evaporates and the flavour stays. Like the lid in 4.1, in reverse.', 'Вода испаряется, вкус остаётся. Как крышка в 4.1, только наоборот.'),
     },
     {
       text: l('Skloni tiganj i umešaj hladan puter, kocku po kocku.', 'Take the pan off the heat and swirl in cold butter, a cube at a time.', 'Сними сковороду с огня и вмешай холодное масло по кубику.'),
@@ -236,7 +235,7 @@ const deglaze: Lesson = {
 }
 
 const bechamel: Lesson = {
-  id: '7.4',
+  id: '9.1',
   title: l('Bešamel', 'Béchamel', 'Бешамель'),
   goal: l(
     'Napraviš glatak bešamel bez grudvica.',
@@ -306,15 +305,15 @@ const bechamel: Lesson = {
     ],
     answer: 0,
     explain: l(
-      'Skrob iz brašna mora da proključa da bi nabubrio, kao pirinač u 3.1. Strpljenje pre korekcije, isto kao u 4.5.',
-      'The starch in flour has to come to a simmer to swell, like the rice in 3.1. Patience before adjusting, as in 4.5.',
-      'Крахмалу муки нужно закипеть, чтобы набухнуть, как рису в 3.1. Терпение до поправок, как в 4.5.',
+      'Skrob iz brašna mora da proključa da bi nabubrio, kao pirinač u 4.1. Strpljenje pre korekcije, isto kao u 5.5.',
+      'The starch in flour has to come to a simmer to swell, like the rice in 4.1. Patience before adjusting, as in 5.5.',
+      'Крахмалу муки нужно закипеть, чтобы набухнуть, как рису в 4.1. Терпение до поправок, как в 5.5.',
     ),
   },
 }
 
 const emulsions: Lesson = {
-  id: '7.5',
+  id: '3.2',
   title: l('Vinegret i majonez', 'Vinaigrette and mayonnaise', 'Винегрет и майонез'),
   goal: l(
     'Napraviš vinegret i domaći majonez i razumeš zašto se ulje i voda spoje.',
@@ -331,9 +330,9 @@ const emulsions: Lesson = {
     { item: l('Tegla sa poklopcem i činija', 'Jar with lid and a bowl', 'Банка с крышкой и миска'), qty: l('1 + 1', '1 + 1', '1 + 1') },
   ],
   why: l(
-    'Ulje i voda se ne mešaju sami. Senf i žumance ih drže zajedno. To je emulzija, isto što drži puter u sosu iz 7.3.',
-    'Oil and water do not mix on their own. Mustard and yolk hold them together. That is an emulsion, the same thing that holds the butter in the 7.3 sauce.',
-    'Масло и вода сами не смешиваются. Горчица и желток удерживают их вместе. Это эмульсия — то же, что держит масло в соусе из 7.3.',
+    'Ulje i voda se ne mešaju sami. Senf i žumance ih drže zajedno. To je emulzija, isto što drži puter u sosu iz 9.8.',
+    'Oil and water do not mix on their own. Mustard and yolk hold them together. That is an emulsion, the same thing that holds the butter in the 9.8 sauce.',
+    'Масло и вода сами не смешиваются. Горчица и желток удерживают их вместе. Это эмульсия — то же, что держит масло в соусе из 9.8.',
   ),
   steps: [
     {
@@ -393,4 +392,7 @@ const emulsions: Lesson = {
   },
 }
 
-export const sauceLessons: Lesson[] = [stock, creamSoup, deglaze, bechamel, emulsions]
+// Written before the course was split into soups and sauces; the lessons now live in three modules.
+export const soupBaseLessons: Lesson[] = [stock, creamSoup]
+export const sauceBaseLessons: Lesson[] = [bechamel, deglaze]
+export const dressingBaseLesson: Lesson = emulsions

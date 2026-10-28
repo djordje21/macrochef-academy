@@ -1,10 +1,10 @@
 import { l, type Lesson } from '../types'
 
-// Module 3 · Heat. The module where the course teaches thinking: every lesson ties what the cook
+// Module 4 · Heat. The module where the course teaches thinking: every lesson ties what the cook
 // sees in the pan to what heat does to proteins, starch and water.
 
 const basics: Lesson = {
-  id: '3.1',
+  id: '4.1',
   title: l('Šta toplota radi hrani', 'What heat does to food', 'Что огонь делает с едой'),
   goal: l(
     'Vidiš svojim očima tri stvari koje toplota radi: proteini se stežu, skrob bubri, voda isparava.',
@@ -144,7 +144,7 @@ const basics: Lesson = {
 }
 
 const boiling: Lesson = {
-  id: '3.2',
+  id: '4.2',
   title: l('Kuvanje, krčkanje, blanširanje', 'Boiling, simmering, blanching', 'Варка, томление, бланширование'),
   goal: l(
     'Razlikuješ ključanje i krčkanje po mehurićima i blanširaš boraniju tako da ostane zelena.',
@@ -271,7 +271,7 @@ const boiling: Lesson = {
 }
 
 const steam: Lesson = {
-  id: '3.3',
+  id: '4.3',
   title: l('Para', 'Steam', 'Пар'),
   goal: l(
     'Skuvaš brokoli na pari tako da ostane jarko zelen i čvrst.',
@@ -390,7 +390,7 @@ const steam: Lesson = {
 }
 
 const oven: Lesson = {
-  id: '3.4',
+  id: '4.4',
   title: l('Rerna', 'Oven', 'Духовка'),
   goal: l(
     'Ispečeš povrće sa zlatnim ivicama, mekano iznutra.',
@@ -503,7 +503,7 @@ const oven: Lesson = {
 }
 
 const saute: Lesson = {
-  id: '3.5',
+  id: '4.5',
   title: l('Tiganj i sotiranje', 'Pan and sautéing', 'Сковорода и соте'),
   goal: l(
     'Sotiraš pečurke tako da budu zlatne i suve, ne sive i vodnjikave.',
@@ -626,7 +626,7 @@ const saute: Lesson = {
 }
 
 const crust: Lesson = {
-  id: '3.6',
+  id: '4.6',
   title: l('Zlatna korica', 'The golden crust', 'Золотистая корочка'),
   goal: l(
     'Napraviš tamnozlatnu koricu na komadu mesa i znaš zašto je nastala.',

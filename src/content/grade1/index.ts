@@ -1,15 +1,18 @@
-import { l, type Grade } from '../types'
-import { kitchenLessons } from './m1-kitchen'
-import { knifeLessons } from './m2-knife'
-import { heatLessons } from './m3-heat'
-import { tasteLessons } from './m4-taste'
-import { eggLessons } from './m5-eggs'
-import { meatLessons } from './m6-meat'
-import { sauceLessons } from './m7-sauces'
-import { starchLessons } from './m8-starches'
+import { l, type Grade, type L } from '../types'
+import { kitchenLessons } from './kitchen'
+import { knifeLessons } from './knife'
+import { heatLessons } from './heat'
+import { tasteLessons } from './taste'
+import { eggLessons } from './eggs'
+import { meatLessons } from './meat'
+import { dressingBaseLesson, sauceBaseLessons, soupBaseLessons } from './sauces'
+import { starchLessons } from './starches'
 
-// Grade 1 · First steps. Modules in teaching order: kitchen and knife first, then heat and taste,
-// then dishes.
+// Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
+// station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
+// Lessons not written yet are listed as planned, so the whole path is visible from day one.
+
+const p = (id: string, title: L) => ({ id, title })
 
 export const grade1: Grade = {
   n: 1,
@@ -40,7 +43,7 @@ export const grade1: Grade = {
         'Equipment, order and hygiene. Everything that has to be ready before you turn on the stove.',
         'Инвентарь, порядок и гигиена. Всё, что должно быть готово, прежде чем включить плиту.',
       ),
-      photo: 'm1.webp',
+      photo: 'kitchen.webp',
       lessons: kitchenLessons,
     },
     {
@@ -52,80 +55,245 @@ export const grade1: Grade = {
         'Grip, honing and the four basic cuts. After this module you cut faster and safer.',
         'Хват, правка и четыре базовые нарезки. После этого модуля ты режешь быстрее и безопаснее.',
       ),
-      photo: 'm2.webp',
+      photo: 'knife.webp',
       lessons: knifeLessons,
     },
     {
       id: 'm3',
       n: 3,
+      title: l('Hladna kuhinja', 'The cold station', 'Холодный цех'),
+      intro: l(
+        'Salate i dresinzi, od pranja lista do organizacije cele partije. Prvi modul u kom praviš pravo jelo.',
+        'Salads and dressings, from washing a leaf to organising the whole station. The first module where you make a real dish.',
+        'Салаты и заправки, от мытья листа до организации всего цеха. Первый модуль, где ты готовишь настоящее блюдо.',
+      ),
+      photo: 'cold.webp',
+      lessons: [dressingBaseLesson],
+      planned: [
+        p('3.1', l('Pranje i sušenje salate', 'Washing and drying salad', 'Мытьё и сушка салата')),
+        p('3.3', l('Dresinzi: vrste i varijante', 'Dressings: types and variations', 'Заправки: виды и варианты')),
+        p('3.4', l('Sastavljanje salate', 'Building a salad', 'Как собрать салат')),
+        p('3.5', l('Organizacija hladne partije', 'Organising the cold station', 'Организация холодного цеха')),
+      ],
+    },
+    {
+      id: 'm4',
+      n: 4,
       title: l('Toplota', 'Heat', 'Огонь'),
       intro: l(
         'Šta toplota radi hrani i kako je kontrolišeš: voda, para, rerna, tiganj.',
         'What heat does to food and how to control it: water, steam, oven, pan.',
         'Что огонь делает с едой и как им управлять: вода, пар, духовка, сковорода.',
       ),
-      photo: 'm3.webp',
+      photo: 'heat.webp',
       lessons: heatLessons,
     },
     {
-      id: 'm4',
-      n: 4,
+      id: 'm5',
+      n: 5,
       title: l('Ukus', 'Taste', 'Вкус'),
       intro: l(
         'So, kiselina, masnoća, slatko, ljuto, umami. Probaj, koriguj, probaj ponovo.',
         'Salt, acid, fat, sweet, heat, umami. Taste, adjust, taste again.',
         'Соль, кислота, жир, сладость, острота, умами. Попробуй, поправь, попробуй снова.',
       ),
-      photo: 'm4.webp',
+      photo: 'taste.webp',
       lessons: tasteLessons,
     },
     {
-      id: 'm5',
-      n: 5,
+      id: 'm6',
+      n: 6,
       title: l('Jaja i povrće', 'Eggs and vegetables', 'Яйца и овощи'),
       intro: l(
         'Jaja na četiri načina i povrće iz tiganja. Najjeftiniji način da naučiš kontrolu vatre.',
         'Eggs four ways and vegetables from the pan. The cheapest way to learn heat control.',
         'Яйца четырьмя способами и овощи со сковороды. Самый дешёвый способ научиться управлять огнём.',
       ),
-      photo: 'm5.webp',
+      photo: 'eggs.webp',
       lessons: eggLessons,
-    },
-    {
-      id: 'm6',
-      n: 6,
-      title: l('Meso i riba', 'Meat and fish', 'Мясо и рыба'),
-      intro: l(
-        'Termometar umesto nagađanja. Piletina, kotlet i riba sa hrskavom kožom.',
-        'A thermometer instead of guessing. Chicken, a chop and fish with crisp skin.',
-        'Термометр вместо догадок. Курица, отбивная и рыба с хрустящей кожей.',
-      ),
-      photo: 'm6.webp',
-      lessons: meatLessons,
     },
     {
       id: 'm7',
       n: 7,
-      title: l('Supe i sosevi', 'Soups and sauces', 'Супы и соусы'),
+      title: l('Meso i riba', 'Meat and fish', 'Мясо и рыба'),
       intro: l(
-        'Fond, krem supa i tri sosa koja koristiš celog života.',
-        'Stock, a cream soup and three sauces you will use for life.',
-        'Бульон, крем-суп и три соуса на всю жизнь.',
+        'Od skladištenja i čišćenja do tiganja: žile, koža, porcije, termometar i riba sa hrskavom kožom.',
+        'From storing and trimming to the pan: sinew, skin, portions, the thermometer and crisp-skinned fish.',
+        'От хранения и зачистки до сковороды: жилы, кожа, порции, термометр и рыба с хрустящей кожей.',
       ),
-      photo: 'm7.webp',
-      lessons: sauceLessons,
+      photo: 'meat.webp',
+      lessons: meatLessons,
+      planned: [
+        p('7.1', l('Skladištenje i odmrzavanje', 'Storing and thawing', 'Хранение и разморозка')),
+        p('7.2', l('Čišćenje mesa: žile, opna, masnoća', 'Trimming meat: sinew, silver skin, fat', 'Зачистка мяса: жилы, плёнка, жир')),
+        p('7.3', l('Sečenje i porcioniranje', 'Cutting and portioning', 'Нарезка и порционирование')),
+        p('7.4', l('Koža i koščice: piletina i riba', 'Skin and pin bones: chicken and fish', 'Кожа и косточки: курица и рыба')),
+      ],
     },
     {
       id: 'm8',
       n: 8,
+      title: l('Supe i čorbe', 'Soups and stews', 'Супы и похлёбки'),
+      intro: l(
+        'Fondovi, bistre supe, čorbe i potaži. Osnova polovine naše kuhinje.',
+        'Stocks, clear soups, thick soups and potages. The base of half our cooking.',
+        'Бульоны, прозрачные супы, похлёбки и потажи. Основа половины нашей кухни.',
+      ),
+      photo: 'soups.webp',
+      lessons: soupBaseLessons,
+      planned: [
+        p('8.2', l('Tamni goveđi fond', 'Brown beef stock', 'Тёмный говяжий бульон')),
+        p('8.3', l('Povrtni i riblji fond', 'Vegetable and fish stock', 'Овощной и рыбный бульон')),
+        p('8.4', l('Bistra goveđa supa', 'Clear beef soup', 'Прозрачный говяжий суп')),
+        p('8.5', l('Čorba', 'Thick soup (čorba)', 'Чорба')),
+      ],
+    },
+    {
+      id: 'm9',
+      n: 9,
+      title: l('Sosevi', 'Sauces', 'Соусы'),
+      intro: l(
+        'Pet osnovnih sosova klasične kuhinje i njihove nadogradnje, plus sos iz tiganja za tri minuta.',
+        'The five mother sauces of classic cooking and their derivatives, plus a pan sauce in three minutes.',
+        'Пять базовых соусов классической кухни и их производные, плюс соус на сковороде за три минуты.',
+      ),
+      photo: 'sauces.webp',
+      lessons: sauceBaseLessons,
+      planned: [
+        p('9.2', l('Mornej: bešamel sa sirom', 'Mornay: béchamel with cheese', 'Морне: бешамель с сыром')),
+        p('9.3', l('Velute i suprem', 'Velouté and suprême', 'Велюте и сюпрем')),
+        p('9.4', l('Smeđi sos', 'Brown sauce', 'Коричневый соус')),
+        p('9.5', l('Paradajz sos', 'Tomato sauce', 'Томатный соус')),
+        p('9.6', l('Holandez', 'Hollandaise', 'Голландский соус')),
+        p('9.7', l('Bearnez', 'Béarnaise', 'Беарнский соус')),
+        p('9.9', l('Beurre blanc', 'Beurre blanc', 'Бёр блан')),
+      ],
+    },
+    {
+      id: 'm10',
+      n: 10,
       title: l('Pirinač, testenina, krompir', 'Rice, pasta, potatoes', 'Рис, паста, картофель'),
       intro: l(
         'Prilozi koji uvek uspeju: pirinač, al dente, pire i pečeni krompir.',
         'Sides that always work: rice, al dente pasta, mash and roast potatoes.',
         'Гарниры, которые всегда получаются: рис, паста аль денте, пюре и печёный картофель.',
       ),
-      photo: 'm8.webp',
+      photo: 'starches.webp',
       lessons: starchLessons,
+    },
+    {
+      id: 'm11',
+      n: 11,
+      title: l('Mahunarke i žitarice', 'Pulses and grains', 'Бобовые и крупы'),
+      intro: l(
+        'Pasulj, sočivo, leblebija i bulgur. Jeftino, zdravo i domaće.',
+        'Beans, lentils, chickpeas and bulgur. Cheap, healthy and homely.',
+        'Фасоль, чечевица, нут и булгур. Дёшево, полезно и по-домашнему.',
+      ),
+      photo: 'legumes.webp',
+      lessons: [],
+      planned: [
+        p('11.1', l('Pasulj: namakanje i kuvanje', 'Beans: soaking and cooking', 'Фасоль: замачивание и варка')),
+        p('11.2', l('Prebranac', 'Baked beans (prebranac)', 'Запечённая фасоль (пребранац)')),
+        p('11.3', l('Sočivo', 'Lentils', 'Чечевица')),
+        p('11.4', l('Leblebija i humus', 'Chickpeas and hummus', 'Нут и хумус')),
+        p('11.5', l('Bulgur', 'Bulgur', 'Булгур')),
+      ],
+    },
+    {
+      id: 'm12',
+      n: 12,
+      title: l('Dinstanje i braziranje', 'Stewing and braising', 'Тушение и брезирование'),
+      intro: l(
+        'Gulaš, paprikaš, sarma. Tehnika iza pola naše kuhinje: sporo, poklopljeno, sa malo tečnosti.',
+        'Goulash, paprikash, sarma. The technique behind half our cooking: slow, covered, with little liquid.',
+        'Гуляш, паприкаш, сарма. Техника, на которой держится половина нашей кухни: медленно, под крышкой, с малым количеством жидкости.',
+      ),
+      photo: 'braise.webp',
+      lessons: [],
+      planned: [
+        p('12.1', l('Šta je braziranje', 'What braising is', 'Что такое брезирование')),
+        p('12.2', l('Gulaš', 'Goulash', 'Гуляш')),
+        p('12.3', l('Pileći paprikaš', 'Chicken paprikash', 'Куриный паприкаш')),
+        p('12.4', l('Sarma', 'Sarma', 'Сарма')),
+        p('12.5', l('Braziran juneći obraz', 'Braised beef cheeks', 'Тушёные говяжьи щёчки')),
+      ],
+    },
+    {
+      id: 'm13',
+      n: 13,
+      title: l('Pečenje u rerni', 'Oven roasting', 'Запекание в духовке'),
+      intro: l(
+        'Celo pile, pečenje i sve što ide uz njih. Nedeljni ručak bez stresa.',
+        'A whole chicken, a roast and everything that goes with them. Sunday lunch without stress.',
+        'Целая курица, запечённое мясо и всё, что к ним полагается. Воскресный обед без стресса.',
+      ),
+      photo: 'roast.webp',
+      lessons: [],
+      planned: [
+        p('13.1', l('Celo pile', 'Whole roast chicken', 'Целая курица')),
+        p('13.2', l('Rasecanje pečenog pileta', 'Carving a roast chicken', 'Как разделать запечённую курицу')),
+        p('13.3', l('Svinjsko pečenje', 'Roast pork', 'Запечённая свинина')),
+        p('13.4', l('Krompir i povrće uz pečenje', 'Potatoes and vegetables with the roast', 'Картофель и овощи к жаркому')),
+        p('13.5', l('Sos od soka pečenja', 'Gravy from the roasting juices', 'Соус из сока жаркого')),
+      ],
+    },
+    {
+      id: 'm14',
+      n: 14,
+      title: l('Roštilj i grill tiganj', 'Grill and grill pan', 'Гриль и сковорода-гриль'),
+      intro: l(
+        'Zone vatre, marinade i meso koje je sočno, a ne zagorelo.',
+        'Heat zones, marinades and meat that is juicy, not charred.',
+        'Зоны жара, маринады и мясо, которое сочное, а не обугленное.',
+      ),
+      photo: 'grill.webp',
+      lessons: [],
+      planned: [
+        p('14.1', l('Roštilj: žar i zone vatre', 'The grill: coals and heat zones', 'Гриль: угли и зоны жара')),
+        p('14.2', l('Grill tiganj u stanu', 'A grill pan at home', 'Сковорода-гриль дома')),
+        p('14.3', l('Pljeskavica i ćevapi', 'Pljeskavica and ćevapi', 'Плескавица и чевапи')),
+        p('14.4', l('Marinade i ražnjići', 'Marinades and skewers', 'Маринады и шашлычки')),
+        p('14.5', l('Povrće na roštilju', 'Grilled vegetables', 'Овощи на гриле')),
+      ],
+    },
+    {
+      id: 'm15',
+      n: 15,
+      title: l('Ostaci i zero waste', 'Leftovers and zero waste', 'Остатки и ноль отходов'),
+      intro: l(
+        'Šta od obrezaka, kore i jučerašnjeg ručka. Kako restoran ne baca, a kako i ti ne moraš.',
+        'What to do with trimmings, peels and yesterday’s lunch. How a restaurant wastes nothing, and how you need not either.',
+        'Что делать с обрезками, кожурой и вчерашним обедом. Как ресторан ничего не выбрасывает и как этого добиться дома.',
+      ),
+      photo: 'leftovers.webp',
+      lessons: [],
+      planned: [
+        p('15.1', l('Obrezci: fond, ulje, čips', 'Trimmings: stock, oil, crisps', 'Обрезки: бульон, масло, чипсы')),
+        p('15.2', l('Hleb od juče', 'Yesterday’s bread', 'Вчерашний хлеб')),
+        p('15.3', l('Jučerašnji ručak, novo jelo', 'Yesterday’s lunch, a new dish', 'Вчерашний обед — новое блюдо')),
+        p('15.4', l('Pametno zamrzavanje', 'Freezing smart', 'Умная заморозка')),
+        p('15.5', l('Kora, peteljke, lišće', 'Peels, stems and leaves', 'Кожура, стебли и листья')),
+      ],
+    },
+    {
+      id: 'm16',
+      n: 16,
+      title: l('Planiranje i meal prep', 'Planning and meal prep', 'Планирование и заготовки'),
+      intro: l(
+        'Nedelja unapred: jelovnik, nabavka i kutije u frižideru. Sa makroima u MacroChefu.',
+        'A week ahead: menu, shopping and boxes in the fridge. With macros in MacroChef.',
+        'Неделя вперёд: меню, покупки и контейнеры в холодильнике. С макросами в MacroChef.',
+      ),
+      photo: 'mealprep.webp',
+      lessons: [],
+      planned: [
+        p('16.1', l('Jelovnik za nedelju', 'A menu for the week', 'Меню на неделю')),
+        p('16.2', l('Spisak za nabavku', 'The shopping list', 'Список покупок')),
+        p('16.3', l('Meal prep nedeljom', 'Sunday meal prep', 'Заготовки в воскресенье')),
+        p('16.4', l('Kutije, frižider i rokovi', 'Boxes, fridge and use-by dates', 'Контейнеры, холодильник и сроки')),
+        p('16.5', l('Makroi u MacroChefu', 'Macros in MacroChef', 'Макросы в MacroChef')),
+      ],
     },
   ],
   exam: {

@@ -31,7 +31,7 @@ export function Exam() {
     <div className="exam">
       {exam.stage === 'intro' && (
         <header className="exam-cover">
-          <Photo name="m4.webp" />
+          <Photo name="taste.webp" />
         </header>
       )}
       <div className="screen exam-body">

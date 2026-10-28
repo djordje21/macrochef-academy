@@ -106,7 +106,7 @@ export const decisions: { key: 'cut' | 'heat' | 'taste'; title: L; hint: L; less
       'Which heat for the protein and which for the side? At what temperature do you take the protein off?',
       'Какой нагрев для белка и какой для гарнира? При какой температуре снимаешь белок?',
     ),
-    lessons: ['3.5', '3.6', '6.1'],
+    lessons: ['4.5', '4.6', '7.5'],
   },
   {
     key: 'taste',
@@ -116,7 +116,7 @@ export const decisions: { key: 'cut' | 'heat' | 'taste'; title: L; hint: L; less
       'How will you check and correct the taste at the end? What in the basket is your acid, and what is your fat?',
       'Как ты проверишь и поправишь вкус в конце? Что в корзине будет кислотой, а что жиром?',
     ),
-    lessons: ['4.2', '4.5'],
+    lessons: ['5.2', '5.5'],
   },
 ]
 
@@ -124,7 +124,7 @@ export const decisions: { key: 'cut' | 'heat' | 'taste'; title: L; hint: L; less
 export const cookChecks: { text: L; lesson: string }[] = [
   { text: l('Mise en place je spreman pre paljenja ringle.', 'Mise en place is ready before the stove goes on.', 'Мизанплас готов до включения плиты.'), lesson: '1.2' },
   { text: l('Daska za sirovo meso je odvojena.', 'The raw-meat board is kept separate.', 'Доска для сырого мяса отдельно.'), lesson: '1.3' },
-  { text: l('Protein je izmeren termometrom i odmoren.', 'The protein was measured with a thermometer and rested.', 'Белок измерен термометром и отдохнул.'), lesson: '6.2' },
-  { text: l('Probao si i korigovao redom: so, kiselina, masnoća.', 'You tasted and corrected in order: salt, acid, fat.', 'Ты пробовал и поправлял по порядку: соль, кислота, жир.'), lesson: '4.5' },
-  { text: l('Tanjir je topao i na njemu nema bare.', 'The plate is warm and has no puddle on it.', 'Тарелка тёплая, на ней нет лужи.'), lesson: '6.2' },
+  { text: l('Protein je izmeren termometrom i odmoren.', 'The protein was measured with a thermometer and rested.', 'Белок измерен термометром и отдохнул.'), lesson: '7.6' },
+  { text: l('Probao si i korigovao redom: so, kiselina, masnoća.', 'You tasted and corrected in order: salt, acid, fat.', 'Ты пробовал и поправлял по порядку: соль, кислота, жир.'), lesson: '5.5' },
+  { text: l('Tanjir je topao i na njemu nema bare.', 'The plate is warm and has no puddle on it.', 'Тарелка тёплая, на ней нет лужи.'), lesson: '7.6' },
 ]

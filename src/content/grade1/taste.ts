@@ -1,10 +1,10 @@
 import { l, type Lesson } from '../types'
 
-// Module 4 · Taste. Every lesson is a side-by-side tasting: the cook changes one thing and tastes
+// Module 5 · Taste. Every lesson is a side-by-side tasting: the cook changes one thing and tastes
 // the difference, so the rules come from their own tongue, not from the text.
 
 const salt: Lesson = {
-  id: '4.1',
+  id: '5.1',
   title: l('So: kada i koliko', 'Salt: when and how much', 'Соль: когда и сколько'),
   goal: l(
     'Posoliš jelo u pravom trenutku i u pravoj količini.',
@@ -129,7 +129,7 @@ const salt: Lesson = {
 }
 
 const acid: Lesson = {
-  id: '4.2',
+  id: '5.2',
   title: l('Kiselina', 'Acid', 'Кислота'),
   goal: l(
     'Oživiš „ravno“ jelo sa nekoliko kapi limuna ili sirćeta.',
@@ -228,7 +228,7 @@ const acid: Lesson = {
 }
 
 const fatSweet: Lesson = {
-  id: '4.3',
+  id: '5.3',
   title: l('Masnoća i slatko', 'Fat and sweetness', 'Жир и сладость'),
   goal: l(
     'Koristiš masnoću da nosi ukus, a slatko da smiri kiselo.',
@@ -331,7 +331,7 @@ const fatSweet: Lesson = {
 }
 
 const heatUmami: Lesson = {
-  id: '4.4',
+  id: '5.4',
   title: l('Ljuto i umami', 'Heat and umami', 'Острота и умами'),
   goal: l(
     'Dodaješ ljuto postepeno i prepoznaješ umami u namirnicama koje već imaš.',
@@ -404,7 +404,7 @@ const heatUmami: Lesson = {
         'Если слишком остро, добавь жир, сладость или йогурт, но не воду.',
       ),
       done: l('Ljutina se smiri, a jelo ostane gusto.', 'The heat calms down and the dish stays thick.', 'Острота успокаивается, а блюдо остаётся густым.'),
-      why: l('Vidi 4.3: ljutina se rastvara u masti.', 'See 4.3: chilli heat dissolves in fat.', 'См. 4.3: острота растворяется в жире.'),
+      why: l('Vidi 5.3: ljutina se rastvara u masti.', 'See 5.3: chilli heat dissolves in fat.', 'См. 5.3: острота растворяется в жире.'),
     },
   ],
   mistake: {
@@ -432,7 +432,7 @@ const heatUmami: Lesson = {
 }
 
 const tasteAdjust: Lesson = {
-  id: '4.5',
+  id: '5.5',
   title: l('Probaj i koriguj', 'Taste and adjust', 'Попробуй и поправь'),
   goal: l(
     'Probaš jelo i znaš redom šta da proveriš i kako da ispraviš.',

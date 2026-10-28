@@ -368,9 +368,9 @@ const onion: Lesson = {
         'Кубики отпадают сами, одного размера. Остаётся корень.',
       ),
       why: l(
-        'Koren baci ili sačuvaj za fond iz modula 7.',
-        'Throw the root away or keep it for the stock in module 7.',
-        'Корень выброси или сохрани для бульона из модуля 7.',
+        'Koren baci ili sačuvaj za fond iz modula 8.',
+        'Throw the root away or keep it for the stock in module 8.',
+        'Корень выброси или сохрани для бульона из модуля 8.',
       ),
       drawing: 'onionDice',
     },

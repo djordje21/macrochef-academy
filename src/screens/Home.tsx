@@ -60,7 +60,7 @@ export function Home() {
 
         <div className="rows">
           {grade.modules.map((m, i) => {
-            const total = m.lessons.length || m.planned?.length || 0
+            const total = m.lessons.length
             const finished = m.lessons.filter((x) => done.has(x.id)).length
             const cls = [
               'row',

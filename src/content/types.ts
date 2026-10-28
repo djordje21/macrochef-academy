@@ -43,9 +43,10 @@ export interface Module {
   title: L
   intro: L
   photo: string
-  /** Written lessons, or only the planned titles while the module is in progress. */
+  /** Written lessons. */
   lessons: Lesson[]
-  planned?: { title: L; minutes: number }[]
+  /** Lessons announced but not written yet, with the id they will have. */
+  planned?: { id: string; title: L }[]
 }
 
 export interface Grade {

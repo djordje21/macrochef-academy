@@ -1,10 +1,10 @@
 import { l, type Lesson } from '../types'
 
-// Module 5 · Eggs and vegetables. Eggs are the cheapest way to practise heat control: proteins set
+// Module 6 · Eggs and vegetables. Eggs are the cheapest way to practise heat control: proteins set
 // at known temperatures, and every mistake shows on the plate within a minute.
 
 const boiled: Lesson = {
-  id: '5.1',
+  id: '6.1',
   title: l('Kuvana jaja', 'Boiled eggs', 'Варёные яйца'),
   goal: l(
     'Skuvaš jaje tačno onako kako hoćeš: tečno, kremasto ili tvrdo žumance.',
@@ -83,7 +83,7 @@ const boiled: Lesson = {
 }
 
 const scrambled: Lesson = {
-  id: '5.2',
+  id: '6.2',
   title: l('Kajgana', 'Scrambled eggs', 'Скрэмбл'),
   goal: l(
     'Napraviš kremastu kajganu sa mekanim, krupnim grudvicama.',
@@ -149,15 +149,15 @@ const scrambled: Lesson = {
     ],
     answer: 0,
     explain: l(
-      'Isto kao u 3.1: proteini se stežu pod toplotom. Što brže i jače, to više vode istisnu. Tiha vatra ih steže taman toliko.',
-      'Same as 3.1: heat makes proteins tighten. The faster and hotter, the more water they squeeze out. Low heat tightens them just enough.',
-      'Как в 3.1: при нагреве белки сжимаются. Чем быстрее и сильнее, тем больше воды выдавливают. Слабый огонь сжимает их ровно настолько, насколько нужно.',
+      'Isto kao u 4.1: proteini se stežu pod toplotom. Što brže i jače, to više vode istisnu. Tiha vatra ih steže taman toliko.',
+      'Same as 4.1: heat makes proteins tighten. The faster and hotter, the more water they squeeze out. Low heat tightens them just enough.',
+      'Как в 4.1: при нагреве белки сжимаются. Чем быстрее и сильнее, тем больше воды выдавливают. Слабый огонь сжимает их ровно настолько, насколько нужно.',
     ),
   },
 }
 
 const omelette: Lesson = {
-  id: '5.3',
+  id: '6.3',
   title: l('Omlet', 'Omelette', 'Омлет'),
   goal: l(
     'Napraviš omlet koji je spolja glatak i žut, a iznutra mekan.',
@@ -231,7 +231,7 @@ const omelette: Lesson = {
 }
 
 const poached: Lesson = {
-  id: '5.4',
+  id: '6.4',
   title: l('Poširano jaje', 'Poached egg', 'Яйцо пашот'),
   goal: l(
     'Poširaš jaje sa čvrstim belancem i tečnim žumancetom, bez pramenova u vodi.',
@@ -247,7 +247,7 @@ const poached: Lesson = {
     { item: l('Rešetkasta kašika', 'Slotted spoon', 'Шумовка'), qty: l('1', '1', '1') },
   ],
   why: l(
-    'Poširanje je kuvanje u vodi ispod ključanja. Isto znanje treba za ribu i piletinu u 6. i 7. modulu.',
+    'Poširanje je kuvanje u vodi ispod ključanja. Isto znanje treba za ribu i piletinu u 7. i 8. modulu.',
     'Poaching is cooking in water below the boil. You need the same skill for fish and chicken later.',
     'Пашот — это варка в воде ниже точки кипения. Тот же навык понадобится для рыбы и курицы.',
   ),
@@ -305,7 +305,7 @@ const poached: Lesson = {
 }
 
 const greenPan: Lesson = {
-  id: '5.5',
+  id: '6.5',
   title: l('Povrće u tiganju', 'Pan-fried vegetables', 'Овощи на сковороде'),
   goal: l(
     'Ispržiš tikvice da budu zlatne spolja i čvrste iznutra, sa belim lukom koji ne zagori.',
@@ -321,9 +321,9 @@ const greenPan: Lesson = {
     { item: l('Limun', 'Lemon', 'Лимон'), qty: l('¼', '¼', '¼') },
   ],
   why: l(
-    'Ova lekcija spaja tri modula: rez iz M2, tiganj iz M3 i korekciju ukusa iz M4.',
-    'This lesson ties three modules together: the cut from M2, the pan from M3 and the seasoning from M4.',
-    'Этот урок объединяет три модуля: нарезку из М2, сковороду из М3 и вкус из М4.',
+    'Ova lekcija spaja tri modula: rez iz M2, tiganj iz M4 i korekciju ukusa iz M5.',
+    'This lesson ties three modules together: the cut from M2, the pan from M4 and the seasoning from M5.',
+    'Этот урок объединяет три модуля: нарезку из М2, сковороду из М4 и вкус из М5.',
   ),
   steps: [
     {
@@ -340,7 +340,7 @@ const greenPan: Lesson = {
       text: l('Rasporedi tikvice u jednom sloju i ne mešaj ih.', 'Lay the courgettes in one layer and do not stir.', 'Разложи кабачки в один слой и не мешай.'),
       params: [l('3 min', '3 min', '3 мин')],
       done: l('Donja strana je zlatna.', 'The underside is golden.', 'Нижняя сторона золотистая.'),
-      why: l('Pravilo iz 3.5: korica se pravi dok namirnica leži.', 'The rule from 3.5: the crust forms while the food lies still.', 'Правило из 3.5: корочка образуется, пока продукт лежит.'),
+      why: l('Pravilo iz 4.5: korica se pravi dok namirnica leži.', 'The rule from 4.5: the crust forms while the food lies still.', 'Правило из 4.5: корочка образуется, пока продукт лежит.'),
       drawing: 'zucchiniPan',
     },
     {
@@ -352,7 +352,7 @@ const greenPan: Lesson = {
     {
       text: l('Skloni sa vatre, posoli i dodaj kap limuna.', 'Take off the heat, salt and add a squeeze of lemon.', 'Сними с огня, посоли и добавь немного лимона.'),
       done: l('Tikvice su zlatne, čvrste i ukus je jasan.', 'The courgettes are golden and firm, and the flavour is clear.', 'Кабачки золотистые, упругие, вкус ясный.'),
-      why: l('So na kraju, da ne izvuče vodu. Kiselina iz 4.2 da ukus ne bude ravan.', 'Salt at the end so it does not draw out water. Acid from 4.2 so the taste is not flat.', 'Соль в конце, чтобы не вытянула воду. Кислота из 4.2 — чтобы вкус не был плоским.'),
+      why: l('So na kraju, da ne izvuče vodu. Kiselina iz 5.2 da ukus ne bude ravan.', 'Salt at the end so it does not draw out water. Acid from 5.2 so the taste is not flat.', 'Соль в конце, чтобы не вытянула воду. Кислота из 5.2 — чтобы вкус не был плоским.'),
     },
   ],
   mistake: {
@@ -372,9 +372,9 @@ const greenPan: Lesson = {
     ],
     answer: 0,
     explain: l(
-      'Tikvice su skoro sve voda, kao pečurke iz 3.5. So na početku je izvuče napolje i umesto prženja dobiješ kuvanje.',
-      'Courgettes are almost all water, like the mushrooms in 3.5. Salt at the start pulls it out, and instead of frying you get stewing.',
-      'Кабачки почти целиком из воды, как грибы в 3.5. Соль в начале вытягивает её, и вместо жарки получается тушение.',
+      'Tikvice su skoro sve voda, kao pečurke iz 4.5. So na početku je izvuče napolje i umesto prženja dobiješ kuvanje.',
+      'Courgettes are almost all water, like the mushrooms in 4.5. Salt at the start pulls it out, and instead of frying you get stewing.',
+      'Кабачки почти целиком из воды, как грибы в 4.5. Соль в начале вытягивает её, и вместо жарки получается тушение.',
     ),
   },
 }

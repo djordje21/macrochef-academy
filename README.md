@@ -20,7 +20,7 @@ Deploy:
 
 - `src/content/` – sadržaj kursa, odvojen od koda. Svaki tekst postoji na sva tri jezika (`l(sr, en, ru)`).
   - `grade1/index.ts` – program 1. razreda: 8 modula i završni ispit.
-  - `grade1/m1-kitchen.ts` … `grade1/m8-starches.ts` – po jedan fajl za svaki modul.
+  - `grade1/*.ts` – lekcije po temama (kitchen, knife, heat, …); `grade1/index.ts` slaže ih u 16 modula i navodi planirane lekcije.
   - `reference.ts` – Mere i temperature: temperature, odnosi, vremena i rezovi.
   - `exam.ts` – završni ispit: namirnice po grupama, tri odluke i kontrolna lista.
 - `src/drawings/` – crteži koraka. Hrana i alat su pune boje, ono što kuvar radi je žuta linija koja se iscrta kad se korak otvori.
@@ -38,7 +38,7 @@ Deploy:
 
 ## Status
 
-- 1. razred: svih 8 modula napisano, 41 lekcija i 204 koraka na SR/EN/RU, sa crtežima, plus Mere i temperature (tablice iz svih lekcija). Interaktivni završni ispit „Izazov frižider“ (nasumičan frižider, tri odluke, kontrolna lista dok kuvaš). Landing stranica za nove posetioce.
+- 1. razred: 16 modula po partijama kuhinje. Napisano 41 lekcija na SR/EN/RU (moduli 1, 2, 4, 5, 6, 10 celi; delovi 3, 7, 8, 9), ostale su na spisku kao planirane. Teorija i praksa, tajmeri, Mere i temperature, interaktivni završni ispit, landing stranica.
 - 2. i 3. razred: najavljeni na početnoj.
 
 ## Fotografije
