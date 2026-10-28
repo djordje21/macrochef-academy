@@ -216,5 +216,18 @@
   "oops.missing.eyebrow": "404 · nije na meniju",
   "oops.missing.title": "Ovo jelo nije na meniju.",
   "oops.missing.text": "Stranica koju tražiš ne postoji ili je premeštena. Kuhinja je i dalje otvorena.",
-  "oops.missing.cta": "Nazad u kuhinju"
+  "oops.missing.cta": "Nazad u kuhinju",
+  "ask.open": "Pitaj kuvara",
+  "ask.eyebrow": "AI asistent",
+  "ask.title": "Pitaj kuvara",
+  "ask.empty": "Pitaj bilo šta o kuvanju ili o lekciji koju gledaš: zamene sastojaka, šta ako je nešto pošlo naopako, koliko dugo, na kojoj temperaturi.",
+  "ask.placeholder": "Npr. čime da zamenim šalotu?",
+  "ask.send": "Pošalji",
+  "ask.thinking": "Razmišljam…",
+  "ask.note": "Odgovara veštačka inteligencija i može da pogreši. Za bezbednost hrane važe mere iz lekcija.",
+  "ask.error": "Odgovor nije stigao. Pokušaj ponovo za trenutak.",
+  "ask.offline": "Nema interneta. Pitanja traže vezu, a lekcije rade i bez nje.",
+  "ask.limited": "Previše pitanja odjednom. Sačekaj minut pa pitaj ponovo.",
+  "ask.notConfigured": "Asistent još nije uključen. Uskoro.",
+  "ask.refused": "Na ovo pitanje ne mogu da odgovorim. Pitaj nešto o kuvanju."
 }

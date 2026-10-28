@@ -19,6 +19,7 @@ import { AppBar } from './AppBar'
 import { TimerPill } from '../components/TimerPill'
 import { Oops } from '../components/Oops'
 import { SharePrompt } from '../components/SharePrompt'
+import { AskBubble } from '../components/AskBubble'
 
 function Screen() {
   const { path, params } = useRoute()
@@ -62,6 +63,7 @@ export function App() {
   }, [grade])
   // The step screen stays a focused, full-screen view next to the stove.
   const focused = path.endsWith('/step')
+  const landing = path.startsWith('/about') || (path === '/' && !isWelcomed())
   return (
     <>
       <div className={focused ? 'focused' : 'with-bar'}>
@@ -71,6 +73,7 @@ export function App() {
       {!focused && <Menu />}
       <TimerPill />
       {!focused && <SharePrompt />}
+      {!landing && <AskBubble />}
     </>
   )
 }

@@ -1,0 +1,239 @@
+.ask-bubble {
+  position: fixed;
+  z-index: 22;
+  right: max(16px, env(safe-area-inset-right, 0px));
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 92px);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.ask-bubble.hidden {
+  transform: scale(0.6);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ask-bubble svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ask-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  background: rgba(5, 10, 22, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.ask-scrim.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ask-sheet {
+  position: fixed;
+  z-index: 46;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: min(560px, 100%);
+  height: min(78dvh, 640px);
+  display: flex;
+  flex-direction: column;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 22px 22px 0 0;
+  padding: 16px var(--gutter) calc(env(safe-area-inset-bottom, 0px) + 12px);
+  transform: translateY(105%);
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.ask-sheet.open {
+  transform: none;
+}
+
+.ask-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ask-head div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ask-head .label {
+  color: var(--accent);
+}
+
+.ask-head b {
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+
+.ask-close {
+  width: var(--tap);
+  height: var(--tap);
+  margin: -8px -8px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.ask-list {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.ask-empty,
+.ask-note {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ask-note {
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+
+.ask-turn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ask-q,
+.ask-a {
+  margin: 0;
+  padding: 10px 13px;
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  max-width: 88%;
+}
+
+.ask-q {
+  align-self: flex-end;
+  background: var(--accent);
+  color: var(--on-accent);
+  border-bottom-right-radius: 4px;
+}
+
+.ask-a {
+  align-self: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 4px;
+}
+
+.ask-thinking {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+}
+
+.ask-thinking i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: ask-dot 1s ease-in-out infinite;
+}
+
+.ask-thinking i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.ask-thinking i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.ask-thinking span {
+  margin-left: 6px;
+  font-size: 13px;
+}
+
+@keyframes ask-dot {
+  50% {
+    opacity: 0.25;
+    transform: translateY(-3px);
+  }
+}
+
+.ask-error {
+  margin: 0;
+  color: var(--warn);
+  font-size: 14px;
+}
+
+.ask-form {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.ask-form textarea {
+  flex: 1;
+  resize: none;
+  min-height: 52px;
+  max-height: 120px;
+  padding: 12px 14px;
+  border-radius: var(--r-tile);
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+}
+
+.ask-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.ask-form .cta {
+  width: 52px;
+  padding: 0;
+  font-size: 20px;
+  flex: none;
+}
+
+.ask-form .cta:disabled {
+  opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ask-thinking i {
+    animation: none;
+  }
+}
