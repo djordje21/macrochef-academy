@@ -1,6 +1,7 @@
 import { l, type Grade, type L } from '../types'
 import { timingLessons } from './timing'
 import { poultryLessons } from './poultry'
+import { butcheryLessons } from './butchery'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -63,15 +64,7 @@ export const grade2: Grade = {
         'Отрубы говядины, свинины и баранины, обвалка, рулет и собственный фарш. Ты знаешь, что покупаешь и зачем.',
       ),
       photo: 'g2-butchery.webp',
-      lessons: [],
-      planned: [
-        p('2.3.1', l('Rezovi junetine i šta je za šta', 'Beef cuts and what each is for', 'Отрубы говядины и для чего каждый')),
-        p('2.3.2', l('Svinjski i jagnjeći rezovi', 'Pork and lamb cuts', 'Отрубы свинины и баранины')),
-        p('2.3.3', l('Otkoštavanje plećke', 'Boning a shoulder', 'Обвалка лопатки')),
-        p('2.3.4', l('Roladna i vezivanje', 'Rolling and tying a roast', 'Рулет и перевязка')),
-        p('2.3.5', l('Svoje mleveno meso', 'Grinding your own mince', 'Собственный фарш')),
-        p('2.3.6', l('Biftek: odresci i stepen pečenja', 'Steak: cuts and doneness', 'Стейк: отрубы и прожарка')),
-      ],
+      lessons: butcheryLessons,
     },
     {
       id: 'g2m4',

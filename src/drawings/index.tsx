@@ -2039,6 +2039,81 @@ const drawings = {
       <Cut i={1} d="M210 80 L150 120 M180 76 L110 120 M140 74 L74 112" />
     </>
   ),
+  // Grade 2 · Module 3 · Meat butchery
+  cutsMap: (
+    <>
+      <path d="M40 80 Q40 50 80 46 L220 46 Q262 50 262 84 L262 100 Q260 118 230 120 L80 120 Q42 118 40 100 Z" fill={C.meat} opacity=".55" />
+      <path d="M110 46 L110 120 M200 46 L200 120" stroke={C.bg} strokeWidth="3" />
+      <rect x="114" y="50" width="82" height="30" rx="6" fill={C.ok} opacity=".8" />
+      <rect x="44" y="84" width="62" height="32" rx="8" fill={C.warn} opacity=".8" />
+      <rect x="204" y="84" width="54" height="32" rx="8" fill={C.warn} opacity=".8" />
+      <Cut i={0} d="M155 30 L155 44" />
+      <Cut i={1} d="M75 136 L75 122 M231 136 L231 122" />
+    </>
+  ),
+  marbling: (
+    <>
+      <Board y={128} />
+      <path d="M60 120 Q50 70 150 64 Q250 70 240 120 Z" fill={C.meat} />
+      <g stroke={C.paper} strokeWidth="2" fill="none" opacity=".85">
+        <path d="M90 90 Q110 84 130 96 Q150 104 170 92" /><path d="M100 108 Q130 100 160 112 Q190 118 210 104" /><path d="M140 76 Q160 82 190 78" />
+      </g>
+      <path d="M60 120 Q50 70 150 64 Q250 70 240 120" stroke={C.paper} strokeWidth="6" fill="none" />
+      <Cut i={0} d="M150 30 A30 10 0 1 0 151 30" />
+    </>
+  ),
+  boneBlade: (
+    <>
+      <Board y={136} />
+      <path d="M50 126 Q40 60 150 56 Q260 60 250 126 Z" fill={C.meat} />
+      <path d="M100 80 L200 70 L210 104 L110 112 Z" fill={C.paper} />
+      <Cut i={0} d="M98 76 L202 66" />
+      <Cut i={1} d="M108 116 L212 108" />
+    </>
+  ),
+  butterflyRoast: (
+    <>
+      <Board y={136} />
+      <rect x="40" y="96" width="220" height="32" rx="6" fill={C.meat} />
+      <rect x="40" y="96" width="220" height="6" rx="3" fill={C.paper} opacity=".8" />
+      <Cut i={0} d="M270 96 L270 128" />
+      <Cut i={1} d="M264 96 L276 96 M264 128 L276 128" />
+      <Cut i={2} d="M60 80 Q150 50 240 80" />
+    </>
+  ),
+  butcherKnot: (
+    <>
+      <Board y={128} />
+      <rect x="50" y="78" width="200" height="50" rx="24" fill={C.meat} />
+      <path d="M150 78 L150 128" stroke={C.paper} strokeWidth="3" />
+      <circle cx="150" cy="74" r="6" fill="none" stroke={C.paper} strokeWidth="3" />
+      <Cut i={0} d="M140 60 Q150 50 160 60 Q150 70 140 60" />
+      <Cut i={1} d="M156 66 L176 40" />
+    </>
+  ),
+  grinder: (
+    <>
+      <rect x="80" y="40" width="110" height="40" rx="10" fill={C.steelEdge} />
+      <rect x="110" y="12" width="40" height="30" rx="4" fill={C.steel} />
+      <rect x="190" y="48" width="18" height="24" rx="3" fill={C.steel} />
+      <path d="M150 96 A80 30 0 0 0 290 96 Z" fill={C.pot} transform="translate(-60 30)" />
+      <g stroke={C.meat} strokeWidth="4" strokeLinecap="round"><path d="M200 74 Q204 96 200 116" /><path d="M206 74 Q210 96 206 116" /></g>
+      <Cut i={0} d="M130 2 L130 10" />
+      <Cut i={1} d="M70 60 A20 20 0 1 1 72 62" />
+    </>
+  ),
+  doneness: (
+    <>
+      {['#B5333A', '#C8545A', '#D27A72', '#B88A7A', '#9C8072'].map((c, i) => (
+        <g key={i}>
+          <rect x={22 + i * 54} y="70" width="46" height="46" rx="6" fill={C.crust} />
+          <rect x={27 + i * 54} y="75" width="36" height="36" rx="4" fill={c} />
+        </g>
+      ))}
+      <Cut i={0} d="M22 132 L280 132" />
+      <Cut i={1} d="M130 124 L130 140" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
