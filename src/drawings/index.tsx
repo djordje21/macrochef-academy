@@ -1716,6 +1716,107 @@ const drawings = {
       <Cut i={0} d="M200 96 Q230 76 252 64" />
     </>
   ),
+  // Module 15 · Leftovers
+  trimBag: (
+    <>
+      <path d="M90 40 L210 40 L220 146 L80 146 Z" fill={C.ice} opacity=".35" />
+      <rect x="86" y="34" width="128" height="10" rx="3" fill={C.handle} />
+      <g fill={C.carrot}><rect x="110" y="110" width="30" height="8" rx="4" transform="rotate(-20 125 114)" /><rect x="160" y="120" width="34" height="8" rx="4" transform="rotate(15 177 124)" /></g>
+      <g fill={C.leaf}><ellipse cx="130" cy="130" rx="14" ry="6" /><ellipse cx="180" cy="100" rx="12" ry="5" /></g>
+      <g fill={C.skin}><circle cx="150" cy="96" r="10" /><circle cx="114" cy="86" r="8" /></g>
+      <Cut i={0} d="M150 10 L150 30" />
+      <Cut i={1} d="M142 22 L150 30 L158 22" />
+    </>
+  ),
+  renderFat: (
+    <>
+      <rect x="60" y="80" width="180" height="66" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="88" rx="84" ry="10" fill="#F2E2B4" opacity=".9" />
+      <g fill={C.bread}><rect x="100" y="80" width="14" height="10" rx="3" /><rect x="130" y="82" width="14" height="10" rx="3" /><rect x="160" y="80" width="14" height="10" rx="3" /><rect x="186" y="83" width="14" height="10" rx="3" /></g>
+      <Cut i={0} d="M76 140 L224 140" dash />
+      <Cut i={1} d="M120 60 Q112 48 120 36" />
+      <Cut i={2} d="M180 60 Q172 48 180 36" />
+    </>
+  ),
+  breadCubes: (
+    <>
+      <rect x="40" y="110" width="220" height="12" rx="4" fill={C.potDark} />
+      <g fill={C.bread} stroke="#B88A3E" strokeWidth="3">
+        <rect x="60" y="80" width="28" height="28" rx="4" /><rect x="100" y="80" width="28" height="28" rx="4" /><rect x="140" y="80" width="28" height="28" rx="4" /><rect x="180" y="80" width="28" height="28" rx="4" /><rect x="220" y="80" width="28" height="28" rx="4" />
+      </g>
+      <Cut i={0} d="M94 66 L94 122" dash />
+      <Cut i={1} d="M134 66 L134 122" dash />
+    </>
+  ),
+  frenchToast: (
+    <>
+      <path d="M40 70 L200 70 L190 120 L50 120 Z" fill={C.pot} />
+      <rect x="46" y="76" width="148" height="30" rx="4" fill={C.yolk} opacity=".8" />
+      <rect x="160" y="40" width="80" height="60" rx="10" fill={C.bread} stroke="#B88A3E" strokeWidth="3" transform="rotate(20 200 70)" />
+      <Cut i={0} d="M250 40 Q260 70 236 96" />
+      <Cut i={1} d="M232 86 L236 96 L246 92" />
+    </>
+  ),
+  friedRice: (
+    <>
+      <path d="M40 80 A110 60 0 0 0 260 80 Z" fill={C.potDark} />
+      <rect x="250" y="70" width="40" height="10" rx="5" fill={C.handle} />
+      <ellipse cx="150" cy="84" rx="100" ry="12" fill={C.paper} />
+      <g fill={C.yolk}><rect x="110" y="78" width="14" height="8" rx="3" /><rect x="170" y="80" width="14" height="8" rx="3" /></g>
+      <g fill={C.veg}><circle cx="140" cy="82" r="4" /><circle cx="200" cy="84" r="4" /><circle cx="96" cy="86" r="4" /></g>
+      <Cut i={0} d="M60 120 Q150 150 240 120" dash />
+      <Cut i={1} d="M120 54 Q112 42 120 30" />
+      <Cut i={2} d="M180 54 Q172 42 180 30" />
+    </>
+  ),
+  flatBags: (
+    <>
+      <g>
+        <rect x="40" y="116" width="140" height="18" rx="4" fill={C.ice} opacity=".6" />
+        <rect x="46" y="120" width="120" height="10" rx="3" fill={C.meat} />
+      </g>
+      {[200, 222, 244].map((x, i) => (
+        <g key={x}>
+          <rect x={x} y="40" width="16" height="94" rx="3" fill={C.ice} opacity=".6" />
+          <rect x={x + 3} y="48" width="10" height="80" rx="2" fill={[C.warn, C.bread, C.leaf][i]} />
+        </g>
+      ))}
+      <Cut i={0} d="M40 100 L180 100" />
+      <Cut i={1} d="M110 90 L110 110" />
+    </>
+  ),
+  iceTray: (
+    <>
+      <rect x="40" y="80" width="220" height="56" rx="8" fill={C.ice} opacity=".5" />
+      <g>
+        {[56, 98, 140, 182, 224].map((x) => (
+          <g key={x}><rect x={x} y="90" width="30" height="16" rx="4" fill="#E8D6A8" /><rect x={x} y="112" width="30" height="16" rx="4" fill={C.leaf} opacity=".8" /></g>
+        ))}
+      </g>
+      <Cut i={0} d="M150 30 L150 74" />
+      <Cut i={1} d="M140 64 L150 74 L160 64" />
+    </>
+  ),
+  zestLemon: (
+    <>
+      <ellipse cx="110" cy="96" rx="56" ry="42" fill={C.yolk} />
+      <ellipse cx="96" cy="86" rx="20" ry="14" fill="#FFF3C4" opacity=".7" />
+      <rect x="150" y="30" width="20" height="120" rx="4" fill={C.steel} transform="rotate(30 160 90)" />
+      <g fill="#FFE07A"><circle cx="200" cy="140" r="3" /><circle cx="212" cy="146" r="3" /><circle cx="190" cy="148" r="3" /></g>
+      <Cut i={0} d="M140 60 Q160 90 140 120" />
+    </>
+  ),
+  peelStem: (
+    <>
+      <Board y={128} />
+      <rect x="60" y="94" width="150" height="26" rx="13" fill={C.leafDark} />
+      <rect x="60" y="98" width="90" height="18" rx="9" fill="#C8D69A" />
+      <circle cx="232" cy="96" r="26" fill={C.leaf} />
+      <path d="M150 70 L200 70 L196 84 L154 84 Z" fill={C.steel} />
+      <Cut i={0} d="M200 60 L70 60" />
+      <Cut i={1} d="M80 54 L70 60 L80 66" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

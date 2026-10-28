@@ -15,6 +15,7 @@ import { legumeLessons } from './legumes'
 import { braiseLessons } from './braise'
 import { roastLessons } from './roast'
 import { grillLessons } from './grill'
+import { leftoverLessons } from './leftovers'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
@@ -230,14 +231,7 @@ export const grade1: Grade = {
         'Что делать с обрезками, кожурой и вчерашним обедом. Как ресторан ничего не выбрасывает и как этого добиться дома.',
       ),
       photo: 'leftovers.webp',
-      lessons: [],
-      planned: [
-        p('15.1', l('Obrezci: fond, ulje, čips', 'Trimmings: stock, oil, crisps', 'Обрезки: бульон, масло, чипсы')),
-        p('15.2', l('Hleb od juče', 'Yesterday’s bread', 'Вчерашний хлеб')),
-        p('15.3', l('Jučerašnji ručak, novo jelo', 'Yesterday’s lunch, a new dish', 'Вчерашний обед — новое блюдо')),
-        p('15.4', l('Pametno zamrzavanje', 'Freezing smart', 'Умная заморозка')),
-        p('15.5', l('Kora, peteljke, lišće', 'Peels, stems and leaves', 'Кожура, стебли и листья')),
-      ],
+      lessons: leftoverLessons,
     },
     {
       id: 'm16',
