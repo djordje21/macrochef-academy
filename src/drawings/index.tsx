@@ -1524,6 +1524,98 @@ const drawings = {
       <Cut i={1} d="M140 52 L150 62 L160 52" />
     </>
   ),
+  // Module 13 · Oven roasting
+  dryBrine: (
+    <>
+      <rect x="50" y="12" width="200" height="140" rx="10" fill={C.fridge} opacity=".25" />
+      <rect x="70" y="120" width="160" height="6" rx="3" fill={C.steelEdge} />
+      <ellipse cx="150" cy="96" rx="60" ry="26" fill={C.flesh} />
+      <g fill={C.paper}><circle cx="120" cy="80" r="2" /><circle cx="140" cy="74" r="2" /><circle cx="162" cy="76" r="2" /><circle cx="182" cy="84" r="2" /><circle cx="130" cy="90" r="2" /><circle cx="170" cy="92" r="2" /></g>
+      <Cut i={0} d="M80 40 L100 40 M90 30 L90 50 M83 33 L97 47 M97 33 L83 47" />
+      <Cut i={1} d="M200 40 Q220 30 240 40" />
+    </>
+  ),
+  trussChicken: (
+    <>
+      <Board y={136} />
+      <g>
+        <ellipse cx="150" cy="96" rx="70" ry="40" fill={C.bread} />
+        <ellipse cx="96" cy="112" rx="26" ry="16" fill="#D9A95E" transform="rotate(-20 96 112)" />
+        <ellipse cx="204" cy="112" rx="26" ry="16" fill="#D9A95E" transform="rotate(20 204 112)" />
+      </g>
+      <Cut i={0} d="M108 124 Q150 140 192 124" />
+      <Cut i={1} d="M140 132 Q150 146 160 132" />
+    </>
+  ),
+  chickenProbe: (
+    <>
+      <rect x="40" y="128" width="220" height="10" rx="4" fill={C.potDark} />
+      <g>
+        <ellipse cx="150" cy="96" rx="70" ry="40" fill={C.bread} />
+        <ellipse cx="96" cy="112" rx="26" ry="16" fill="#D9A95E" transform="rotate(-20 96 112)" />
+        <ellipse cx="204" cy="112" rx="26" ry="16" fill="#D9A95E" transform="rotate(20 204 112)" />
+      </g>
+      <rect x="212" y="40" width="5" height="70" rx="2" fill={C.steel} transform="rotate(-30 214 75)" />
+      <rect x="226" y="26" width="26" height="18" rx="4" fill={C.handle} transform="rotate(-30 239 35)" />
+      <Cut i={0} d="M196 112 m-10 0 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0" />
+    </>
+  ),
+  carveLeg: (
+    <>
+      <Board y={136} />
+      <ellipse cx="140" cy="96" rx="70" ry="40" fill={C.bread} />
+      <ellipse cx="226" cy="112" rx="28" ry="16" fill="#D9A95E" transform="rotate(30 226 112)" />
+      <circle cx="200" cy="102" r="6" fill={C.paper} />
+      <Cut i={0} d="M196 76 Q206 96 196 120" />
+      <Cut i={1} d="M220 82 L240 70" />
+    </>
+  ),
+  carveBreast: (
+    <>
+      <Board y={136} />
+      <ellipse cx="150" cy="96" rx="70" ry="40" fill={C.bread} />
+      <path d="M150 56 L150 130" stroke={C.ring} strokeWidth="3" />
+      <path d="M140 20 L156 20 L152 64 L146 64 Z" fill={C.steel} />
+      <Cut i={0} d="M156 64 L156 100 Q160 126 196 128" />
+    </>
+  ),
+  tiedRoast: (
+    <>
+      <Board y={128} />
+      <rect x="50" y="78" width="200" height="50" rx="24" fill={C.meat} />
+      <g stroke={C.paper} strokeWidth="3">
+        <path d="M80 78 L80 128" /><path d="M110 78 L110 128" /><path d="M140 78 L140 128" /><path d="M170 78 L170 128" /><path d="M200 78 L200 128" /><path d="M230 82 L230 124" />
+      </g>
+      <Cut i={0} d="M80 62 L110 62" />
+      <Cut i={1} d="M80 56 L80 68 M110 56 L110 68" />
+    </>
+  ),
+  vegGroups: (
+    <>
+      {[60, 150, 240].map((x, i) => (
+        <g key={x}>
+          <path d={`M${x - 40} 96 A40 30 0 0 0 ${x + 40} 96 Z`} fill={C.pot} />
+          <g fill={[C.carrot, C.warn, C.veg][i]}>
+            <rect x={x - 22} y="84" width="14" height="14" rx="3" /><rect x={x - 4} y="80" width="14" height="14" rx="3" /><rect x={x + 10} y="86" width="14" height="14" rx="3" />
+          </g>
+        </g>
+      ))}
+      <Cut i={0} d="M30 140 L90 140" />
+      <Cut i={1} d="M120 140 L160 140" />
+      <Cut i={2} d="M220 140 L240 140" />
+    </>
+  ),
+  fatPour: (
+    <>
+      <g transform="rotate(-12 150 100)">
+        <rect x="50" y="80" width="200" height="40" rx="6" fill={C.potDark} />
+        <rect x="56" y="100" width="188" height="14" rx="3" fill="#7A3B22" />
+        <rect x="56" y="92" width="188" height="8" rx="3" fill="#F2D58C" opacity=".85" />
+      </g>
+      <Cut i={0} d="M58 116 Q40 130 44 150" />
+      <Cut i={1} d="M240 70 L240 96" dash />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

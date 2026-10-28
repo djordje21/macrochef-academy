@@ -13,6 +13,7 @@ import { soupLessons } from './soups'
 import { motherSauceLessons } from './mothersauces'
 import { legumeLessons } from './legumes'
 import { braiseLessons } from './braise'
+import { roastLessons } from './roast'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
@@ -204,14 +205,7 @@ export const grade1: Grade = {
         'Целая курица, запечённое мясо и всё, что к ним полагается. Воскресный обед без стресса.',
       ),
       photo: 'roast.webp',
-      lessons: [],
-      planned: [
-        p('13.1', l('Celo pile', 'Whole roast chicken', 'Целая курица')),
-        p('13.2', l('Rasecanje pečenog pileta', 'Carving a roast chicken', 'Как разделать запечённую курицу')),
-        p('13.3', l('Svinjsko pečenje', 'Roast pork', 'Запечённая свинина')),
-        p('13.4', l('Krompir i povrće uz pečenje', 'Potatoes and vegetables with the roast', 'Картофель и овощи к жаркому')),
-        p('13.5', l('Sos od soka pečenja', 'Gravy from the roasting juices', 'Соус из сока жаркого')),
-      ],
+      lessons: roastLessons,
     },
     {
       id: 'm14',
