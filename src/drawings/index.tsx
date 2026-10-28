@@ -1269,6 +1269,74 @@ const drawings = {
       <Cut i={1} d="M282 120 L262 120 M282 120 L276 114 M282 120 L276 126" />
     </>
   ),
+  // Module 8 · Soups
+  roastBones: (
+    <>
+      <rect x="40" y="96" width="220" height="40" rx="6" fill={C.potDark} />
+      <g fill={C.crust}>
+        <rect x="70" y="80" width="50" height="22" rx="11" /><rect x="130" y="76" width="44" height="26" rx="13" /><rect x="184" y="82" width="46" height="20" rx="10" />
+      </g>
+      <g fill={C.ring}><circle cx="74" cy="91" r="7" /><circle cx="226" cy="92" r="6" /></g>
+      <Cut i={0} d="M80 60 Q90 46 80 32" />
+      <Cut i={1} d="M150 56 Q160 42 150 28" />
+      <Cut i={2} d="M220 60 Q230 46 220 32" />
+    </>
+  ),
+  fishRinse: (
+    <>
+      <path d="M50 70 A100 70 0 0 0 250 70 Z" fill={C.pot} />
+      <ellipse cx="150" cy="70" rx="100" ry="12" fill={C.water} opacity=".7" />
+      <path d="M100 74 L170 74 L196 62 L196 86 L170 74" fill={C.steel} />
+      <g stroke={C.steelEdge} strokeWidth="2"><path d="M110 74 L110 66" /><path d="M126 74 L126 64" /><path d="M142 74 L142 64" /><path d="M158 74 L158 66" /></g>
+      <Cut i={0} d="M150 10 L150 44" />
+      <Cut i={1} d="M134 12 L134 40" />
+      <Cut i={2} d="M166 12 L166 40" />
+    </>
+  ),
+  sweatVeg: (
+    <>
+      <rect x="50" y="96" width="200" height="40" rx="8" fill={C.pot} />
+      <rect x="250" y="108" width="40" height="10" rx="5" fill={C.handle} />
+      <g fill={C.flesh}>
+        <rect x="80" y="86" width="14" height="14" rx="3" /><rect x="110" y="84" width="14" height="14" rx="3" /><rect x="180" y="86" width="14" height="14" rx="3" />
+      </g>
+      <g fill={C.carrot}><rect x="140" y="86" width="14" height="14" rx="3" /><rect x="206" y="84" width="14" height="14" rx="3" /></g>
+      <g fill={C.leaf}><rect x="160" y="80" width="14" height="14" rx="3" /></g>
+      <Cut i={0} d="M70 140 L230 140" dash />
+      <Cut i={1} d="M110 60 Q150 40 190 60" />
+    </>
+  ),
+  charOnion: (
+    <>
+      <rect x="50" y="110" width="200" height="22" rx="8" fill={C.steelEdge} />
+      <rect x="250" y="114" width="40" height="10" rx="5" fill={C.handle} />
+      <path d="M100 108 A50 50 0 0 1 200 108 Z" fill={C.skin} />
+      <path d="M112 108 A38 38 0 0 1 188 108" fill="none" stroke={C.skinShade} strokeWidth="3" />
+      <rect x="100" y="104" width="100" height="6" rx="3" fill={C.crust} />
+      <Cut i={0} d="M90 140 L210 140" />
+    </>
+  ),
+  clothStrain: (
+    <>
+      <rect x="70" y="96" width="160" height="56" rx="8" fill={C.pot} />
+      <path d="M60 60 Q150 120 240 60 Z" fill={C.paper} opacity=".85" />
+      <path d="M60 60 L240 60" stroke={C.steelEdge} strokeWidth="4" strokeLinecap="round" />
+      <Cut i={0} d="M150 12 L150 50" />
+      <Cut i={1} d="M150 98 L150 120" dash />
+    </>
+  ),
+  temperLiaison: (
+    <>
+      <path d="M150 80 A60 50 0 0 0 270 80 Z" fill={C.pot} />
+      <ellipse cx="210" cy="80" rx="60" ry="9" fill="#F8E3A0" />
+      <rect x="30" y="90" width="90" height="56" rx="8" fill={C.pot} />
+      <ellipse cx="75" cy="98" rx="40" ry="8" fill="#F2E2B4" />
+      <ellipse cx="120" cy="40" rx="18" ry="9" fill={C.steel} />
+      <rect x="60" y="28" width="50" height="6" rx="3" fill={C.steel} transform="rotate(-20 85 31)" />
+      <Cut i={0} d="M134 46 Q160 54 176 72" />
+      <Cut i={1} d="M186 92 A24 6 0 1 0 234 92" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

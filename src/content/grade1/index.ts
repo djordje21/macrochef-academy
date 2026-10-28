@@ -9,6 +9,7 @@ import { meatPrepLessons } from './meatprep'
 import { dressingBaseLesson, sauceBaseLessons, soupBaseLessons } from './sauces'
 import { starchLessons } from './starches'
 import { coldLessons } from './cold'
+import { soupLessons } from './soups'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
@@ -130,13 +131,7 @@ export const grade1: Grade = {
         'Бульоны, прозрачные супы, похлёбки и потажи. Основа половины нашей кухни.',
       ),
       photo: 'soups.webp',
-      lessons: soupBaseLessons,
-      planned: [
-        p('8.2', l('Tamni goveđi fond', 'Brown beef stock', 'Тёмный говяжий бульон')),
-        p('8.3', l('Povrtni i riblji fond', 'Vegetable and fish stock', 'Овощной и рыбный бульон')),
-        p('8.4', l('Bistra goveđa supa', 'Clear beef soup', 'Прозрачный говяжий суп')),
-        p('8.5', l('Čorba', 'Thick soup (čorba)', 'Чорба')),
-      ],
+      lessons: [soupBaseLessons[0], soupLessons.brownStock, soupLessons.quickStocks, soupLessons.beefSoup, soupLessons.corba, soupBaseLessons[1]],
     },
     {
       id: 'm9',
