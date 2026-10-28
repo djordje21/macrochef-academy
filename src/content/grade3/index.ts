@@ -8,6 +8,7 @@ import { pastryLessons } from './pastry'
 import { creatingLessons } from './creating'
 import { menuLessons } from './menu'
 import { nutritionLessons } from './nutrition'
+import { foodCostLessons } from './foodcost'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -153,14 +154,7 @@ export const grade3: Grade = {
         'Тест выхода, техкарта с ценой, фудкост %, приёмка товара, инвентаризация и отходы.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.10.1', l('Yield test', 'The yield test', 'Тест выхода')),
-        p('3.10.2', l('Recept-kartica sa cenom', 'The costed recipe card', 'Техкарта с себестоимостью')),
-        p('3.10.3', l('Food cost i prodajna cena', 'Food cost and the menu price', 'Фудкост и цена в меню')),
-        p('3.10.4', l('Prijem robe i dobavljači', 'Receiving goods and suppliers', 'Приёмка товара и поставщики')),
-        p('3.10.5', l('Inventura i otpad', 'Stocktake and waste', 'Инвентаризация и отходы')),
-      ],
+      lessons: foodCostLessons,
     },
     {
       id: 'g3m11',
