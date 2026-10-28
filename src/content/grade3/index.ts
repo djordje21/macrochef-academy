@@ -4,6 +4,7 @@ import { chefSauceLessons } from './chefsauces'
 import { fineDiningLessons } from './finedining'
 import { modernLessons } from './modern'
 import { proteinLessons } from './protein'
+import { pastryLessons } from './pastry'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -101,14 +102,7 @@ export const grade3: Grade = {
         'Темперированный шоколад, ганаш, сорбет, мадлен и зеркальная глазурь. Финал меню.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.6.1', l('Temperiranje čokolade', 'Tempering chocolate', 'Темперирование шоколада')),
-        p('3.6.2', l('Ganache', 'Ganache', 'Ганаш')),
-        p('3.6.3', l('Sorbe bez mašine', 'Sorbet without a machine', 'Сорбет без машины')),
-        p('3.6.4', l('Madlene i financijeri', 'Madeleines and financiers', 'Мадлен и финансье')),
-        p('3.6.5', l('Ogledalna glazura', 'Mirror glaze', 'Зеркальная глазурь')),
-      ],
+      lessons: pastryLessons,
     },
     {
       id: 'g3m7',

@@ -3059,6 +3059,32 @@ const drawings = {
       <rect x="244" y="22" width="12" height="26" rx="4" fill={C.handle} transform="rotate(45 250 35)" />
     </>
   ),
+  // Grade 3 · Module 6 · Pastry
+  chocTemper: (
+    <>
+      <path d="M70 80 A80 56 0 0 0 230 80 Z" fill={C.steel} />
+      <ellipse cx="150" cy="80" rx="80" ry="12" fill={C.crust} />
+      <g fill={C.crust}>
+        <rect x="40" y="30" width="16" height="12" rx="2" transform="rotate(-12 48 36)" />
+        <rect x="62" y="20" width="12" height="10" rx="2" transform="rotate(18 68 25)" />
+        <rect x="34" y="54" width="12" height="10" rx="2" />
+      </g>
+      <rect x="196" y="14" width="10" height="64" rx="4" fill={C.paper} transform="rotate(18 201 46)" />
+      <circle cx="214" cy="18" r="10" fill={C.handle} />
+      <Cut i={0} d="M58 44 Q90 60 118 74" />
+      <Cut i={1} d="M120 92 A30 8 0 1 0 180 92" />
+    </>
+  ),
+  glazePour: (
+    <>
+      <rect x="40" y="128" width="220" height="6" rx="3" fill={C.steelEdge} />
+      <rect x="86" y="80" width="128" height="46" rx="6" fill={C.paper} />
+      <path d="M86 86 Q150 76 214 86 L214 100 Q204 112 196 100 Q186 120 176 102 Q160 116 150 100 Q136 118 124 102 Q110 114 100 100 Q92 110 86 100 Z" fill={C.warn} />
+      <path d="M150 14 L150 76" stroke={C.warn} strokeWidth="8" strokeLinecap="round" />
+      <Cut i={0} d="M70 60 Q150 40 230 60" dash />
+      <Cut i={1} d="M96 90 L204 90" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
