@@ -315,7 +315,7 @@
   color: var(--accent);
 }
 
-/* Sales sections: the problem, what you learn, the chef's word, questions, last call. */
+/* Sales sections: why this course, what you learn, the chef's word, questions, last call. */
 .landing-pain ul {
   margin: 0;
   padding: 0;
@@ -331,12 +331,12 @@
   gap: 10px;
   font-size: 16px;
   line-height: 1.45;
-  color: var(--on-photo);
+  color: var(--text);
 }
 
 .landing-pain li::before {
-  content: '✕';
-  color: var(--warn);
+  content: '✓';
+  color: var(--ok);
   font-weight: 800;
 }
 
