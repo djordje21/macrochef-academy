@@ -1973,6 +1973,72 @@ const drawings = {
       <Cut i={1} d="M268 64 L280 72 L268 80" />
     </>
   ),
+  // Grade 2 · Module 2 · Poultry
+  shears: (
+    <>
+      <Board y={136} />
+      <ellipse cx="140" cy="100" rx="80" ry="34" fill={C.flesh} />
+      <path d="M140 70 L140 130" stroke={C.ring} strokeWidth="10" strokeLinecap="round" />
+      <g stroke={C.steel} strokeWidth="5" strokeLinecap="round"><path d="M150 72 L230 30" /><path d="M150 80 L232 52" /></g>
+      <g fill="none" stroke={C.handle} strokeWidth="5"><circle cx="244" cy="24" r="10" /><circle cx="246" cy="56" r="10" /></g>
+      <Cut i={0} d="M128 66 L128 134" dash />
+      <Cut i={1} d="M152 66 L152 134" dash />
+    </>
+  ),
+  spatchcock: (
+    <>
+      <Board y={136} />
+      <path d="M50 120 Q60 70 150 64 Q240 70 250 120 Z" fill={C.flesh} />
+      <ellipse cx="70" cy="122" rx="26" ry="12" fill="#E8C9A6" />
+      <ellipse cx="230" cy="122" rx="26" ry="12" fill="#E8C9A6" />
+      <path d="M150 66 L150 118" stroke={C.ring} strokeWidth="3" />
+      <Cut i={0} d="M150 20 L150 58" />
+      <Cut i={1} d="M140 48 L150 58 L160 48" />
+    </>
+  ),
+  chickenEight: (
+    <>
+      <Board y={136} />
+      <g fill={C.flesh}>
+        <ellipse cx="60" cy="96" rx="22" ry="12" /><ellipse cx="60" cy="122" rx="22" ry="12" />
+        <path d="M100 86 L130 86 L136 108 L96 108 Z" /><path d="M100 112 L130 112 L136 132 L96 132 Z" />
+        <path d="M150 84 Q180 80 196 100 L190 108 L150 108 Z" /><path d="M150 112 Q180 108 196 128 L190 134 L150 134 Z" />
+        <path d="M216 90 L250 84 L262 100 L230 106 Z" /><path d="M216 116 L250 110 L262 126 L230 132 Z" />
+      </g>
+      <Cut i={0} d="M86 76 L86 140" dash />
+      <Cut i={1} d="M143 76 L143 140" dash />
+      <Cut i={2} d="M206 76 L206 140" dash />
+    </>
+  ),
+  boneThigh: (
+    <>
+      <Board y={136} />
+      <path d="M70 120 Q60 70 150 64 Q240 70 230 120 Z" fill={C.flesh} />
+      <rect x="100" y="88" width="100" height="12" rx="6" fill={C.paper} />
+      <circle cx="100" cy="94" r="9" fill={C.paper} /><circle cx="200" cy="94" r="9" fill={C.paper} />
+      <Cut i={0} d="M96 80 L204 80" />
+      <Cut i={1} d="M96 108 L204 108" />
+    </>
+  ),
+  supreme: (
+    <>
+      <Board y={136} />
+      <path d="M60 120 Q70 74 160 70 Q220 74 230 110 Q200 132 120 132 Z" fill={C.bread} />
+      <rect x="226" y="88" width="50" height="8" rx="4" fill={C.paper} transform="rotate(-15 250 92)" />
+      <circle cx="276" cy="84" r="7" fill={C.paper} />
+      <Cut i={0} d="M232 76 L270 66" />
+      <Cut i={1} d="M236 104 L272 94" />
+    </>
+  ),
+  scoreDuck: (
+    <>
+      <Board y={136} />
+      <path d="M50 124 Q60 74 150 70 Q240 74 250 124 Z" fill="#F2E6D0" />
+      <rect x="54" y="118" width="192" height="8" rx="3" fill={C.meat} />
+      <Cut i={0} d="M90 84 L150 120 M120 76 L190 120 M160 74 L230 116" />
+      <Cut i={1} d="M210 80 L150 120 M180 76 L110 120 M140 74 L74 112" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

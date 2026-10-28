@@ -1,5 +1,6 @@
 import { l, type Grade, type L } from '../types'
 import { timingLessons } from './timing'
+import { poultryLessons } from './poultry'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -50,14 +51,7 @@ export const grade2: Grade = {
         'Сырая курица на восемь частей, бабочкой, без костей и супрем. Целая птица дешевле, и ничего не пропадает.',
       ),
       photo: 'g2-poultry.webp',
-      lessons: [],
-      planned: [
-        p('2.2.1', l('Sirovo pile na 8 delova', 'A raw chicken into 8 pieces', 'Сырая курица на 8 частей')),
-        p('2.2.2', l('Pile na leptir', 'Spatchcocked chicken', 'Курица бабочкой')),
-        p('2.2.3', l('Otkoštavanje batka', 'Boning a thigh', 'Обвалка бедра')),
-        p('2.2.4', l('Suprem: prsa sa kožom i koskom krila', 'Suprême: breast with skin and wing bone', 'Супрем: грудка с кожей и косточкой крыла')),
-        p('2.2.5', l('Pačja prsa i topljenje masti', 'Duck breast and rendering the fat', 'Утиная грудка и вытапливание жира')),
-      ],
+      lessons: poultryLessons,
     },
     {
       id: 'g2m3',
