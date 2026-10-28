@@ -110,7 +110,7 @@
   "menu.open": "Otvori meni",
   "menu.close": "Zatvori meni",
   "menu.grades": "Razredi",
-  "menu.modules": "1. razred · moduli",
+  "menu.modules": "{n}. razred · moduli",
   "menu.family": "Deo MacroChef porodice",
   "ref.ratios": "Odnosi i mere",
   "ref.times": "Vremena",

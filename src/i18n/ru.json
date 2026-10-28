@@ -110,7 +110,7 @@
   "menu.open": "Открыть меню",
   "menu.close": "Закрыть меню",
   "menu.grades": "Классы",
-  "menu.modules": "1 класс · модули",
+  "menu.modules": "{n} класс · модули",
   "menu.family": "Часть семьи MacroChef",
   "ref.ratios": "Пропорции и меры",
   "ref.times": "Время",

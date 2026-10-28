@@ -110,7 +110,7 @@
   "menu.open": "Open menu",
   "menu.close": "Close menu",
   "menu.grades": "Grades",
-  "menu.modules": "Grade 1 · modules",
+  "menu.modules": "Grade {n} · modules",
   "menu.family": "Part of the MacroChef family",
   "ref.ratios": "Ratios and measures",
   "ref.times": "Times",

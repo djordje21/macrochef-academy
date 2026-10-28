@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { gradeList, grades, isOpen } from '../content'
+import { findLesson, gradeList, gradeOfModule, grades, isOpen } from '../content'
 import { useDone } from './progress'
 import { useExam } from './exam'
 import { shareApp } from './share'
@@ -17,7 +17,16 @@ export function Menu() {
   const exam = useExam()
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
-  const grade = grades[0]
+  // Modules are listed only inside a grade, for that grade; elsewhere the grade links are enough.
+  const [, section, id] = path.split('/')
+  const grade =
+    section === 'grade'
+      ? grades.find((g) => g.n === Number(id))
+      : section === 'module'
+        ? gradeOfModule(id)
+        : section === 'lesson'
+          ? gradeOfModule(findLesson(id)?.module.id ?? '')
+          : undefined
 
   // Close on any navigation and on Escape.
   useEffect(() => setOpen(false), [path])
@@ -91,33 +100,37 @@ export function Menu() {
           ))}
         </nav>
 
-        <span className="label menu-label">{t('menu.modules')}</span>
-        <div className="menu-modules">
-          {grade.modules.map((m) => {
-            const finished = m.lessons.filter((x) => done.has(x.id)).length
-            return (
-              <details key={m.id} open={path.startsWith(`/module/${m.id}`)}>
-                <summary>
-                  <span className="mono">M{m.n}</span>
-                  <span>{c(m.title)}</span>
-                  <span className="mono menu-count">
-                    {finished}/{m.lessons.length}
-                  </span>
-                </summary>
-                <button className="menu-module-open" onClick={() => go(`/module/${m.id}`)}>
-                  {c(m.intro)}
-                </button>
-                {m.lessons.map((x) => (
-                  <button key={x.id} className={`menu-lesson ${here(`/lesson/${x.id}`)}`} onClick={() => go(`/lesson/${x.id}`)}>
-                    <span className="mono">{x.id}</span>
-                    <span>{c(x.title)}</span>
-                    {done.has(x.id) && <span className="menu-ok">✓</span>}
-                  </button>
-                ))}
-              </details>
-            )
-          })}
-        </div>
+        {grade && (
+          <>
+            <span className="label menu-label">{t('menu.modules', { n: grade.n })}</span>
+            <div className="menu-modules">
+              {grade.modules.map((m) => {
+                const finished = m.lessons.filter((x) => done.has(x.id)).length
+                return (
+                  <details key={m.id} open={path === `/module/${m.id}` || m.lessons.some((x) => path.startsWith(`/lesson/${x.id}`))}>
+                    <summary>
+                      <span className="mono">M{m.n}</span>
+                      <span>{c(m.title)}</span>
+                      <span className="mono menu-count">
+                        {finished}/{m.lessons.length}
+                      </span>
+                    </summary>
+                    <button className="menu-module-open" onClick={() => go(`/module/${m.id}`)}>
+                      {c(m.intro)}
+                    </button>
+                    {m.lessons.map((x) => (
+                      <button key={x.id} className={`menu-lesson ${here(`/lesson/${x.id}`)}`} onClick={() => go(`/lesson/${x.id}`)}>
+                        <span className="mono">{x.id}</span>
+                        <span>{c(x.title)}</span>
+                        {done.has(x.id) && <span className="menu-ok">✓</span>}
+                      </button>
+                    ))}
+                  </details>
+                )
+              })}
+            </div>
+          </>
+        )}
 
         <p className="menu-foot">
           {t('menu.family')}
