@@ -9,6 +9,7 @@ import { creatingLessons } from './creating'
 import { menuLessons } from './menu'
 import { nutritionLessons } from './nutrition'
 import { foodCostLessons } from './foodcost'
+import { haccpLessons } from './haccp'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -166,14 +167,7 @@ export const grade3: Grade = {
         'Семь принципов, охлаждение и разогрев, температурные журналы, аллергены и план уборки.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.11.1', l('Sedam principa HACCP-a', 'The seven HACCP principles', 'Семь принципов ХАССП')),
-        p('3.11.2', l('Hlađenje i podgrevanje', 'Cooling and reheating', 'Охлаждение и разогрев')),
-        p('3.11.3', l('Temperaturne liste', 'Temperature logs', 'Температурные журналы')),
-        p('3.11.4', l('Alergeni u kuhinji', 'Allergens in the kitchen', 'Аллергены на кухне')),
-        p('3.11.5', l('Plan čišćenja i inspekcija', 'Cleaning plan and inspection', 'План уборки и проверка')),
-      ],
+      lessons: haccpLessons,
     },
     {
       id: 'g3m12',

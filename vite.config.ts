@@ -46,6 +46,8 @@ export default defineConfig(({ mode }) => ({
         cleanupOutdatedCaches: true,
         // Lessons are read next to the stove, often offline, so the cover photos are precached too.
         globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2}'],
+        // Every lesson of every grade ships in the main bundle so the course works offline; it outgrew the 2 MiB default.
+        maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
       },
     }),
   ],
