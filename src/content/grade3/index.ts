@@ -5,6 +5,7 @@ import { fineDiningLessons } from './finedining'
 import { modernLessons } from './modern'
 import { proteinLessons } from './protein'
 import { pastryLessons } from './pastry'
+import { creatingLessons } from './creating'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -114,14 +115,7 @@ export const grade3: Grade = {
         'От продукта в сезон до блюда в меню: сочетания, текстура, дегустация и техкарта.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.7.1', l('Od sastojka do ideje', 'From ingredient to idea', 'От продукта к идее')),
-        p('3.7.2', l('Uparivanje ukusa', 'Pairing flavours', 'Сочетание вкусов')),
-        p('3.7.3', l('Tekstura i temperatura', 'Texture and temperature', 'Текстура и температура')),
-        p('3.7.4', l('Proba i ispravka', 'Tasting and correcting', 'Дегустация и исправление')),
-        p('3.7.5', l('Recept-kartica', 'The recipe card', 'Техкарта')),
-      ],
+      lessons: creatingLessons,
     },
     {
       id: 'g3m8',
