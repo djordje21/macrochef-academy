@@ -4,7 +4,9 @@ import { l, type L } from './types'
 export const temps: { food: L; note?: L; c: number; label?: string }[] = [
   { food: l('Piletina, ćuretina', 'Chicken, turkey', 'Курица, индейка'), note: l('bez izuzetka', 'no exceptions', 'без исключений'), c: 74 },
   { food: l('Mleveno meso', 'Minced meat', 'Фарш'), note: l('pljeskavica, ćufte', 'burgers, meatballs', 'котлеты, тефтели'), c: 71 },
-  { food: l('Svinjetina', 'Pork', 'Свинина'), note: l('kotlet, file', 'chop, tenderloin', 'отбивная, вырезка'), c: 63 },
+  { food: l('Svinjetina, kotlet i file', 'Pork chop and tenderloin', 'Свинина, отбивная и вырезка'), note: l('+ 3 min odmora, meso sa veterinarskim pregledom', '+ 3 min rest, inspected meat', '+ 3 мин отдыха, мясо с ветеринарным контролем'), c: 63 },
+  { food: l('Svinjska plećka, sporo pečena', 'Pork shoulder, slow-roasted', 'Свиная лопатка, медленное запекание'), note: l('dok se ne raspada: zbog mekoće, ne zbog bezbednosti', 'until it falls apart: for tenderness, not safety', 'пока не распадается: ради мягкости, не безопасности'), c: 88, label: '85–90' },
+  { food: l('Divlja svinja, domaće klanje', 'Wild boar, home-slaughtered pork', 'Кабан, домашний забой'), note: l('uz obavezan pregled na trihinelu', 'always tested for trichinella', 'только с проверкой на трихинеллу'), c: 71 },
   { food: l('Junetina, medium', 'Beef, medium', 'Говядина, medium'), c: 60 },
   { food: l('Junetina, medium rare', 'Beef, medium rare', 'Говядина, medium rare'), note: l('stek', 'steak', 'стейк'), c: 55 },
   { food: l('Riba', 'Fish', 'Рыба'), note: l('losos, oslić', 'salmon, hake', 'лосось, хек'), c: 52, label: '50–55' },
