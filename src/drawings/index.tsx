@@ -2114,6 +2114,93 @@ const drawings = {
       <Cut i={1} d="M130 124 L130 140" />
     </>
   ),
+  // Grade 2 · Module 4 · Fish and seafood
+  fishFresh: (
+    <>
+      <rect x="30" y="110" width="240" height="30" rx="6" fill={C.ice} opacity=".6" />
+      <path d="M60 96 Q110 66 190 76 L236 60 L232 96 L236 132 L190 116 Q110 126 60 96 Z" fill={C.steel} />
+      <circle cx="84" cy="92" r="5" fill={C.bg} />
+      <path d="M100 86 Q106 96 100 106" stroke={C.warn} strokeWidth="4" fill="none" />
+      <Cut i={0} d="M84 92 m-11 0 a11 11 0 1 0 22 0 a11 11 0 1 0 -22 0" />
+      <Cut i={1} d="M104 76 L118 60" />
+    </>
+  ),
+  scaleFish: (
+    <>
+      <Board y={136} />
+      <path d="M60 96 Q110 66 190 76 L236 60 L232 96 L236 132 L190 116 Q110 126 60 96 Z" fill={C.steel} />
+      <circle cx="84" cy="92" r="5" fill={C.bg} />
+      <g fill={C.paper}><circle cx="150" cy="54" r="3" /><circle cx="162" cy="44" r="3" /><circle cx="140" cy="40" r="3" /><circle cx="176" cy="56" r="3" /></g>
+      <Cut i={0} d="M220 100 L80 100" />
+      <Cut i={1} d="M92 92 L80 100 L92 108" />
+    </>
+  ),
+  filletRound: (
+    <>
+      <Board y={136} />
+      <path d="M60 96 Q110 66 190 76 L236 60 L232 96 L236 132 L190 116 Q110 126 60 96 Z" fill={C.steel} />
+      <circle cx="84" cy="92" r="5" fill={C.bg} />
+      <Cut i={0} d="M104 70 Q100 96 104 122" />
+      <Cut i={1} d="M108 96 L226 96" dash />
+    </>
+  ),
+  filletFlat: (
+    <>
+      <Board y={136} />
+      <ellipse cx="150" cy="96" rx="96" ry="40" fill="#C9B79A" />
+      <path d="M246 96 L270 80 L270 112 Z" fill="#C9B79A" />
+      <circle cx="80" cy="84" r="4" fill={C.bg} /><circle cx="86" cy="96" r="4" fill={C.bg} />
+      <Cut i={0} d="M70 96 L240 96" />
+      <Cut i={1} d="M150 92 L150 62 M150 100 L150 130" dash />
+    </>
+  ),
+  squidClean: (
+    <>
+      <Board y={136} />
+      <path d="M60 104 Q60 84 90 82 L200 86 L230 96 L200 106 L90 110 Q60 110 60 104 Z" fill="#F2E6E0" />
+      <g stroke="#E8C4C0" strokeWidth="5" strokeLinecap="round"><path d="M232 96 L268 84" /><path d="M232 96 L272 96" /><path d="M232 96 L268 108" /></g>
+      <rect x="80" y="54" width="120" height="6" rx="3" fill={C.ice} />
+      <Cut i={0} d="M220 74 L250 74" />
+      <Cut i={1} d="M244 68 L252 74 L244 80" />
+    </>
+  ),
+  musselTap: (
+    <>
+      <path d="M50 70 A100 60 0 0 0 250 70 Z" fill={C.pot} />
+      <g fill="#1F2A44" stroke="#3A4E78" strokeWidth="2">
+        <ellipse cx="110" cy="80" rx="20" ry="11" transform="rotate(-20 110 80)" /><ellipse cx="150" cy="86" rx="20" ry="11" transform="rotate(10 150 86)" /><ellipse cx="190" cy="78" rx="20" ry="11" transform="rotate(25 190 78)" />
+      </g>
+      <Cut i={0} d="M150 30 L150 66" />
+      <Cut i={1} d="M136 60 Q150 70 164 60" />
+    </>
+  ),
+  prawnC: (
+    <>
+      <Board y={136} />
+      <path d="M90 110 A34 34 0 1 1 124 76" fill="none" stroke="#F49A7A" strokeWidth="18" strokeLinecap="round" />
+      <path d="M200 110 A28 28 0 1 1 228 82 A28 28 0 0 1 206 110" fill="none" stroke="#C0705A" strokeWidth="14" strokeLinecap="round" opacity=".6" />
+      <Cut i={0} d="M70 52 L80 62 L96 44" />
+      <Cut i={1} d="M200 48 L220 68 M220 48 L200 68" />
+    </>
+  ),
+  saltCrust: (
+    <>
+      <rect x="30" y="120" width="240" height="14" rx="4" fill={C.potDark} />
+      <path d="M50 120 Q60 70 150 64 Q240 70 250 120 Z" fill={C.paper} />
+      <g fill="#D8DEE8"><circle cx="100" cy="100" r="3" /><circle cx="130" cy="86" r="3" /><circle cx="170" cy="90" r="3" /><circle cx="200" cy="104" r="3" /><circle cx="150" cy="108" r="3" /></g>
+      <Cut i={0} d="M44 124 Q150 44 256 124" dash />
+    </>
+  ),
+  papillote: (
+    <>
+      <rect x="30" y="120" width="240" height="14" rx="4" fill={C.potDark} />
+      <path d="M50 118 Q150 30 250 118 Z" fill={C.paper} />
+      <path d="M50 118 Q150 30 250 118" fill="none" stroke="#D8DEE8" strokeWidth="6" strokeDasharray="4 6" />
+      <Cut i={0} d="M110 40 Q104 30 110 20" />
+      <Cut i={1} d="M150 30 Q144 20 150 10" />
+      <Cut i={2} d="M190 40 Q184 30 190 20" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

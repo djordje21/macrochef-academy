@@ -2,6 +2,7 @@ import { l, type Grade, type L } from '../types'
 import { timingLessons } from './timing'
 import { poultryLessons } from './poultry'
 import { butcheryLessons } from './butchery'
+import { fishLessons } from './fish'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -76,15 +77,7 @@ export const grade2: Grade = {
         'Целая рыба от чешуи до филе, плоская рыба, кальмары, мидии и креветки. Свежесть видна глазом, чувствуется по запаху и на ощупь.',
       ),
       photo: 'g2-fish.webp',
-      lessons: [],
-      planned: [
-        p('2.4.1', l('Cela riba: krljušt, utroba, škrge', 'Whole fish: scales, guts, gills', 'Целая рыба: чешуя, потроха, жабры')),
-        p('2.4.2', l('Filetiranje okrugle ribe', 'Filleting a round fish', 'Филетирование круглой рыбы')),
-        p('2.4.3', l('Pljosnata riba', 'Flat fish', 'Плоская рыба')),
-        p('2.4.4', l('Lignje i hobotnica', 'Squid and octopus', 'Кальмары и осьминог')),
-        p('2.4.5', l('Školjke i škampi', 'Mussels and prawns', 'Мидии и креветки')),
-        p('2.4.6', l('Riba u soli i u papiru', 'Fish in salt and in paper', 'Рыба в соли и в пергаменте')),
-      ],
+      lessons: fishLessons,
     },
     {
       id: 'g2m5',
