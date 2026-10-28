@@ -46,7 +46,8 @@ function Cut({ d, i = 0, dash }: { d: string; i?: number; dash?: boolean }) {
       className={dash ? 'cut dash' : 'cut'}
       d={d}
       pathLength={1}
-      style={{ animationDelay: `${0.15 + i * 0.22}s` }}
+      // The grade's accent, so the cook's lines match the room they are in.
+      style={{ animationDelay: `${0.15 + i * 0.22}s`, stroke: 'var(--accent)' }}
       fill="none"
       stroke={C.cut}
       strokeWidth={3}

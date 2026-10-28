@@ -34,7 +34,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11, 23, 48, 0.5) 0%, rgba(11, 23, 48, 0) 30%, rgba(11, 23, 48, 0.55) 60%, var(--bg) 100%);
+  background: linear-gradient(180deg, rgba(var(--bg-rgb), 0.5) 0%, rgba(var(--bg-rgb), 0) 30%, rgba(var(--bg-rgb), 0.55) 60%, var(--bg) 100%);
   pointer-events: none;
 }
 
@@ -601,7 +601,7 @@
   right: 0;
   bottom: 0;
   padding: 10px max(var(--gutter), env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 10px);
-  background: rgba(11, 23, 48, 0.94);
+  background: rgba(var(--bg-rgb), 0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 1px solid var(--line);
