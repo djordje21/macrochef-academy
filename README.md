@@ -42,10 +42,6 @@ Deploy:
 - 2. razred (Zanat): 14 modula, 78 lekcija, sve napisane. Kuhinje sveta: Francuska, Italija i Mediteran, Azija kao bonus.
 - 3. razred (Chef): 14 modula, 70 lekcija, sve napisane. Tehnika visokog nivoa, kreiranje jela i menija, food cost, HACCP, vođenje tima, otvaranje kuhinje i hotelska kuhinja. Svaki razred ima svoje okruženje: teget i žuta, antracit i bakar, crna i šampanj.
 
-## Pitaj kuvara (AI)
-
-Oblačić u uglu otvara razgovor sa Claude-om. App šalje pitanje i tekst lekcije koja je otvorena na `/api/ask`, a Worker (`worker/index.ts`) zove Claude API. Ključ nije u appu: postavlja se jednom kao tajna `ANTHROPIC_API_KEY` u Cloudflare-u (Worker → Settings → Variables and Secrets, tip Secret) ili sa `npx wrangler secret put ANTHROPIC_API_KEY`. Dok ključa nema, oblačić kaže da asistent još nije uključen. Najviše 10 pitanja u minuti sa jedne adrese.
-
 ## Fotografije
 
 Sa [Pexels](https://www.pexels.com), pod Pexels licencom (besplatno, i za komercijalnu upotrebu). Hero je [8448077](https://www.pexels.com/photo/8448077/). Fajlovi su u `public/media/`, širine do 1200 px, a tačka fokusa za isečak naslovne slike je u `src/components/photoFocus.ts`.

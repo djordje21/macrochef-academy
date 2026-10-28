@@ -1,21 +1,13 @@
-// Cloudflare Worker: serves the Vite build from dist/ and answers /api/ask (worker/index.ts).
+// Cloudflare Workers static assets: serves the Vite build from dist/.
 // public/_headers is copied into dist and applied by Cloudflare.
-// The Claude API key is a secret, set once in the Cloudflare dashboard (Settings → Variables and Secrets)
-// or with `npx wrangler secret put ANTHROPIC_API_KEY`. Without it the bubble says the assistant is not set up yet.
 {
   "name": "macrochef-academy",
-  "main": "worker/index.ts",
   "compatibility_date": "2025-09-01",
   // The public address is macrochef-academy.macrochef.workers.dev; no per-version preview links.
   "workers_dev": true,
   "preview_urls": false,
   "assets": {
     "directory": "./dist",
-    "binding": "ASSETS",
-    "not_found_handling": "single-page-application",
-    // Only the API runs the Worker first; every other path is served straight from the assets.
-    "run_worker_first": ["/api/*"]
-  },
-  // At most 10 questions a minute from one address, so one person cannot run up the bill.
-  "ratelimits": [{ "name": "ASK_LIMIT", "namespace_id": "1001", "simple": { "limit": 10, "period": 60 } }]
+    "not_found_handling": "single-page-application"
+  }
 }

@@ -216,18 +216,5 @@
   "oops.missing.eyebrow": "404 · not on the menu",
   "oops.missing.title": "This dish isn't on the menu.",
   "oops.missing.text": "The page you are looking for doesn't exist or has moved. The kitchen is still open.",
-  "oops.missing.cta": "Back to the kitchen",
-  "ask.open": "Ask the chef",
-  "ask.eyebrow": "AI assistant",
-  "ask.title": "Ask the chef",
-  "ask.empty": "Ask anything about cooking or the lesson you have open: ingredient swaps, what to do when something goes wrong, how long, at what temperature.",
-  "ask.placeholder": "E.g. what can I use instead of shallots?",
-  "ask.send": "Send",
-  "ask.thinking": "Thinking…",
-  "ask.note": "Answers come from AI and can be wrong. For food safety, the measures in the lessons apply.",
-  "ask.error": "The answer did not come through. Try again in a moment.",
-  "ask.offline": "No internet. Questions need a connection; the lessons work without one.",
-  "ask.limited": "Too many questions at once. Wait a minute and ask again.",
-  "ask.notConfigured": "The assistant is not switched on yet. Coming soon.",
-  "ask.refused": "I can't answer that one. Ask me something about cooking."
+  "oops.missing.cta": "Back to the kitchen"
 }
