@@ -3,6 +3,7 @@ import { timingLessons } from './timing'
 import { poultryLessons } from './poultry'
 import { butcheryLessons } from './butchery'
 import { fishLessons } from './fish'
+import { doughLessons } from './doughs'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -89,14 +90,7 @@ export const grade2: Grade = {
         'Блины, тесто для питы, песочное, слоёное и заварное. Пять видов теста, на которых держится половина выпечки.',
       ),
       photo: 'g2-doughs.webp',
-      lessons: [],
-      planned: [
-        p('2.5.1', l('Palačinke i krep', 'Pancakes and crêpes', 'Блины и крепы')),
-        p('2.5.2', l('Kore i pita', 'Filo and pita', 'Тесто фило и пита')),
-        p('2.5.3', l('Prhko testo', 'Shortcrust pastry', 'Песочное тесто')),
-        p('2.5.4', l('Brzo lisnato testo', 'Rough puff pastry', 'Быстрое слоёное тесто')),
-        p('2.5.5', l('Testo za ekler', 'Choux pastry', 'Заварное тесто')),
-      ],
+      lessons: doughLessons,
     },
     {
       id: 'g2m6',

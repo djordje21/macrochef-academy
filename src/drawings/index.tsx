@@ -2201,6 +2201,81 @@ const drawings = {
       <Cut i={2} d="M190 40 Q184 30 190 20" />
     </>
   ),
+  // Grade 2 · Module 5 · Doughs
+  crepeSwirl: (
+    <>
+      <circle cx="140" cy="94" r="62" fill={C.potDark} />
+      <rect x="198" y="88" width="80" height="12" rx="6" fill={C.handle} />
+      <circle cx="140" cy="94" r="54" fill={C.bread} opacity=".9" />
+      <Cut i={0} d="M140 94 m-40 0 a40 40 0 1 0 80 0" />
+      <Cut i={1} d="M176 104 L180 94 L188 102" />
+    </>
+  ),
+  filoCloth: (
+    <>
+      <Board y={136} />
+      <g fill={C.paper}>
+        <rect x="60" y="112" width="180" height="6" rx="2" /><rect x="62" y="104" width="178" height="6" rx="2" /><rect x="58" y="96" width="182" height="6" rx="2" />
+      </g>
+      <path d="M50 96 Q150 60 250 96 L250 104 Q150 74 50 104 Z" fill={C.cloth} opacity=".85" />
+      <g fill={C.water}><circle cx="110" cy="62" r="3" /><circle cx="150" cy="54" r="3" /><circle cx="190" cy="62" r="3" /></g>
+      <Cut i={0} d="M150 20 L150 44" />
+    </>
+  ),
+  pitaTray: (
+    <>
+      <rect x="40" y="70" width="220" height="70" rx="6" fill={C.potDark} />
+      <path d="M48 96 Q70 76 92 96 Q114 116 136 96 Q158 76 180 96 Q202 116 224 96 Q240 82 252 96 L252 132 L48 132 Z" fill={C.bread} />
+      <path d="M48 96 Q70 76 92 96 Q114 116 136 96 Q158 76 180 96 Q202 116 224 96 Q240 82 252 96" fill="none" stroke="#B88A3E" strokeWidth="3" />
+      <Cut i={0} d="M150 20 L150 60" />
+      <Cut i={1} d="M140 50 L150 60 L160 50" />
+    </>
+  ),
+  rubButter: (
+    <>
+      <path d="M50 70 A100 64 0 0 0 250 70 Z" fill={C.pot} />
+      <ellipse cx="150" cy="74" rx="90" ry="12" fill={C.paper} />
+      <g fill={C.yolk}><circle cx="110" cy="74" r="3" /><circle cx="130" cy="70" r="3" /><circle cx="160" cy="76" r="3" /><circle cx="186" cy="72" r="3" /><circle cx="146" cy="68" r="3" /></g>
+      <Cut i={0} d="M120 40 Q135 20 150 40 Q165 60 180 40" />
+    </>
+  ),
+  blindBake: (
+    <>
+      <path d="M50 80 L250 80 L236 130 L64 130 Z" fill={C.bread} />
+      <path d="M62 84 L238 84 L228 120 L72 120 Z" fill={C.paper} />
+      <g fill="#E8DCC4"><circle cx="100" cy="104" r="6" /><circle cx="120" cy="108" r="6" /><circle cx="140" cy="104" r="6" /><circle cx="160" cy="108" r="6" /><circle cx="180" cy="104" r="6" /><circle cx="200" cy="108" r="6" /></g>
+      <Cut i={0} d="M150 30 L150 70" />
+      <Cut i={1} d="M140 60 L150 70 L160 60" />
+    </>
+  ),
+  letterFold: (
+    <>
+      <rect x="30" y="80" width="150" height="50" rx="4" fill={C.flesh} />
+      <g stroke={C.yolk} strokeWidth="3" strokeDasharray="6 6"><path d="M80 80 L80 130" /><path d="M130 80 L130 130" /></g>
+      <rect x="210" y="80" width="56" height="50" rx="4" fill={C.flesh} />
+      <g stroke="#E2CDA4" strokeWidth="2"><path d="M210 96 L266 96" /><path d="M210 112 L266 112" /></g>
+      <Cut i={0} d="M44 74 Q55 50 74 74" />
+      <Cut i={1} d="M166 74 Q155 50 136 74" />
+      <Cut i={2} d="M190 104 L204 104" />
+    </>
+  ),
+  chouxBall: (
+    <>
+      <rect x="60" y="84" width="180" height="60" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="100" rx="56" ry="20" fill={C.bread} />
+      <ellipse cx="150" cy="134" rx="80" ry="4" fill="#E8DCC4" opacity=".7" />
+      <rect x="150" y="30" width="8" height="70" rx="3" fill={C.woodTop} transform="rotate(20 154 65)" />
+      <Cut i={0} d="M84 100 A66 26 0 0 0 216 100" />
+    </>
+  ),
+  chouxV: (
+    <>
+      <rect x="146" y="10" width="8" height="70" rx="3" fill={C.woodTop} />
+      <path d="M126 78 L174 78 L150 130 Z" fill={C.bread} />
+      <rect x="120" y="70" width="60" height="12" rx="6" fill={C.woodTop} />
+      <Cut i={0} d="M120 82 L150 140 L180 82" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
