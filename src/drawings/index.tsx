@@ -2990,6 +2990,43 @@ const drawings = {
       <Cut i={1} d="M140 30 L150 42 L160 30" />
     </>
   ),
+  // Grade 3 · Module 3 · Fine dining
+  foamStick: (
+    <>
+      <path d="M60 70 L240 50 L230 146 L76 146 Z" fill={C.pot} />
+      <path d="M68 92 L236 74 L230 140 L78 140 Z" fill={C.water} opacity=".55" />
+      <g fill={C.paper}>
+        <circle cx="150" cy="80" r="10" />
+        <circle cx="168" cy="76" r="8" />
+        <circle cx="134" cy="84" r="8" />
+        <circle cx="184" cy="74" r="6" />
+        <circle cx="118" cy="88" r="6" />
+      </g>
+      <rect x="172" y="6" width="16" height="74" rx="4" fill={C.handle} transform="rotate(20 180 43)" />
+      <rect x="156" y="70" width="26" height="14" rx="4" fill={C.steel} transform="rotate(20 169 77)" />
+      <Cut i={0} d="M110 70 Q120 56 112 42" />
+      <Cut i={1} d="M140 62 Q150 46 142 30" />
+    </>
+  ),
+  tuileCurl: (
+    <>
+      <Board y={128} />
+      <rect x="40" y="96" width="220" height="28" rx="14" fill={C.woodTop} />
+      <path d="M100 98 A50 22 0 0 1 200 98" fill="none" stroke={C.bread} strokeWidth="8" strokeLinecap="round" />
+      <Cut i={0} d="M100 60 A50 40 0 0 1 200 60" dash />
+      <Cut i={1} d="M150 20 L150 52 M140 42 L150 54 L160 42" />
+    </>
+  ),
+  quenelle: (
+    <>
+      <rect x="30" y="70" width="110" height="10" rx="5" fill={C.steel} />
+      <ellipse cx="190" cy="78" rx="62" ry="30" fill={C.steel} />
+      <ellipse cx="192" cy="74" rx="46" ry="20" fill={C.paper} />
+      <path d="M150 74 Q192 58 236 74" fill="none" stroke={C.fridge} strokeWidth="3" />
+      <Cut i={0} d="M160 120 A40 16 0 1 0 240 120" />
+      <Cut i={1} d="M230 112 L240 120 L228 128" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

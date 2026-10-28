@@ -1,6 +1,7 @@
 import { l, type Grade, type L } from '../types'
 import { stationLessons } from './station'
 import { chefSauceLessons } from './chefsauces'
+import { fineDiningLessons } from './finedining'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -62,14 +63,7 @@ export const grade3: Grade = {
         'Шелковистое пюре, гель из агара, пена, тюиль и кнель. Небольшие техники, поднимающие тарелку на другой уровень.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.3.1', l('Svilen pire kroz sito', 'Silky purée through a sieve', 'Шелковистое пюре через сито')),
-        p('3.3.2', l('Agar gel i fluid gel', 'Agar gel and fluid gel', 'Гель из агара и флюид-гель')),
-        p('3.3.3', l('Pena od lecitina', 'Lecithin foam', 'Пена на лецитине')),
-        p('3.3.4', l('Tuile i čips od povrća', 'Tuile and vegetable crisps', 'Тюиль и овощные чипсы')),
-        p('3.3.5', l('Quenelle jednom kašikom', 'A one-spoon quenelle', 'Кнель одной ложкой')),
-      ],
+      lessons: fineDiningLessons,
     },
     {
       id: 'g3m4',
