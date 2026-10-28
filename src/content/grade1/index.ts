@@ -7,6 +7,7 @@ import { eggLessons } from './eggs'
 import { meatLessons } from './meat'
 import { dressingBaseLesson, sauceBaseLessons, soupBaseLessons } from './sauces'
 import { starchLessons } from './starches'
+import { coldLessons } from './cold'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
@@ -68,13 +69,7 @@ export const grade1: Grade = {
         'Салаты и заправки, от мытья листа до организации всего цеха. Первый модуль, где ты готовишь настоящее блюдо.',
       ),
       photo: 'cold.webp',
-      lessons: [dressingBaseLesson],
-      planned: [
-        p('3.1', l('Pranje i sušenje salate', 'Washing and drying salad', 'Мытьё и сушка салата')),
-        p('3.3', l('Dresinzi: vrste i varijante', 'Dressings: types and variations', 'Заправки: виды и варианты')),
-        p('3.4', l('Sastavljanje salate', 'Building a salad', 'Как собрать салат')),
-        p('3.5', l('Organizacija hladne partije', 'Organising the cold station', 'Организация холодного цеха')),
-      ],
+      lessons: [coldLessons.washing, dressingBaseLesson, coldLessons.dressings, coldLessons.building, coldLessons.station],
     },
     {
       id: 'm4',

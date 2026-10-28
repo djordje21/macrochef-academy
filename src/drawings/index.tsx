@@ -1122,6 +1122,75 @@ const drawings = {
       <Cut i={1} d="M150 72 L150 86" />
     </>
   ),
+  // Module 3 · Cold station
+  saladBath: (
+    <>
+      <path d="M50 70 A100 70 0 0 0 250 70 Z" fill={C.pot} />
+      <ellipse cx="150" cy="70" rx="100" ry="12" fill={C.water} opacity=".7" />
+      <g fill={C.leaf}>
+        <ellipse cx="120" cy="64" rx="22" ry="9" transform="rotate(-15 120 64)" />
+        <ellipse cx="166" cy="62" rx="24" ry="9" transform="rotate(12 166 62)" />
+      </g>
+      <g fill={C.ice}>
+        <rect x="92" y="72" width="12" height="12" rx="2" transform="rotate(15 98 78)" />
+        <rect x="196" y="72" width="12" height="12" rx="2" transform="rotate(-10 202 78)" />
+      </g>
+      <Cut i={0} d="M130 40 L130 18" />
+      <Cut i={1} d="M170 40 L170 18" />
+      <Cut i={2} d="M110 140 L190 140" dash />
+    </>
+  ),
+  spinner: (
+    <>
+      <path d="M80 60 L220 60 L208 146 L92 146 Z" fill={C.pot} />
+      <path d="M90 66 L210 66 L200 138 L100 138 Z" fill="none" stroke={C.steel} strokeWidth="2" strokeDasharray="4 4" />
+      <ellipse cx="150" cy="96" rx="40" ry="16" fill={C.leaf} />
+      <rect x="72" y="50" width="156" height="12" rx="6" fill={C.potDark} />
+      <rect x="146" y="30" width="8" height="22" rx="3" fill={C.handle} />
+      <Cut i={0} d="M110 30 A40 10 0 1 0 190 30" />
+      <Cut i={1} d="M184 22 L190 30 L180 34" />
+    </>
+  ),
+  dressingJars: (
+    <>
+      {[60, 150, 240].map((x, i) => (
+        <g key={x}>
+          <rect x={x - 26} y="50" width="52" height="96" rx="8" fill={C.ice} opacity=".35" />
+          <rect x={x - 24} y="40" width="48" height="12" rx="3" fill={C.handle} />
+          <rect x={x - 22} y={[96, 110, 84][i]} width="44" height={[46, 32, 58][i]} rx="5" fill={[C.yolk, '#F8E3A0', C.paper][i]} opacity=".8" />
+        </g>
+      ))}
+      <Cut i={0} d="M44 96 L76 96" />
+      <Cut i={1} d="M134 110 L166 110" />
+      <Cut i={2} d="M224 84 L256 84" />
+    </>
+  ),
+  saladLayers: (
+    <>
+      <path d="M50 64 A100 74 0 0 0 250 64 Z" fill={C.pot} />
+      <ellipse cx="150" cy="64" rx="100" ry="12" fill={C.leafDark} />
+      <g fill={C.leaf}>
+        <ellipse cx="110" cy="58" rx="22" ry="8" /><ellipse cx="190" cy="58" rx="22" ry="8" />
+      </g>
+      <g fill={C.warn}><circle cx="140" cy="52" r="7" /><circle cx="168" cy="54" r="7" /></g>
+      <g fill={C.bread}><rect x="120" y="40" width="10" height="10" rx="2" /><rect x="176" y="38" width="10" height="10" rx="2" /></g>
+      <Cut i={0} d="M150 10 Q150 24 150 34" />
+      <Cut i={1} d="M70 64 Q150 100 230 64" />
+    </>
+  ),
+  coldStation: (
+    <>
+      <rect x="30" y="96" width="240" height="50" rx="8" fill={C.ice} opacity=".6" />
+      {[50, 110, 170, 230].map((x, i) => (
+        <g key={x}>
+          <rect x={x} y="70" width="48" height="50" rx="6" fill={C.fridge} />
+          <rect x={x + 6} y="76" width="36" height="20" rx="4" fill={[C.leaf, C.warn, C.yolk, C.paper][i]} />
+        </g>
+      ))}
+      <Cut i={0} d="M40 56 L260 56" />
+      <Cut i={1} d="M40 150 L260 150" dash />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
