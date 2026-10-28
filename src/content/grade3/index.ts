@@ -2,6 +2,7 @@ import { l, type Grade, type L } from '../types'
 import { stationLessons } from './station'
 import { chefSauceLessons } from './chefsauces'
 import { fineDiningLessons } from './finedining'
+import { modernLessons } from './modern'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -75,14 +76,7 @@ export const grade3: Grade = {
         'Пастеризация су-вид по таблице, лактоферментация, порошки, сухой посол и настои.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.4.1', l('Sous vide: pasterizacija po tablici', 'Sous vide: pasteurising by the table', 'Су-вид: пастеризация по таблице')),
-        p('3.4.2', l('Laktofermentacija u salamuri', 'Lacto-fermentation in brine', 'Лактоферментация в рассоле')),
-        p('3.4.3', l('Prahovi i so od bilja', 'Powders and herb salt', 'Порошки и травяная соль')),
-        p('3.4.4', l('Suvo soljenje i suva koža', 'Dry brining and dry skin', 'Сухой посол и сухая кожа')),
-        p('3.4.5', l('Infuzije: mleko, pavlaka, ulje', 'Infusions: milk, cream, oil', 'Настои: молоко, сливки, масло')),
-      ],
+      lessons: modernLessons,
     },
     {
       id: 'g3m5',
