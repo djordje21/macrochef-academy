@@ -2894,6 +2894,101 @@ const drawings = {
       <Cut i={1} d="M120 70 A50 50 0 0 1 170 100" dash />
     </>
   ),
+  // Grade 2 · Module 14 · Asia
+  wokToss: (
+    <>
+      <path d="M50 70 Q150 160 250 70 Z" fill={C.potDark} />
+      <rect x="250" y="66" width="44" height="10" rx="5" fill={C.handle} />
+      <g fill={C.skin}>
+        <rect x="110" y="84" width="16" height="12" rx="4" />
+        <rect x="140" y="90" width="16" height="12" rx="4" />
+        <rect x="170" y="84" width="16" height="12" rx="4" />
+      </g>
+      <g fill={C.skin}>
+        <rect x="128" y="30" width="14" height="10" rx="3" transform="rotate(-20 135 35)" />
+        <rect x="160" y="22" width="14" height="10" rx="3" transform="rotate(15 167 27)" />
+      </g>
+      <g fill={C.warn}>
+        <path d="M110 150 Q120 132 130 150 Z" />
+        <path d="M140 156 Q150 132 160 156 Z" />
+        <path d="M170 150 Q180 132 190 150 Z" />
+      </g>
+      <Cut i={0} d="M90 76 Q120 20 170 30 Q210 40 210 76" />
+      <Cut i={1} d="M200 66 L210 78 L218 64" />
+    </>
+  ),
+  curryCrack: (
+    <>
+      <path d="M50 64 Q150 160 250 64 Z" fill={C.pot} />
+      <ellipse cx="150" cy="70" rx="96" ry="12" fill={C.paper} />
+      <g fill={C.yolk}>
+        <ellipse cx="116" cy="70" rx="12" ry="4" />
+        <ellipse cx="160" cy="72" rx="16" ry="4" />
+        <ellipse cx="196" cy="68" rx="9" ry="3" />
+      </g>
+      <Cut i={0} d="M116 52 L116 62" />
+      <Cut i={1} d="M160 50 L160 64" />
+      <Cut i={2} d="M196 52 L196 62" />
+    </>
+  ),
+  gyozaPleat: (
+    <>
+      <Board y={118} />
+      <path d="M70 100 A80 70 0 0 1 230 100 Z" fill={C.paper} />
+      <path d="M100 98 A50 40 0 0 1 200 98 Z" fill={C.meat} opacity=".8" />
+      <Cut i={0} d="M78 94 Q86 76 96 66" dash />
+      <Cut i={1} d="M110 56 L118 70 L128 50 L136 64 L146 46 L154 60 L164 46 L172 62" />
+    </>
+  ),
+  gyozaPan: (
+    <>
+      <ellipse cx="140" cy="100" rx="110" ry="40" fill={C.potDark} />
+      <ellipse cx="140" cy="96" rx="96" ry="32" fill={C.pot} />
+      <rect x="244" y="92" width="50" height="10" rx="5" fill={C.handle} />
+      <g fill={C.paper}>
+        <path d="M70 100 A22 16 0 0 1 114 100 Z" />
+        <path d="M118 100 A22 16 0 0 1 162 100 Z" />
+        <path d="M166 100 A22 16 0 0 1 210 100 Z" />
+      </g>
+      <g fill={C.crust}>
+        <rect x="70" y="100" width="44" height="5" rx="2" />
+        <rect x="118" y="100" width="44" height="5" rx="2" />
+        <rect x="166" y="100" width="44" height="5" rx="2" />
+      </g>
+      <Cut i={0} d="M90 60 Q96 44 90 30" dash />
+      <Cut i={1} d="M190 60 Q196 44 190 30" dash />
+      <Cut i={2} d="M70 112 L210 112" />
+    </>
+  ),
+  ajitama: (
+    <>
+      <rect x="60" y="40" width="180" height="104" rx="10" fill={C.pot} />
+      <rect x="66" y="64" width="168" height="74" rx="8" fill={C.crust} opacity=".85" />
+      <g fill={C.ring}>
+        <ellipse cx="110" cy="100" rx="22" ry="28" />
+        <ellipse cx="160" cy="104" rx="22" ry="28" />
+        <ellipse cx="206" cy="98" rx="20" ry="26" />
+      </g>
+      <Cut i={0} d="M66 64 Q150 58 234 64" />
+      <Cut i={1} d="M150 14 L150 40 M138 30 L150 42 L162 30" />
+    </>
+  ),
+  ramenBowl: (
+    <>
+      <path d="M40 60 Q150 180 260 60 Z" fill={C.handle} />
+      <ellipse cx="150" cy="64" rx="108" ry="16" fill={C.ring} />
+      <g fill="none" stroke={C.bread} strokeWidth="3">
+        <path d="M80 66 Q100 58 120 66 T160 66" />
+        <path d="M90 72 Q110 64 130 72 T170 72" />
+      </g>
+      <ellipse cx="200" cy="64" rx="16" ry="11" fill={C.paper} />
+      <circle cx="200" cy="64" r="6" fill={C.yolk} />
+      <rect x="160" y="54" width="22" height="16" rx="4" fill={C.meat} />
+      <g fill={C.leaf}><circle cx="110" cy="58" r="3" /><circle cx="122" cy="62" r="3" /><circle cx="134" cy="56" r="3" /></g>
+      <Cut i={0} d="M150 10 L150 40" />
+      <Cut i={1} d="M140 30 L150 42 L160 30" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

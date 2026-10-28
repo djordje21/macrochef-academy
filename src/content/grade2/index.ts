@@ -1,4 +1,4 @@
-import { l, type Grade, type L } from '../types'
+import { l, type Grade } from '../types'
 import { timingLessons } from './timing'
 import { poultryLessons } from './poultry'
 import { butcheryLessons } from './butchery'
@@ -12,13 +12,13 @@ import { frenchLessons } from './french'
 import { italianLessons } from './italian'
 import { mediterraneanLessons } from './mediterranean'
 import { platingLessons } from './plating'
+import { asiaLessons } from './asia'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
 // the Mediterranean, grouped as world kitchens), plating, and Asia as a bonus world kitchen. Lesson ids carry the grade: "2.4.1".
 // Every lesson is announced as planned first, so the whole path is visible before it is written.
 
-const p = (id: string, title: L) => ({ id, title })
 
 export const grade2: Grade = {
   n: 2,
@@ -206,13 +206,7 @@ export const grade2: Grade = {
         'Дополнение для любопытных: вок, карри, пельмени и рамен. Не обязательно для экзамена.',
       ),
       photo: 'g2-asia.webp',
-      lessons: [],
-      planned: [
-        p('2.14.1', l('Vok i ukus vatre', 'The wok and the taste of fire', 'Вок и вкус огня')),
-        p('2.14.2', l('Tajlandski kari', 'Thai curry', 'Тайское карри')),
-        p('2.14.3', l('Gjoze', 'Gyoza', 'Гёдза')),
-        p('2.14.4', l('Ramen čorba', 'Ramen broth', 'Бульон для рамена')),
-      ],
+      lessons: asiaLessons,
     },
   ],
   exam: {

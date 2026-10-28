@@ -39,7 +39,7 @@ Deploy:
 ## Status
 
 - 1. razred: 16 modula po partijama kuhinje, 90 lekcija na SR/EN/RU, sve napisane, svaka sa crtežima koraka. Teorija i praksa, tajmeri, Mere i temperature, interaktivni završni ispit, landing stranica.
-- 2. razred (Zanat): 14 modula i 78 lekcija u planu, vidljivi u appu kao „u pripremi“. Kuhinje sveta: Francuska, Italija i Mediteran, Azija kao bonus.
+- 2. razred (Zanat): 14 modula, 78 lekcija, sve napisane. Kuhinje sveta: Francuska, Italija i Mediteran, Azija kao bonus.
 - 3. razred: najavljen na početnoj.
 
 ## Fotografije
