@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { allLessons, gradeList, grades, isOpen } from '../content'
 import { useDone } from '../app/progress'
 import { navigate } from '../app/router'
 import { markWelcomed } from '../app/progress'
-import { useT, type Key } from '../i18n/useT'
+import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import { Drawing } from '../drawings'
 import { ModeCards } from '../components/ModeCards'
@@ -22,6 +22,24 @@ export function Landing() {
   const { t, c } = useT()
   const [video, setVideo] = useState(true)
   const grade = grades[0]
+
+  // A slim call to action follows the reader once the hero's button scrolls away,
+  // and steps aside when the closing call to action comes into view.
+  const heroCta = useRef<HTMLDivElement>(null)
+  const finalCta = useRef<HTMLElement>(null)
+  const [sticky, setSticky] = useState(false)
+  useEffect(() => {
+    const seen = new Map<Element, boolean>()
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => seen.set(e.target, e.isIntersecting))
+      const heroGone = heroCta.current ? seen.get(heroCta.current) === false : false
+      const finalShown = finalCta.current ? seen.get(finalCta.current) === true : false
+      setSticky(heroGone && !finalShown)
+    })
+    if (heroCta.current) io.observe(heroCta.current)
+    if (finalCta.current) io.observe(finalCta.current)
+    return () => io.disconnect()
+  }, [])
 
   const done = useDone()
   const next = allLessons.find((x) => !done.has(x.id))
@@ -82,7 +100,12 @@ export function Landing() {
           <span className="label landing-eyebrow">{t('landing.eyebrow')}</span>
           <h1>{t('landing.title')}</h1>
           <p>{t('landing.sub')}</p>
-          {mainCta}
+          <div ref={heroCta}>{mainCta}</div>
+          <ul className="landing-trust">
+            {(['trust1', 'trust2', 'trust3'] as const).map((k) => (
+              <li key={k}>{t(`landing.${k}`)}</li>
+            ))}
+          </ul>
           {started && (
             <button className="landing-book" onClick={start}>
               {t('nav.book')} →
@@ -110,31 +133,45 @@ export function Landing() {
         <section className="landing-pain">
           <h2>{t('landing.painTitle')}</h2>
           <ul>
-            {(['pain1', 'pain2', 'pain3'] as const).map((k) => (
+            {(['pain1', 'pain2', 'pain3', 'pain4'] as const).map((k) => (
               <li key={k}>{t(`landing.${k}`)}</li>
             ))}
           </ul>
           <p className="pain-answer">{t('landing.painAnswer')}</p>
         </section>
 
+        <section className="landing-chef">
+          <span className="label">{t('landing.chefTitle')}</span>
+          <h2>{t('landing.chefName')}</h2>
+          <span className="chef-role">{t('landing.chefRole')}</span>
+          <blockquote>„{t('landing.quote')}“</blockquote>
+        </section>
+
         <section>
-          <h2>{t('landing.learnTitle')}</h2>
-          <ol className="landing-learn">
-            {grade.modules.map((m) => (
-              <li key={m.id}>
-                <button
-                  onClick={() => {
-                    markWelcomed()
-                    navigate(`/module/${m.id}`)
-                  }}
-                >
-                  <span className="mono">M{m.n}</span>
-                  <b>{c(m.title)}</b>
-                  <span>{t(`landing.learn.${m.id}` as Key)}</span>
-                </button>
-              </li>
+          <h2>{t('landing.vsTitle')}</h2>
+          <div className="landing-vs" role="table">
+            <div className="vs-row vs-head" role="row">
+              <span role="columnheader" />
+              <span role="columnheader">{t('landing.vsThem')}</span>
+              <span role="columnheader">{t('landing.vsUs')}</span>
+            </div>
+            {([1, 2, 3, 4, 5] as const).map((n) => (
+              <div key={n} className="vs-row" role="row">
+                <span role="rowheader">{t(`landing.vs${n}l`)}</span>
+                <span role="cell">{t(`landing.vs${n}a`)}</span>
+                <span role="cell">{t(`landing.vs${n}b`)}</span>
+              </div>
             ))}
-          </ol>
+          </div>
+        </section>
+
+        <section>
+          <h2>{t('landing.outTitle')}</h2>
+          <ul className="landing-out">
+            {(['out1', 'out2', 'out3', 'out4', 'out5', 'out6'] as const).map((k) => (
+              <li key={k}>{t(`landing.${k}`)}</li>
+            ))}
+          </ul>
         </section>
 
         <section>
@@ -201,18 +238,37 @@ export function Landing() {
               </button>
             ))}
           </div>
+          <span className="label">{t('menu.modules', { n: 1 })}</span>
+          <div className="landing-modules">
+            {grade.modules.map((m) => (
+              <button
+                key={m.id}
+                onClick={() => {
+                  markWelcomed()
+                  navigate(`/module/${m.id}`)
+                }}
+              >
+                <span className="mono">M{m.n}</span>
+                {c(m.title)}
+              </button>
+            ))}
+          </div>
+          <button className="how-open" onClick={() => navigate('/grade/1')}>
+            {t('landing.plan')} →
+          </button>
         </section>
 
-        <section className="landing-chef">
-          <span className="label">{t('landing.chefTitle')}</span>
-          <h2>{t('landing.chefName')}</h2>
-          <span className="chef-role">{t('landing.chefRole')}</span>
-          <blockquote>„{t('landing.quote')}“</blockquote>
-        </section>
-
-        <section className="landing-mc">
-          <h2>{t('landing.mcTitle')}</h2>
-          <p className="muted">{t('landing.mcText')}</p>
+        <section>
+          <h2>{t('landing.forTitle')}</h2>
+          <div className="landing-for">
+            {([1, 2, 3] as const).map((n) => (
+              <div key={n}>
+                <span className="mono">0{n}</span>
+                <b>{t(`landing.for${n}t`)}</b>
+                <span>{t(`landing.for${n}d`)}</span>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="landing-faq">
@@ -225,11 +281,15 @@ export function Landing() {
           ))}
         </section>
 
-        <section className="landing-final">
+        <section className="landing-final" ref={finalCta}>
           <h2>{t('landing.finalTitle')}</h2>
           <p className="muted">{t('landing.finalText')}</p>
           {mainCta}
         </section>
+      </div>
+
+      <div className={`landing-sticky ${sticky ? 'on' : ''}`} aria-hidden={!sticky} inert={!sticky}>
+        {mainCta}
       </div>
     </div>
   )
