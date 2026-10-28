@@ -8,11 +8,21 @@ import { GradeCards } from '../components/GradeCards'
 import './GradeView.css'
 import { Oops } from '../components/Oops'
 
+// Grades whose plan the user opened, kept for the session so Back from a module finds it still open.
+const openPlans = new Set<number>()
+
 /** A short intro to one grade: who it is for, what you can do at the end, its modules and exam. */
 export function GradeView({ n }: { n: number }) {
   const { t, c } = useT()
   const done = useDone()
-  const [showPlan, setShowPlan] = useState(false)
+  const [showPlan, setShowPlanState] = useState(() => openPlans.has(n))
+  const setShowPlan = (update: (v: boolean) => boolean) =>
+    setShowPlanState((v) => {
+      const next = update(v)
+      if (next) openPlans.add(n)
+      else openPlans.delete(n)
+      return next
+    })
   const written = grades.find((g) => g.n === n)
   const planned = upcoming.find((g) => g.n === n)
   const grade = written ?? planned
