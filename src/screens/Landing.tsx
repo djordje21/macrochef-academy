@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { allLessons, grades, upcoming } from '../content'
+import { allLessons, gradeList, grades, isOpen } from '../content'
 import { useDone } from '../app/progress'
 import { navigate } from '../app/router'
 import { markWelcomed } from '../app/progress'
@@ -184,13 +184,13 @@ export function Landing() {
                 <small>{c(grade.tagline)}</small>
               </div>
             </button>
-            {upcoming.map((g) => (
+            {gradeList.filter((g) => g.n !== 1).map((g) => (
               <button key={g.n} className={`lg-card g${g.n}`} onClick={() => navigate(`/grade/${g.n}`)}>
                 <Photo name={g.photo} />
                 <div>
                   <span className="next-top">
                     <span className="label">{t('grade.label', { n: g.n })}</span>
-                    <span className="next-pill">{t('grade.soon')}</span>
+                    <span className={`next-pill ${isOpen(g.n) ? 'open' : ''}`}>{t(isOpen(g.n) ? 'landing.open' : 'grade.soon')}</span>
                   </span>
                   <b>{c(g.title)}</b>
                   <small>{c(g.tagline)}</small>

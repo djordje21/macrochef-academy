@@ -1,4 +1,4 @@
-import { grades, upcoming } from '../content'
+import { gradeList, isOpen } from '../content'
 import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Photo } from './Photo'
@@ -7,9 +7,7 @@ import './GradeCards.css'
 /** Cards for every grade except the one on screen; each opens that grade's overview. */
 export function GradeCards({ exclude }: { exclude: number }) {
   const { t, c } = useT()
-  const cards = [...grades.map((g) => ({ ...g, open: true })), ...upcoming.map((g) => ({ ...g, open: false }))].filter(
-    (g) => g.n !== exclude,
-  )
+  const cards = gradeList.filter((g) => g.n !== exclude).map((g) => ({ ...g, open: isOpen(g.n) }))
 
   return (
     <div className="home-next">

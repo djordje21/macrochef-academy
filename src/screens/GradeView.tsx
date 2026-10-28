@@ -17,6 +17,8 @@ export function GradeView({ n }: { n: number }) {
   if (!grade) return null
 
   const lessons = written ? written.modules.flatMap((m) => m.lessons) : []
+  const plannedCount = written ? written.modules.reduce((sum, m) => sum + (m.planned?.length ?? 0), 0) : 0
+  const open = lessons.length > 0
   const minutes = lessons.reduce((sum, x) => sum + x.minutes, 0)
   const next = allLessons.find((x) => !done.has(x.id))
 
@@ -41,11 +43,11 @@ export function GradeView({ n }: { n: number }) {
             <span>{t('gradeview.modulesN')}</span>
           </div>
           <div>
-            <b>{written ? lessons.length : '—'}</b>
+            <b>{written ? lessons.length + plannedCount : '—'}</b>
             <span>{t('gradeview.lessonsN')}</span>
           </div>
           <div>
-            <b>{written ? `~${Math.round(minutes / 60)} h` : '—'}</b>
+            <b>{open ? `~${Math.round(minutes / 60)} h` : '—'}</b>
             <span>{t('gradeview.read')}</span>
           </div>
         </div>
@@ -62,7 +64,7 @@ export function GradeView({ n }: { n: number }) {
 
         <div className="gv-modules">
           <span className="label">{t('gradeview.modules')}</span>
-          {!written && <p className="muted gv-planned">{t('gradeview.planned')}</p>}
+          {!open && <p className="muted gv-planned">{t('gradeview.planned')}</p>}
           <ol>
             {written
               ? written.modules.map((m) => (
@@ -91,7 +93,7 @@ export function GradeView({ n }: { n: number }) {
           </div>
         )}
 
-        {written ? (
+        {open ? (
           <button className="cta split" onClick={() => navigate(next ? `/lesson/${next.id}` : '/exam')}>
             <span>
               {t(done.size ? 'home.continue' : 'home.start')}

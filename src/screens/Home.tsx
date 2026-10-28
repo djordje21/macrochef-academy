@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { allLessons, findLesson, grades, upcoming } from '../content'
+import { allLessons, findLesson, gradeList, grades } from '../content'
 import { useDone } from '../app/progress'
 import { useExam } from '../app/exam'
 import { navigate } from '../app/router'
@@ -41,7 +41,7 @@ export function Home() {
           <button className="chip on" onClick={() => navigate(`/grade/${grade.n}`)}>
             {grade.n}. {c(grade.title)}
           </button>
-          {upcoming.map((g) => (
+          {gradeList.filter((g) => g.n !== grade.n).map((g) => (
             <button key={g.n} className="chip" onClick={() => navigate(`/grade/${g.n}`)}>
               {g.n}. {c(g.title)}
             </button>

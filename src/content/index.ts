@@ -1,45 +1,9 @@
 import { l, type Grade, type Lesson, type Module, type UpcomingGrade } from './types'
 import { grade1 } from './grade1'
+import { grade2 } from './grade2'
 
-/** Grades 2 and 3 are announced with their planned modules; their lessons come later. */
+/** Grade 3 is announced with its planned modules; its lessons come later. */
 export const upcoming: UpcomingGrade[] = [
-  {
-    n: 2,
-    title: l('Zanat', 'Craft', 'Ремесло'),
-    tagline: l(
-      'Obrada mesa i ribe, testa, konzervacija, plating.',
-      'Butchery and fish, dough, preserving, plating.',
-      'Разделка мяса и рыбы, тесто, заготовки, подача.',
-    ),
-    photo: 'grade-2.webp',
-    audience: l(
-      'Za one koji su završili 1. razred i kuvaju samostalno, a hoće da rade kao u profesionalnoj kuhinji.',
-      'For cooks who finished grade 1 and cook on their own, and want to work like a professional kitchen.',
-      'Для тех, кто окончил 1 класс и готовит самостоятельно, а хочет работать как на профессиональной кухне.',
-    ),
-    outcome: l(
-      'Obradiš celu pticu i ribu, umesiš hleb, sačuvaš sezonu u tegli i složiš tanjir kao u restoranu.',
-      'You break down a whole bird and a fish, bake bread, preserve the season in a jar and plate like a restaurant.',
-      'Ты разделываешь целую птицу и рыбу, печёшь хлеб, сохраняешь сезон в банке и подаёшь как в ресторане.',
-    ),
-    plannedModules: [
-      l('Obrada mesa: cela piletina, otkoštavanje, porcioniranje', 'Butchery: whole chicken, boning, portioning', 'Разделка мяса: целая курица, обвалка, порционирование'),
-      l('Riba: čišćenje i filetiranje', 'Fish: cleaning and filleting', 'Рыба: чистка и филетирование'),
-      l('Testa i hleb', 'Doughs and bread', 'Тесто и хлеб'),
-      l('Konzervacija: kiseljenje, fermentacija, sušenje', 'Preserving: pickling, fermenting, drying', 'Заготовки: маринование, ферментация, сушка'),
-      l('Niske temperature i sous vide', 'Low temperature and sous vide', 'Низкие температуры и су-вид'),
-      l('Kuhinje sveta: Balkan, Mediteran, Azija', 'World kitchens: Balkans, Mediterranean, Asia', 'Кухни мира: Балканы, Средиземноморье, Азия'),
-      l('Plating: tanjir kao u restoranu', 'Plating: a restaurant plate', 'Подача: тарелка как в ресторане'),
-    ],
-    exam: {
-      title: l('Meni od tri jela', 'A three-course menu', 'Меню из трёх блюд'),
-      text: l(
-        'Predjelo, glavno jelo i desert za četiri osobe, servirano u isto vreme.',
-        'A starter, main and dessert for four, served on time.',
-        'Закуска, основное блюдо и десерт на четверых, поданные вовремя.',
-      ),
-    },
-  },
   {
     n: 3,
     title: l('Chef', 'Chef', 'Шеф'),
@@ -78,7 +42,19 @@ export const upcoming: UpcomingGrade[] = [
   },
 ]
 
-export const grades: Grade[] = [grade1]
+export const grades: Grade[] = [grade1, grade2]
+
+/** Every grade in order, written or announced, for cards and menus. */
+export const gradeList: (Grade | UpcomingGrade)[] = [...grades, ...upcoming]
+
+/** A grade is open once at least one of its lessons is written. */
+export function isOpen(n: number): boolean {
+  return grades.some((g) => g.n === n && g.modules.some((m) => m.lessons.length > 0))
+}
+
+export function gradeOfModule(id: string): Grade | undefined {
+  return grades.find((g) => g.modules.some((m) => m.id === id))
+}
 
 export function findModule(id: string): Module | undefined {
   return grades.flatMap((g) => g.modules).find((m) => m.id === id)

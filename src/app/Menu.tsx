@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { grades, upcoming } from '../content'
+import { gradeList, grades, isOpen } from '../content'
 import { useDone } from './progress'
 import { useExam } from './exam'
 import { navigate, useRoute } from './router'
@@ -68,11 +68,11 @@ export function Menu() {
 
         <span className="label menu-label">{t('menu.grades')}</span>
         <nav className="menu-links">
-          {[grade, ...upcoming].map((g) => (
+          {gradeList.map((g) => (
             <button key={g.n} className={here(`/grade/${g.n}`)} onClick={() => go(`/grade/${g.n}`)}>
               <span className={`menu-dot g${g.n}`} />
               {g.n}. {c(g.title)}
-              {g.n > 1 && <span className="menu-soon">{t('grade.soon')}</span>}
+              {!isOpen(g.n) && <span className="menu-soon">{t('grade.soon')}</span>}
             </button>
           ))}
         </nav>

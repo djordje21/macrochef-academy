@@ -1,4 +1,4 @@
-import { findModule } from '../content'
+import { findModule, gradeOfModule } from '../content'
 import { useDone } from '../app/progress'
 import { goBack, navigate } from '../app/router'
 import { useT } from '../i18n/useT'
@@ -12,7 +12,7 @@ export function ModuleScreen({ id }: { id: string }) {
   if (!module) return null
   const next = module.lessons.find((x) => !done.has(x.id))
   // Written and planned lessons in one list, in lesson order.
-  const lessonNo = (id: string) => Number(id.split('.')[1])
+  const lessonNo = (id: string) => Number(id.split('.').at(-1))
   const rows = [...module.lessons.map((lesson) => ({ lesson })), ...(module.planned ?? [])].sort(
     (a, b) => lessonNo('lesson' in a ? a.lesson.id : a.id) - lessonNo('lesson' in b ? b.lesson.id : b.id),
   )
@@ -22,7 +22,7 @@ export function ModuleScreen({ id }: { id: string }) {
       <header className="module-cover">
         <Photo name={module.photo} />
         <button className="back module-back" onClick={goBack}>
-          ‹ {t('grade.label', { n: 1 })}
+          ‹ {t('grade.label', { n: gradeOfModule(module.id)?.n ?? 1 })}
         </button>
         <div className="module-title">
           <span className="label">

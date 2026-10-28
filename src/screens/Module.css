@@ -36,3 +36,8 @@
 .module-title h1 {
   font-size: 28px;
 }
+
+/* Room for three-part lesson numbers such as 2.11.1. */
+.module .row {
+  grid-template-columns: 50px minmax(0, 1fr) auto;
+}

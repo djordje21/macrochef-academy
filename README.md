@@ -39,7 +39,8 @@ Deploy:
 ## Status
 
 - 1. razred: 16 modula po partijama kuhinje, 90 lekcija na SR/EN/RU, sve napisane, svaka sa crtežima koraka. Teorija i praksa, tajmeri, Mere i temperature, interaktivni završni ispit, landing stranica.
-- 2. i 3. razred: najavljeni na početnoj.
+- 2. razred (Zanat): 14 modula i 78 lekcija u planu, vidljivi u appu kao „u pripremi“. Francuska, Italija i Mediteran kao kuhinje tehnike, Azija kao bonus.
+- 3. razred: najavljen na početnoj.
 
 ## Fotografije
 
@@ -55,3 +56,5 @@ Sa [Pexels](https://www.pexels.com), pod Pexels licencom (besplatno, i za komerc
 [m6](https://www.pexels.com/photo/close-up-photo-of-steak-on-barbeque-grill-8477345/),
 [m7](https://www.pexels.com/photo/stew-in-a-pot-20943934/),
 [m8](https://www.pexels.com/photo/various-types-of-raw-pasta-in-bowls-6287344/).
+
+2. razred, Pexels: [g2-timing](https://www.pexels.com/photo/30120987/), [g2-poultry](https://www.pexels.com/photo/10842249/), [g2-butchery](https://www.pexels.com/photo/9424951/), [g2-fish](https://www.pexels.com/photo/14062105/), [g2-doughs](https://www.pexels.com/photo/6937404/), [g2-bread](https://www.pexels.com/photo/4881596/), [g2-desserts](https://www.pexels.com/photo/835741/), [g2-preserves](https://www.pexels.com/photo/34711401/), [g2-lowtemp](https://www.pexels.com/photo/7627420/), [g2-french](https://www.pexels.com/photo/7474378/), [g2-italian](https://www.pexels.com/photo/1398688/), [g2-med](https://www.pexels.com/photo/1022385/), [g2-plating](https://www.pexels.com/photo/30507463/), [g2-asia](https://www.pexels.com/photo/34615582/).
