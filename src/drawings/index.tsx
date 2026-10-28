@@ -1817,6 +1817,88 @@ const drawings = {
       <Cut i={1} d="M80 54 L70 60 L80 66" />
     </>
   ),
+  // Module 16 · Planning and meal prep
+  weekGrid: (
+    <>
+      {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+        <rect key={i} x={24 + i * 38} y="50" width="32" height="70" rx="5" fill={i === 0 || i === 3 ? C.ok : i === 6 ? C.steelEdge : C.pot} opacity={i === 6 ? 0.5 : 1} />
+      ))}
+      <Cut i={0} d="M24 136 L56 136" />
+      <Cut i={1} d="M138 136 L170 136" />
+      <Cut i={2} d="M24 34 L270 34" dash />
+    </>
+  ),
+  threeBases: (
+    <>
+      {[60, 150, 240].map((x, i) => (
+        <g key={x}>
+          <rect x={x - 40} y="66" width="80" height="60" rx="8" fill={C.pot} />
+          <rect x={x - 34} y="74" width="68" height="44" rx="5" fill={[C.crust, '#D9B26A', C.veg][i]} opacity=".9" />
+        </g>
+      ))}
+      <Cut i={0} d="M60 140 Q150 160 240 140" />
+      <Cut i={1} d="M150 56 L150 20" />
+    </>
+  ),
+  shoppingList: (
+    <>
+      <rect x="90" y="14" width="120" height="140" rx="6" fill={C.paper} />
+      <g fill={C.steelEdge}>
+        <rect x="104" y="30" width="60" height="6" rx="3" /><rect x="104" y="52" width="80" height="6" rx="3" /><rect x="104" y="74" width="70" height="6" rx="3" />
+        <rect x="104" y="96" width="76" height="6" rx="3" /><rect x="104" y="118" width="56" height="6" rx="3" />
+      </g>
+      <Cut i={0} d="M186 30 L190 36 L198 26" />
+      <Cut i={1} d="M192 52 L196 58 L204 48" />
+      <Cut i={2} d="M76 44 L76 132" />
+    </>
+  ),
+  fifoShelf: (
+    <>
+      <rect x="40" y="110" width="220" height="8" rx="3" fill={C.steelEdge} />
+      <g>
+        <rect x="60" y="66" width="40" height="44" rx="5" fill={C.warn} />
+        <rect x="120" y="66" width="40" height="44" rx="5" fill={C.yolk} />
+        <rect x="180" y="66" width="40" height="44" rx="5" fill={C.ok} />
+      </g>
+      <Cut i={0} d="M240 50 L50 50" />
+      <Cut i={1} d="M62 42 L50 50 L62 58" />
+    </>
+  ),
+  prepTimeline: (
+    <>
+      <rect x="30" y="40" width="240" height="20" rx="6" fill={C.potDark} />
+      <rect x="30" y="72" width="150" height="20" rx="6" fill={C.pot} />
+      <rect x="30" y="104" width="100" height="20" rx="6" fill={C.leaf} opacity=".8" />
+      <Cut i={0} d="M30 140 L270 140" />
+      <Cut i={1} d="M30 134 L30 146 M270 134 L270 146" />
+    </>
+  ),
+  boxRow: (
+    <>
+      {[30, 120, 210].map((x) => (
+        <g key={x}>
+          <rect x={x} y="60" width="80" height="62" rx="8" fill={C.ice} opacity=".45" />
+          <rect x={x} y="54" width="80" height="10" rx="4" fill={C.handle} />
+          <rect x={x + 6} y="72" width="32" height="44" rx="4" fill={C.crust} />
+          <rect x={x + 42} y="72" width="32" height="20" rx="4" fill="#D9B26A" />
+          <rect x={x + 42} y="96" width="32" height="20" rx="4" fill={C.veg} />
+        </g>
+      ))}
+      <Cut i={0} d="M40 136 L100 136" />
+      <Cut i={1} d="M130 136 L190 136" />
+      <Cut i={2} d="M220 136 L280 136" />
+    </>
+  ),
+  rawCooked: (
+    <>
+      <rect x="30" y="110" width="110" height="34" rx="8" fill={C.steelEdge} />
+      <rect x="160" y="110" width="110" height="34" rx="8" fill={C.steelEdge} />
+      <ellipse cx="85" cy="100" rx="34" ry="12" fill={C.paper} />
+      <ellipse cx="215" cy="92" rx="48" ry="20" fill={C.paper} />
+      <Cut i={0} d="M118 64 L182 64" />
+      <Cut i={1} d="M172 56 L182 64 L172 72" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

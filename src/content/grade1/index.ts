@@ -1,4 +1,4 @@
-import { l, type Grade, type L } from '../types'
+import { l, type Grade } from '../types'
 import { kitchenLessons } from './kitchen'
 import { knifeLessons } from './knife'
 import { heatLessons } from './heat'
@@ -16,12 +16,10 @@ import { braiseLessons } from './braise'
 import { roastLessons } from './roast'
 import { grillLessons } from './grill'
 import { leftoverLessons } from './leftovers'
+import { mealPrepLessons } from './mealprep'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
-// Lessons not written yet are listed as planned, so the whole path is visible from day one.
-
-const p = (id: string, title: L) => ({ id, title })
 
 export const grade1: Grade = {
   n: 1,
@@ -243,14 +241,7 @@ export const grade1: Grade = {
         'Неделя вперёд: меню, покупки и контейнеры в холодильнике. С макросами в MacroChef.',
       ),
       photo: 'mealprep.webp',
-      lessons: [],
-      planned: [
-        p('16.1', l('Jelovnik za nedelju', 'A menu for the week', 'Меню на неделю')),
-        p('16.2', l('Spisak za nabavku', 'The shopping list', 'Список покупок')),
-        p('16.3', l('Meal prep nedeljom', 'Sunday meal prep', 'Заготовки в воскресенье')),
-        p('16.4', l('Kutije, frižider i rokovi', 'Boxes, fridge and use-by dates', 'Контейнеры, холодильник и сроки')),
-        p('16.5', l('Makroi u MacroChefu', 'Macros in MacroChef', 'Макросы в MacroChef')),
-      ],
+      lessons: mealPrepLessons,
     },
   ],
   exam: {
