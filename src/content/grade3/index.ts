@@ -47,7 +47,7 @@ export const grade3: Grade = {
         'The station, prep list, par levels and the line check. A kitchen that is ready before the first guest.',
         'Станция, преп-лист, пар-уровни и проверка перед сервисом. Кухня, готовая до первого гостя.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-station.webp',
       lessons: stationLessons,
     },
     {
@@ -59,7 +59,7 @@ export const grade3: Grade = {
         'Demi-glace, jus, sabayon, green oil and finishing a sauce with butter. Sauce is a kitchen\'s signature.',
         'Деми-глас, жю, сабайон, зелёное масло и завершение соуса маслом. Соус — подпись кухни.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-sauces.webp',
       lessons: chefSauceLessons,
     },
     {
@@ -71,7 +71,7 @@ export const grade3: Grade = {
         'Silky purée, agar gel, foam, tuile and quenelle. Small techniques that lift a plate to another level.',
         'Шелковистое пюре, гель из агара, пена, тюиль и кнель. Небольшие техники, поднимающие тарелку на другой уровень.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-finedining.webp',
       lessons: fineDiningLessons,
     },
     {
@@ -83,7 +83,7 @@ export const grade3: Grade = {
         'Sous vide pasteurisation by the table, lacto-fermentation, powders, dry brining and infusions.',
         'Пастеризация су-вид по таблице, лактоферментация, порошки, сухой посол и настои.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-modern.webp',
       lessons: modernLessons,
     },
     {
@@ -95,7 +95,7 @@ export const grade3: Grade = {
         'Basted rib-eye, fish crudo, rack of lamb, venison loin and scallops.',
         'Рибай с поливкой маслом, крудо из рыбы, каре ягнёнка, филе косули и гребешки.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-protein.webp',
       lessons: proteinLessons,
     },
     {
@@ -107,7 +107,7 @@ export const grade3: Grade = {
         'Tempered chocolate, ganache, sorbet, madeleines and mirror glaze. The end of the menu.',
         'Темперированный шоколад, ганаш, сорбет, мадлен и зеркальная глазурь. Финал меню.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-pastry.webp',
       lessons: pastryLessons,
     },
     {
@@ -119,7 +119,7 @@ export const grade3: Grade = {
         'From an ingredient in season to a dish on the menu: pairing, texture, tasting and the recipe card.',
         'От продукта в сезон до блюда в меню: сочетания, текстура, дегустация и техкарта.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-creating.webp',
       lessons: creatingLessons,
     },
     {
@@ -131,7 +131,7 @@ export const grade3: Grade = {
         'Menu structure, the rhythm of a tasting menu, dish descriptions and the matrix that shows what earns.',
         'Структура меню, ритм дегустационного меню, описание блюд и матрица, показывающая, что приносит прибыль.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-menu.webp',
       lessons: menuLessons,
     },
     {
@@ -143,7 +143,7 @@ export const grade3: Grade = {
         'Macro balance on the plate, the 14 allergens, swaps and lighter classics, entered in MacroChef.',
         'Баланс макросов на тарелке, 14 аллергенов, замены и облегчённая классика в MacroChef.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-nutrition.webp',
       lessons: nutritionLessons,
     },
     {
@@ -155,7 +155,7 @@ export const grade3: Grade = {
         'Yield test, costed recipe card, food cost %, receiving goods, stocktake and waste.',
         'Тест выхода, техкарта с ценой, фудкост %, приёмка товара, инвентаризация и отходы.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-foodcost.webp',
       lessons: foodCostLessons,
     },
     {
@@ -167,7 +167,7 @@ export const grade3: Grade = {
         'The seven principles, cooling and reheating, temperature logs, allergens and the cleaning plan.',
         'Семь принципов, охлаждение и разогрев, температурные журналы, аллергены и план уборки.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-haccp.webp',
       lessons: haccpLessons,
     },
     {
@@ -179,7 +179,7 @@ export const grade3: Grade = {
         'The brigade, the rota, training a new cook, communication on service and kitchen culture.',
         'Бригада, график смен, обучение нового повара, общение на сервисе и культура кухни.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-team.webp',
       lessons: teamLessons,
     },
     {
@@ -191,7 +191,7 @@ export const grade3: Grade = {
         'Workflow and layout, equipment, test kitchen, soft opening and the first 90 days.',
         'Поток работы и планировка, оборудование, тестовая кухня, мягкое открытие и первые 90 дней.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-opening.webp',
       lessons: openingLessons,
     },
     {
@@ -203,7 +203,7 @@ export const grade3: Grade = {
         'A banquet for a hundred, the hot line, hotel breakfast, room service and the buffet.',
         'Банкет на сто человек, горячая линия, гостиничный завтрак, рум-сервис и шведский стол.',
       ),
-      photo: 'grade-3.webp',
+      photo: 'g3-hotel.webp',
       lessons: hotelLessons,
     },
   ],

@@ -40,7 +40,7 @@ Deploy:
 
 - 1. razred: 16 modula po partijama kuhinje, 90 lekcija na SR/EN/RU, sve napisane, svaka sa crtežima koraka. Teorija i praksa, tajmeri, Mere i temperature, interaktivni završni ispit, landing stranica.
 - 2. razred (Zanat): 14 modula, 78 lekcija, sve napisane. Kuhinje sveta: Francuska, Italija i Mediteran, Azija kao bonus.
-- 3. razred: najavljen na početnoj.
+- 3. razred (Chef): 14 modula, 70 lekcija, sve napisane. Tehnika visokog nivoa, kreiranje jela i menija, food cost, HACCP, vođenje tima, otvaranje kuhinje i hotelska kuhinja. Svaki razred ima svoje okruženje: teget i žuta, antracit i bakar, crna i šampanj.
 
 ## Fotografije
 
@@ -58,3 +58,5 @@ Sa [Pexels](https://www.pexels.com), pod Pexels licencom (besplatno, i za komerc
 [m8](https://www.pexels.com/photo/various-types-of-raw-pasta-in-bowls-6287344/).
 
 2. razred, Pexels: [g2-timing](https://www.pexels.com/photo/30120987/), [g2-poultry](https://www.pexels.com/photo/10842249/), [g2-butchery](https://www.pexels.com/photo/9424951/), [g2-fish](https://www.pexels.com/photo/14062105/), [g2-doughs](https://www.pexels.com/photo/6937404/), [g2-bread](https://www.pexels.com/photo/4881596/), [g2-desserts](https://www.pexels.com/photo/835741/), [g2-preserves](https://www.pexels.com/photo/34711401/), [g2-lowtemp](https://www.pexels.com/photo/7627420/), [g2-french](https://www.pexels.com/photo/7474378/), [g2-italian](https://www.pexels.com/photo/1398688/), [g2-med](https://www.pexels.com/photo/1022385/), [g2-plating](https://www.pexels.com/photo/30507463/), [g2-asia](https://www.pexels.com/photo/34615582/).
+
+3. razred, Pexels: [g3-station](https://www.pexels.com/photo/19020744/), [g3-sauces](https://www.pexels.com/photo/32742923/), [g3-finedining](https://www.pexels.com/photo/3297884/), [g3-modern](https://www.pexels.com/photo/3338538/), [g3-protein](https://www.pexels.com/photo/40366703/), [g3-pastry](https://www.pexels.com/photo/6035333/), [g3-creating](https://www.pexels.com/photo/9133003/), [g3-menu](https://www.pexels.com/photo/18978083/), [g3-nutrition](https://www.pexels.com/photo/6546181/), [g3-foodcost](https://www.pexels.com/photo/1093837/), [g3-haccp](https://www.pexels.com/photo/5779747/), [g3-team](https://www.pexels.com/photo/6937464/), [g3-opening](https://www.pexels.com/photo/6375553/), [g3-hotel](https://www.pexels.com/photo/37240724/).
