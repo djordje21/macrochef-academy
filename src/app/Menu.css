@@ -1,7 +1,7 @@
 .menu-button {
   position: fixed;
   z-index: 30;
-  top: calc(env(safe-area-inset-top, 0px) + 10px);
+  top: calc(env(safe-area-inset-top, 0px) + (var(--bar) - var(--tap)) / 2);
   right: max(12px, env(safe-area-inset-right, 0px));
   width: var(--tap);
   height: var(--tap);
@@ -22,12 +22,6 @@
   stroke-linecap: round;
 }
 
-/* Leave room for the burger on the right of every top bar. */
-.topbar,
-.home-bar,
-.landing-bar {
-  padding-right: 52px;
-}
 
 .menu-scrim {
   position: fixed;

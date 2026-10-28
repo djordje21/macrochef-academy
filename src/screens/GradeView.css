@@ -18,7 +18,7 @@
 .gv-back {
   position: absolute;
   z-index: 2;
-  top: calc(env(safe-area-inset-top, 0px) + 8px);
+  top: calc(env(safe-area-inset-top, 0px) + var(--bar) + 6px);
   left: var(--gutter);
   color: var(--text);
 }

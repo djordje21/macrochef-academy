@@ -9,6 +9,12 @@
   margin: 0 auto;
 }
 
+/* A screen that starts at the top of the page leaves room for the app bar; one under a photo cover does not. */
+.with-bar > .screen,
+.with-bar .exam > .screen:first-child {
+  padding-top: calc(env(safe-area-inset-top, 0px) + var(--bar) + 12px);
+}
+
 .label {
   font-family: var(--font-data);
   font-size: 11px;

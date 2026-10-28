@@ -10,22 +10,7 @@
   inset: 0;
 }
 
-.home-bar {
-  position: absolute;
-  z-index: 2;
-  top: calc(env(safe-area-inset-top, 0px) + 12px);
-  left: var(--gutter);
-  right: var(--gutter);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.home-brand {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 15px;
-}
 
 .home-title {
   position: absolute;
@@ -129,15 +114,4 @@
   }
 }
 
-.home-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
 
-.home-about {
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 12px;
-  color: var(--on-photo);
-}

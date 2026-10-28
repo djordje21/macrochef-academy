@@ -1,0 +1,32 @@
+/* One bar for the whole app. Screens leave --bar of room under it; the burger (Menu.css) sits in its right end. */
+:root {
+  --bar: 56px;
+}
+
+.app-bar {
+  position: fixed;
+  z-index: 25;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(env(safe-area-inset-top, 0px) + var(--bar));
+  padding: env(safe-area-inset-top, 0px) calc(max(12px, env(safe-area-inset-right, 0px)) + var(--tap) + 10px) 0
+    max(var(--gutter), env(safe-area-inset-left, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(11, 23, 48, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.app-bar-home {
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
+}
+
+.app-bar .lang-switch {
+  background: var(--card);
+}

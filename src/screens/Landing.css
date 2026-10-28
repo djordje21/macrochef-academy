@@ -32,16 +32,6 @@
   pointer-events: none;
 }
 
-.landing-bar {
-  position: absolute;
-  z-index: 2;
-  top: calc(env(safe-area-inset-top, 0px) + 12px);
-  left: var(--gutter);
-  right: var(--gutter);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .landing-copy {
   position: relative;
@@ -261,14 +251,7 @@
   display: contents;
 }
 
-.landing-bar {
-  gap: 12px;
-}
 
-.landing-bar .home-brand {
-  font-size: 13px;
-  min-width: 0;
-}
 
 .lg-card {
   width: 100%;
@@ -363,14 +346,26 @@
   }
 }
 
+/* Every module tile is one button: a tap anywhere on it opens the module. */
 .landing-learn li {
+  display: flex;
+}
+
+.landing-learn button {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
   padding: 14px;
+  text-align: left;
   border-radius: var(--r-tile);
   background: var(--card);
   border: 1px solid var(--line);
+  transition: border-color 0.2s;
+}
+
+.landing-learn button:hover {
+  border-color: var(--accent);
 }
 
 .landing-learn .mono {
@@ -382,7 +377,7 @@
   font-size: 15px;
 }
 
-.landing-learn li > span:last-child {
+.landing-learn button > span:last-child {
   font-size: 13.5px;
   color: var(--muted);
   line-height: 1.45;
@@ -443,4 +438,8 @@
 
 .landing-final h2 {
   font-size: 24px;
+}
+
+.landing-eyebrow {
+  color: var(--accent);
 }

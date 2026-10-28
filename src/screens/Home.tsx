@@ -3,8 +3,6 @@ import { useDone } from '../app/progress'
 import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
-import { LangSwitch } from '../components/LangSwitch'
-import { Logo } from '../components/Logo'
 import { GradeCards } from '../components/GradeCards'
 import './Home.css'
 
@@ -20,12 +18,6 @@ export function Home() {
     <div className="home">
       <header className="home-cover">
         <Photo name={grade.photo} />
-        <div className="home-bar">
-          <button className="home-brand" onClick={() => navigate('/about')}>
-            <Logo /> <span className="home-about">{t('landing.about')}</span>
-          </button>
-          <LangSwitch />
-        </div>
         <div className="home-title enter-up">
           <span className="label">MacroChef Academy</span>
           <h1>{t('landing.gradesTitle')}</h1>

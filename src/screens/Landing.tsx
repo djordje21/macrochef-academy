@@ -5,7 +5,6 @@ import { navigate } from '../app/router'
 import { markWelcomed } from '../app/progress'
 import { useT, type Key } from '../i18n/useT'
 import { Photo } from '../components/Photo'
-import { LangSwitch } from '../components/LangSwitch'
 import { Drawing } from '../drawings'
 import { ModeCards } from '../components/ModeCards'
 import './Landing.css'
@@ -79,11 +78,8 @@ export function Landing() {
             aria-hidden="true"
           />
         )}
-        <div className="landing-bar">
-          <span className="home-brand">{t('landing.eyebrow')}</span>
-          <LangSwitch />
-        </div>
         <div className="landing-copy enter-up">
+          <span className="label landing-eyebrow">{t('landing.eyebrow')}</span>
           <h1>{t('landing.title')}</h1>
           <p>{t('landing.sub')}</p>
           {mainCta}
@@ -126,9 +122,16 @@ export function Landing() {
           <ol className="landing-learn">
             {grade.modules.map((m) => (
               <li key={m.id}>
-                <span className="mono">M{m.n}</span>
-                <b>{c(m.title)}</b>
-                <span>{t(`landing.learn.${m.id}` as Key)}</span>
+                <button
+                  onClick={() => {
+                    markWelcomed()
+                    navigate(`/module/${m.id}`)
+                  }}
+                >
+                  <span className="mono">M{m.n}</span>
+                  <b>{c(m.title)}</b>
+                  <span>{t(`landing.learn.${m.id}` as Key)}</span>
+                </button>
               </li>
             ))}
           </ol>

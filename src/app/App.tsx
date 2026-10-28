@@ -13,6 +13,7 @@ import { Theory } from '../screens/Theory'
 import { Practice } from '../screens/Practice'
 import { isWelcomed } from './progress'
 import { Menu } from './Menu'
+import { AppBar } from './AppBar'
 import { TimerPill } from '../components/TimerPill'
 
 function Screen() {
@@ -43,7 +44,10 @@ export function App() {
   const focused = path.endsWith('/step')
   return (
     <>
-      <Screen />
+      <div className={focused ? 'focused' : 'with-bar'}>
+        <Screen />
+      </div>
+      {!focused && <AppBar />}
       {!focused && <Menu />}
       <TimerPill />
     </>
