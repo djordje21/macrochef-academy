@@ -9,6 +9,7 @@ import { dessertLessons } from './desserts'
 import { preserveLessons } from './preserves'
 import { lowTempLessons } from './lowtemp'
 import { frenchLessons } from './french'
+import { italianLessons } from './italian'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -167,16 +168,7 @@ export const grade2: Grade = {
         'Паста и ньокки ручной работы, рагу и ризотто. Мало ингредиентов, и каждый должен быть точным.',
       ),
       photo: 'g2-italian.webp',
-      lessons: [],
-      planned: [
-        p('2.11.1', l('Sveža pasta od jaja', 'Fresh egg pasta', 'Свежая яичная паста')),
-        p('2.11.2', l('Tagliatelle i pappardelle', 'Tagliatelle and pappardelle', 'Тальятелле и паппарделле')),
-        p('2.11.3', l('Ravioli', 'Ravioli', 'Равиоли')),
-        p('2.11.4', l('Njoke od krompira', 'Potato gnocchi', 'Картофельные ньокки')),
-        p('2.11.5', l('Ragù alla bolognese', 'Ragù alla bolognese', 'Рагу болоньезе')),
-        p('2.11.6', l('Cacio e pepe i carbonara', 'Cacio e pepe and carbonara', 'Качо э пепе и карбонара')),
-        p('2.11.7', l('Rizoto alla milanese', 'Risotto alla milanese', 'Ризотто по-милански')),
-      ],
+      lessons: italianLessons,
     },
     {
       id: 'g2m12',

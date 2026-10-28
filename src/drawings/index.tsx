@@ -2677,6 +2677,82 @@ const drawings = {
       <Cut i={1} d="M30 140 L60 140 M240 140 L270 140" />
     </>
   ),
+  // Grade 2 · Module 11 · Italy
+  flourWell: (
+    <>
+      <rect x="20" y="120" width="260" height="14" rx="4" fill={C.woodTop} />
+      <path d="M60 120 Q70 70 150 64 Q230 70 240 120 Z" fill={C.paper} />
+      <ellipse cx="150" cy="96" rx="40" ry="14" fill={C.yolk} />
+      <circle cx="140" cy="94" r="6" fill="#F5A623" /><circle cx="160" cy="98" r="6" fill="#F5A623" />
+      <Cut i={0} d="M150 96 m-26 0 a26 9 0 1 0 52 0 a26 9 0 1 0 -52 0" />
+    </>
+  ),
+  pastaMachine: (
+    <>
+      <rect x="110" y="40" width="80" height="70" rx="8" fill={C.steel} />
+      <rect x="120" y="70" width="60" height="8" rx="4" fill={C.steelEdge} />
+      <rect x="190" y="56" width="40" height="8" rx="4" fill={C.handle} />
+      <path d="M40 74 L120 74 L120 78 L40 82 Z" fill={C.yolk} opacity=".9" />
+      <path d="M180 76 L280 70 L280 72 L180 78 Z" fill={C.yolk} opacity=".9" />
+      <Cut i={0} d="M232 50 A12 12 0 1 1 231 51" />
+      <Cut i={1} d="M50 96 L270 96" />
+      <Cut i={2} d="M260 90 L270 96 L260 102" />
+    </>
+  ),
+  cutRibbons: (
+    <>
+      <Board y={128} />
+      <rect x="40" y="96" width="120" height="30" rx="14" fill={C.yolk} />
+      <g stroke="#E8C060" strokeWidth="2">{[60, 80, 100, 120, 140].map((x) => <path key={x} d={`M${x} 96 L${x} 126`} />)}</g>
+      <g fill={C.yolk}>{[190, 204, 218, 232, 246].map((x) => <rect key={x} x={x} y="60" width="8" height="66" rx="3" />)}</g>
+      <Cut i={0} d="M70 70 L70 90" />
+      <Cut i={1} d="M90 70 L90 90" />
+    </>
+  ),
+  ravioliSheet: (
+    <>
+      <rect x="30" y="70" width="240" height="64" rx="4" fill={C.yolk} opacity=".9" />
+      <g fill="#F4EEE2">{[70, 130, 190, 250].map((x) => <circle key={x} cx={x - 10} cy="102" r="12" />)}</g>
+      <g stroke="#E8C060" strokeWidth="2" strokeDasharray="4 3">{[90, 150, 210].map((x) => <path key={x} d={`M${x} 70 L${x} 134`} />)}</g>
+      <Cut i={0} d="M60 102 m-18 0 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0" />
+      <Cut i={1} d="M120 102 m-18 0 a18 18 0 1 0 36 0 a18 18 0 1 0 -36 0" />
+    </>
+  ),
+  gnocchiFork: (
+    <>
+      <Board y={128} />
+      <g fill="#F2DFB0">{[60, 100, 140].map((x) => <rect key={x} x={x} y="98" width="30" height="26" rx="10" />)}</g>
+      <g stroke="#D9C28A" strokeWidth="2">{[66, 72, 78, 84].map((x) => <path key={x} d={`M${x} 100 L${x} 122`} />)}</g>
+      <g stroke={C.steel} strokeWidth="3" strokeLinecap="round"><path d="M200 40 L260 40" /><path d="M200 50 L250 50" /><path d="M200 60 L250 60" /><path d="M200 70 L250 70" /><path d="M250 40 L250 70" /></g>
+      <Cut i={0} d="M196 80 Q150 90 110 96" />
+    </>
+  ),
+  emulsionToss: (
+    <>
+      <rect x="40" y="100" width="190" height="16" rx="4" fill={C.potDark} />
+      <rect x="230" y="102" width="56" height="8" rx="4" fill={C.handle} />
+      <g fill="none" stroke="#F4E3BE" strokeWidth="4" strokeLinecap="round"><path d="M80 98 Q120 70 160 96 Q190 116 210 92" /><path d="M70 96 Q110 60 150 90" /><path d="M100 98 Q150 64 200 96" /></g>
+      <Cut i={0} d="M60 50 Q130 20 200 50" />
+      <Cut i={1} d="M192 42 L200 50 L190 56" />
+      <Cut i={2} d="M250 40 L270 60 M270 40 L250 60" dash />
+    </>
+  ),
+  saffron: (
+    <>
+      <ellipse cx="150" cy="110" rx="70" ry="22" fill={C.steel} />
+      <ellipse cx="150" cy="104" rx="56" ry="14" fill="#F2A23A" />
+      <g stroke="#C2402F" strokeWidth="3" strokeLinecap="round"><path d="M130 100 L140 92" /><path d="M150 106 L162 98" /><path d="M168 100 L176 108" /></g>
+      <Cut i={0} d="M110 70 Q104 58 110 46" />
+      <Cut i={1} d="M190 70 Q184 58 190 46" />
+    </>
+  ),
+  onda: (
+    <>
+      <ellipse cx="150" cy="114" rx="120" ry="20" fill={C.paper} />
+      <path d="M50 112 Q80 92 110 104 Q140 116 170 100 Q200 86 240 108 Q200 124 150 124 Q90 124 50 112 Z" fill="#F2C84A" />
+      <Cut i={0} d="M60 90 Q80 70 110 82 Q140 94 170 78 Q200 64 240 86" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
