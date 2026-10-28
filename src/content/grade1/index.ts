@@ -10,6 +10,7 @@ import { dressingBaseLesson, sauceBaseLessons, soupBaseLessons } from './sauces'
 import { starchLessons } from './starches'
 import { coldLessons } from './cold'
 import { soupLessons } from './soups'
+import { motherSauceLessons } from './mothersauces'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
@@ -143,15 +144,16 @@ export const grade1: Grade = {
         'Пять базовых соусов классической кухни и их производные, плюс соус на сковороде за три минуты.',
       ),
       photo: 'sauces.webp',
-      lessons: sauceBaseLessons,
-      planned: [
-        p('9.2', l('Mornej: bešamel sa sirom', 'Mornay: béchamel with cheese', 'Морне: бешамель с сыром')),
-        p('9.3', l('Velute i suprem', 'Velouté and suprême', 'Велюте и сюпрем')),
-        p('9.4', l('Smeđi sos', 'Brown sauce', 'Коричневый соус')),
-        p('9.5', l('Paradajz sos', 'Tomato sauce', 'Томатный соус')),
-        p('9.6', l('Holandez', 'Hollandaise', 'Голландский соус')),
-        p('9.7', l('Bearnez', 'Béarnaise', 'Беарнский соус')),
-        p('9.9', l('Beurre blanc', 'Beurre blanc', 'Бёр блан')),
+      lessons: [
+        sauceBaseLessons[0],
+        motherSauceLessons.mornay,
+        motherSauceLessons.veloute,
+        motherSauceLessons.brownSauce,
+        motherSauceLessons.tomatoSauce,
+        motherSauceLessons.hollandaise,
+        motherSauceLessons.bearnaise,
+        sauceBaseLessons[1],
+        motherSauceLessons.beurreBlanc,
       ],
     },
     {

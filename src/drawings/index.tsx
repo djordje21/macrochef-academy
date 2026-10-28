@@ -1337,6 +1337,94 @@ const drawings = {
       <Cut i={1} d="M186 92 A24 6 0 1 0 234 92" />
     </>
   ),
+  // Module 9 · Mother sauces
+  cheeseIn: (
+    <>
+      <rect x="70" y="80" width="160" height="66" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="88" rx="74" ry="10" fill="#F2E2B4" />
+      <g fill={C.yolk}>
+        <rect x="120" y="30" width="4" height="12" rx="2" transform="rotate(20 122 36)" /><rect x="140" y="20" width="4" height="12" rx="2" transform="rotate(-15 142 26)" />
+        <rect x="160" y="34" width="4" height="12" rx="2" transform="rotate(30 162 40)" /><rect x="176" y="22" width="4" height="12" rx="2" transform="rotate(-25 178 28)" />
+      </g>
+      <Cut i={0} d="M150 50 L150 76" />
+      <Cut i={1} d="M140 66 L150 76 L160 66" />
+    </>
+  ),
+  brownRoux: (
+    <>
+      <rect x="50" y="100" width="200" height="36" rx="8" fill={C.pot} />
+      <rect x="250" y="110" width="40" height="10" rx="5" fill={C.handle} />
+      <ellipse cx="150" cy="104" rx="90" ry="9" fill="#8A5A34" />
+      <rect x="130" y="40" width="8" height="66" rx="3" fill={C.woodTop} transform="rotate(20 134 73)" />
+      <g>
+        <circle cx="60" cy="40" r="10" fill={C.flesh} /><circle cx="90" cy="40" r="10" fill={C.bread} /><circle cx="120" cy="40" r="10" fill="#8A5A34" />
+      </g>
+      <Cut i={0} d="M70 40 L80 40 M100 40 L110 40" />
+      <Cut i={1} d="M108 120 A40 6 0 1 0 188 120" />
+    </>
+  ),
+  tomatoSimmer: (
+    <>
+      <rect x="60" y="80" width="180" height="66" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="88" rx="84" ry="10" fill={C.warn} />
+      <ellipse cx="150" cy="88" rx="62" ry="6" fill="#C9452F" />
+      <Cut i={0} d="M70 88 A80 10 0 0 0 230 88" />
+      <Cut i={1} d="M110 60 Q100 46 110 32" />
+      <Cut i={2} d="M190 60 Q180 46 190 32" />
+    </>
+  ),
+  bainMarie: (
+    <>
+      <rect x="80" y="96" width="140" height="54" rx="8" fill={C.potDark} />
+      <path d="M70 60 A80 50 0 0 0 230 60 Z" fill={C.steel} />
+      <ellipse cx="150" cy="60" rx="80" ry="9" fill={C.yolk} />
+      <ellipse cx="150" cy="126" rx="62" ry="8" fill={C.water} opacity=".7" />
+      <Cut i={0} d="M120 118 Q114 110 120 102" />
+      <Cut i={1} d="M180 118 Q174 110 180 102" />
+      <Cut i={2} d="M150 104 L150 116" dash />
+    </>
+  ),
+  ribbon: (
+    <>
+      <path d="M60 80 A90 60 0 0 0 240 80 Z" fill={C.steel} />
+      <ellipse cx="150" cy="80" rx="90" ry="10" fill={C.yolk} />
+      <g stroke={C.steelEdge} strokeWidth="2.5" fill="none"><path d="M180 10 L170 50 Q160 66 154 50 L166 8" /></g>
+      <Cut i={0} d="M162 60 Q150 74 130 78 Q110 80 100 76" />
+    </>
+  ),
+  butterStream: (
+    <>
+      <path d="M40 90 A80 56 0 0 0 200 90 Z" fill={C.steel} />
+      <ellipse cx="120" cy="90" rx="80" ry="9" fill="#F8E3A0" />
+      <path d="M220 30 L268 30 L262 60 L226 60 Z" fill={C.pot} transform="rotate(-25 244 45)" />
+      <g stroke={C.steelEdge} strokeWidth="2.5" fill="none"><path d="M70 20 L86 66 Q98 84 104 62 L92 18" /></g>
+      <Cut i={0} d="M216 62 Q190 66 170 86" />
+      <Cut i={1} d="M96 96 A28 6 0 1 0 152 96" />
+    </>
+  ),
+  reduction: (
+    <>
+      <rect x="70" y="70" width="160" height="76" rx="8" fill={C.pot} />
+      <rect x="230" y="84" width="40" height="10" rx="5" fill={C.handle} />
+      <rect x="76" y="124" width="148" height="16" rx="4" fill="#E8D6A8" />
+      <Cut i={0} d="M80 84 L220 84" dash />
+      <Cut i={1} d="M80 104 L220 104" dash />
+      <Cut i={2} d="M150 50 L150 120" />
+      <Cut i={3} d="M140 110 L150 120 L160 110" />
+    </>
+  ),
+  butterCubes: (
+    <>
+      <rect x="60" y="96" width="180" height="50" rx="8" fill={C.pot} />
+      <rect x="240" y="108" width="40" height="10" rx="5" fill={C.handle} />
+      <ellipse cx="150" cy="102" rx="84" ry="9" fill="#F8E3A0" />
+      <g fill={C.yolk}>
+        <rect x="120" y="30" width="18" height="18" rx="3" /><rect x="150" y="12" width="18" height="18" rx="3" /><rect x="176" y="34" width="18" height="18" rx="3" />
+      </g>
+      <Cut i={0} d="M130 56 L134 86" />
+      <Cut i={1} d="M110 110 A40 6 0 1 0 190 110" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
