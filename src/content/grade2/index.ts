@@ -7,6 +7,7 @@ import { doughLessons } from './doughs'
 import { breadLessons } from './bread'
 import { dessertLessons } from './desserts'
 import { preserveLessons } from './preserves'
+import { lowTempLessons } from './lowtemp'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -141,14 +142,7 @@ export const grade2: Grade = {
         'Конфи, су-вид и медленное запекание. Мясо, приготовленное точно до края, без серого кольца.',
       ),
       photo: 'g2-lowtemp.webp',
-      lessons: [],
-      planned: [
-        p('2.9.1', l('Zašto niska temperatura', 'Why low temperature', 'Зачем низкая температура')),
-        p('2.9.2', l('Konfi', 'Confit', 'Конфи')),
-        p('2.9.3', l('Sous vide bez skupe opreme', 'Sous vide without expensive kit', 'Су-вид без дорогого оборудования')),
-        p('2.9.4', l('Biftek obrnutim redom', 'Reverse-seared steak', 'Стейк обратной обжаркой')),
-        p('2.9.5', l('Sporo pečena jagnjeća plećka', 'Slow-roasted lamb shoulder', 'Медленно запечённая баранья лопатка')),
-      ],
+      lessons: lowTempLessons,
     },
     {
       id: 'g2m10',

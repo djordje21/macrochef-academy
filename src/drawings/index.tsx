@@ -2537,6 +2537,72 @@ const drawings = {
       <Cut i={1} d="M180 124 Q172 116 180 108" />
     </>
   ),
+  // Grade 2 · Module 9 · Low temperature
+  greyBand: (
+    <>
+      <rect x="30" y="60" width="110" height="60" rx="8" fill={C.crust} />
+      <rect x="38" y="68" width="94" height="44" rx="5" fill="#9C8072" />
+      <rect x="54" y="80" width="62" height="20" rx="4" fill="#D27A72" />
+      <rect x="160" y="60" width="110" height="60" rx="8" fill={C.crust} />
+      <rect x="164" y="64" width="102" height="52" rx="6" fill="#D27A72" />
+      <Cut i={0} d="M38 130 L132 130" dash />
+      <Cut i={1} d="M164 130 L266 130" />
+    </>
+  ),
+  confitPot: (
+    <>
+      <rect x="50" y="70" width="200" height="74" rx="8" fill={C.potDark} />
+      <rect x="56" y="78" width="188" height="60" rx="5" fill="#F2DFA8" opacity=".85" />
+      <g fill={C.crust}><ellipse cx="100" cy="110" rx="34" ry="14" /><ellipse cx="170" cy="112" rx="34" ry="14" /></g>
+      <g fill={C.paper}><rect x="128" y="104" width="22" height="6" rx="3" /><rect x="198" y="106" width="22" height="6" rx="3" /></g>
+      <Cut i={0} d="M56 86 L244 86" dash />
+      <Cut i={1} d="M150 40 L150 60" />
+    </>
+  ),
+  zipBag: (
+    <>
+      <path d="M40 60 A110 70 0 0 0 260 60 Z" fill={C.pot} />
+      <ellipse cx="150" cy="62" rx="110" ry="12" fill={C.water} opacity=".7" />
+      <path d="M120 20 L180 20 L184 120 L116 120 Z" fill={C.ice} opacity=".6" />
+      <rect x="118" y="18" width="64" height="6" rx="3" fill={C.handle} />
+      <ellipse cx="150" cy="96" rx="26" ry="16" fill={C.flesh} />
+      <Cut i={0} d="M200 110 L200 70" />
+      <Cut i={1} d="M192 78 L200 70 L208 78" />
+    </>
+  ),
+  sousVidePot: (
+    <>
+      <rect x="50" y="50" width="200" height="94" rx="10" fill={C.pot} />
+      <rect x="56" y="62" width="188" height="76" rx="6" fill={C.water} opacity=".6" />
+      <rect x="90" y="96" width="70" height="30" rx="6" fill={C.ice} opacity=".8" />
+      <ellipse cx="125" cy="111" rx="26" ry="10" fill={C.flesh} />
+      <rect x="208" y="20" width="5" height="100" rx="2" fill={C.steel} />
+      <rect x="198" y="10" width="26" height="16" rx="4" fill={C.handle} />
+      <Cut i={0} d="M236 70 L236 120" />
+      <Cut i={1} d="M230 70 L242 70 M230 120 L242 120" />
+    </>
+  ),
+  reverseSear: (
+    <>
+      <rect x="20" y="30" width="130" height="110" rx="8" fill={C.potDark} />
+      <rect x="28" y="96" width="114" height="4" rx="2" fill={C.steelEdge} />
+      <rect x="50" y="74" width="70" height="22" rx="8" fill="#9C8072" />
+      <rect x="170" y="110" width="110" height="16" rx="4" fill="#2E2E2E" />
+      <rect x="190" y="88" width="70" height="22" rx="8" fill={C.crust} />
+      <Cut i={0} d="M150 84 L172 84" />
+      <Cut i={1} d="M164 78 L172 84 L164 90" />
+      <Cut i={2} d="M200 70 Q194 60 200 50 M250 70 Q244 60 250 50" />
+    </>
+  ),
+  lambTray: (
+    <>
+      <rect x="30" y="80" width="240" height="60" rx="8" fill={C.potDark} />
+      <g fill={C.bread}><circle cx="70" cy="110" r="14" /><circle cx="230" cy="112" r="14" /><circle cx="100" cy="122" r="12" /><circle cx="200" cy="124" r="12" /></g>
+      <path d="M90 104 Q100 64 150 60 Q200 64 210 104 Z" fill={C.crust} />
+      <path d="M40 80 Q150 30 260 80" fill="none" stroke={C.steel} strokeWidth="4" strokeDasharray="6 4" />
+      <Cut i={0} d="M150 30 L150 14" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
