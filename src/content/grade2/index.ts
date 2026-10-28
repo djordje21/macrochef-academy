@@ -2,7 +2,7 @@ import { l, type Grade, type L } from '../types'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
-// the Mediterranean), plating, and Asia as a bonus. Lesson ids carry the grade: "2.4.1".
+// the Mediterranean, grouped as world kitchens), plating, and Asia as a bonus world kitchen. Lesson ids carry the grade: "2.4.1".
 // Every lesson is announced as planned first, so the whole path is visible before it is written.
 
 const p = (id: string, title: L) => ({ id, title })
@@ -11,9 +11,9 @@ export const grade2: Grade = {
   n: 2,
   title: l('Zanat', 'Craft', 'Ремесло'),
   tagline: l(
-    'Obrada mesa i ribe, testa i hleb, deserti, Francuska, Italija i Mediteran.',
-    'Butchery and fish, dough and bread, desserts, France, Italy and the Mediterranean.',
-    'Разделка мяса и рыбы, тесто и хлеб, десерты, Франция, Италия и Средиземноморье.',
+    'Obrada mesa i ribe, testa i hleb, deserti i kuhinje sveta: Francuska, Italija, Mediteran.',
+    'Butchery and fish, dough and bread, desserts and world kitchens: France, Italy, the Mediterranean.',
+    'Разделка мяса и рыбы, тесто и хлеб, десерты и кухни мира: Франция, Италия, Средиземноморье.',
   ),
   photo: 'grade-2.webp',
   audience: l(
@@ -206,7 +206,7 @@ export const grade2: Grade = {
     {
       id: 'g2m10',
       n: 10,
-      title: l('Francuska kuhinja', 'French cuisine', 'Французская кухня'),
+      title: l('Kuhinje sveta: Francuska', 'World kitchens: France', 'Кухни мира: Франция'),
       intro: l(
         'Osnova svake profesionalne kuhinje. Puter, vino, sporo kuvanje i klasična jela na kojima se uči tehnika.',
         'The foundation of every professional kitchen. Butter, wine, slow cooking and the classic dishes technique is learned on.',
@@ -227,7 +227,7 @@ export const grade2: Grade = {
     {
       id: 'g2m11',
       n: 11,
-      title: l('Italijanska kuhinja', 'Italian cuisine', 'Итальянская кухня'),
+      title: l('Kuhinje sveta: Italija', 'World kitchens: Italy', 'Кухни мира: Италия'),
       intro: l(
         'Ručno pravljena pasta i njoke, ragu i rizoto. Malo sastojaka, a svaki mora da bude tačan.',
         'Handmade pasta and gnocchi, ragù and risotto. Few ingredients, and every one has to be right.',
@@ -248,7 +248,7 @@ export const grade2: Grade = {
     {
       id: 'g2m12',
       n: 12,
-      title: l('Mediteranski ukusi i tehnike', 'Mediterranean flavours and techniques', 'Средиземноморские вкусы и техники'),
+      title: l('Kuhinje sveta: Mediteran', 'World kitchens: the Mediterranean', 'Кухни мира: Средиземноморье'),
       intro: l(
         'Maslinovo ulje, limun, bilje i žar. Jednostavno, sezonski i lagano, a puno ukusa.',
         'Olive oil, lemon, herbs and fire. Simple, seasonal and light, and full of flavour.',
@@ -286,7 +286,7 @@ export const grade2: Grade = {
     {
       id: 'g2m14',
       n: 14,
-      title: l('Bonus: Azija', 'Bonus: Asia', 'Бонус: Азия'),
+      title: l('Kuhinje sveta: Azija (bonus)', 'World kitchens: Asia (bonus)', 'Кухни мира: Азия (бонус)'),
       intro: l(
         'Dodatak za radoznale: vok, kari, knedle i ramen. Nije uslov za ispit.',
         'An extra for the curious: wok, curry, dumplings and ramen. Not required for the exam.',
