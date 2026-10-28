@@ -4,12 +4,13 @@ import { goBack } from '../app/router'
 import { ModeCards } from '../components/ModeCards'
 import { useT } from '../i18n/useT'
 import './Lesson.css'
+import { Oops } from '../components/Oops'
 
 export function LessonScreen({ id }: { id: string }) {
   const { t, c } = useT()
   const done = useDone()
   const found = findLesson(id)
-  if (!found) return null
+  if (!found) return <Oops kind="missing" />
   const { lesson, module } = found
 
   return (

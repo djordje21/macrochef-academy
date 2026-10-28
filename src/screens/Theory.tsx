@@ -3,12 +3,13 @@ import { goBack, navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Drawing } from '../drawings'
 import './Theory.css'
+import { Oops } from '../components/Oops'
 
 /** The whole lesson on one scrolling page, for reading away from the stove. */
 export function Theory({ id }: { id: string }) {
   const { t, c } = useT()
   const found = findLesson(id)
-  if (!found) return null
+  if (!found) return <Oops kind="missing" />
   const { lesson } = found
 
   return (

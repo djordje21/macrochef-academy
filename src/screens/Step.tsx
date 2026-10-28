@@ -6,6 +6,7 @@ import { Drawing } from '../drawings'
 import { useWakeLock } from '../app/useWakeLock'
 import { parseDuration, startTimer } from '../app/timer'
 import './Step.css'
+import { Oops } from '../components/Oops'
 
 /** One step per screen, read with wet hands next to the board: big type, one action, the screen stays on. */
 export function StepScreen({ id, n }: { id: string; n: number }) {
@@ -16,7 +17,7 @@ export function StepScreen({ id, n }: { id: string; n: number }) {
   useEffect(() => setSeen(false), [n])
 
   const found = findLesson(id)
-  if (!found) return null
+  if (!found) return <Oops kind="missing" />
   const { lesson } = found
   const total = lesson.steps.length
   const step = lesson.steps[Math.min(Math.max(n, 1), total) - 1]

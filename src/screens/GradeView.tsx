@@ -6,6 +6,7 @@ import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import { GradeCards } from '../components/GradeCards'
 import './GradeView.css'
+import { Oops } from '../components/Oops'
 
 /** A short intro to one grade: who it is for, what you can do at the end, its modules and exam. */
 export function GradeView({ n }: { n: number }) {
@@ -14,7 +15,7 @@ export function GradeView({ n }: { n: number }) {
   const written = grades.find((g) => g.n === n)
   const planned = upcoming.find((g) => g.n === n)
   const grade = written ?? planned
-  if (!grade) return null
+  if (!grade) return <Oops kind="missing" />
 
   const lessons = written ? written.modules.flatMap((m) => m.lessons) : []
   const plannedCount = written ? written.modules.reduce((sum, m) => sum + (m.planned?.length ?? 0), 0) : 0

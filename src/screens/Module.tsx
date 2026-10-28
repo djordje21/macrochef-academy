@@ -4,12 +4,13 @@ import { goBack, navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import './Module.css'
+import { Oops } from '../components/Oops'
 
 export function ModuleScreen({ id }: { id: string }) {
   const { t, c } = useT()
   const done = useDone()
   const module = findModule(id)
-  if (!module) return null
+  if (!module) return <Oops kind="missing" />
   const next = module.lessons.find((x) => !done.has(x.id))
   // Written and planned lessons in one list, in lesson order.
   const lessonNo = (id: string) => Number(id.split('.').at(-1))

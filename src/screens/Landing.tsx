@@ -15,12 +15,24 @@ const demoLesson = allLessons.find((x) => x.id === '2.3')!
 const demo = demoLesson.steps[3]
 
 /**
- * The first page a visitor sees. The hero plays public/media/hero.mp4 when that file exists
- * and falls back to the grade-1 photo when it does not.
+ * The first page a visitor sees. The hero plays public/media/hero.mp4 and shows the hero photo
+ * on any device where the video cannot play.
  */
 export function Landing() {
   const { t, c } = useT()
   const [video, setVideo] = useState(true)
+  // The photo stays in place until the video really plays. iOS blocks autoplay in Low Power Mode
+  // and when the muted attribute is missing, which React does not render, so it is set by hand.
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [playing, setPlaying] = useState(false)
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+    v.muted = true
+    v.defaultMuted = true
+    v.setAttribute('muted', '')
+    v.play().catch(() => setVideo(false))
+  }, [])
   const grade = grades[0]
 
   // A slim call to action follows the reader once the hero's button scrolls away,
@@ -85,13 +97,15 @@ export function Landing() {
         </div>
         {video && (
           <video
-            className="landing-video"
+            ref={videoRef}
+            className={`landing-video ${playing ? 'playing' : ''}`}
             src={`${import.meta.env.BASE_URL}media/hero.mp4`}
             autoPlay
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
+            onPlaying={() => setPlaying(true)}
             onError={() => setVideo(false)}
             aria-hidden="true"
           />
@@ -235,21 +249,6 @@ export function Landing() {
                   <b>{c(g.title)}</b>
                   <small>{c(g.tagline)}</small>
                 </div>
-              </button>
-            ))}
-          </div>
-          <span className="label">{t('menu.modules', { n: 1 })}</span>
-          <div className="landing-modules">
-            {grade.modules.map((m) => (
-              <button
-                key={m.id}
-                onClick={() => {
-                  markWelcomed()
-                  navigate(`/module/${m.id}`)
-                }}
-              >
-                <span className="mono">M{m.n}</span>
-                {c(m.title)}
               </button>
             ))}
           </div>

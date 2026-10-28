@@ -208,5 +208,13 @@
   "landing.vs5l": "In the kitchen",
   "landing.vs5a": "a video you pause with greasy fingers",
   "landing.vs5b": "one step on screen, the screen stays on",
-  "landing.plan": "The full grade 1 plan"
+  "landing.plan": "The full grade 1 plan",
+  "oops.crash.eyebrow": "Kitchen accident",
+  "oops.crash.title": "Something got burnt.",
+  "oops.crash.text": "We pulled the pan off the heat and opened a window. Your progress is safe, just start again.",
+  "oops.crash.cta": "Clean the pan and carry on",
+  "oops.missing.eyebrow": "404 · not on the menu",
+  "oops.missing.title": "This dish isn't on the menu.",
+  "oops.missing.text": "The page you are looking for doesn't exist or has moved. The kitchen is still open.",
+  "oops.missing.cta": "Back to the kitchen"
 }

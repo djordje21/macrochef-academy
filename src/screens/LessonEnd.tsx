@@ -5,12 +5,13 @@ import { considerPrompt } from '../app/share'
 import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import './LessonEnd.css'
+import { Oops } from '../components/Oops'
 
 export function LessonEnd({ id }: { id: string }) {
   const { t, c } = useT()
   const [picked, setPicked] = useState<number | null>(null)
   const found = findLesson(id)
-  if (!found) return null
+  if (!found) return <Oops kind="missing" />
   const { lesson, module } = found
   const { think, mistake, recipe } = lesson
 

@@ -1,0 +1,69 @@
+.oops {
+  min-height: 100dvh;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.oops h1 {
+  font-size: clamp(26px, 7vw, 34px);
+  line-height: 1.15;
+}
+
+.oops p {
+  max-width: 340px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.oops .label {
+  color: var(--accent);
+}
+
+.oops .cta {
+  max-width: 340px;
+  margin-top: 8px;
+}
+
+.oops-art {
+  width: 200px;
+  height: 140px;
+}
+
+.oops-smoke {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 90;
+  animation: oops-rise 2.4s ease-in-out infinite;
+}
+
+.oops-smoke:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.oops-smoke:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes oops-rise {
+  0% {
+    stroke-dashoffset: 90;
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -90;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oops-smoke {
+    animation: none;
+    stroke-dasharray: none;
+  }
+}

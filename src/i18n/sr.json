@@ -208,5 +208,13 @@
   "landing.vs5l": "U kuhinji",
   "landing.vs5a": "video koji pauziraš masnim prstima",
   "landing.vs5b": "jedan korak na ekranu, ekran se ne gasi",
-  "landing.plan": "Ceo plan 1. razreda"
+  "landing.plan": "Ceo plan 1. razreda",
+  "oops.crash.eyebrow": "Greška u kuhinji",
+  "oops.crash.title": "Nešto je zagorelo.",
+  "oops.crash.text": "Sklonili smo tiganj sa vatre i provetrili kuhinju. Tvoj napredak je sačuvan, samo kreni ispočetka.",
+  "oops.crash.cta": "Očisti tiganj i nastavi",
+  "oops.missing.eyebrow": "404 · nije na meniju",
+  "oops.missing.title": "Ovo jelo nije na meniju.",
+  "oops.missing.text": "Stranica koju tražiš ne postoji ili je premeštena. Kuhinja je i dalje otvorena.",
+  "oops.missing.cta": "Nazad u kuhinju"
 }

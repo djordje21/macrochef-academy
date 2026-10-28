@@ -21,6 +21,12 @@
   /* Keep the knife and the hand in frame when a phone crops the wide video. */
   object-position: 62% center;
   filter: saturate(0.82) contrast(1.08) brightness(0.7);
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.landing-video.playing {
+  opacity: 1;
 }
 
 /* The photo's own gradient sits under the video, so the hero carries one on top as well. */
@@ -586,30 +592,6 @@
   font-size: 14px;
   color: var(--muted);
   line-height: 1.45;
-}
-
-.landing-modules {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.landing-modules button {
-  min-height: 38px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 0 12px;
-  border-radius: var(--r-pill);
-  border: 1px solid var(--line);
-  background: var(--card);
-  font-size: 13.5px;
-  font-weight: 600;
-}
-
-.landing-modules .mono {
-  font-size: 11px;
-  color: var(--accent);
 }
 
 .landing-sticky {

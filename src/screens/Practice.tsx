@@ -2,12 +2,13 @@ import { findLesson } from '../content'
 import { goBack, navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import './Practice.css'
+import { Oops } from '../components/Oops'
 
 /** The door into the kitchen: what to set up before the first step. */
 export function Practice({ id }: { id: string }) {
   const { t, c } = useT()
   const found = findLesson(id)
-  if (!found) return null
+  if (!found) return <Oops kind="missing" />
   const { lesson } = found
 
   return (

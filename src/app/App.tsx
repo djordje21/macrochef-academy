@@ -15,6 +15,7 @@ import { isWelcomed } from './progress'
 import { Menu } from './Menu'
 import { AppBar } from './AppBar'
 import { TimerPill } from '../components/TimerPill'
+import { Oops } from '../components/Oops'
 import { SharePrompt } from '../components/SharePrompt'
 
 function Screen() {
@@ -30,6 +31,7 @@ function Screen() {
   if (section === 'lesson' && id && sub === 'theory') return <Theory id={id} />
   if (section === 'lesson' && id && sub === 'practice') return <Practice id={id} />
   if (section === 'lesson' && id) return <LessonScreen id={id} />
+  if (section && section !== 'home' && section !== 'reference') return <Oops kind="missing" />
 
   return (
     <>
