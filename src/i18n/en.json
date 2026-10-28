@@ -180,5 +180,15 @@
   "landing.learn.m13": "A whole chicken and a roast for Sunday lunch.",
   "landing.learn.m14": "Grill and grill pan: juicy, not charred.",
   "landing.learn.m15": "To waste nothing: trimmings, bread and yesterday’s lunch become a new dish.",
-  "landing.learn.m16": "To plan the week and prepare meals ahead, with macros."
+  "landing.learn.m16": "To plan the week and prepare meals ahead, with macros.",
+  "share.menu": "Share with a friend",
+  "share.copied": "Link copied. Send it to whoever you like.",
+  "share.title": "MacroChef Academy",
+  "share.message": "I'm learning to cook step by step with MacroChef Academy. Take a look, I think you'll like it:",
+  "share.eyebrow": "Lessons finished: {n}",
+  "share.promptTitle": "Cooking is better together",
+  "share.promptText": "If the academy is helping you, recommend it to a friend who wants to learn to cook properly.",
+  "share.cta": "Recommend to a friend",
+  "share.later": "Maybe later",
+  "share.copiedShort": "Link copied ✓"
 }

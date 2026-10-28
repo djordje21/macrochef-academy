@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { gradeList, grades, isOpen } from '../content'
 import { useDone } from './progress'
 import { useExam } from './exam'
+import { shareApp } from './share'
 import { navigate, useRoute } from './router'
 import { useT } from '../i18n/useT'
 import { LangSwitch } from '../components/LangSwitch'
@@ -15,6 +16,7 @@ export function Menu() {
   const done = useDone()
   const exam = useExam()
   const [open, setOpen] = useState(false)
+  const [copied, setCopied] = useState(false)
   const grade = grades[0]
 
   // Close on any navigation and on Escape.
@@ -29,6 +31,12 @@ export function Menu() {
   const go = (to: string) => {
     setOpen(false)
     navigate(to)
+  }
+  const share = async () => {
+    if ((await shareApp(t('share.title'), t('share.message'))) === 'copied') {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2500)
+    }
   }
   const here = (to: string) => (path === to ? 'on' : '')
 
@@ -63,6 +71,12 @@ export function Menu() {
           </button>
           <button className={here('/about')} onClick={() => go('/about')}>
             {t('landing.about')}
+          </button>
+          <button className="menu-share" onClick={share}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v12M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" />
+            </svg>
+            {copied ? t('share.copiedShort') : t('share.menu')}
           </button>
         </nav>
 

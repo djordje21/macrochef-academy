@@ -15,6 +15,7 @@ import { isWelcomed } from './progress'
 import { Menu } from './Menu'
 import { AppBar } from './AppBar'
 import { TimerPill } from '../components/TimerPill'
+import { SharePrompt } from '../components/SharePrompt'
 
 function Screen() {
   const { path, params } = useRoute()
@@ -50,6 +51,7 @@ export function App() {
       {!focused && <AppBar />}
       {!focused && <Menu />}
       <TimerPill />
+      {!focused && <SharePrompt />}
     </>
   )
 }

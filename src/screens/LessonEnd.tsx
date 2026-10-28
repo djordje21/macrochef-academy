@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { allLessons, findLesson } from '../content'
-import { markDone } from '../app/progress'
+import { doneCount, markDone } from '../app/progress'
+import { considerPrompt } from '../app/share'
 import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import './LessonEnd.css'
@@ -15,6 +16,7 @@ export function LessonEnd({ id }: { id: string }) {
 
   const finish = () => {
     markDone(lesson.id)
+    considerPrompt(doneCount())
     const next = allLessons[allLessons.indexOf(lesson) + 1]
     // Straight on to the next lesson inside the module; back to the module when it is done.
     if (next && findLesson(next.id)?.module === module) navigate(`/lesson/${next.id}`, undefined, true)

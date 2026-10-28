@@ -180,5 +180,15 @@
   "landing.learn.m13": "Celo pile i pečenje za nedeljni ručak.",
   "landing.learn.m14": "Roštilj i grill tiganj: sočno, a ne zagorelo.",
   "landing.learn.m15": "Da ne bacaš: obrezci, hleb i jučerašnji ručak postaju novo jelo.",
-  "landing.learn.m16": "Da isplaniraš nedelju i spremiš obroke unapred, sa makroima."
+  "landing.learn.m16": "Da isplaniraš nedelju i spremiš obroke unapred, sa makroima.",
+  "share.menu": "Podeli sa prijateljem",
+  "share.copied": "Link je kopiran. Pošalji ga kome želiš.",
+  "share.title": "MacroChef Academy",
+  "share.message": "Učim da kuvam korak po korak u MacroChef Academy. Pogledaj, mislim da će ti se svideti:",
+  "share.eyebrow": "Završenih lekcija: {n}",
+  "share.promptTitle": "Kuvanje je lepše u društvu",
+  "share.promptText": "Ako ti akademija pomaže, preporuči je prijatelju koji želi da nauči da kuva kako treba.",
+  "share.cta": "Preporuči prijatelju",
+  "share.later": "Možda kasnije",
+  "share.copiedShort": "Link je kopiran ✓"
 }

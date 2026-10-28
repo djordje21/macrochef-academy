@@ -47,6 +47,10 @@ export function markDone(id: string) {
   listeners.forEach((l) => l())
 }
 
+export function doneCount(): number {
+  return done.size
+}
+
 export function useDone(): Set<string> {
   return useSyncExternalStore(
     (cb) => {
