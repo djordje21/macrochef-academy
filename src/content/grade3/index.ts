@@ -3,6 +3,7 @@ import { stationLessons } from './station'
 import { chefSauceLessons } from './chefsauces'
 import { fineDiningLessons } from './finedining'
 import { modernLessons } from './modern'
+import { proteinLessons } from './protein'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -88,14 +89,7 @@ export const grade3: Grade = {
         'Рибай с поливкой маслом, крудо из рыбы, каре ягнёнка, филе косули и гребешки.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.5.1', l('Rib-eye i podlivanje puterom', 'Rib-eye and butter basting', 'Рибай и поливка маслом')),
-        p('3.5.2', l('Crudo i tartar od ribe', 'Fish crudo and tartare', 'Крудо и тартар из рыбы')),
-        p('3.5.3', l('Jagnjeći kare', 'Rack of lamb', 'Каре ягнёнка')),
-        p('3.5.4', l('Srneći file', 'Venison loin', 'Филе косули')),
-        p('3.5.5', l('Jakobove kapice', 'Scallops', 'Морские гребешки')),
-      ],
+      lessons: proteinLessons,
     },
     {
       id: 'g3m6',

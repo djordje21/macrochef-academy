@@ -3027,6 +3027,38 @@ const drawings = {
       <Cut i={1} d="M230 112 L240 120 L228 128" />
     </>
   ),
+  // Grade 3 · Module 5 · Protein
+  baste: (
+    <>
+      <g transform="rotate(-10 150 110)">
+        <ellipse cx="140" cy="112" rx="100" ry="30" fill={C.potDark} />
+        <ellipse cx="140" cy="108" rx="88" ry="22" fill={C.pot} />
+        <rect x="236" y="104" width="54" height="10" rx="5" fill={C.handle} />
+        <rect x="104" y="96" width="70" height="20" rx="8" fill={C.crust} />
+        <ellipse cx="66" cy="114" rx="22" ry="8" fill={C.yolk} opacity=".85" />
+      </g>
+      <path d="M40 54 L96 74" stroke={C.steel} strokeWidth="5" strokeLinecap="round" />
+      <ellipse cx="102" cy="76" rx="13" ry="8" fill={C.steel} />
+      <Cut i={0} d="M62 100 Q60 70 100 70" />
+      <Cut i={1} d="M110 82 Q124 86 132 98" />
+    </>
+  ),
+  frenchRack: (
+    <>
+      <Board y={128} />
+      <path d="M50 120 L200 120 L200 84 Q130 70 50 84 Z" fill={C.meat} />
+      <path d="M50 84 Q130 70 200 84 L200 92 Q130 78 50 92 Z" fill={C.paper} opacity=".7" />
+      <g fill={C.paper}>
+        <rect x="70" y="44" width="8" height="46" rx="4" transform="rotate(-24 74 67)" />
+        <rect x="100" y="40" width="8" height="48" rx="4" transform="rotate(-24 104 64)" />
+        <rect x="130" y="38" width="8" height="48" rx="4" transform="rotate(-24 134 62)" />
+        <rect x="160" y="40" width="8" height="48" rx="4" transform="rotate(-24 164 64)" />
+      </g>
+      <Cut i={0} d="M60 76 L200 70" dash />
+      <path d="M250 40 L214 76" stroke={C.steel} strokeWidth="4" strokeLinecap="round" />
+      <rect x="244" y="22" width="12" height="26" rx="4" fill={C.handle} transform="rotate(45 250 35)" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
