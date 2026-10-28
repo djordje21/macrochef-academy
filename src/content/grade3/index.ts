@@ -1,5 +1,6 @@
 import { l, type Grade, type L } from '../types'
 import { stationLessons } from './station'
+import { chefSauceLessons } from './chefsauces'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -49,14 +50,7 @@ export const grade3: Grade = {
         'Деми-глас, жю, сабайон, зелёное масло и завершение соуса маслом. Соус — подпись кухни.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.2.1', l('Demi-glace', 'Demi-glace', 'Деми-глас')),
-        p('3.2.2', l('Jus od piletine', 'Chicken jus', 'Куриный жю')),
-        p('3.2.3', l('Sabayon', 'Sabayon', 'Сабайон')),
-        p('3.2.4', l('Zeleno ulje od bilja', 'Green herb oil', 'Зелёное масло из зелени')),
-        p('3.2.5', l('Balans i sjaj sosa', 'Balance and gloss', 'Баланс и блеск соуса')),
-      ],
+      lessons: chefSauceLessons,
     },
     {
       id: 'g3m3',
