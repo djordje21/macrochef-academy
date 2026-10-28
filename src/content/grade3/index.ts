@@ -1,4 +1,4 @@
-import { l, type Grade, type L } from '../types'
+import { l, type Grade } from '../types'
 import { stationLessons } from './station'
 import { chefSauceLessons } from './chefsauces'
 import { fineDiningLessons } from './finedining'
@@ -12,12 +12,11 @@ import { foodCostLessons } from './foodcost'
 import { haccpLessons } from './haccp'
 import { teamLessons } from './team'
 import { openingLessons } from './opening'
+import { hotelLessons } from './hotel'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
 // Lesson ids carry the grade: "3.4.1". Every lesson is announced as planned first.
-
-const p = (id: string, title: L) => ({ id, title })
 
 export const grade3: Grade = {
   n: 3,
@@ -205,14 +204,7 @@ export const grade3: Grade = {
         'Банкет на сто человек, горячая линия, гостиничный завтрак, рум-сервис и шведский стол.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.14.1', l('Banket za sto ljudi', 'A banquet for a hundred', 'Банкет на сто человек')),
-        p('3.14.2', l('Topla i hladna linija', 'Hot and cold holding', 'Горячая и холодная линия')),
-        p('3.14.3', l('Hotelski doručak', 'Hotel breakfast', 'Гостиничный завтрак')),
-        p('3.14.4', l('Room service', 'Room service', 'Рум-сервис')),
-        p('3.14.5', l('Švedski sto', 'The buffet', 'Шведский стол')),
-      ],
+      lessons: hotelLessons,
     },
   ],
   exam: {
