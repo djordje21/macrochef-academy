@@ -2276,6 +2276,107 @@ const drawings = {
       <Cut i={0} d="M120 82 L150 140 L180 82" />
     </>
   ),
+  // Grade 2 · Module 6 · Bread
+  bakersPct: (
+    <>
+      <rect x="40" y="40" width="220" height="20" rx="4" fill={C.paper} />
+      <rect x="40" y="70" width="143" height="20" rx="4" fill={C.water} opacity=".8" />
+      <rect x="40" y="100" width="12" height="16" rx="3" fill={C.steel} />
+      <rect x="40" y="124" width="6" height="16" rx="2" fill={C.bread} />
+      <Cut i={0} d="M260 32 L260 66" />
+      <Cut i={1} d="M183 64 L183 96" />
+    </>
+  ),
+  kneadDough: (
+    <>
+      <rect x="20" y="120" width="260" height="14" rx="4" fill={C.woodTop} />
+      <ellipse cx="140" cy="108" rx="70" ry="18" fill={C.flesh} />
+      <path d="M150 80 Q170 60 200 64 L214 90 Q190 96 168 104 Z" fill={C.skin} />
+      <Cut i={0} d="M110 70 L230 70" />
+      <Cut i={1} d="M220 62 L232 70 L220 78" />
+    </>
+  ),
+  windowpane: (
+    <>
+      <path d="M70 120 Q60 60 90 40 L210 40 Q240 60 230 120 Q150 100 70 120 Z" fill={C.flesh} />
+      <circle cx="150" cy="80" r="26" fill="#FFF6E2" />
+      <path d="M40 120 L70 120 M230 120 L260 120" stroke={C.skin} strokeWidth="18" strokeLinecap="round" />
+      <Cut i={0} d="M150 80 m-26 0 a26 26 0 1 0 52 0 a26 26 0 1 0 -52 0" />
+    </>
+  ),
+  doughRise: (
+    <>
+      <path d="M60 80 A90 64 0 0 0 240 80 Z" fill={C.pot} />
+      <path d="M68 80 Q150 10 232 80 Z" fill={C.flesh} />
+      <g fill={C.bg} opacity=".35"><circle cx="110" cy="66" r="3" /><circle cx="180" cy="62" r="4" /><circle cx="150" cy="50" r="2" /></g>
+      <Cut i={0} d="M262 120 L262 40" />
+      <Cut i={1} d="M254 48 L262 40 L270 48" />
+    </>
+  ),
+  shapeLoaf: (
+    <>
+      <rect x="20" y="120" width="260" height="14" rx="4" fill={C.woodTop} />
+      <ellipse cx="150" cy="100" rx="62" ry="24" fill={C.flesh} />
+      <Cut i={0} d="M90 112 Q150 140 210 112" />
+      <Cut i={1} d="M200 120 L212 110 L204 104" />
+    </>
+  ),
+  pokeTest: (
+    <>
+      <path d="M50 120 Q60 60 150 56 Q240 60 250 120 Z" fill={C.flesh} />
+      <ellipse cx="150" cy="70" rx="10" ry="5" fill="#E2CDA4" />
+      <path d="M140 10 L140 52 Q150 64 160 52 L160 10 Z" fill={C.skin} />
+      <Cut i={0} d="M180 50 Q196 60 180 70" />
+    </>
+  ),
+  scoreLoaf: (
+    <>
+      <rect x="30" y="122" width="240" height="12" rx="4" fill={C.potDark} />
+      <path d="M60 122 Q70 62 150 58 Q230 62 240 122 Z" fill={C.bread} />
+      <path d="M110 74 Q150 60 196 80" stroke="#F4E3BE" strokeWidth="6" fill="none" />
+      <Cut i={0} d="M108 76 Q150 58 198 82" />
+      <Cut i={1} d="M70 40 Q64 30 70 20 M230 40 Q224 30 230 20" />
+    </>
+  ),
+  focaccia: (
+    <>
+      <rect x="30" y="70" width="240" height="70" rx="6" fill={C.potDark} />
+      <rect x="36" y="76" width="228" height="58" rx="4" fill={C.bread} />
+      <g fill="#B88A3E">{[60, 100, 140, 180, 220].flatMap((x) => [90, 118].map((y) => <circle key={`${x}-${y}`} cx={x + (y === 118 ? 20 : 0)} cy={y} r="5" />))}</g>
+      <g stroke={C.leafDark} strokeWidth="2"><path d="M80 100 L92 96" /><path d="M150 104 L162 100" /><path d="M216 98 L228 94" /></g>
+      <Cut i={0} d="M150 20 L150 60" />
+    </>
+  ),
+  starterJar: (
+    <>
+      <rect x="110" y="30" width="80" height="116" rx="12" fill={C.ice} opacity=".35" />
+      <rect x="114" y="24" width="72" height="10" rx="4" fill={C.handle} />
+      <rect x="114" y="70" width="72" height="72" rx="8" fill="#D9C7A0" />
+      <g fill="#F4E9D2"><circle cx="130" cy="90" r="4" /><circle cx="160" cy="80" r="5" /><circle cx="170" cy="110" r="3" /><circle cx="140" cy="122" r="4" /></g>
+      <rect x="106" y="104" width="88" height="5" rx="2" fill={C.warn} />
+      <Cut i={0} d="M208 104 L208 70" />
+      <Cut i={1} d="M200 78 L208 70 L216 78" />
+    </>
+  ),
+  stretchFold: (
+    <>
+      <path d="M60 90 A90 56 0 0 0 240 90 Z" fill={C.pot} />
+      <ellipse cx="150" cy="92" rx="80" ry="12" fill={C.flesh} />
+      <path d="M200 90 Q230 40 200 20" stroke={C.flesh} strokeWidth="18" fill="none" strokeLinecap="round" />
+      <Cut i={0} d="M216 30 Q160 0 110 70" />
+      <Cut i={1} d="M118 58 L110 70 L124 70" />
+    </>
+  ),
+  dutchOven: (
+    <>
+      <rect x="60" y="70" width="180" height="74" rx="12" fill="#2E2E2E" />
+      <rect x="52" y="60" width="196" height="14" rx="7" fill="#3E3E3E" />
+      <rect x="136" y="46" width="28" height="14" rx="5" fill="#3E3E3E" />
+      <path d="M90 140 Q100 92 150 88 Q200 92 210 140 Z" fill={C.crust} />
+      <Cut i={0} d="M40 100 Q30 90 40 80" />
+      <Cut i={1} d="M260 100 Q270 90 260 80" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

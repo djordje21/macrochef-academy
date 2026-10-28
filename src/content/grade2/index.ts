@@ -4,6 +4,7 @@ import { poultryLessons } from './poultry'
 import { butcheryLessons } from './butchery'
 import { fishLessons } from './fish'
 import { doughLessons } from './doughs'
+import { breadLessons } from './bread'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -102,15 +103,7 @@ export const grade2: Grade = {
         'Мука, вода, соль и время. От погачи и фокаччи до хлеба на закваске.',
       ),
       photo: 'g2-bread.webp',
-      lessons: [],
-      planned: [
-        p('2.6.1', l('Brašno, voda, kvasac, so', 'Flour, water, yeast, salt', 'Мука, вода, дрожжи, соль')),
-        p('2.6.2', l('Mešenje i gluten', 'Kneading and gluten', 'Замес и глютен')),
-        p('2.6.3', l('Fermentacija i oblikovanje', 'Proving and shaping', 'Расстойка и формовка')),
-        p('2.6.4', l('Pogača i fokača', 'Pogača and focaccia', 'Погача и фокачча')),
-        p('2.6.5', l('Kiselo testo: starter', 'Sourdough: the starter', 'Закваска: стартер')),
-        p('2.6.6', l('Hleb od kiselog testa', 'A sourdough loaf', 'Хлеб на закваске')),
-      ],
+      lessons: breadLessons,
     },
     {
       id: 'g2m7',
