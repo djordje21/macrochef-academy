@@ -10,6 +10,7 @@ import { menuLessons } from './menu'
 import { nutritionLessons } from './nutrition'
 import { foodCostLessons } from './foodcost'
 import { haccpLessons } from './haccp'
+import { teamLessons } from './team'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -179,14 +180,7 @@ export const grade3: Grade = {
         'Бригада, график смен, обучение нового повара, общение на сервисе и культура кухни.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.12.1', l('Brigada u restoranu', 'The restaurant brigade', 'Бригада в ресторане')),
-        p('3.12.2', l('Raspored smena', 'The rota', 'График смен')),
-        p('3.12.3', l('Obuka novog kuvara', 'Training a new cook', 'Обучение нового повара')),
-        p('3.12.4', l('Komunikacija na servisu', 'Communication on service', 'Общение на сервисе')),
-        p('3.12.5', l('Kultura kuhinje i pritisak', 'Kitchen culture and pressure', 'Культура кухни и давление')),
-      ],
+      lessons: teamLessons,
     },
     {
       id: 'g3m13',
