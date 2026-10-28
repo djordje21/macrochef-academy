@@ -14,6 +14,7 @@ import { motherSauceLessons } from './mothersauces'
 import { legumeLessons } from './legumes'
 import { braiseLessons } from './braise'
 import { roastLessons } from './roast'
+import { grillLessons } from './grill'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
@@ -217,14 +218,7 @@ export const grade1: Grade = {
         'Зоны жара, маринады и мясо, которое сочное, а не обугленное.',
       ),
       photo: 'grill.webp',
-      lessons: [],
-      planned: [
-        p('14.1', l('Roštilj: žar i zone vatre', 'The grill: coals and heat zones', 'Гриль: угли и зоны жара')),
-        p('14.2', l('Grill tiganj u stanu', 'A grill pan at home', 'Сковорода-гриль дома')),
-        p('14.3', l('Pljeskavica i ćevapi', 'Pljeskavica and ćevapi', 'Плескавица и чевапи')),
-        p('14.4', l('Marinade i ražnjići', 'Marinades and skewers', 'Маринады и шашлычки')),
-        p('14.5', l('Povrće na roštilju', 'Grilled vegetables', 'Овощи на гриле')),
-      ],
+      lessons: grillLessons,
     },
     {
       id: 'm15',

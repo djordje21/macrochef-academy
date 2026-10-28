@@ -1616,6 +1616,106 @@ const drawings = {
       <Cut i={1} d="M240 70 L240 96" dash />
     </>
   ),
+  // Module 14 · Grill
+  chimney: (
+    <>
+      <rect x="110" y="40" width="80" height="100" rx="6" fill={C.steelEdge} />
+      <g fill={C.bg} opacity=".6"><circle cx="126" cy="128" r="4" /><circle cx="150" cy="128" r="4" /><circle cx="174" cy="128" r="4" /></g>
+      <rect x="190" y="70" width="40" height="10" rx="5" fill={C.handle} />
+      <g fill="#2A2A2A"><circle cx="128" cy="44" r="8" /><circle cx="150" cy="40" r="8" /><circle cx="172" cy="44" r="8" /></g>
+      <Cut i={0} d="M130 30 Q122 18 132 6" />
+      <Cut i={1} d="M150 28 Q142 16 152 4" />
+      <Cut i={2} d="M170 30 Q162 18 172 6" />
+    </>
+  ),
+  twoZone: (
+    <>
+      <path d="M30 80 A120 64 0 0 0 270 80 Z" fill={C.potDark} />
+      <g fill="#D9D2C8"><circle cx="70" cy="96" r="9" /><circle cx="92" cy="104" r="9" /><circle cx="80" cy="116" r="9" /><circle cx="110" cy="96" r="9" /><circle cx="104" cy="114" r="9" /><circle cx="126" cy="106" r="9" /></g>
+      <g fill={C.warn} opacity=".7"><circle cx="80" cy="104" r="4" /><circle cx="110" cy="108" r="4" /></g>
+      <g stroke={C.steel} strokeWidth="3"><path d="M40 80 L260 80" /><path d="M60 70 L60 90" /><path d="M100 70 L100 90" /><path d="M140 70 L140 90" /><path d="M180 70 L180 90" /><path d="M220 70 L220 90" /></g>
+      <Cut i={0} d="M70 54 Q60 40 70 26" />
+      <Cut i={1} d="M110 54 Q100 40 110 26" />
+      <Cut i={2} d="M160 60 L250 60" dash />
+    </>
+  ),
+  handTest: (
+    <>
+      <path d="M40 120 A110 40 0 0 0 260 120 Z" fill={C.potDark} />
+      <g stroke={C.steel} strokeWidth="3"><path d="M50 120 L250 120" /></g>
+      <path d="M110 60 Q110 44 126 44 L196 44 Q206 44 206 54 Q206 64 196 64 L126 64 Q110 64 110 60 Z" fill={C.skin} />
+      <Cut i={0} d="M230 64 L230 118" />
+      <Cut i={1} d="M224 64 L236 64 M224 118 L236 118" />
+    </>
+  ),
+  grillMarks: (
+    <>
+      <rect x="40" y="96" width="220" height="40" rx="8" fill="#2E2E2E" />
+      <g stroke="#555" strokeWidth="4"><path d="M60 96 L60 136" /><path d="M90 96 L90 136" /><path d="M120 96 L120 136" /><path d="M150 96 L150 136" /><path d="M180 96 L180 136" /><path d="M210 96 L210 136" /><path d="M240 96 L240 136" /></g>
+      <rect x="90" y="60" width="120" height="44" rx="12" fill={C.meat} />
+      <g stroke={C.crust} strokeWidth="4" strokeLinecap="round"><path d="M104 66 L136 98" /><path d="M134 66 L166 98" /><path d="M164 66 L196 98" /></g>
+      <Cut i={0} d="M220 40 A30 30 0 0 1 250 70" />
+      <Cut i={1} d="M244 62 L250 70 L256 60" />
+    </>
+  ),
+  kneadMince: (
+    <>
+      <path d="M50 70 A100 70 0 0 0 250 70 Z" fill={C.pot} />
+      <ellipse cx="150" cy="80" rx="70" ry="22" fill={C.meat} />
+      <g stroke="#E8A79F" strokeWidth="2" fill="none"><path d="M110 76 Q130 70 150 80 Q170 90 190 80" /></g>
+      <Cut i={0} d="M150 60 Q150 30 180 24" />
+      <Cut i={1} d="M150 60 Q150 34 120 26" />
+    </>
+  ),
+  pattyDimple: (
+    <>
+      <Board y={128} />
+      <g fill={C.meat}>
+        <rect x="40" y="96" width="70" height="20" rx="10" /><rect x="40" y="70" width="70" height="20" rx="10" />
+      </g>
+      <ellipse cx="200" cy="108" rx="64" ry="18" fill={C.meat} />
+      <ellipse cx="200" cy="106" rx="20" ry="6" fill="#A84E44" />
+      <Cut i={0} d="M200 60 L200 96" />
+      <Cut i={1} d="M192 88 L200 96 L208 88" />
+    </>
+  ),
+  skewers: (
+    <>
+      <Board y={136} />
+      {[66, 106].map((y) => (
+        <g key={y}>
+          <rect x="30" y={y - 2} width="240" height="4" rx="2" fill={C.woodTop} />
+          <rect x="56" y={y - 14} width="28" height="28" rx="6" fill={C.bread} />
+          <rect x="88" y={y - 12} width="10" height="24" rx="3" fill={C.warn} />
+          <rect x="102" y={y - 14} width="28" height="28" rx="6" fill={C.bread} />
+          <rect x="134" y={y - 12} width="10" height="24" rx="3" fill="#9C4D8F" />
+          <rect x="148" y={y - 14} width="28" height="28" rx="6" fill={C.bread} />
+          <rect x="180" y={y - 12} width="10" height="24" rx="3" fill={C.veg} />
+          <rect x="194" y={y - 14} width="28" height="28" rx="6" fill={C.bread} />
+        </g>
+      ))}
+      <Cut i={0} d="M84 40 L88 40 M98 40 L102 40" />
+      <Cut i={1} d="M86 34 L86 46 M100 34 L100 46" />
+    </>
+  ),
+  blisterPepper: (
+    <>
+      <path d="M40 120 A110 40 0 0 0 260 120 Z" fill={C.potDark} />
+      <g stroke={C.steel} strokeWidth="3"><path d="M50 116 L250 116" /></g>
+      <path d="M90 104 Q90 76 150 76 Q220 76 214 104 Z" fill={C.warn} />
+      <g fill="#1E1E1E"><ellipse cx="120" cy="88" rx="12" ry="6" /><ellipse cx="160" cy="84" rx="14" ry="6" /><ellipse cx="196" cy="94" rx="10" ry="5" /></g>
+      <rect x="80" y="86" width="12" height="6" rx="3" fill={C.leafDark} />
+      <Cut i={0} d="M150 40 A30 12 0 1 1 149 40" />
+    </>
+  ),
+  peelPepper: (
+    <>
+      <Board y={128} />
+      <path d="M70 120 Q70 90 150 90 Q240 90 230 120 Z" fill={C.warn} />
+      <path d="M190 92 Q220 70 250 60 L256 70 Q226 86 206 100 Z" fill="#3A2A22" />
+      <Cut i={0} d="M200 96 Q230 76 252 64" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
