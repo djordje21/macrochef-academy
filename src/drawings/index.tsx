@@ -2603,6 +2603,80 @@ const drawings = {
       <Cut i={0} d="M150 30 L150 14" />
     </>
   ),
+  // Grade 2 · Module 10 · France
+  mirepoix: (
+    <>
+      <Board y={128} />
+      <g fill={C.skin}>{[40, 60, 80, 100].map((x) => <rect key={x} x={x} y="104" width="16" height="16" rx="3" />)}{[40, 60, 80, 100].map((x) => <rect key={`b${x}`} x={x} y="86" width="16" height="16" rx="3" />)}</g>
+      <g fill={C.carrot}>{[150, 170, 150, 170].map((x, i) => <rect key={i} x={x} y={i < 2 ? 104 : 86} width="16" height="16" rx="3" />)}</g>
+      <g fill={C.leaf}>{[220, 240, 220, 240].map((x, i) => <rect key={i} x={x} y={i < 2 ? 104 : 86} width="16" height="16" rx="3" />)}</g>
+      <Cut i={0} d="M40 70 L116 70" />
+      <Cut i={1} d="M150 70 L186 70" />
+      <Cut i={2} d="M220 70 L256 70" />
+    </>
+  ),
+  bouquetGarni: (
+    <>
+      <Board y={136} />
+      <path d="M100 110 Q150 90 200 110 Q150 130 100 110 Z" fill={C.leafDark} />
+      <g stroke={C.leaf} strokeWidth="3"><path d="M200 108 L236 92" /><path d="M200 112 L240 108" /><path d="M200 110 L232 124" /></g>
+      <g stroke={C.paper} strokeWidth="3"><path d="M130 98 L130 122" /><path d="M170 98 L170 122" /></g>
+      <Cut i={0} d="M100 110 Q70 80 60 40" />
+    </>
+  ),
+  noisette: (
+    <>
+      <rect x="70" y="84" width="160" height="56" rx="8" fill={C.steel} />
+      <rect x="230" y="96" width="50" height="10" rx="5" fill={C.handle} />
+      <ellipse cx="150" cy="92" rx="74" ry="10" fill="#D9A441" />
+      <g fill="#7A4A1E"><circle cx="120" cy="94" r="2.5" /><circle cx="140" cy="92" r="2.5" /><circle cx="160" cy="95" r="2.5" /><circle cx="180" cy="92" r="2.5" /><circle cx="130" cy="96" r="2" /></g>
+      <Cut i={0} d="M100 60 Q150 40 200 60" />
+      <Cut i={1} d="M192 52 L200 60 L190 64" />
+    </>
+  ),
+  dredge: (
+    <>
+      <rect x="40" y="90" width="140" height="44" rx="6" fill={C.potDark} />
+      <ellipse cx="110" cy="100" rx="64" ry="8" fill={C.paper} />
+      <path d="M180 70 Q220 54 270 66 L262 82 Q220 78 186 86 Z" fill="#F4EEE2" />
+      <g fill={C.paper}><circle cx="210" cy="96" r="2" /><circle cx="226" cy="104" r="2" /><circle cx="240" cy="96" r="2" /></g>
+      <Cut i={0} d="M200 112 Q225 126 250 112" />
+    </>
+  ),
+  gratinLayers: (
+    <>
+      <rect x="40" y="70" width="220" height="70" rx="12" fill={C.paper} />
+      <rect x="50" y="78" width="200" height="56" rx="6" fill="#F4E3BE" />
+      <g fill={C.bread}>{[0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => <ellipse key={i} cx={66 + i * 21} cy="90" rx="14" ry="6" />)}</g>
+      <g fill="#E8C98E">{[0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => <ellipse key={i} cx={74 + i * 21} cy="106" rx="14" ry="6" />)}</g>
+      <Cut i={0} d="M270 84 L270 134" />
+      <Cut i={1} d="M264 84 L276 84 M264 134 L276 134" />
+    </>
+  ),
+  ratatouillePans: (
+    <>
+      {[[70, '#5C3A8A'], [150, C.veg], [230, C.warn]].map(([x, c]) => (
+        <g key={x as number}>
+          <circle cx={x as number} cy="96" r="34" fill={C.potDark} />
+          <g fill={c as string}>
+            <rect x={(x as number) - 18} y="80" width="12" height="12" rx="2" /><rect x={(x as number) + 2} y="84" width="12" height="12" rx="2" /><rect x={(x as number) - 10} y="100" width="12" height="12" rx="2" />
+          </g>
+        </g>
+      ))}
+      <Cut i={0} d="M70 50 L70 58" />
+      <Cut i={1} d="M150 50 L150 58" />
+      <Cut i={2} d="M230 50 L230 58" />
+    </>
+  ),
+  quicheWobble: (
+    <>
+      <ellipse cx="150" cy="104" rx="110" ry="34" fill={C.bread} />
+      <ellipse cx="150" cy="100" rx="96" ry="26" fill="#F8E3A0" />
+      <g fill="#C26A4A"><rect x="110" y="94" width="10" height="6" rx="2" /><rect x="170" y="100" width="10" height="6" rx="2" /><rect x="140" y="106" width="10" height="6" rx="2" /></g>
+      <Cut i={0} d="M120 100 Q135 92 150 100 Q165 108 180 100" />
+      <Cut i={1} d="M30 140 L60 140 M240 140 L270 140" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

@@ -8,6 +8,7 @@ import { breadLessons } from './bread'
 import { dessertLessons } from './desserts'
 import { preserveLessons } from './preserves'
 import { lowTempLessons } from './lowtemp'
+import { frenchLessons } from './french'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -154,16 +155,7 @@ export const grade2: Grade = {
         'Основа любой профессиональной кухни. Масло, вино, медленная готовка и классические блюда, на которых учат технику.',
       ),
       photo: 'g2-french.webp',
-      lessons: [],
-      planned: [
-        p('2.10.1', l('Mirepoix, bouquet garni i braon puter', 'Mirepoix, bouquet garni and brown butter', 'Мирпуа, букет гарни и коричневое масло')),
-        p('2.10.2', l('Riba meunière', 'Fish meunière', 'Рыба мёньер')),
-        p('2.10.3', l('Coq au vin', 'Coq au vin', 'Петух в вине')),
-        p('2.10.4', l('Bœuf bourguignon', 'Bœuf bourguignon', 'Говядина по-бургундски')),
-        p('2.10.5', l('Gratin dauphinois', 'Gratin dauphinois', 'Гратен дофинуа')),
-        p('2.10.6', l('Ratatouille', 'Ratatouille', 'Рататуй')),
-        p('2.10.7', l('Quiche lorraine', 'Quiche lorraine', 'Киш лорен')),
-      ],
+      lessons: frenchLessons,
     },
     {
       id: 'g2m11',
