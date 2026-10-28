@@ -2753,6 +2753,70 @@ const drawings = {
       <Cut i={0} d="M60 90 Q80 70 110 82 Q140 94 170 78 Q200 64 240 86" />
     </>
   ),
+  // Grade 2 · Module 12 · Mediterranean
+  oilTaste: (
+    <>
+      <rect x="60" y="30" width="44" height="110" rx="10" fill="#3E5A2A" />
+      <rect x="72" y="14" width="20" height="18" rx="4" fill={C.handle} />
+      <rect x="62" y="70" width="40" height="40" rx="4" fill={C.paper} opacity=".85" />
+      <ellipse cx="190" cy="100" rx="40" ry="14" fill={C.steel} />
+      <ellipse cx="190" cy="98" rx="28" ry="8" fill="#C9B23A" />
+      <rect x="226" y="94" width="50" height="8" rx="4" fill={C.steel} />
+      <Cut i={0} d="M170 70 Q190 50 210 70" />
+    </>
+  ),
+  herbChop: (
+    <>
+      <Board y={128} />
+      <g fill={C.leaf}>{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => <circle key={i} cx={70 + (i % 5) * 22} cy={104 + Math.floor(i / 5) * 12} r="5" />)}</g>
+      <g fill={C.leafDark}>{[0, 1, 2, 3, 4].map((i) => <circle key={i} cx={80 + i * 22} cy="110" r="4" />)}</g>
+      <path d="M180 60 L280 40 L284 50 L188 74 Z" fill={C.steel} />
+      <Cut i={0} d="M190 90 Q220 70 250 90 Q220 110 190 90" />
+    </>
+  ),
+  scoreFish: (
+    <>
+      <rect x="30" y="120" width="240" height="10" rx="3" fill={C.steel} />
+      <path d="M50 96 Q100 64 190 72 L240 56 L236 96 L240 132 L190 120 Q100 128 50 96 Z" fill={C.steelEdge} />
+      <circle cx="74" cy="92" r="5" fill={C.bg} />
+      <Cut i={0} d="M110 76 L130 116" />
+      <Cut i={1} d="M140 74 L160 116" />
+      <Cut i={2} d="M170 74 L190 114" />
+    </>
+  ),
+  charAubergine: (
+    <>
+      <path d="M40 120 A110 40 0 0 0 260 120 Z" fill={C.potDark} />
+      <path d="M70 100 Q80 70 160 70 Q220 72 230 96 Q200 114 120 112 Q76 112 70 100 Z" fill="#2A1E30" />
+      <path d="M226 90 L250 82 L246 96 Z" fill={C.leafDark} />
+      <g fill="#5C3A8A" opacity=".6"><ellipse cx="130" cy="88" rx="20" ry="6" /><ellipse cx="180" cy="92" rx="16" ry="5" /></g>
+      <Cut i={0} d="M110 56 Q104 44 110 32" />
+      <Cut i={1} d="M180 56 Q174 44 180 32" />
+    </>
+  ),
+  mezePlate: (
+    <>
+      <ellipse cx="150" cy="100" rx="130" ry="44" fill={C.paper} />
+      <circle cx="80" cy="98" r="30" fill="#F4F1E8" />
+      <circle cx="150" cy="96" r="30" fill="#B8A07A" />
+      <circle cx="220" cy="98" r="30" fill="#E8D6A8" />
+      <g fill="#C9B23A"><ellipse cx="80" cy="98" rx="10" ry="5" /><ellipse cx="150" cy="96" rx="10" ry="5" /><ellipse cx="220" cy="98" rx="10" ry="5" /></g>
+      <g fill={C.warn}><circle cx="226" cy="90" r="2" /><circle cx="212" cy="104" r="2" /></g>
+      <g fill={C.leaf}><circle cx="74" cy="88" r="2" /><circle cx="88" cy="106" r="2" /></g>
+      <Cut i={0} d="M150 40 L150 58" />
+    </>
+  ),
+  paellaPan: (
+    <>
+      <ellipse cx="150" cy="100" rx="120" ry="40" fill="#2E2E2E" />
+      <rect x="10" y="94" width="24" height="10" rx="5" fill="#2E2E2E" /><rect x="266" y="94" width="24" height="10" rx="5" fill="#2E2E2E" />
+      <ellipse cx="150" cy="98" rx="108" ry="32" fill="#E8A83A" />
+      <g fill="#F49A7A">{[100, 150, 200].map((x) => <path key={x} d={`M${x - 12} 96 A12 12 0 1 1 ${x + 4} 86`} stroke="#F49A7A" strokeWidth="6" fill="none" />)}</g>
+      <g fill={C.crust}><rect x="90" y="106" width="12" height="8" rx="3" /><rect x="170" y="110" width="12" height="8" rx="3" /></g>
+      <g fill={C.bg} opacity=".4"><circle cx="120" cy="104" r="2" /><circle cx="186" cy="94" r="2" /><circle cx="140" cy="88" r="2" /></g>
+      <Cut i={0} d="M44 98 A106 30 0 0 0 256 98" dash />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

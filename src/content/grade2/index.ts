@@ -10,6 +10,7 @@ import { preserveLessons } from './preserves'
 import { lowTempLessons } from './lowtemp'
 import { frenchLessons } from './french'
 import { italianLessons } from './italian'
+import { mediterraneanLessons } from './mediterranean'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -180,14 +181,7 @@ export const grade2: Grade = {
         'Оливковое масло, лимон, травы и огонь. Просто, по сезону и легко, но очень вкусно.',
       ),
       photo: 'g2-med.webp',
-      lessons: [],
-      planned: [
-        p('2.12.1', l('Maslinovo ulje: sirovo i za kuvanje', 'Olive oil: raw and for cooking', 'Оливковое масло: сырое и для готовки')),
-        p('2.12.2', l('Limun, beli luk i bilje: gremolata i salsa verde', 'Lemon, garlic and herbs: gremolata and salsa verde', 'Лимон, чеснок и травы: гремолата и сальса верде')),
-        p('2.12.3', l('Cela riba na žaru', 'Whole fish on the grill', 'Целая рыба на гриле')),
-        p('2.12.4', l('Meze: cacik, baba ganuš, humus', 'Meze: tzatziki, baba ganoush, hummus', 'Мезе: цацики, баба гануш, хумус')),
-        p('2.12.5', l('Paella', 'Paella', 'Паэлья')),
-      ],
+      lessons: mediterraneanLessons,
     },
     {
       id: 'g2m13',
