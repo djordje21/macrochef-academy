@@ -12,6 +12,7 @@ import { coldLessons } from './cold'
 import { soupLessons } from './soups'
 import { motherSauceLessons } from './mothersauces'
 import { legumeLessons } from './legumes'
+import { braiseLessons } from './braise'
 
 // Grade 1 · First steps. Modules follow the stations of a kitchen: set-up and knife, the cold
 // station, heat and taste, then the dishes, and finally the habits that run a home kitchen.
@@ -191,14 +192,7 @@ export const grade1: Grade = {
         'Гуляш, паприкаш, сарма. Техника, на которой держится половина нашей кухни: медленно, под крышкой, с малым количеством жидкости.',
       ),
       photo: 'braise.webp',
-      lessons: [],
-      planned: [
-        p('12.1', l('Šta je braziranje', 'What braising is', 'Что такое брезирование')),
-        p('12.2', l('Gulaš', 'Goulash', 'Гуляш')),
-        p('12.3', l('Pileći paprikaš', 'Chicken paprikash', 'Куриный паприкаш')),
-        p('12.4', l('Sarma', 'Sarma', 'Сарма')),
-        p('12.5', l('Braziran juneći obraz', 'Braised beef cheeks', 'Тушёные говяжьи щёчки')),
-      ],
+      lessons: braiseLessons,
     },
     {
       id: 'm13',

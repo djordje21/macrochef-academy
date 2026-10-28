@@ -290,7 +290,6 @@ const hummus: Lesson = {
       params: [l('4 min', '4 min', '4 мин'), l('toplo, ne hladno', 'warm, not cold', 'тёплый, не холодный')],
       done: l('Humus je potpuno gladak, bez ijednog zrnca na jeziku.', 'The hummus is perfectly smooth, not a grain on the tongue.', 'Хумус абсолютно гладкий, ни крупинки на языке.'),
       why: l('Topla leblebija se lakše usitni. Četiri minuta zvuči dugo, a to je razlika između dobrog i odličnog.', 'Warm chickpeas break down more easily. Four minutes sounds long; it is the difference between good and great.', 'Тёплый нут легче измельчается. Четыре минуты кажутся долгими, но это разница между хорошим и отличным.'),
-      drawing: 'blend',
     },
     {
       text: l('Proveri gustinu i ukus, pa dodaj vodu ili limun.', 'Check the texture and taste, then adjust with water or lemon.', 'Проверь густоту и вкус, поправь водой или лимоном.'),

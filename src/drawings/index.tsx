@@ -1469,6 +1469,61 @@ const drawings = {
       <Cut i={0} d="M110 60 Q150 40 190 60" />
     </>
   ),
+  // Module 12 · Braising
+  braiseLevel: (
+    <>
+      <rect x="60" y="66" width="180" height="80" rx="10" fill={C.potDark} />
+      <rect x="66" y="104" width="168" height="36" rx="6" fill="#8A4A2C" opacity=".85" />
+      <g fill={C.crust}><rect x="84" y="86" width="40" height="34" rx="10" /><rect x="132" y="82" width="40" height="38" rx="10" /><rect x="180" y="88" width="38" height="32" rx="10" /></g>
+      <rect x="54" y="52" width="192" height="12" rx="6" fill={C.pot} />
+      <Cut i={0} d="M44 104 L256 104" dash />
+      <Cut i={1} d="M110 40 Q150 22 190 40" />
+    </>
+  ),
+  forkTender: (
+    <>
+      <Board y={128} />
+      <rect x="90" y="88" width="120" height="40" rx="16" fill={C.crust} />
+      <g stroke="#5A2A16" strokeWidth="2"><path d="M110 96 L112 122" /><path d="M130 94 L132 124" /><path d="M170 94 L168 124" /></g>
+      <g stroke={C.steel} strokeWidth="3" strokeLinecap="round">
+        <path d="M150 14 L150 50" /><path d="M140 50 L140 100" /><path d="M150 50 L150 100" /><path d="M160 50 L160 100" /><path d="M140 50 L160 50" />
+      </g>
+      <Cut i={0} d="M176 60 L176 100" />
+      <Cut i={1} d="M170 92 L176 100 L182 92" />
+    </>
+  ),
+  leafRib: (
+    <>
+      <Board y={128} />
+      <path d="M60 120 Q60 50 150 40 Q240 50 240 120 Z" fill="#C8D69A" />
+      <path d="M150 120 L150 50" stroke="#A9BC72" strokeWidth="10" strokeLinecap="round" />
+      <path d="M190 58 L134 104 L140 110 L196 64 Z" fill={C.steel} />
+      <Cut i={0} d="M150 112 L150 60" />
+    </>
+  ),
+  rollSarma: (
+    <>
+      <Board y={128} />
+      <path d="M40 124 L190 124 Q200 90 160 84 L40 84 Z" fill="#C8D69A" />
+      <ellipse cx="80" cy="102" rx="26" ry="12" fill={C.meat} />
+      <ellipse cx="214" cy="104" rx="30" ry="22" fill="#B8C982" />
+      <path d="M196 96 Q214 86 232 100" stroke="#9AAE64" strokeWidth="3" fill="none" />
+      <Cut i={0} d="M110 70 Q150 50 190 70" />
+      <Cut i={1} d="M180 62 L190 70 L178 76" />
+    </>
+  ),
+  sarmaPot: (
+    <>
+      <rect x="50" y="56" width="200" height="90" rx="10" fill={C.potDark} />
+      <g fill="#B8C982">
+        <ellipse cx="90" cy="120" rx="22" ry="14" /><ellipse cx="136" cy="120" rx="22" ry="14" /><ellipse cx="182" cy="120" rx="22" ry="14" /><ellipse cx="216" cy="120" rx="14" ry="14" />
+        <ellipse cx="112" cy="96" rx="22" ry="14" /><ellipse cx="158" cy="96" rx="22" ry="14" /><ellipse cx="202" cy="96" rx="20" ry="14" />
+      </g>
+      <ellipse cx="150" cy="76" rx="84" ry="8" fill={C.paper} />
+      <Cut i={0} d="M150 20 L150 62" />
+      <Cut i={1} d="M140 52 L150 62 L160 52" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
