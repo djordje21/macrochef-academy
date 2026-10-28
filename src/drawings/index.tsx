@@ -2377,6 +2377,67 @@ const drawings = {
       <Cut i={1} d="M260 100 Q270 90 260 80" />
     </>
   ),
+  // Grade 2 · Module 7 · Desserts
+  creamBoil: (
+    <>
+      <rect x="70" y="80" width="160" height="66" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="88" rx="74" ry="10" fill={C.yolk} />
+      <g fill="#F8D27A"><circle cx="120" cy="86" r="5" /><circle cx="160" cy="84" r="6" /><circle cx="186" cy="88" r="4" /></g>
+      <g stroke={C.steel} strokeWidth="2.5" fill="none"><path d="M150 14 L146 62 Q150 82 158 62 L162 16" /></g>
+      <Cut i={0} d="M110 64 Q100 50 110 36" />
+      <Cut i={1} d="M196 64 Q186 50 196 36" />
+    </>
+  ),
+  gelatinBloom: (
+    <>
+      <path d="M50 70 A100 60 0 0 0 250 70 Z" fill={C.pot} />
+      <ellipse cx="150" cy="70" rx="100" ry="12" fill={C.water} opacity=".7" />
+      <g fill={C.paper} opacity=".75">
+        <rect x="100" y="76" width="44" height="26" rx="3" transform="rotate(-8 122 89)" /><rect x="156" y="78" width="44" height="26" rx="3" transform="rotate(10 178 91)" />
+      </g>
+      <Cut i={0} d="M70 40 L90 40 M80 30 L80 50 M73 33 L87 47 M87 33 L73 47" />
+    </>
+  ),
+  unmould: (
+    <>
+      <ellipse cx="150" cy="130" rx="90" ry="12" fill={C.paper} />
+      <path d="M116 128 L124 80 L176 80 L184 128 Z" fill="#F8EFDF" />
+      <path d="M116 128 L184 128" stroke="#E8DCC4" strokeWidth="3" />
+      <ellipse cx="150" cy="80" rx="26" ry="5" fill="#C2402F" opacity=".85" />
+      <Cut i={0} d="M100 96 Q94 86 100 76" />
+      <Cut i={1} d="M200 96 Q206 86 200 76" />
+    </>
+  ),
+  foldMousse: (
+    <>
+      <path d="M50 70 A100 64 0 0 0 250 70 Z" fill={C.pot} />
+      <ellipse cx="150" cy="74" rx="90" ry="12" fill="#6B3E26" />
+      <path d="M110 74 Q140 64 170 76" stroke={C.paper} strokeWidth="5" fill="none" opacity=".8" />
+      <rect x="180" y="16" width="10" height="64" rx="4" fill={C.handle} transform="rotate(25 185 48)" />
+      <Cut i={0} d="M110 110 Q150 140 190 110 Q200 80 170 60" />
+      <Cut i={1} d="M162 68 L170 60 L176 70" />
+    </>
+  ),
+  caramelColor: (
+    <>
+      {['#F8EFDF', '#F2D58C', '#E3A64A', '#B8682A', '#5A2A16'].map((c, i) => (
+        <circle key={i} cx={42 + i * 54} cy="90" r="22" fill={c} />
+      ))}
+      <Cut i={0} d="M150 130 m-30 0 a30 6 0 1 0 60 0 a30 6 0 1 0 -60 0" />
+      <Cut i={1} d="M150 120 L150 116" />
+      <Cut i={2} d="M232 60 L268 120 M268 60 L232 120" dash />
+    </>
+  ),
+  tartFruit: (
+    <>
+      <ellipse cx="150" cy="100" rx="110" ry="40" fill={C.bread} />
+      <ellipse cx="150" cy="96" rx="96" ry="32" fill="#F8E3A0" />
+      <g fill={C.warn}>{[0, 1, 2, 3, 4, 5, 6, 7].map((i) => <circle key={i} cx={150 + 80 * Math.cos((i * Math.PI) / 4)} cy={96 + 24 * Math.sin((i * Math.PI) / 4)} r="9" />)}</g>
+      <g fill={C.ok}>{[0, 1, 2, 3, 4, 5].map((i) => <circle key={i} cx={150 + 46 * Math.cos((i * Math.PI) / 3)} cy={96 + 14 * Math.sin((i * Math.PI) / 3)} r="7" />)}</g>
+      <circle cx="150" cy="96" r="8" fill="#5C3A8A" />
+      <Cut i={0} d="M150 40 L150 56" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

@@ -5,6 +5,7 @@ import { butcheryLessons } from './butchery'
 import { fishLessons } from './fish'
 import { doughLessons } from './doughs'
 import { breadLessons } from './bread'
+import { dessertLessons } from './desserts'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -115,15 +116,7 @@ export const grade2: Grade = {
         'Кремы, панакота, мусс, карамель и фруктовый тарт. Достаточно для десерта на экзамене, а кондитерка ждёт 3 класса.',
       ),
       photo: 'g2-desserts.webp',
-      lessons: [],
-      planned: [
-        p('2.7.1', l('Krem za kolače', 'Pastry cream', 'Заварной крем')),
-        p('2.7.2', l('Engleski krem', 'Crème anglaise', 'Английский крем')),
-        p('2.7.3', l('Panakota i želatin', 'Panna cotta and gelatine', 'Панакота и желатин')),
-        p('2.7.4', l('Čokoladni mus', 'Chocolate mousse', 'Шоколадный мусс')),
-        p('2.7.5', l('Karamel', 'Caramel', 'Карамель')),
-        p('2.7.6', l('Voćni tart', 'Fruit tart', 'Фруктовый тарт')),
-      ],
+      lessons: dessertLessons,
     },
     {
       id: 'g2m8',
