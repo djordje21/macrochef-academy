@@ -314,3 +314,133 @@
   font-weight: 700;
   color: var(--accent);
 }
+
+/* Sales sections: the problem, what you learn, the chef's word, questions, last call. */
+.landing-pain ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.landing-pain li {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--on-photo);
+}
+
+.landing-pain li::before {
+  content: '✕';
+  color: var(--warn);
+  font-weight: 800;
+}
+
+.pain-answer {
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 1.35;
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+}
+
+.landing-learn {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .landing-learn {
+    grid-template-columns: 1fr;
+  }
+}
+
+.landing-learn li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  border-radius: var(--r-tile);
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.landing-learn .mono {
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.landing-learn b {
+  font-size: 15px;
+}
+
+.landing-learn li > span:last-child {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.landing-chef blockquote {
+  margin: 4px 0 0;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.landing-faq details {
+  border-bottom: 1px solid var(--line);
+}
+
+.landing-faq summary {
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.landing-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.landing-faq summary::after {
+  content: '+';
+  font-size: 22px;
+  color: var(--accent);
+  transition: transform 0.25s;
+}
+
+.landing-faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.landing-faq details p {
+  padding: 0 0 14px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.landing-final {
+  text-align: left;
+  padding: 22px 18px;
+  border-radius: var(--r-card);
+  background: linear-gradient(160deg, rgba(245, 184, 61, 0.14), rgba(245, 184, 61, 0));
+  border: 1px solid var(--accent);
+}
+
+.landing-final h2 {
+  font-size: 24px;
+}

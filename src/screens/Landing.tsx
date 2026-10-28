@@ -3,7 +3,7 @@ import { allLessons, grades, upcoming } from '../content'
 import { useDone } from '../app/progress'
 import { navigate } from '../app/router'
 import { markWelcomed } from '../app/progress'
-import { useT } from '../i18n/useT'
+import { useT, type Key } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import { LangSwitch } from '../components/LangSwitch'
 import { Drawing } from '../drawings'
@@ -111,6 +111,29 @@ export function Landing() {
           </div>
         </div>
 
+        <section className="landing-pain">
+          <h2>{t('landing.painTitle')}</h2>
+          <ul>
+            {(['pain1', 'pain2', 'pain3'] as const).map((k) => (
+              <li key={k}>{t(`landing.${k}`)}</li>
+            ))}
+          </ul>
+          <p className="pain-answer">{t('landing.painAnswer')}</p>
+        </section>
+
+        <section>
+          <h2>{t('landing.learnTitle')}</h2>
+          <ol className="landing-learn">
+            {grade.modules.map((m) => (
+              <li key={m.id}>
+                <span className="mono">M{m.n}</span>
+                <b>{c(m.title)}</b>
+                <span>{t(`landing.learn.${m.id}` as Key)}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
         <section>
           <h2>{t('landing.modesTitle')}</h2>
           <ModeCards />
@@ -181,7 +204,7 @@ export function Landing() {
           <span className="label">{t('landing.chefTitle')}</span>
           <h2>{t('landing.chefName')}</h2>
           <span className="chef-role">{t('landing.chefRole')}</span>
-          <p>{t('landing.chefText')}</p>
+          <blockquote>„{t('landing.quote')}“</blockquote>
         </section>
 
         <section className="landing-mc">
@@ -189,7 +212,21 @@ export function Landing() {
           <p className="muted">{t('landing.mcText')}</p>
         </section>
 
-        {mainCta}
+        <section className="landing-faq">
+          <h2>{t('landing.faqTitle')}</h2>
+          {([1, 2, 3, 4, 5] as const).map((n) => (
+            <details key={n}>
+              <summary>{t(`landing.faq${n}q`)}</summary>
+              <p>{t(`landing.faq${n}a`)}</p>
+            </details>
+          ))}
+        </section>
+
+        <section className="landing-final">
+          <h2>{t('landing.finalTitle')}</h2>
+          <p className="muted">{t('landing.finalText')}</p>
+          {mainCta}
+        </section>
       </div>
     </div>
   )
