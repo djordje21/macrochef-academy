@@ -1,48 +1,12 @@
-import { l, type Grade, type Lesson, type Module, type UpcomingGrade } from './types'
+import { type Grade, type Lesson, type Module, type UpcomingGrade } from './types'
 import { grade1 } from './grade1'
 import { grade2 } from './grade2'
+import { grade3 } from './grade3'
 
-/** Grade 3 is announced with its planned modules; its lessons come later. */
-export const upcoming: UpcomingGrade[] = [
-  {
-    n: 3,
-    title: l('Chef', 'Chef', 'Шеф'),
-    tagline: l(
-      'Fine dining, pastry, meni, food cost, vođenje tima.',
-      'Fine dining, pastry, menus, food cost, leading a team.',
-      'Высокая кухня, кондитерка, меню, фудкост, управление командой.',
-    ),
-    photo: 'grade-3.webp',
-    audience: l(
-      'Za one koji kuvaju kao zanatlije, a hoće da vode: meni, ljude i brojeve.',
-      'For cooks with the craft who want to lead: the menu, the people and the numbers.',
-      'Для тех, кто владеет ремеслом и хочет руководить: меню, людьми и цифрами.',
-    ),
-    outcome: l(
-      'Osmisliš meni, izračunaš mu cenu i vodiš kuhinju kao chef.',
-      'You design a menu, cost it and run a kitchen like a chef.',
-      'Ты составляешь меню, считаешь его себестоимость и руководишь кухней как шеф.',
-    ),
-    plannedModules: [
-      l('Fine dining tehnike', 'Fine dining techniques', 'Техники высокой кухни'),
-      l('Pastry i deserti', 'Pastry and desserts', 'Кондитерка и десерты'),
-      l('Kreiranje menija', 'Menu design', 'Создание меню'),
-      l('Food cost i nabavka', 'Food cost and purchasing', 'Фудкост и закупки'),
-      l('Vođenje kuhinje: brigada i HACCP sistem', 'Running a kitchen: brigade and HACCP', 'Управление кухней: бригада и ХАССП'),
-      l('Nutritivni dizajn jela, sa MacroChefom', 'Nutrition by design, with MacroChef', 'Питательный дизайн блюд с MacroChef'),
-    ],
-    exam: {
-      title: l('Tvoj meni', 'Your menu', 'Твоё меню'),
-      text: l(
-        'Degustacioni meni od pet jela, sa food costom, alergenima i makroima za svako jelo.',
-        'A five-course tasting menu with food cost, allergens and macros for every dish.',
-        'Дегустационное меню из пяти блюд с фудкостом, аллергенами и макросами для каждого.',
-      ),
-    },
-  },
-]
+/** Grades announced with their planned modules but not yet in the course. None right now. */
+export const upcoming: UpcomingGrade[] = []
 
-export const grades: Grade[] = [grade1, grade2]
+export const grades: Grade[] = [grade1, grade2, grade3]
 
 /** Every grade in order, written or announced, for cards and menus. */
 export const gradeList: (Grade | UpcomingGrade)[] = [...grades, ...upcoming]

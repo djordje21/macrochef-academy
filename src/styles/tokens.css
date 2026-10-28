@@ -66,4 +66,11 @@
   --on-accent: #0B0A09;
   --r-card: 4px;
   --r-tile: 4px;
+  --font-display: 'Fraunces Variable', Georgia, serif;
+}
+
+/* Fraunces reads as fine dining at a light weight; the bold weights the other grades use look heavy in it. */
+:root[data-grade='3'] :is(h1, h2, h3, .how-num, .step-num) {
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }

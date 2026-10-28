@@ -12,6 +12,7 @@ import { Oops } from '../components/Oops'
 export function GradeView({ n }: { n: number }) {
   const { t, c } = useT()
   const done = useDone()
+  const [showPlan, setShowPlan] = useState(false)
   const written = grades.find((g) => g.n === n)
   const planned = upcoming.find((g) => g.n === n)
   const grade = written ?? planned
@@ -20,7 +21,6 @@ export function GradeView({ n }: { n: number }) {
   const lessons = written ? written.modules.flatMap((m) => m.lessons) : []
   const plannedCount = written ? written.modules.reduce((sum, m) => sum + (m.planned?.length ?? 0), 0) : 0
   const open = lessons.length > 0
-  const [showPlan, setShowPlan] = useState(false)
   const minutes = lessons.reduce((sum, x) => sum + x.minutes, 0)
   const next = lessons.find((x) => !done.has(x.id))
 
