@@ -11,6 +11,7 @@ import { nutritionLessons } from './nutrition'
 import { foodCostLessons } from './foodcost'
 import { haccpLessons } from './haccp'
 import { teamLessons } from './team'
+import { openingLessons } from './opening'
 
 // Grade 3 · Chef. From a cook with the craft to a chef: technique at restaurant level, creating dishes
 // and menus, then the kitchen as a business: food cost, HACCP, the team, opening a kitchen and the hotel.
@@ -192,14 +193,7 @@ export const grade3: Grade = {
         'Поток работы и планировка, оборудование, тестовая кухня, мягкое открытие и первые 90 дней.',
       ),
       photo: 'grade-3.webp',
-      lessons: [],
-      planned: [
-        p('3.13.1', l('Tok rada i raspored prostora', 'Workflow and layout', 'Поток работы и планировка')),
-        p('3.13.2', l('Izbor opreme', 'Choosing equipment', 'Выбор оборудования')),
-        p('3.13.3', l('Test kuhinja', 'The test kitchen', 'Тестовая кухня')),
-        p('3.13.4', l('Soft opening', 'The soft opening', 'Мягкое открытие')),
-        p('3.13.5', l('Prvih 90 dana', 'The first 90 days', 'Первые 90 дней')),
-      ],
+      lessons: openingLessons,
     },
     {
       id: 'g3m14',
