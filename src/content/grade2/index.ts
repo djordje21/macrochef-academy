@@ -1,4 +1,5 @@
 import { l, type Grade, type L } from '../types'
+import { timingLessons } from './timing'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -37,14 +38,7 @@ export const grade2: Grade = {
         'Как готовить несколько блюд сразу и подать всё в одну минуту. Без этого нет меню из трёх блюд.',
       ),
       photo: 'g2-timing.webp',
-      lessons: [],
-      planned: [
-        p('2.1.1', l('Brigada kod kuće: ko radi šta', 'A brigade at home: who does what', 'Бригада дома: кто что делает')),
-        p('2.1.2', l('Radni plan unazad od serviranja', 'Planning backwards from service', 'План назад от подачи')),
-        p('2.1.3', l('Mise en place za ceo meni', 'Mise en place for a whole menu', 'Мизанплас для всего меню')),
-        p('2.1.4', l('Tri jela, jedan šporet', 'Three dishes, one stove', 'Три блюда, одна плита')),
-        p('2.1.5', l('Služenje na vreme: toplo, hladno, odmor', 'Serving on time: hot, cold, resting', 'Подача вовремя: горячее, холодное, отдых')),
-      ],
+      lessons: timingLessons,
     },
     {
       id: 'g2m2',

@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { allLessons, grades, upcoming } from '../content'
+import { grades, upcoming } from '../content'
 import { useDone } from '../app/progress'
 import { goBack, navigate } from '../app/router'
 import { useT } from '../i18n/useT'
@@ -20,7 +20,7 @@ export function GradeView({ n }: { n: number }) {
   const plannedCount = written ? written.modules.reduce((sum, m) => sum + (m.planned?.length ?? 0), 0) : 0
   const open = lessons.length > 0
   const minutes = lessons.reduce((sum, x) => sum + x.minutes, 0)
-  const next = allLessons.find((x) => !done.has(x.id))
+  const next = lessons.find((x) => !done.has(x.id))
 
   return (
     <div className={`grade-view g${n}`} style={{ '--accent': `var(--grade-${n})` } as CSSProperties}>

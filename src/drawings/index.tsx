@@ -1899,6 +1899,80 @@ const drawings = {
       <Cut i={1} d="M172 56 L182 64 L172 72" />
     </>
   ),
+  // Grade 2 · Module 1 · Timing
+  stations: (
+    <>
+      <rect x="20" y="40" width="260" height="100" rx="8" fill={C.fridge} opacity=".2" />
+      <rect x="28" y="48" width="60" height="84" rx="6" fill={C.warn} opacity=".75" />
+      <rect x="94" y="48" width="60" height="84" rx="6" fill={C.ice} opacity=".8" />
+      <rect x="160" y="48" width="60" height="84" rx="6" fill={C.yolk} opacity=".75" />
+      <rect x="226" y="48" width="46" height="84" rx="6" fill={C.paper} />
+      <Cut i={0} d="M28 30 L272 30" dash />
+      <Cut i={1} d="M249 60 L249 120" />
+    </>
+  ),
+  backwardsPlan: (
+    <>
+      <rect x="30" y="50" width="110" height="18" rx="5" fill={C.pot} />
+      <rect x="90" y="78" width="140" height="18" rx="5" fill={C.potDark} />
+      <rect x="170" y="106" width="70" height="18" rx="5" fill={C.yolk} opacity=".8" />
+      <path d="M262 30 L262 140" stroke={C.ok} strokeWidth="4" strokeLinecap="round" />
+      <Cut i={0} d="M256 150 L40 150" />
+      <Cut i={1} d="M52 142 L40 150 L52 158" />
+    </>
+  ),
+  courseTrays: (
+    <>
+      {[30, 120, 210].map((x, i) => (
+        <g key={x}>
+          <rect x={x} y="70" width="80" height="60" rx="6" fill={C.steelEdge} />
+          <circle cx={x + 22} cy="92" r="11" fill={[C.leaf, C.meat, C.yolk][i]} />
+          <rect x={x + 40} y="82" width="30" height="20" rx="4" fill={C.paper} />
+          <rect x={x + 12} y="110" width="56" height="12" rx="3" fill={C.bread} opacity=".8" />
+        </g>
+      ))}
+      <Cut i={0} d="M40 54 L100 54" />
+      <Cut i={1} d="M130 54 L190 54" />
+      <Cut i={2} d="M220 54 L280 54" />
+    </>
+  ),
+  stoveMap: (
+    <>
+      <rect x="40" y="24" width="220" height="130" rx="10" fill={C.potDark} />
+      {[[95, 58], [205, 58], [95, 108], [205, 108]].map(([x, y], i) => (
+        <circle key={i} cx={x} cy={y} r="20" fill="none" stroke={i === 3 ? C.ok : C.steel} strokeWidth="4" />
+      ))}
+      <rect x="54" y="138" width="192" height="10" rx="3" fill={C.warn} opacity=".7" />
+      <Cut i={0} d="M95 58 m-10 0 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0" />
+      <Cut i={1} d="M205 58 m-10 0 a10 10 0 1 0 20 0 a10 10 0 1 0 -20 0" />
+    </>
+  ),
+  warmPlates: (
+    <>
+      <rect x="40" y="40" width="160" height="110" rx="10" fill={C.potDark} />
+      <g fill={C.paper}>
+        <ellipse cx="120" cy="120" rx="60" ry="8" /><ellipse cx="120" cy="108" rx="60" ry="8" /><ellipse cx="120" cy="96" rx="60" ry="8" />
+      </g>
+      <Cut i={0} d="M90 80 Q84 68 90 56" />
+      <Cut i={1} d="M120 80 Q114 68 120 56" />
+      <Cut i={2} d="M150 80 Q144 68 150 56" />
+      <ellipse cx="250" cy="110" rx="34" ry="8" fill={C.ice} />
+      <ellipse cx="250" cy="98" rx="34" ry="8" fill={C.ice} />
+    </>
+  ),
+  plateLine: (
+    <>
+      {[50, 117, 184, 251].map((x) => (
+        <g key={x}>
+          <ellipse cx={x} cy="104" rx="30" ry="12" fill={C.paper} />
+          <ellipse cx={x - 6} cy="100" rx="10" ry="5" fill={C.bread} />
+          <rect x={x + 2} y="94" width="14" height="8" rx="3" fill={C.crust} />
+        </g>
+      ))}
+      <Cut i={0} d="M20 72 L280 72" />
+      <Cut i={1} d="M268 64 L280 72 L268 80" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings
