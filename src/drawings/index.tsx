@@ -2438,6 +2438,105 @@ const drawings = {
       <Cut i={0} d="M150 40 L150 56" />
     </>
   ),
+  // Grade 2 · Module 8 · Preserving
+  jarsOven: (
+    <>
+      <rect x="30" y="20" width="240" height="130" rx="10" fill={C.potDark} />
+      <rect x="40" y="112" width="220" height="5" rx="2" fill={C.steelEdge} />
+      {[60, 120, 180].map((x) => (
+        <rect key={x} x={x} y="56" width="50" height="56" rx="8" fill={C.ice} opacity=".45" />
+      ))}
+      <Cut i={0} d="M70 40 Q64 32 70 24" />
+      <Cut i={1} d="M150 40 Q144 32 150 24" />
+      <Cut i={2} d="M230 40 Q224 32 230 24" />
+    </>
+  ),
+  headspace: (
+    <>
+      <g><rect x="122" y="50" width="56" height="90" rx="8" fill={C.ice} opacity=".35" /><rect x="125" y="44" width="50" height="10" rx="3" fill={C.handle} /><rect x="126" y="70" width="48" height="66" rx="6" fill={C.warn} /></g>
+      <Cut i={0} d="M190 54 L190 70" />
+      <Cut i={1} d="M184 54 L196 54 M184 70 L196 70" />
+    </>
+  ),
+  waterBath: (
+    <>
+      <rect x="40" y="40" width="220" height="104" rx="10" fill={C.pot} />
+      <rect x="46" y="54" width="208" height="86" rx="6" fill={C.water} opacity=".6" />
+      {[70, 130, 190].map((x) => (
+        <g key={x}><rect x={x} y="80" width="40" height="56" rx="6" fill={C.ice} opacity=".8" /><rect x={x + 2} y="74" width="36" height="8" rx="3" fill={C.handle} /></g>
+      ))}
+      <Cut i={0} d="M46 62 L254 62" dash />
+      <Cut i={1} d="M262 62 L262 74" />
+    </>
+  ),
+  pickleJar: (
+    <>
+      <g><rect x="122" y="50" width="56" height="90" rx="8" fill={C.ice} opacity=".35" /><rect x="125" y="44" width="50" height="10" rx="3" fill={C.handle} /><rect x="126" y="70" width="48" height="66" rx="6" fill={C.ice} /></g>
+      <g fill={C.veg}><circle cx="138" cy="90" r="8" /><circle cx="160" cy="104" r="8" /><circle cx="142" cy="120" r="8" /></g>
+      <g fill={C.carrot}><rect x="152" y="80" width="14" height="6" rx="3" /><rect x="132" y="104" width="14" height="6" rx="3" /></g>
+      <Cut i={0} d="M150 10 L150 40" />
+      <Cut i={1} d="M142 32 L150 40 L158 32" />
+    </>
+  ),
+  cabbageMassage: (
+    <>
+      <path d="M50 70 A100 64 0 0 0 250 70 Z" fill={C.pot} />
+      <ellipse cx="150" cy="76" rx="88" ry="14" fill="#D8E6B8" />
+      <g stroke="#B8CC8E" strokeWidth="2" fill="none"><path d="M100 74 Q120 68 140 76" /><path d="M150 72 Q170 66 196 76" /></g>
+      <ellipse cx="150" cy="112" rx="60" ry="8" fill={C.water} opacity=".5" />
+      <Cut i={0} d="M110 44 Q130 24 150 44 Q170 64 190 44" />
+    </>
+  ),
+  krautWeight: (
+    <>
+      <rect x="110" y="30" width="80" height="116" rx="12" fill={C.ice} opacity=".35" />
+      <rect x="114" y="74" width="72" height="68" rx="8" fill="#D8E6B8" />
+      <rect x="114" y="66" width="72" height="10" rx="3" fill={C.water} opacity=".7" />
+      <rect x="128" y="44" width="44" height="28" rx="6" fill={C.ice} opacity=".7" />
+      <Cut i={0} d="M150 10 L150 38" />
+      <Cut i={1} d="M142 30 L150 38 L158 30" />
+    </>
+  ),
+  ajvarPot: (
+    <>
+      <rect x="40" y="70" width="220" height="74" rx="8" fill={C.pot} />
+      <ellipse cx="150" cy="78" rx="104" ry="12" fill="#B8341E" />
+      <ellipse cx="120" cy="76" rx="20" ry="3" fill="#F2B860" opacity=".8" />
+      <ellipse cx="190" cy="80" rx="16" ry="3" fill="#F2B860" opacity=".8" />
+      <rect x="170" y="10" width="8" height="80" rx="3" fill={C.woodTop} transform="rotate(20 174 50)" />
+      <Cut i={0} d="M80 90 L220 90" dash />
+    </>
+  ),
+  jamWrinkle: (
+    <>
+      <ellipse cx="150" cy="104" rx="100" ry="26" fill={C.paper} />
+      <ellipse cx="150" cy="100" rx="34" ry="12" fill="#C2402F" />
+      <g stroke="#8A2A1E" strokeWidth="2" fill="none"><path d="M128 96 Q134 100 128 104" /><path d="M136 94 Q142 100 136 106" /></g>
+      <path d="M190 72 Q206 60 220 66 L214 80 Q200 82 192 88 Z" fill={C.skin} />
+      <Cut i={0} d="M190 96 L166 98" />
+      <Cut i={1} d="M174 92 L166 98 L174 104" />
+    </>
+  ),
+  dryTray: (
+    <>
+      <rect x="30" y="96" width="240" height="10" rx="3" fill={C.steelEdge} />
+      <g fill="#C2402F">{[60, 100, 140, 180, 220].map((x) => <path key={x} d={`M${x - 14} 94 Q${x} 74 ${x + 14} 94 Z`} />)}</g>
+      <Cut i={0} d="M60 60 Q54 48 60 36" />
+      <Cut i={1} d="M150 60 Q144 48 150 36" />
+      <Cut i={2} d="M240 60 Q234 48 240 36" />
+    </>
+  ),
+  smokePot: (
+    <>
+      <rect x="60" y="60" width="180" height="84" rx="10" fill="#2E2E2E" />
+      <rect x="52" y="50" width="196" height="12" rx="6" fill="#3E3E3E" />
+      <g fill="#8A5A34"><rect x="80" y="128" width="20" height="6" rx="2" /><rect x="110" y="132" width="20" height="6" rx="2" /><rect x="150" y="128" width="20" height="6" rx="2" /><rect x="190" y="132" width="20" height="6" rx="2" /></g>
+      <rect x="70" y="100" width="160" height="4" rx="2" fill={C.steel} />
+      <path d="M100 98 Q150 80 200 98 Z" fill={C.carrot} />
+      <Cut i={0} d="M120 124 Q112 116 120 108" />
+      <Cut i={1} d="M180 124 Q172 116 180 108" />
+    </>
+  ),
 } satisfies Record<string, ReactNode>
 
 export type DrawingId = keyof typeof drawings

@@ -6,6 +6,7 @@ import { fishLessons } from './fish'
 import { doughLessons } from './doughs'
 import { breadLessons } from './bread'
 import { dessertLessons } from './desserts'
+import { preserveLessons } from './preserves'
 
 // Grade 2 · Craft. From a home cook to a cook who can work a station: raw butchery, dough and bread,
 // desserts, preserving, low temperature, then three cuisines that teach technique (France, Italy,
@@ -128,15 +129,7 @@ export const grade2: Grade = {
         'Стерильные банки, маринование, квашеная капуста, айвар и джем. Сезон в банке, безопасно.',
       ),
       photo: 'g2-preserves.webp',
-      lessons: [],
-      planned: [
-        p('2.8.1', l('Sterilizacija tegli', 'Sterilising jars', 'Стерилизация банок')),
-        p('2.8.2', l('Brzo kiseljenje', 'Quick pickles', 'Быстрое маринование')),
-        p('2.8.3', l('Kiseli kupus i fermentacija', 'Sauerkraut and fermentation', 'Квашеная капуста и ферментация')),
-        p('2.8.4', l('Ajvar', 'Ajvar', 'Айвар')),
-        p('2.8.5', l('Džem i slatko', 'Jam and fruit preserve', 'Джем и варенье')),
-        p('2.8.6', l('Sušenje i dimljenje kod kuće', 'Drying and smoking at home', 'Сушка и копчение дома')),
-      ],
+      lessons: preserveLessons,
     },
     {
       id: 'g2m9',
