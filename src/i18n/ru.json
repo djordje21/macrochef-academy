@@ -104,6 +104,8 @@
   "gradeview.read": "чтения",
   "gradeview.soonCta": "Откроется после {n} класса",
   "gradeview.planned": "План класса, уроки готовятся.",
+  "gradeview.showPlan": "Посмотреть весь план",
+  "gradeview.hidePlan": "Скрыть план",
   "gradeview.others": "Другие классы",
   "menu.open": "Открыть меню",
   "menu.close": "Закрыть меню",

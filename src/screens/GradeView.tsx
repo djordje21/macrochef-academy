@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import { useState, type CSSProperties } from 'react'
 import { grades, upcoming } from '../content'
 import { useDone } from '../app/progress'
 import { goBack, navigate } from '../app/router'
@@ -19,6 +19,7 @@ export function GradeView({ n }: { n: number }) {
   const lessons = written ? written.modules.flatMap((m) => m.lessons) : []
   const plannedCount = written ? written.modules.reduce((sum, m) => sum + (m.planned?.length ?? 0), 0) : 0
   const open = lessons.length > 0
+  const [showPlan, setShowPlan] = useState(false)
   const minutes = lessons.reduce((sum, x) => sum + x.minutes, 0)
   const next = lessons.find((x) => !done.has(x.id))
 
@@ -62,29 +63,6 @@ export function GradeView({ n }: { n: number }) {
           <p>{c(grade.outcome)}</p>
         </div>
 
-        <div className="gv-modules">
-          <span className="label">{t('gradeview.modules')}</span>
-          {!open && <p className="muted gv-planned">{t('gradeview.planned')}</p>}
-          <ol>
-            {written
-              ? written.modules.map((m) => (
-                  <li key={m.id}>
-                    <button onClick={() => navigate(`/module/${m.id}`)}>
-                      <b>{c(m.title)}</b>
-                      <span>{c(m.intro)}</span>
-                    </button>
-                  </li>
-                ))
-              : planned!.plannedModules.map((m, i) => (
-                  <li key={i}>
-                    <div>
-                      <b>{c(m)}</b>
-                    </div>
-                  </li>
-                ))}
-          </ol>
-        </div>
-
         {grade.exam && (
           <div className="gv-exam">
             <span className="label">{t('module.exam')}</span>
@@ -109,6 +87,36 @@ export function GradeView({ n }: { n: number }) {
           <button className="cta" disabled>
             {t('gradeview.soonCta', { n: n - 1 })}
           </button>
+        )}
+
+        <button className="gv-plan-toggle" aria-expanded={showPlan} onClick={() => setShowPlan((v) => !v)}>
+          {t(showPlan ? 'gradeview.hidePlan' : 'gradeview.showPlan')}
+          <span aria-hidden="true">{showPlan ? '−' : '+'}</span>
+        </button>
+
+        {showPlan && (
+          <div className="gv-modules">
+            <span className="label">{t('gradeview.modules')}</span>
+            {!open && <p className="muted gv-planned">{t('gradeview.planned')}</p>}
+            <ol>
+              {written
+                ? written.modules.map((m) => (
+                    <li key={m.id}>
+                      <button onClick={() => navigate(`/module/${m.id}`)}>
+                        <b>{c(m.title)}</b>
+                        <span>{c(m.intro)}</span>
+                      </button>
+                    </li>
+                  ))
+                : planned!.plannedModules.map((m, i) => (
+                    <li key={i}>
+                      <div>
+                        <b>{c(m)}</b>
+                      </div>
+                    </li>
+                  ))}
+            </ol>
+          </div>
         )}
 
         <div className="gv-others">

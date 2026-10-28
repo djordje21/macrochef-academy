@@ -104,6 +104,8 @@
   "gradeview.read": "reading",
   "gradeview.soonCta": "Opens after grade {n}",
   "gradeview.planned": "Grade plan; lessons are being written.",
+  "gradeview.showPlan": "See the full plan",
+  "gradeview.hidePlan": "Hide the plan",
   "gradeview.others": "Other grades",
   "menu.open": "Open menu",
   "menu.close": "Close menu",

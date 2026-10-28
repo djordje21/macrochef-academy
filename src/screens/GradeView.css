@@ -151,3 +151,35 @@
   gap: 8px;
   margin-top: 12px;
 }
+
+/* The full plan opens under its own button, so the overview stays short. */
+.gv-plan-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  background: var(--card);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.gv-plan-toggle span {
+  font-family: var(--font-data);
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.gv-plan-toggle[aria-expanded='true'] + .gv-modules {
+  animation: gv-open 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes gv-open {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}

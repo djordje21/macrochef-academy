@@ -1,7 +1,5 @@
-import type { CSSProperties } from 'react'
-import { allLessons, findLesson, gradeList, grades } from '../content'
+import { allLessons, grades } from '../content'
 import { useDone } from '../app/progress'
-import { useExam } from '../app/exam'
 import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
@@ -10,13 +8,12 @@ import { Logo } from '../components/Logo'
 import { GradeCards } from '../components/GradeCards'
 import './Home.css'
 
+/** The textbook's front page: continue where you stopped, then the three grades as cards. */
 export function Home() {
   const { t, c } = useT()
   const done = useDone()
-  const exam = useExam()
   const grade = grades[0]
   const next = allLessons.find((x) => !done.has(x.id)) ?? allLessons[0]
-  const nextModule = findLesson(next.id)?.module
   const started = done.size > 0
 
   return (
@@ -30,24 +27,13 @@ export function Home() {
           <LangSwitch />
         </div>
         <div className="home-title enter-up">
-          <span className="label">{t('grade.label', { n: grade.n })}</span>
-          <h1>{c(grade.title)}</h1>
-          <p>{c(grade.tagline)}</p>
+          <span className="label">MacroChef Academy</span>
+          <h1>{t('landing.gradesTitle')}</h1>
+          <p>{t('landing.title')}</p>
         </div>
       </header>
 
       <div className="screen home-body">
-        <div className="chips">
-          <button className="chip on" onClick={() => navigate(`/grade/${grade.n}`)}>
-            {grade.n}. {c(grade.title)}
-          </button>
-          {gradeList.filter((g) => g.n !== grade.n).map((g) => (
-            <button key={g.n} className="chip" onClick={() => navigate(`/grade/${g.n}`)}>
-              {g.n}. {c(g.title)}
-            </button>
-          ))}
-        </div>
-
         <button className="cta split nudge" onClick={() => navigate(`/lesson/${next.id}`)}>
           <span>
             {t(started ? 'home.continue' : 'home.start')}
@@ -58,48 +44,8 @@ export function Home() {
           <span aria-hidden="true">→</span>
         </button>
 
-        <div className="rows">
-          {grade.modules.map((m, i) => {
-            const total = m.lessons.length
-            const finished = m.lessons.filter((x) => done.has(x.id)).length
-            const cls = [
-              'row',
-              m.lessons.length === 0 ? 'soon' : '',
-              m === nextModule ? 'current' : '',
-              m.lessons.length > 0 && finished === total ? 'done' : '',
-            ].join(' ')
-            return (
-              <button
-                key={m.id}
-                className={`${cls} enter`}
-                style={{ '--i': i } as CSSProperties}
-                onClick={() => navigate(`/module/${m.id}`)}
-              >
-                <span className="n">M{m.n}</span>
-                <span>{c(m.title)}</span>
-                <span className="s">
-                  {m.lessons.length ? t('module.done', { d: finished, n: total }) : t('module.soon')}
-                </span>
-                <span className="meter" aria-hidden="true">
-                  <i style={{ width: `${total ? (finished / total) * 100 : 0}%` }} />
-                </span>
-              </button>
-            )
-          })}
-          {grade.exam && (
-            <button
-              className={`row enter ${exam.passed ? 'done' : ''}`}
-              style={{ '--i': grade.modules.length } as CSSProperties}
-              onClick={() => navigate('/exam')}
-            >
-              <span className="n">∎</span>
-              <span>{c(grade.exam.title)}</span>
-              <span className="s">{exam.passed ? `✓ ${t('exam.passed')}` : t('module.exam')}</span>
-            </button>
-          )}
-        </div>
-
-        <GradeCards exclude={grade.n} />
+        <span className="label home-grades-label">{t('menu.grades')}</span>
+        <GradeCards />
       </div>
     </div>
   )

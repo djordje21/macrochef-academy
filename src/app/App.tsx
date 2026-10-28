@@ -21,7 +21,7 @@ function Screen() {
 
   if (section === 'about' || (path === '/' && !isWelcomed())) return <Landing />
   if (section === 'exam') return <Exam />
-  if (section === 'grade' && id) return <GradeView n={Number(id)} />
+  if (section === 'grade' && id) return <GradeView key={id} n={Number(id)} />
   if (section === 'module' && id) return <ModuleScreen id={id} />
   if (section === 'lesson' && id && sub === 'step') return <StepScreen id={id} n={Number(params.get('n') ?? 1)} />
   if (section === 'lesson' && id && sub === 'end') return <LessonEnd id={id} />

@@ -57,6 +57,11 @@
   padding-top: 14px;
 }
 
+.home-grades-label {
+  display: block;
+  margin-top: 22px;
+}
+
 
 
 /* Home motion: the title rises in, modules arrive one after another, progress bars fill to where you are.

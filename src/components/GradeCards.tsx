@@ -4,8 +4,8 @@ import { useT } from '../i18n/useT'
 import { Photo } from './Photo'
 import './GradeCards.css'
 
-/** Cards for every grade except the one on screen; each opens that grade's overview. */
-export function GradeCards({ exclude }: { exclude: number }) {
+/** Cards for every grade, or every grade but the one on screen; each opens that grade's overview. */
+export function GradeCards({ exclude }: { exclude?: number }) {
   const { t, c } = useT()
   const cards = gradeList.filter((g) => g.n !== exclude).map((g) => ({ ...g, open: isOpen(g.n) }))
 

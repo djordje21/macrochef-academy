@@ -104,6 +104,8 @@
   "gradeview.read": "čitanja",
   "gradeview.soonCta": "Otvara se posle {n}. razreda",
   "gradeview.planned": "Plan razreda, lekcije su u pripremi.",
+  "gradeview.showPlan": "Pogledaj ceo plan",
+  "gradeview.hidePlan": "Sakrij plan",
   "gradeview.others": "Ostali razredi",
   "menu.open": "Otvori meni",
   "menu.close": "Zatvori meni",
