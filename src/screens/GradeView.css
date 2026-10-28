@@ -10,11 +10,6 @@
   inset: 0;
 }
 
-.grade-view.g2 .gv-cover .photo img,
-.grade-view.g3 .gv-cover .photo img {
-  filter: saturate(0.55) contrast(1.05) brightness(0.7);
-}
-
 .gv-back {
   position: absolute;
   z-index: 2;

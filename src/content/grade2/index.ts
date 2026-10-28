@@ -28,7 +28,7 @@ export const grade2: Grade = {
     'Butchery and fish, dough and bread, desserts and world kitchens: France, Italy, the Mediterranean.',
     'Разделка мяса и рыбы, тесто и хлеб, десерты и кухни мира: Франция, Италия, Средиземноморье.',
   ),
-  photo: 'grade-2.webp',
+  photo: 'g2-butchery.webp',
   audience: l(
     'Za one koji su završili 1. razred i kuvaju samostalno, a hoće da rade kao u profesionalnoj kuhinji.',
     'For cooks who finished grade 1 and cook on their own, and want to work like a professional kitchen.',
