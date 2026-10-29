@@ -1,7 +1,7 @@
 import type { Lang } from '../content/types'
 
 // The other two projects of the family. `?lang=` carries the language across, since each app keeps its own storage.
-const PORTFOLIO = 'https://djordje-milenkovic.netlify.app'
+const PORTFOLIO = 'https://portfolio.macrochef.workers.dev'
 const MACROCHEF = 'https://macrochef.macrochef.workers.dev/'
 
 export const portfolioUrl = (lang: Lang) => `${PORTFOLIO}/${lang}/`

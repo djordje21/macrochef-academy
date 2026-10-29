@@ -48,7 +48,7 @@ One name, three doors. The umbrella brand is Đorđe himself; the portfolio is t
 
 | Project | What it is | Repo | Live | Stack | Deploys from |
 |---|---|---|---|---|---|
-| Portfolio | Who he is | `djordje21/portfolio` | djordje-milenkovic.netlify.app (`/sr/`, `/en/`, `/ru/`) | Astro + Tailwind, static | `main` → Netlify |
+| Portfolio | Who he is | `djordje21/portfolio` | portfolio.macrochef.workers.dev (`/sr/`, `/en/`, `/ru/`) | Astro + Tailwind, static | `main` → Cloudflare Workers Builds (moved from Netlify on 2026-10-29) |
 | Macro Chef Academy | What he gives: cooking school for young cooks and learners | `djordje21/macrochef-academy` | macrochef-academy.macrochef.workers.dev | React + Vite PWA, no backend | `main` → Cloudflare Workers Builds |
 | MacroChef | What he builds: ad-free calorie and macro tracker | `djordje21/macrochef` | macrochef.macrochef.workers.dev | React + Vite PWA, Dexie, Supabase accounts | `ccr-e80a272b-xkto0p` → Cloudflare Workers Builds |
 
