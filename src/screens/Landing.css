@@ -441,6 +441,11 @@
   font-size: 24px;
 }
 
+.landing-sign {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+}
+
 .landing-eyebrow {
   color: var(--accent);
 }

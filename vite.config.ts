@@ -27,7 +27,7 @@ export default defineConfig(({ mode }) => ({
       injectRegister: false,
       includeAssets: ['icons/icon.svg', 'icons/apple-touch-icon.png'],
       manifest: {
-        name: 'MacroChef Academy',
+        name: 'Macro Chef Academy',
         short_name: 'Academy',
         description: 'Škola kuvanja korak po korak. Napravio kuvar.',
         lang: 'sr',

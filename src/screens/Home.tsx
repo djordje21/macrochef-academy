@@ -19,7 +19,7 @@ export function Home() {
       <header className="home-cover">
         <Photo name={grade.photo} />
         <div className="home-title enter-up">
-          <span className="label">MacroChef Academy</span>
+          <span className="label">Macro Chef Academy</span>
           <h1>{t('landing.gradesTitle')}</h1>
           <p>{t('landing.title')}</p>
         </div>

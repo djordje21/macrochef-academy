@@ -7,6 +7,7 @@ import { navigate, useRoute } from './router'
 import { useT } from '../i18n/useT'
 import { LangSwitch } from '../components/LangSwitch'
 import { Logo } from '../components/Logo'
+import { Signature } from '../components/Signature'
 import './Menu.css'
 
 /** The burger button and the drawer behind it: every place in the app, two taps away. */
@@ -132,10 +133,10 @@ export function Menu() {
           </>
         )}
 
-        <p className="menu-foot">
-          {t('menu.family')}
+        <div className="menu-foot">
+          <Signature compact />
           <span className="mono">v {__APP_VERSION__}</span>
-        </p>
+        </div>
       </aside>
     </>
   )

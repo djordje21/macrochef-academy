@@ -7,6 +7,7 @@ import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import { Drawing } from '../drawings'
 import { ModeCards } from '../components/ModeCards'
+import { Signature } from '../components/Signature'
 import './Landing.css'
 
 const steps = allLessons.reduce((sum, x) => sum + x.steps.length, 0)
@@ -285,6 +286,10 @@ export function Landing() {
           <p className="muted">{t('landing.finalText')}</p>
           {mainCta}
         </section>
+
+        <footer className="landing-sign">
+          <Signature />
+        </footer>
       </div>
 
       <div className={`landing-sticky ${sticky ? 'on' : ''}`} aria-hidden={!sticky} inert={!sticky}>
