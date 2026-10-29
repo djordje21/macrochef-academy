@@ -4,11 +4,12 @@ import { doneCount, markDone } from '../app/progress'
 import { considerPrompt } from '../app/share'
 import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
+import { macrochefUrl } from '../app/family'
 import './LessonEnd.css'
 import { Oops } from '../components/Oops'
 
 export function LessonEnd({ id }: { id: string }) {
-  const { t, c } = useT()
+  const { t, c, lang } = useT()
   const [picked, setPicked] = useState<number | null>(null)
   const found = findLesson(id)
   if (!found) return <Oops kind="missing" />
@@ -87,6 +88,19 @@ export function LessonEnd({ id }: { id: string }) {
               <small>kcal · {t('end.per100')}</small>
             </span>
           </div>
+          <a
+            className="open-mc"
+            href={macrochefUrl(lang, '/academy', {
+              lesson: lesson.id,
+              name: c(recipe.name),
+              kcal: recipe.kcal,
+              p: recipe.protein,
+              c: recipe.carbs,
+              f: recipe.fat,
+            })}
+          >
+            {t('end.openMc')} <span aria-hidden="true">↗</span>
+          </a>
         </div>
       )}
 

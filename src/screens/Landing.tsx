@@ -8,6 +8,7 @@ import { Photo } from '../components/Photo'
 import { Drawing } from '../drawings'
 import { ModeCards } from '../components/ModeCards'
 import { Signature } from '../components/Signature'
+import { portfolioUrl } from '../app/family'
 import './Landing.css'
 
 const steps = allLessons.reduce((sum, x) => sum + x.steps.length, 0)
@@ -20,7 +21,7 @@ const demo = demoLesson.steps[3]
  * on any device where the video cannot play.
  */
 export function Landing() {
-  const { t, c } = useT()
+  const { t, c, lang } = useT()
   const [video, setVideo] = useState(true)
   // The photo stays in place until the video really plays. iOS blocks autoplay in Low Power Mode
   // and when the muted attribute is missing, which React does not render, so it is set by hand.
@@ -160,6 +161,9 @@ export function Landing() {
           <h2>{t('landing.chefName')}</h2>
           <span className="chef-role">{t('landing.chefRole')}</span>
           <blockquote>„{t('landing.quote')}“</blockquote>
+          <a className="chef-path" href={portfolioUrl(lang)}>
+            {t('landing.fullPath')} <span aria-hidden="true">↗</span>
+          </a>
         </section>
 
         <section>

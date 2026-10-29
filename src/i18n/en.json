@@ -215,5 +215,8 @@
   "oops.missing.eyebrow": "404 · not on the menu",
   "oops.missing.title": "This dish isn't on the menu.",
   "oops.missing.text": "The page you are looking for doesn't exist or has moved. The kitchen is still open.",
-  "oops.missing.cta": "Back to the kitchen"
+  "oops.missing.cta": "Back to the kitchen",
+  "end.openMc": "Open in MacroChef",
+  "landing.fullPath": "The whole path",
+  "family.title": "Đorđe and his projects"
 }

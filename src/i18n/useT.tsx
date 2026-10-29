@@ -13,6 +13,12 @@ const STORAGE_KEY = 'mc.lang'
 
 function initialLang(): Lang {
   try {
+    // A link from the portfolio or MacroChef says which language the reader was in.
+    const fromLink = new URLSearchParams(location.search).get('lang') as Lang | null
+    if (fromLink && LANGS.includes(fromLink)) {
+      localStorage.setItem(STORAGE_KEY, fromLink)
+      return fromLink
+    }
     const saved = localStorage.getItem(STORAGE_KEY) as Lang | null
     if (saved && LANGS.includes(saved)) return saved
   } catch {

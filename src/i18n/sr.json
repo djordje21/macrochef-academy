@@ -215,5 +215,8 @@
   "oops.missing.eyebrow": "404 · nije na meniju",
   "oops.missing.title": "Ovo jelo nije na meniju.",
   "oops.missing.text": "Stranica koju tražiš ne postoji ili je premeštena. Kuhinja je i dalje otvorena.",
-  "oops.missing.cta": "Nazad u kuhinju"
+  "oops.missing.cta": "Nazad u kuhinju",
+  "end.openMc": "Otvori u MacroChef-u",
+  "landing.fullPath": "Ceo put",
+  "family.title": "Đorđe i njegovi projekti"
 }

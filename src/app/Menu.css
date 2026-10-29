@@ -228,3 +228,25 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+
+/* The other two projects of the family, one tap away. */
+.menu-family {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+
+.menu-family a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  color: var(--grade-1);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}

@@ -8,11 +8,12 @@ import { useT } from '../i18n/useT'
 import { LangSwitch } from '../components/LangSwitch'
 import { Logo } from '../components/Logo'
 import { Signature } from '../components/Signature'
+import { macrochefUrl, portfolioUrl } from './family'
 import './Menu.css'
 
 /** The burger button and the drawer behind it: every place in the app, two taps away. */
 export function Menu() {
-  const { t, c } = useT()
+  const { t, c, lang } = useT()
   const { path } = useRoute()
   const done = useDone()
   const exam = useExam()
@@ -67,6 +68,15 @@ export function Menu() {
           </button>
         </div>
         <LangSwitch />
+
+        <div className="menu-family" aria-label={t('family.title')}>
+          <a href={macrochefUrl(lang)}>
+            MacroChef <span aria-hidden="true">↗</span>
+          </a>
+          <a href={portfolioUrl(lang)}>
+            Đorđe Milenković <span aria-hidden="true">↗</span>
+          </a>
+        </div>
 
         <nav className="menu-links">
           <button className={here('/')} onClick={() => go('/')}>

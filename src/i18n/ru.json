@@ -215,5 +215,8 @@
   "oops.missing.eyebrow": "404 · нет в меню",
   "oops.missing.title": "Этого блюда нет в меню.",
   "oops.missing.text": "Страница, которую ты ищешь, не существует или перемещена. Кухня всё ещё открыта.",
-  "oops.missing.cta": "Вернуться на кухню"
+  "oops.missing.cta": "Вернуться на кухню",
+  "end.openMc": "Открыть в MacroChef",
+  "landing.fullPath": "Весь путь",
+  "family.title": "Джордже и его проекты"
 }
