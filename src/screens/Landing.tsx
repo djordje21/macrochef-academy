@@ -8,6 +8,7 @@ import { Photo } from '../components/Photo'
 import { Drawing } from '../drawings'
 import { ModeCards } from '../components/ModeCards'
 import { Signature } from '../components/Signature'
+import { Projects } from '../components/Projects'
 import { portfolioUrl } from '../app/family'
 import './Landing.css'
 
@@ -290,6 +291,8 @@ export function Landing() {
           <p className="muted">{t('landing.finalText')}</p>
           {mainCta}
         </section>
+
+        <Projects />
 
         <footer className="landing-sign">
           <Signature />

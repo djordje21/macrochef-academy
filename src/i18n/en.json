@@ -218,5 +218,13 @@
   "oops.missing.cta": "Back to the kitchen",
   "end.openMc": "Open in MacroChef",
   "landing.fullPath": "The whole path",
-  "family.title": "Đorđe and his projects"
+  "family.title": "Đorđe and his projects",
+  "projects.label": "Projects",
+  "projects.title": "More from Đorđe",
+  "projects.mcKind": "App · calories and macros",
+  "projects.mcText": "An ad-free calorie and macro tracker. Log a dish from a lesson in one tap and see what you eat.",
+  "projects.mcCta": "Open MacroChef",
+  "projects.meKind": "Who teaches",
+  "projects.meText": "Executive Chef, 16 years in professional kitchens. The kitchens, teams and openings he has led.",
+  "projects.meCta": "The whole path"
 }

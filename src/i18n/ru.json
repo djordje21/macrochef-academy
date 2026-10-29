@@ -218,5 +218,13 @@
   "oops.missing.cta": "Вернуться на кухню",
   "end.openMc": "Открыть в MacroChef",
   "landing.fullPath": "Весь путь",
-  "family.title": "Джордже и его проекты"
+  "family.title": "Джордже и его проекты",
+  "projects.label": "Проекты",
+  "projects.title": "Ещё от Джордже",
+  "projects.mcKind": "Приложение · калории и макросы",
+  "projects.mcText": "Счётчик калорий и макросов без рекламы. Блюдо из урока вносишь одним касанием и видишь, что ешь.",
+  "projects.mcCta": "Открыть MacroChef",
+  "projects.meKind": "Кто преподаёт",
+  "projects.meText": "Шеф-повар, 16 лет в профессиональной кухне. Кухни, команды и открытия, которыми он руководил.",
+  "projects.meCta": "Весь путь"
 }

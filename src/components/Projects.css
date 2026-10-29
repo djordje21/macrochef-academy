@@ -1,0 +1,119 @@
+/* Family cards. Yellow is the family thread, so it stays grade-1 yellow in every grade room. */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.projects h2 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 18px 18px;
+  border-radius: var(--r-card);
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.project-card.mc {
+  border-color: var(--grade-1);
+  background: linear-gradient(160deg, rgba(245, 184, 61, 0.16), rgba(245, 184, 61, 0) 70%), var(--card);
+}
+
+.project-badge {
+  align-self: flex-start;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 6px;
+  border-radius: 14px;
+  background: var(--grade-1);
+  color: #0b1730;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.project-mark {
+  width: 120px;
+  height: auto;
+  margin-bottom: 4px;
+  color: var(--grade-1);
+}
+
+.project-kind {
+  font-family: var(--font-data);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grade-1);
+}
+
+.project-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.project-text {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-macros {
+  display: flex;
+  gap: 6px;
+  margin: 6px 0 2px;
+}
+
+.project-macros i {
+  height: 6px;
+  border-radius: 3px;
+}
+
+.project-macros .p {
+  width: 64px;
+  background: var(--protein);
+}
+
+.project-macros .c {
+  width: 44px;
+  background: var(--carbs);
+}
+
+.project-macros .f {
+  width: 28px;
+  background: var(--fat);
+}
+
+.project-cta {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap);
+  margin-top: 8px;
+  padding: 0 18px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--grade-1);
+  color: var(--grade-1);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.project-card.mc .project-cta {
+  background: var(--grade-1);
+  color: #0b1730;
+}

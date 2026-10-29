@@ -4,6 +4,7 @@ import { navigate } from '../app/router'
 import { useT } from '../i18n/useT'
 import { Photo } from '../components/Photo'
 import { GradeCards } from '../components/GradeCards'
+import { Projects } from '../components/Projects'
 import './Home.css'
 
 /** The textbook's front page: continue where you stopped, then the three grades as cards. */
@@ -38,6 +39,8 @@ export function Home() {
 
         <span className="label home-grades-label">{t('menu.grades')}</span>
         <GradeCards />
+
+        <Projects />
       </div>
     </div>
   )

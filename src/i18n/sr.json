@@ -218,5 +218,13 @@
   "oops.missing.cta": "Nazad u kuhinju",
   "end.openMc": "Otvori u MacroChef-u",
   "landing.fullPath": "Ceo put",
-  "family.title": "Đorđe i njegovi projekti"
+  "family.title": "Đorđe i njegovi projekti",
+  "projects.label": "Projekti",
+  "projects.title": "Još od Đorđa",
+  "projects.mcKind": "Aplikacija · kalorije i makroi",
+  "projects.mcText": "Brojač kalorija i makroa bez reklama. Jelo iz lekcije uneseš jednim dodirom i vidiš šta jedeš.",
+  "projects.mcCta": "Otvori MacroChef",
+  "projects.meKind": "Ko predaje",
+  "projects.meText": "Executive Chef, 16 godina u profesionalnoj kuhinji. Kuhinje, timovi i otvaranja koje je vodio.",
+  "projects.meCta": "Ceo put"
 }
