@@ -230,23 +230,92 @@
 }
 
 /* The other two projects of the family, one tap away. */
+/* The three projects as one thread: a yellow line joins the three doors, the Academy is the one you are in. */
 .menu-family {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 12px 0 4px;
+  flex-direction: column;
+  margin: 4px 0 20px;
 }
 
-.menu-family a {
-  display: inline-flex;
+.menu-family::before {
+  content: '';
+  position: absolute;
+  left: 21px;
+  top: 28px;
+  bottom: 28px;
+  width: 2px;
+  background: linear-gradient(var(--grade-1), rgba(245, 184, 61, 0.25));
+}
+
+.menu-family > * {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  column-gap: 14px;
   align-items: center;
-  gap: 6px;
-  min-height: 36px;
-  padding: 0 14px;
-  border: 1px solid var(--line);
-  border-radius: var(--r-pill);
-  color: var(--grade-1);
-  font-size: 13px;
-  font-weight: 700;
+  padding: 10px 0;
+  color: var(--text);
   text-decoration: none;
+}
+
+.family-icon {
+  grid-row: span 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--grade-1);
+  background: var(--bg);
+  color: var(--grade-1);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.family-icon.mark {
+  padding: 8px 5px;
+}
+
+.family-icon.mc {
+  background: var(--grade-1);
+  color: #0b1730;
+}
+
+.family-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.family-role {
+  grid-column: 2;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.family-go {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  color: var(--grade-1);
+  font-size: 16px;
+}
+
+.family-icon.aca {
+  font-size: 12px;
+  letter-spacing: -0.02em;
+}
+
+.menu-family .here {
+  margin: 4px -10px 0;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(245, 184, 61, 0.08);
+}
+
+.menu-family .here b {
+  color: var(--grade-1);
+  font-weight: 600;
 }

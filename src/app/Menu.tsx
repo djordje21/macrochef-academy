@@ -8,6 +8,7 @@ import { useT } from '../i18n/useT'
 import { LangSwitch } from '../components/LangSwitch'
 import { Logo } from '../components/Logo'
 import { Signature } from '../components/Signature'
+import { Monogram } from '../components/Monogram'
 import { macrochefUrl, portfolioUrl } from './family'
 import './Menu.css'
 
@@ -68,15 +69,6 @@ export function Menu() {
           </button>
         </div>
         <LangSwitch />
-
-        <div className="menu-family" aria-label={t('family.title')}>
-          <a href={macrochefUrl(lang)}>
-            MacroChef <span aria-hidden="true">↗</span>
-          </a>
-          <a href={portfolioUrl(lang)}>
-            Đorđe Milenković <span aria-hidden="true">↗</span>
-          </a>
-        </div>
 
         <nav className="menu-links">
           <button className={here('/')} onClick={() => go('/')}>
@@ -142,6 +134,29 @@ export function Menu() {
             </div>
           </>
         )}
+
+        <span className="label menu-label">{t('projects.label')}</span>
+        <nav className="menu-family" aria-label={t('family.title')}>
+          <a href={portfolioUrl(lang)}>
+            <Monogram className="family-icon mark" />
+            <span className="family-name">Đorđe Milenković</span>
+            <span className="family-role">{t('family.meRole')}</span>
+            <span className="family-go" aria-hidden="true">↗</span>
+          </a>
+          <a href={macrochefUrl(lang)}>
+            <span className="family-icon mc" aria-hidden="true">MC</span>
+            <span className="family-name">MacroChef</span>
+            <span className="family-role">{t('family.mcRole')}</span>
+            <span className="family-go" aria-hidden="true">↗</span>
+          </a>
+          <div className="here" aria-current="page">
+            <span className="family-icon aca" aria-hidden="true">MCA</span>
+            <span className="family-name">Macro Chef Academy</span>
+            <span className="family-role">
+              {t('family.mcaRole')} · <b>{t('family.here')}</b>
+            </span>
+          </div>
+        </nav>
 
         <div className="menu-foot">
           <Signature compact />
