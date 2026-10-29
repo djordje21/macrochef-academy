@@ -42,6 +42,44 @@ Keep every lesson consistent with these; change them only on Đole's word.
 - After content changes: build, then look at the step drawings and screens in a browser before pushing. Remove drawings that do not fit the step.
 - He tests on his phone and sends screenshots in Serbian; fix what he shows and say plainly what changed and what was not verified.
 
+## Project family
+
+One name, three doors. The umbrella brand is Đorđe himself; the portfolio is the centre, Academy and MacroChef are his projects. The three stay separate: own repo, own deploy, own look and tone. Never merge repos or apps. This section is the same in all three CLAUDE.md files; when it changes, change it in all three.
+
+| Project | What it is | Repo | Live | Stack | Deploys from |
+|---|---|---|---|---|---|
+| Portfolio | Who he is | `djordje21/portfolio` | djordje-milenkovic.netlify.app (`/sr/`, `/en/`, `/ru/`) | Astro + Tailwind, static | `main` → Netlify |
+| MacroChef Academy | What he gives: cooking school for young cooks and learners | `djordje21/macrochef-academy` | macrochef-academy.macrochef.workers.dev | React + Vite PWA, no backend | `main` → Cloudflare Workers Builds |
+| MacroChef | What he builds: ad-free calorie and macro tracker | `djordje21/macrochef` | macrochef.macrochef.workers.dev | React + Vite PWA, Dexie, Supabase accounts | `ccr-e80a272b-xkto0p` → Cloudflare Workers Builds |
+
+MacroChef's `netlify.toml` is a leftover; Cloudflare is the only live host. Each project has its own Claude Code session; the main session coordinates the three and tells Đole every task it sends to another session.
+
+### Shared signature
+
+- Signature line, exactly: **Executive Chef Đorđe Milenković · MacroChef · Macro Chef Academy**. It goes in each project's footer, with the monogram.
+- Thread colour: yellow `#F5B83D`. In MacroChef and Academy it is already the primary/grade-1 accent. In the portfolio it is an accent only (signature, monogram, small marks); the portfolio stays navy with ice blue.
+- Full rules for signature, colour and tone: `docs/family.md` in the portfolio repo.
+
+### Bridges
+
+| Bridge | From | To | Status |
+|---|---|---|---|
+| "My projects" cards | Portfolio | Academy, MacroChef | planned |
+| Footer signature with links | all three | the other two | planned |
+| "Ko predaje" → "Ceo put" | Academy landing (`landing-chef` section) | Portfolio | planned |
+| "Otvori u MacroChef-u" | Academy lesson end (`lesson.recipe`) | MacroChef | planned, design not agreed |
+| "Nauči tehniku" | MacroChef recipe | Academy lesson | planned, design not agreed |
+
+Deep links: both apps use hash routing. Academy lesson: `https://macrochef-academy.macrochef.workers.dev/#/lesson/<id>` (ids like `5.2`, `2.4.1`, `3.10.5`). MacroChef library recipe: `https://macrochef.macrochef.workers.dev/#/lib?key=<key>`. MacroChef data lives on the device (IndexedDB), so anything passed between the apps goes in the link.
+
+Known gap: an Academy `recipe` is only a name and macros per 100 g; a MacroChef recipe is built from ingredients in raw grams. A full recipe import needs ingredient lists for the Academy dishes, which is content Đole reviews.
+
+### Family rules
+
+- Do not feature Academy on the portfolio until Đole has reviewed the course content.
+- Before any change users can see on the portfolio or in MacroChef, show Đole a preview (screenshot or preview URL) and wait for his OK.
+- Later, not now: one domain with three addresses, possibly one shared account.
+
 ## Open items
 
 - Lesson 13.3 "Svinjsko pečenje" teaches pork neck pink at 70°C. Waiting for Đole: keep it, rewrite as traditional slow-roasted shoulder, or both.
